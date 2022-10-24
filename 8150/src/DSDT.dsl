@@ -30,11 +30,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
     External (_SB_.TZ41.TTSP, UnknownObj)
     External (BREV, UnknownObj)
     External (BSID, UnknownObj)
-    External (PCF1, IntObj)
-    External (PCF2, IntObj)
-    External (PCF3, IntObj)
-    External (PCF4, IntObj)
-    External (PCF5, IntObj)
 
     Scope (\_SB)
     {
@@ -70913,33 +70908,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 })
                 While (One)
                 {
-                    Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                    _T_0 = ToInteger (Arg2)
-                    If ((_T_0 == 0x8056))
-                    {
-                        Local2 = PCFG /* \_SB_.GPU0._ROM.PCFG */
-                    }
-                    ElseIf ((_T_0 == 0x8000))
-                    {
-                        Local2 = PCF1 /* External reference */
-                    }
-                    ElseIf ((_T_0 == 0x8010))
-                    {
-                        Local2 = PCF2 /* External reference */
-                    }
-                    ElseIf ((_T_0 == 0x8011))
-                    {
-                        Local2 = PCF3 /* External reference */
-                    }
-                    ElseIf ((_T_0 == 0x8012))
-                    {
-                        Local2 = PCF4 /* External reference */
-                    }
-                    ElseIf ((_T_0 == 0x8013))
-                    {
-                        Local2 = PCF5 /* External reference */
-                    }
-                    Else
+                    If (One)
                     {
                         Local2 = PCFG /* \_SB_.GPU0._ROM.PCFG */
                     }

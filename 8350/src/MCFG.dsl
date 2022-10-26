@@ -10,16 +10,16 @@
 
 [024h 0036   8]                     Reserved : 0000000000000000
 
-[02Ch 0044   8]                 Base Address : 0000000060000000
+[02Ch 0044   8]                 Base Address : 0000000700000000
 [034h 0052   2]         Segment Group Number : 0000
 [036h 0054   1]             Start Bus Number : 00
-[037h 0055   1]               End Bus Number : 01
+[037h 0055   1]               End Bus Number : FF
 [038h 0056   4]                     Reserved : 00000000
 
-[03Ch 0060   8]                 Base Address : 0000000040000000
+[03Ch 0060   8]                 Base Address : 0000000600000000
 [044h 0068   2]         Segment Group Number : 0001
 [046h 0070   1]             Start Bus Number : 00
-[047h 0071   1]               End Bus Number : 01
+[047h 0071   1]               End Bus Number : FF
 [048h 0072   4]                     Reserved : 00000000
 
 [04Ch 0076   8]                 Base Address : 000000003C000000

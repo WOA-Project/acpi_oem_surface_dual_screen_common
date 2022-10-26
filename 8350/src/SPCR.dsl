@@ -8,7 +8,7 @@
 [01Ch 0028   4]              Asl Compiler ID : "QCOM"
 [020h 0032   4]        Asl Compiler Revision : 00000001
 
-[024h 0036   1]               Interface Type : 11
+[024h 0036   1]               Interface Type : 13
 [025h 0037   3]                     Reserved : 000000
 
 [028h 0040  12]         Serial Port Register : [Generic Address Structure]
@@ -16,7 +16,7 @@
 [029h 0041   1]                    Bit Width : 20
 [02Ah 0042   1]                   Bit Offset : 00
 [02Bh 0043   1]         Encoded Access Width : 20 [Unknown Width Encoding]
-[02Ch 0044   8]                      Address : 0000000000A90000
+[02Ch 0044   8]                      Address : 000000000098C000
 
 [034h 0052   1]               Interrupt Type : 08
 [035h 0053   1]          PCAT-compatible IRQ : 00

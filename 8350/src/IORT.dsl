@@ -458,7 +458,7 @@
 [75Bh 1883   1] Memory Flags (decoded below) : 00
                                    Coherency : 0
                             Device Attribute : 0
-[75Ch 1884   1]            Memory Size Limit : 28
+[75Ch 1884   1]            Memory Size Limit : 30
 [75Dh 1885  10]                  Device Name : "\_SB.GPU0"
 [767h 1895  22]                      Padding : 49 4F 52 54 9C 18 00 00 00 00 51 43 4F 4D 20 20 /* IORT......QCOM   */\
 /* 777h 1911   6 */                            51 43 4F 4D 45 44                               /* QCOMED */\

@@ -1,0 +1,605 @@
+Package (0x0D52)
+{
+    "DEVICE",
+    "\_SB.ADSP.ADCM",
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000000,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000001,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000002,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000003,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000004,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000005,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000006,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000007,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000008,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000009,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x000000000000000A,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x000000000000000B,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x000000000000000C,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x000000000000000D,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x000000000000000E,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x000000000000000F,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000010,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000011,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000012,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+    Package (0x00A5)
+    {
+        "COMPONENT",
+        0x0000000000000013,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0051)
+        {
+            "PSTATE_SET",
+            0x0000000000000000,
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000000,
+            },
+            Package (0x0017)
+            {
+                "PSTATE",
+                0x0000000000000001,
+            },
+        },
+    },
+},

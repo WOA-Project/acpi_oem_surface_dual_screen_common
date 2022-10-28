@@ -1,0 +1,263 @@
+Package (0x07A8)
+{
+    "DEVICE",
+    0x0000000000000003,
+    "\_SB.ADSP",
+    Package (0x0749)
+    {
+        "COMPONENT",
+        0x0000000000000000,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0258)
+        {
+            "PSTATE",
+            0x0000000000000000,
+            Package (0x0044)
+            {
+                "NPARESOURCE",
+                Package (0x0030)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_cx",
+                    0x0000000000000180,
+                },
+            },
+            Package (0x0044)
+            {
+                "NPARESOURCE",
+                Package (0x0030)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_mx",
+                    0x0000000000000180,
+                },
+            },
+            Package (0x0047)
+            {
+                "NPARESOURCE",
+                Package (0x0033)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_lpicx",
+                    0x0000000000000180,
+                },
+            },
+            Package (0x0047)
+            {
+                "NPARESOURCE",
+                Package (0x0033)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_lpimx",
+                    0x0000000000000180,
+                },
+            },
+            Package (0x0044)
+            {
+                "NPARESOURCE",
+                Package (0x0030)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_xo",
+                    0x0000000000000080,
+                },
+            },
+            Package (0x0064)
+            {
+                "BUSARB",
+                Package (0x0055)
+                {
+                    0x0000000000000003,
+                    "ICBID_MASTER_LPASS_PROC",
+                    "ICBID_SLAVE_EBI1",
+                    0x0000000000000001,
+                    0x0000000000000001,
+                },
+            },
+            Package (0x0067)
+            {
+                "BUSARB",
+                Package (0x0058)
+                {
+                    0x0000000000000003,
+                    "ICBID_MASTER_LPASS_PROC",
+                    "ICBID_SLAVE_CLK_CTL",
+                    0x0000000000000001,
+                    0x0000000000000001,
+                },
+            },
+        },
+        Package (0x0258)
+        {
+            "PSTATE",
+            0x0000000000000001,
+            Package (0x0044)
+            {
+                "NPARESOURCE",
+                Package (0x0030)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_cx",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0044)
+            {
+                "NPARESOURCE",
+                Package (0x0030)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_mx",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0047)
+            {
+                "NPARESOURCE",
+                Package (0x0033)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_lpicx",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0047)
+            {
+                "NPARESOURCE",
+                Package (0x0033)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_lpimx",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0044)
+            {
+                "NPARESOURCE",
+                Package (0x0030)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_xo",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0064)
+            {
+                "BUSARB",
+                Package (0x0055)
+                {
+                    0x0000000000000003,
+                    "ICBID_MASTER_LPASS_PROC",
+                    "ICBID_SLAVE_EBI1",
+                    0x0000000000000000,
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0067)
+            {
+                "BUSARB",
+                Package (0x0058)
+                {
+                    0x0000000000000003,
+                    "ICBID_MASTER_LPASS_PROC",
+                    "ICBID_SLAVE_CLK_CTL",
+                    0x0000000000000000,
+                    0x0000000000000000,
+                },
+            },
+        },
+        Package (0x0258)
+        {
+            "PSTATE",
+            0x0000000000000002,
+            Package (0x0044)
+            {
+                "NPARESOURCE",
+                Package (0x0030)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_cx",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0044)
+            {
+                "NPARESOURCE",
+                Package (0x0030)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_mx",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0047)
+            {
+                "NPARESOURCE",
+                Package (0x0033)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_lpicx",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0047)
+            {
+                "NPARESOURCE",
+                Package (0x0033)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_lpimx",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0044)
+            {
+                "NPARESOURCE",
+                Package (0x0030)
+                {
+                    0x0000000000000001,
+                    "/arc/client/rail_xo",
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0064)
+            {
+                "BUSARB",
+                Package (0x0055)
+                {
+                    0x0000000000000003,
+                    "ICBID_MASTER_LPASS_PROC",
+                    "ICBID_SLAVE_EBI1",
+                    0x0000000000000000,
+                    0x0000000000000000,
+                },
+            },
+            Package (0x0067)
+            {
+                "BUSARB",
+                Package (0x0058)
+                {
+                    0x0000000000000003,
+                    "ICBID_MASTER_LPASS_PROC",
+                    "ICBID_SLAVE_CLK_CTL",
+                    0x0000000000000000,
+                    0x0000000000000000,
+                },
+            },
+        },
+    },
+    Package (0x0017)
+    {
+        "DSTATE",
+        0x0000000000000000,
+    },
+    Package (0x0017)
+    {
+        "DSTATE",
+        0x0000000000000003,
+    },
+},

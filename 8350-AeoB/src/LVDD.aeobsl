@@ -1,0 +1,45 @@
+Package (0x0037)
+{
+    "/arc/client/rail_cx",
+    "RAIL_VOLTAGE_LEVEL_NOMINAL",
+},
+Package (0x0037)
+{
+    "/arc/client/rail_mx",
+    "RAIL_VOLTAGE_LEVEL_NOMINAL",
+},
+Package (0x0038)
+{
+    "/arc/client/rail_mxa",
+    "RAIL_VOLTAGE_LEVEL_NOMINAL",
+},
+Package (0x0038)
+{
+    "/arc/client/rail_mxc",
+    "RAIL_VOLTAGE_LEVEL_NOMINAL",
+},
+Package (0x0028)
+{
+    "/arc/client/rail_xo",
+    "XO_LEVEL_ON",
+},
+Package (0x0039)
+{
+    "/arc/client/rail_mmcx",
+    "RAIL_VOLTAGE_LEVEL_NOMINAL",
+},
+Package (0x003A)
+{
+    "/arc/client/rail_lpicx",
+    "RAIL_VOLTAGE_LEVEL_NOMINAL",
+},
+Package (0x003A)
+{
+    "/arc/client/rail_lpimx",
+    "RAIL_VOLTAGE_LEVEL_NOMINAL",
+},
+Package (0x0038)
+{
+    "/arc/client/rail_nsp",
+    "RAIL_VOLTAGE_LEVEL_NOMINAL",
+},

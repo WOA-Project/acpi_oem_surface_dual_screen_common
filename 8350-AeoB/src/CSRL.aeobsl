@@ -1,0 +1,107 @@
+"SUPPRESSIBLE_RESOURCES",
+Package (0x01BD)
+{
+    "SUPP_STATE_EXIT",
+    Package (0x01A5)
+    {
+        "RESOURCES",
+        Package (0x0036)
+        {
+            "FOOTSWITCH",
+            Package (0x0023)
+            {
+                "gcc_usb30_sec_gdsc",
+                0x0000000000000005,
+            },
+        },
+        Package (0x0037)
+        {
+            "FOOTSWITCH",
+            Package (0x0024)
+            {
+                "gcc_usb30_prim_gdsc",
+                0x0000000000000005,
+            },
+        },
+        Package (0x0035)
+        {
+            "FOOTSWITCH",
+            Package (0x0022)
+            {
+                "gcc_usb30_mp_gdsc",
+                0x0000000000000005,
+            },
+        },
+        Package (0x004C)
+        {
+            "FOOTSWITCH",
+            Package (0x0039)
+            {
+                "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_gds",
+                0x0000000000000005,
+            },
+        },
+        Package (0x0030)
+        {
+            "CLOCK",
+            Package (0x0022)
+            {
+                "gcc_camera_xo_clk",
+                0x0000000000000001,
+            },
+        },
+        Package (0x002E)
+        {
+            "CLOCK",
+            Package (0x0020)
+            {
+                "gcc_disp_xo_clk",
+                0x0000000000000001,
+            },
+        },
+        Package (0x002F)
+        {
+            "CLOCK",
+            Package (0x0021)
+            {
+                "gcc_video_xo_clk",
+                0x0000000000000001,
+            },
+        },
+    },
+},
+Package (0x00C0)
+{
+    "SUPP_STATE_ENTER",
+    Package (0x00A7)
+    {
+        "RESOURCES",
+        Package (0x0030)
+        {
+            "CLOCK",
+            Package (0x0022)
+            {
+                "gcc_camera_xo_clk",
+                0x0000000000000002,
+            },
+        },
+        Package (0x002E)
+        {
+            "CLOCK",
+            Package (0x0020)
+            {
+                "gcc_disp_xo_clk",
+                0x0000000000000002,
+            },
+        },
+        Package (0x002F)
+        {
+            "CLOCK",
+            Package (0x0021)
+            {
+                "gcc_video_xo_clk",
+                0x0000000000000002,
+            },
+        },
+    },
+},

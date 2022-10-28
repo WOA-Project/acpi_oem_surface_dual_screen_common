@@ -1,0 +1,94 @@
+Package (0x00E7)
+{
+    "DEVICE",
+    "\_SB.MMU0",
+    Package (0x00CA)
+    {
+        "COMPONENT",
+        0x0000000000000000,
+        Package (0x0054)
+        {
+            "FSTATE",
+            0x0000000000000000,
+            Package (0x0039)
+            {
+                "CLOCK",
+                Package (0x002B)
+                {
+                    "gcc_hlos1_vote_mmu_tcu_clk",
+                    0x0000000000000001,
+                },
+            },
+        },
+        Package (0x0054)
+        {
+            "FSTATE",
+            0x0000000000000001,
+            Package (0x0039)
+            {
+                "CLOCK",
+                Package (0x002B)
+                {
+                    "gcc_hlos1_vote_mmu_tcu_clk",
+                    0x0000000000000002,
+                },
+            },
+        },
+    },
+},
+Package (0x016F)
+{
+    "DEVICE",
+    "\_SB.MMU1",
+    Package (0x0152)
+    {
+        "COMPONENT",
+        0x0000000000000000,
+        Package (0x0098)
+        {
+            "FSTATE",
+            0x0000000000000000,
+            Package (0x003F)
+            {
+                "FOOTSWITCH",
+                Package (0x002C)
+                {
+                    "gcc_hlos1_vote_gpu_smmu_gds",
+                    0x0000000000000001,
+                },
+            },
+            Package (0x003A)
+            {
+                "CLOCK",
+                Package (0x002C)
+                {
+                    "gcc_hlos1_vote_gpu_smmu_clk",
+                    0x0000000000000001,
+                },
+            },
+        },
+        Package (0x0098)
+        {
+            "FSTATE",
+            0x0000000000000001,
+            Package (0x003A)
+            {
+                "CLOCK",
+                Package (0x002C)
+                {
+                    "gcc_hlos1_vote_gpu_smmu_clk",
+                    0x0000000000000002,
+                },
+            },
+            Package (0x003F)
+            {
+                "FOOTSWITCH",
+                Package (0x002C)
+                {
+                    "gcc_hlos1_vote_gpu_smmu_gds",
+                    0x0000000000000002,
+                },
+            },
+        },
+    },
+},

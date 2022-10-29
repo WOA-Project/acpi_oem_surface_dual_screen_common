@@ -544,8 +544,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             {
                 UBUF = UCSI /* \_SB_.PMGK.UCSI */
                 \_SB.UCSI.VERS = BVER /* \_SB_.PMGK.BVER */
-                \_SB.UCSI.CCI = BCCI /* \_SB_.PMGK.BCCI */
                 \_SB.UCSI.MSGI = BMGI /* \_SB_.PMGK.BMGI */
+                \_SB.UCSI.CCI = BCCI /* \_SB_.PMGK.BCCI */
                 Notify (\_SB.UCSI, Arg0)
                 Return (Zero)
             }
@@ -564,7 +564,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 While (One)
                 {
                     Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                    _T_0 = BPID /* \_SB_.PMGK.BPID */
+                    _T_0 = ToInteger (BPID)
                     If ((_T_0 == Zero))
                     {
                         \_SB.UCS0.EUPD |= One
@@ -16786,6 +16786,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
+        Scope (\_SB.NSP0)
+        {
+            Name (_CID, "QCOMFFE7")  // _CID: Compatible ID
+        }
+
         Device (LLC)
         {
             Name (_DEP, Package (One)  // _DEP: Dependencies
@@ -19181,6 +19186,12 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 })
                 Return (CHIF) /* \_SB_.GPU0.CHDV.CHIF */
             }
+
+            Name (LIDB, One)
+            Method (_LID, 0, NotSerialized)  // _LID: Lid Status
+            {
+                Return (LIDB) /* \_SB_.GPU0.LIDB */
+            }
         }
 
         Device (SCM0)
@@ -19264,6 +19275,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (GIO0)
         {
             Name (_HID, "QCOM1A0C")  // _HID: Hardware ID
+            Name (_CID, "QCOMFFE3")  // _CID: Compatible ID
             Name (_UID, Zero)  // _UID: Unique ID
             Alias (\_SB.PSUB, _SUB)
             OperationRegion (GPOR, GeneralPurposeIo, Zero, One)
@@ -19401,6 +19413,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Method (_E26, 0, NotSerialized)  // _Exx: Edge-Triggered GPE, xx=0x00-0xFF
             {
                 \_SB.LID0.LIDB = \_SB.GIO0.LIDR
+                \_SB.GPU0.LIDB = \_SB.GIO0.LIDR
                 Notify (\_SB.LID0, 0x80) // Status Change
             }
 
@@ -19447,6 +19460,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (IPCC)
         {
             Name (_HID, "QCOM1AC2")  // _HID: Hardware ID
+            Name (_CID, "QCOMFFE2")  // _CID: Compatible ID
             Name (_UID, Zero)  // _UID: Unique ID
             Alias (\_SB.PSUB, _SUB)
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -19995,6 +20009,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (QPPX)
         {
             Name (_HID, "QCOM1A96")  // _HID: Hardware ID
+            Name (_CID, "QCOMFFE4")  // _CID: Compatible ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Alias (\_SB.PSUB, _SUB)
@@ -25327,7 +25342,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (URS0)
         {
             Name (_HID, "QCOM1A8B")  // _HID: Hardware ID
-            Name (_CID, "PNP0CA1")  // _CID: Compatible ID
+            Name (_CID, Package (0x02)  // _CID: Compatible ID
+            {
+                "PNP0CA1", 
+                "QCOMFFE1"
+            })
             Alias (\_SB.PSUB, _SUB)
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
@@ -25930,6 +25949,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (UCS0)
         {
             Name (_HID, "QCOM1AA4")  // _HID: Hardware ID
+            Name (_CID, "QCOMFFE5")  // _CID: Compatible ID
             Name (_DEP, Package (One)  // _DEP: Dependencies
             {
                 \_SB.PEP0

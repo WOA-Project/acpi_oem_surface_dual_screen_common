@@ -1736,7 +1736,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Package (0x03)
                                     {
                                         "slpi", 
-                                        0x03, 
+                                        Zero, 
                                         0x03
                                     }, 
 
@@ -1750,7 +1750,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Package (0x03)
                                     {
                                         "modem", 
-                                        Zero, 
+                                        One, 
                                         0x05
                                     }, 
 

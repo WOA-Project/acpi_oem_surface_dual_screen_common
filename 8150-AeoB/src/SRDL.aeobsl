@@ -1,0 +1,102 @@
+"DEFAULT_RESOURCES",
+Package (0x00BA)
+{
+    "OPTIMIZATION",
+    "CPU_CNOC_VOTE",
+    "BOOT",
+    Package (0x008A)
+    {
+        "RESOURCES",
+        Package (0x0078)
+        {
+            "BUSARB",
+            Package (0x0069)
+            {
+                0x0000000000000003,
+                "ICBID_MASTER_APPSS_PROC",
+                "ICBID_SLAVE_CLK_CTL",
+                0x0000000000000001,
+                0x0000000000000001,
+                "SUPPRESSIBLE",
+            },
+        },
+    },
+},
+Package (0x01F9)
+{
+    "OPTIMIZATION",
+    "HW_DRM_VOTE",
+    "BOOT",
+    Package (0x01CB)
+    {
+        "RESOURCES",
+        Package (0x0057)
+        {
+            "NPARESOURCE",
+            Package (0x0043)
+            {
+                0x0000000000000001,
+                "/arc/client/rail_mmcx",
+                0x0000000000000040,
+                "SUPPRESSIBLE",
+            },
+        },
+        Package (0x002D)
+        {
+            "CLOCK",
+            Package (0x001F)
+            {
+                "disp_cc_xo_clk",
+                0x0000000000000001,
+            },
+        },
+        Package (0x0039)
+        {
+            "CLOCK",
+            Package (0x002B)
+            {
+                "disp_cc_xo_clk",
+                0x0000000000000009,
+                0x0000000000000008,
+            },
+        },
+        Package (0x002E)
+        {
+            "CLOCK",
+            Package (0x0020)
+            {
+                "gcc_disp_xo_clk",
+                0x0000000000000001,
+            },
+        },
+        Package (0x003A)
+        {
+            "CLOCK",
+            Package (0x002C)
+            {
+                "gcc_disp_xo_clk",
+                0x0000000000000009,
+                0x0000000000000008,
+            },
+        },
+        Package (0x0038)
+        {
+            "CLOCK",
+            Package (0x002A)
+            {
+                "disp_cc_mdss_rscc_ahb_clk",
+                0x0000000000000001,
+            },
+        },
+        Package (0x0044)
+        {
+            "CLOCK",
+            Package (0x0036)
+            {
+                "disp_cc_mdss_rscc_ahb_clk",
+                0x0000000000000009,
+                0x0000000000000008,
+            },
+        },
+    },
+},

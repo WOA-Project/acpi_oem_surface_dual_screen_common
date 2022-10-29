@@ -1,0 +1,41 @@
+Package (0x0052)
+{
+    "DEVICE",
+    "\_SB.STAT",
+    Package (0x0035)
+    {
+        "COMPONENT",
+        0x0000000000000000,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+    },
+},
+Package (0x0097)
+{
+    "DEVICE",
+    0x0000000000000081,
+    "\_SB.GIO0",
+    Package (0x0035)
+    {
+        "COMPONENT",
+        0x0000000000000000,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+    },
+    Package (0x0035)
+    {
+        "COMPONENT",
+        0x0000000000000001,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+    },
+},

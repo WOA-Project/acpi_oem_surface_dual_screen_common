@@ -1,0 +1,30 @@
+Package (0x00A3)
+{
+    "DEVICE",
+    "\_SB.SDFR",
+    Package (0x0086)
+    {
+        "COMPONENT",
+        0x0000000000000000,
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000000,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000001,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000002,
+        },
+        Package (0x0017)
+        {
+            "FSTATE",
+            0x0000000000000003,
+        },
+    },
+},

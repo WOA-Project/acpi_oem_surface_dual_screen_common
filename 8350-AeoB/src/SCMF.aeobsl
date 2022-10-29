@@ -1,19 +1,19 @@
-Package (0x00FD)
+Package ()
 {
     "DEVICE",
     "\_SB.SCM0",
-    Package (0x00E0)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_cx",
@@ -21,14 +21,14 @@ Package (0x00FD)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_cx",

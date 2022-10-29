@@ -1,39 +1,39 @@
-Package (0x0024)
+Package ()
 {
     "\_SB.SYSM.CLUS.CPU0",
     0x0000000000000010,
 },
-Package (0x0024)
+Package ()
 {
     "\_SB.SYSM.CLUS.CPU1",
     0x0000000000000011,
 },
-Package (0x0024)
+Package ()
 {
     "\_SB.SYSM.CLUS.CPU2",
     0x0000000000000012,
 },
-Package (0x0024)
+Package ()
 {
     "\_SB.SYSM.CLUS.CPU3",
     0x0000000000000013,
 },
-Package (0x0024)
+Package ()
 {
     "\_SB.SYSM.CLUS.CPU4",
     0x0000000000000014,
 },
-Package (0x0024)
+Package ()
 {
     "\_SB.SYSM.CLUS.CPU5",
     0x0000000000000015,
 },
-Package (0x0024)
+Package ()
 {
     "\_SB.SYSM.CLUS.CPU6",
     0x0000000000000016,
 },
-Package (0x0024)
+Package ()
 {
     "\_SB.SYSM.CLUS.CPU7",
     0x0000000000000017,

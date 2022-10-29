@@ -1,10 +1,10 @@
-Package (0x002A)
+Package ()
 {
     "HLOS_DRV",
     0x0000000000000002,
     "/icb/arbiter",
 },
-Package (0x0035)
+Package ()
 {
     "DISPLAY_DRV",
     0x0000000000000009,

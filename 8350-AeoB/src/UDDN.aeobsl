@@ -1,18 +1,18 @@
-Package (0x0079)
+Package ()
 {
     "DEVICE",
     0x0000000000000002,
     "\_SB.UARD",
-    Package (0x0050)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,

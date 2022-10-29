@@ -1,24 +1,24 @@
-Package (0x060A)
+Package ()
 {
     "DEVICE",
     "\_SB.SCSS",
-    Package (0x05B7)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x01D2)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
-            Package (0x006C)
+            Package ()
             {
                 "PMICVREGVOTE",
-                Package (0x0057)
+                Package ()
                 {
                     "PPP_RESOURCE_ID_LDO1_A",
                     0x0000000000000001,
@@ -28,10 +28,10 @@ Package (0x060A)
                     0x0000000000000000,
                 },
             },
-            Package (0x006C)
+            Package ()
             {
                 "PMICVREGVOTE",
-                Package (0x0057)
+                Package ()
                 {
                     "PPP_RESOURCE_ID_LDO5_A",
                     0x0000000000000001,
@@ -41,10 +41,10 @@ Package (0x060A)
                     0x0000000000000000,
                 },
             },
-            Package (0x006C)
+            Package ()
             {
                 "PMICVREGVOTE",
-                Package (0x0057)
+                Package ()
                 {
                     "PPP_RESOURCE_ID_LDO8_C",
                     0x0000000000000001,
@@ -54,10 +54,10 @@ Package (0x060A)
                     0x0000000000000000,
                 },
             },
-            Package (0x0067)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0058)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_APPSS_PROC",
@@ -67,14 +67,14 @@ Package (0x060A)
                 },
             },
         },
-        Package (0x01D2)
+        Package ()
         {
             "PSTATE",
             0x0000000000000001,
-            Package (0x006C)
+            Package ()
             {
                 "PMICVREGVOTE",
-                Package (0x0057)
+                Package ()
                 {
                     "PPP_RESOURCE_ID_LDO1_A",
                     0x0000000000000001,
@@ -84,10 +84,10 @@ Package (0x060A)
                     0x0000000000000000,
                 },
             },
-            Package (0x006C)
+            Package ()
             {
                 "PMICVREGVOTE",
-                Package (0x0057)
+                Package ()
                 {
                     "PPP_RESOURCE_ID_LDO5_A",
                     0x0000000000000001,
@@ -97,10 +97,10 @@ Package (0x060A)
                     0x0000000000000000,
                 },
             },
-            Package (0x006C)
+            Package ()
             {
                 "PMICVREGVOTE",
-                Package (0x0057)
+                Package ()
                 {
                     "PPP_RESOURCE_ID_LDO8_C",
                     0x0000000000000001,
@@ -110,10 +110,10 @@ Package (0x060A)
                     0x0000000000000000,
                 },
             },
-            Package (0x0067)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0058)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_APPSS_PROC",
@@ -123,14 +123,14 @@ Package (0x060A)
                 },
             },
         },
-        Package (0x01D2)
+        Package ()
         {
             "PSTATE",
             0x0000000000000002,
-            Package (0x006C)
+            Package ()
             {
                 "PMICVREGVOTE",
-                Package (0x0057)
+                Package ()
                 {
                     "PPP_RESOURCE_ID_LDO1_A",
                     0x0000000000000001,
@@ -140,10 +140,10 @@ Package (0x060A)
                     0x0000000000000000,
                 },
             },
-            Package (0x006C)
+            Package ()
             {
                 "PMICVREGVOTE",
-                Package (0x0057)
+                Package ()
                 {
                     "PPP_RESOURCE_ID_LDO5_A",
                     0x0000000000000001,
@@ -153,10 +153,10 @@ Package (0x060A)
                     0x0000000000000000,
                 },
             },
-            Package (0x006C)
+            Package ()
             {
                 "PMICVREGVOTE",
-                Package (0x0057)
+                Package ()
                 {
                     "PPP_RESOURCE_ID_LDO8_C",
                     0x0000000000000001,
@@ -166,10 +166,10 @@ Package (0x060A)
                     0x0000000000000000,
                 },
             },
-            Package (0x0067)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0058)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_APPSS_PROC",
@@ -180,12 +180,12 @@ Package (0x060A)
             },
         },
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000000,
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000003,

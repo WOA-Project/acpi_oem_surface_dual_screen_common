@@ -1,75 +1,75 @@
-Package (0x07A8)
+Package ()
 {
     "DEVICE",
     0x0000000000000003,
     "\_SB.ADSP",
-    Package (0x0749)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0258)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_cx",
                     0x0000000000000180,
                 },
             },
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_mx",
                     0x0000000000000180,
                 },
             },
-            Package (0x0047)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0033)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_lpicx",
                     0x0000000000000180,
                 },
             },
-            Package (0x0047)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0033)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_lpimx",
                     0x0000000000000180,
                 },
             },
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
                     0x0000000000000080,
                 },
             },
-            Package (0x0064)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0055)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_LPASS_PROC",
@@ -78,10 +78,10 @@ Package (0x07A8)
                     0x0000000000000001,
                 },
             },
-            Package (0x0067)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0058)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_LPASS_PROC",
@@ -91,64 +91,64 @@ Package (0x07A8)
                 },
             },
         },
-        Package (0x0258)
+        Package ()
         {
             "PSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_cx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_mx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0047)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0033)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_lpicx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0047)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0033)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_lpimx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
                     0x0000000000000000,
                 },
             },
-            Package (0x0064)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0055)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_LPASS_PROC",
@@ -157,10 +157,10 @@ Package (0x07A8)
                     0x0000000000000000,
                 },
             },
-            Package (0x0067)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0058)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_LPASS_PROC",
@@ -170,64 +170,64 @@ Package (0x07A8)
                 },
             },
         },
-        Package (0x0258)
+        Package ()
         {
             "PSTATE",
             0x0000000000000002,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_cx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_mx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0047)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0033)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_lpicx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0047)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0033)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_lpimx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
                     0x0000000000000000,
                 },
             },
-            Package (0x0064)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0055)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_LPASS_PROC",
@@ -236,10 +236,10 @@ Package (0x07A8)
                     0x0000000000000000,
                 },
             },
-            Package (0x0067)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0058)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_LPASS_PROC",
@@ -250,12 +250,12 @@ Package (0x07A8)
             },
         },
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000000,
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000003,

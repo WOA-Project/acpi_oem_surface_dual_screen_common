@@ -1,14 +1,14 @@
-Package (0x0151)
+Package ()
 {
     "COMPONENT",
     0x0000000000000000,
-    Package (0x0095)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_csiphy0_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -19,13 +19,13 @@ Package (0x0151)
             0x0000000017D78400,
         },
     },
-    Package (0x009A)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_csi0phytimer_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -37,17 +37,17 @@ Package (0x0151)
         },
     },
 },
-Package (0x0151)
+Package ()
 {
     "COMPONENT",
     0x0000000000000001,
-    Package (0x0095)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_csiphy1_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -58,13 +58,13 @@ Package (0x0151)
             0x0000000017D78400,
         },
     },
-    Package (0x009A)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_csi1phytimer_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -76,17 +76,17 @@ Package (0x0151)
         },
     },
 },
-Package (0x0151)
+Package ()
 {
     "COMPONENT",
     0x0000000000000002,
-    Package (0x0095)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_csiphy2_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -97,13 +97,13 @@ Package (0x0151)
             0x0000000017D78400,
         },
     },
-    Package (0x009A)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_csi2phytimer_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -115,17 +115,17 @@ Package (0x0151)
         },
     },
 },
-Package (0x0151)
+Package ()
 {
     "COMPONENT",
     0x0000000000000003,
-    Package (0x0095)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_csiphy3_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -136,13 +136,13 @@ Package (0x0151)
             0x0000000017D78400,
         },
     },
-    Package (0x009A)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_csi3phytimer_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,

@@ -1,4 +1,4 @@
-Package (0x0075)
+Package ()
 {
     "com.surface.sensormodule.ffc_ov5693.bin",
     "com.surface.tuned.ffc_ov5693.bin",

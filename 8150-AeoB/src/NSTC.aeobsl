@@ -1,176 +1,176 @@
-Package (0x056C)
+Package ()
 {
     0x0000000000000020,
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_053B",
         0x0000000000000000,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_053C",
         0x0000000000000001,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_053D",
         0x0000000000000002,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_053E",
         0x0000000000000003,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_053F",
         0x0000000000000004,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0540",
         0x0000000000000005,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0541",
         0x0000000000000006,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0542",
         0x0000000000000007,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0543",
         0x0000000000000008,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0544",
         0x0000000000000009,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0545",
         0x000000000000000A,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0546",
         0x000000000000000B,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0547",
         0x000000000000000C,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0548",
         0x000000000000000D,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0549",
         0x000000000000000E,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_054A",
         0x000000000000000F,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_054B",
         0x0000000000000010,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_054C",
         0x0000000000000011,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_054D",
         0x0000000000000012,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_054E",
         0x0000000000000013,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_054F",
         0x0000000000000014,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0550",
         0x0000000000000015,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0551",
         0x0000000000000016,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0552",
         0x0000000000000017,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0553",
         0x0000000000000018,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0554",
         0x0000000000000019,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0555",
         0x000000000000001A,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0556",
         0x000000000000001B,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0557",
         0x000000000000001C,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0558",
         0x000000000000001D,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_0559",
         0x000000000000001E,
     },
-    Package (0x0027)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_059C",
         0x000000000000001F,
     },
 },
-Package (0x03AF)
+Package ()
 {
     0x0000000000000005,
-    Package (0x0073)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_055C",
         0x0000000000000020,
         0x0000000000000005,
-        Package (0x003C)
+        Package ()
         {
             0x0000000000000001,
             0x0000000000000002,
@@ -179,12 +179,12 @@ Package (0x03AF)
             0x0000000000000005,
         },
     },
-    Package (0x00A3)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_055D",
         0x0000000000000021,
         0x0000000000000009,
-        Package (0x006C)
+        Package ()
         {
             0x0000000000000006,
             0x0000000000000007,
@@ -197,12 +197,12 @@ Package (0x03AF)
             0x000000000000000E,
         },
     },
-    Package (0x01B7)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_055E",
         0x0000000000000022,
         0x0000000000000020,
-        Package (0x0180)
+        Package ()
         {
             0x0000000000000000,
             0x0000000000000001,
@@ -238,12 +238,12 @@ Package (0x03AF)
             0x000000000000001F,
         },
     },
-    Package (0x0067)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_059D",
         0x0000000000000023,
         0x0000000000000004,
-        Package (0x0030)
+        Package ()
         {
             0x000000000000000F,
             0x000000000000001B,
@@ -251,12 +251,12 @@ Package (0x03AF)
             0x000000000000001D,
         },
     },
-    Package (0x005B)
+    Package ()
     {
         "ACPI\VEN_QCOM&DEV_059E",
         0x0000000000000024,
         0x0000000000000003,
-        Package (0x0024)
+        Package ()
         {
             0x0000000000000017,
             0x0000000000000019,
@@ -264,94 +264,94 @@ Package (0x03AF)
         },
     },
 },
-Package (0x0397)
+Package ()
 {
     0x000000000000000D,
-    Package (0x0042)
+    Package ()
     {
         "PMIC_THERM",
         "ACPI\VEN_QCOM&DEV_0562",
         0x0000000000000000,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "SYS_THERM1",
         "ACPI\VEN_QCOM&DEV_0563",
         0x0000000000000001,
         0x0000000000000000,
     },
-    Package (0x0040)
+    Package ()
     {
         "PA_THERM",
         "ACPI\VEN_QCOM&DEV_0564",
         0x0000000000000002,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "PMIC_TEMP2",
         "ACPI\VEN_QCOM&DEV_0565",
         0x0000000000000003,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "SYS_THERM2",
         "ACPI\VEN_QCOM&DEV_0566",
         0x0000000000000004,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "SYS_THERM3",
         "ACPI\VEN_QCOM&DEV_0567",
         0x0000000000000005,
         0x0000000000000000,
     },
-    Package (0x0041)
+    Package ()
     {
         "PA_THERM1",
         "ACPI\VEN_QCOM&DEV_0568",
         0x0000000000000006,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "PMIC_TEMP3",
         "ACPI\VEN_QCOM&DEV_0569",
         0x0000000000000007,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "SYS_THERM4",
         "ACPI\VEN_QCOM&DEV_056A",
         0x0000000000000008,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "SYS_THERM5",
         "ACPI\VEN_QCOM&DEV_056B",
         0x0000000000000009,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "SYS_THERM6",
         "ACPI\VEN_QCOM&DEV_05D9",
         0x000000000000000A,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "SYS_THERM7",
         "ACPI\VEN_QCOM&DEV_05DA",
         0x000000000000000B,
         0x0000000000000000,
     },
-    Package (0x0042)
+    Package ()
     {
         "SYS_THERM8",
         "ACPI\VEN_QCOM&DEV_05DB",
@@ -359,10 +359,10 @@ Package (0x0397)
         0x0000000000000000,
     },
 },
-Package (0x004C)
+Package ()
 {
     0x0000000000000001,
-    Package (0x003C)
+    Package ()
     {
         0x0000000000000002,
         0x0000000000000ADC,
@@ -371,80 +371,80 @@ Package (0x004C)
         0x0000000000000001,
     },
 },
-Package (0x00E4)
+Package ()
 {
     0x0000000000000004,
-    Package (0x0032)
+    Package ()
     {
         "cpuv_restriction_cold",
         0x0000000000000001,
         0x0000000000000000,
     },
-    Package (0x0032)
+    Package ()
     {
         "cpuv_restriction_cold",
         0x0000000000000001,
         0x0000000000000001,
     },
-    Package (0x0032)
+    Package ()
     {
         "cpuv_restriction_cold",
         0x0000000000000001,
         0x0000000000000043,
     },
-    Package (0x0032)
+    Package ()
     {
         "cpuv_restriction_cold",
         0x0000000000000001,
         0x0000000000000053,
     },
 },
-Package (0x014C)
+Package ()
 {
     0x0000000000000008,
-    Package (0x0024)
+    Package ()
     {
         0x0000000000000000,
         0x0000000000000000,
         0x0000000000000000,
     },
-    Package (0x0024)
+    Package ()
     {
         0x0000000000000001,
         0x0000000000000002,
         0x0000000000000000,
     },
-    Package (0x0024)
+    Package ()
     {
         0x0000000000000002,
         0x0000000000000003,
         0x0000000000000000,
     },
-    Package (0x0024)
+    Package ()
     {
         0x0000000000000003,
         0x0000000000000004,
         0x0000000000000000,
     },
-    Package (0x0024)
+    Package ()
     {
         0x0000000000000004,
         0x0000000000000001,
         0x0000000000000000,
     },
-    Package (0x0024)
+    Package ()
     {
         0x0000000000000005,
         0x0000000000000001,
         0x0000000000000001,
     },
-    Package (0x0024)
+    Package ()
     {
         0x0000000000000006,
         0x0000000000000001,
         0x0000000000000002,
     },
-    Package (0x0024)
+    Package ()
     {
         0x0000000000000007,
         0x0000000000000001,

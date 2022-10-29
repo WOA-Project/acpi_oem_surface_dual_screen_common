@@ -1,25 +1,25 @@
-Package (0x0416)
+Package ()
 {
     "DEVICE",
     "\_SB.BTH0",
-    Package (0x0035)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
     },
-    Package (0x01DE)
+    Package ()
     {
         "DSTATE",
         0x0000000000000000,
-        Package (0x006D)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0058)
+            Package ()
             {
                 "PPP_RESOURCE_ID_SMPS1_C",
                 0x0000000000000002,
@@ -29,10 +29,10 @@ Package (0x0416)
                 0x0000000000000000,
             },
         },
-        Package (0x006E)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0059)
+            Package ()
             {
                 "PPP_RESOURCE_ID_SMPS12_B",
                 0x0000000000000002,
@@ -42,10 +42,10 @@ Package (0x0416)
                 0x0000000000000000,
             },
         },
-        Package (0x006E)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0059)
+            Package ()
             {
                 "PPP_RESOURCE_ID_SMPS11_B",
                 0x0000000000000002,
@@ -55,10 +55,10 @@ Package (0x0416)
                 0x0000000000000000,
             },
         },
-        Package (0x006E)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0059)
+            Package ()
             {
                 "PPP_RESOURCE_ID_SMPS10_B",
                 0x0000000000000002,
@@ -69,14 +69,14 @@ Package (0x0416)
             },
         },
     },
-    Package (0x01DE)
+    Package ()
     {
         "DSTATE",
         0x0000000000000003,
-        Package (0x006D)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0058)
+            Package ()
             {
                 "PPP_RESOURCE_ID_SMPS1_C",
                 0x0000000000000002,
@@ -86,10 +86,10 @@ Package (0x0416)
                 0x0000000000000000,
             },
         },
-        Package (0x006E)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0059)
+            Package ()
             {
                 "PPP_RESOURCE_ID_SMPS12_B",
                 0x0000000000000002,
@@ -99,10 +99,10 @@ Package (0x0416)
                 0x0000000000000000,
             },
         },
-        Package (0x006E)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0059)
+            Package ()
             {
                 "PPP_RESOURCE_ID_SMPS11_B",
                 0x0000000000000002,
@@ -112,10 +112,10 @@ Package (0x0416)
                 0x0000000000000000,
             },
         },
-        Package (0x006E)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0059)
+            Package ()
             {
                 "PPP_RESOURCE_ID_SMPS10_B",
                 0x0000000000000002,

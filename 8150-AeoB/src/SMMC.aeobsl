@@ -1,33 +1,33 @@
-Package (0x00E7)
+Package ()
 {
     "DEVICE",
     "\_SB.MMU0",
-    Package (0x00CA)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0054)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0039)
+            Package ()
             {
                 "CLOCK",
-                Package (0x002B)
+                Package ()
                 {
                     "gcc_hlos1_vote_mmu_tcu_clk",
                     0x0000000000000001,
                 },
             },
         },
-        Package (0x0054)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0039)
+            Package ()
             {
                 "CLOCK",
-                Package (0x002B)
+                Package ()
                 {
                     "gcc_hlos1_vote_mmu_tcu_clk",
                     0x0000000000000002,
@@ -36,54 +36,54 @@ Package (0x00E7)
         },
     },
 },
-Package (0x016F)
+Package ()
 {
     "DEVICE",
     "\_SB.MMU1",
-    Package (0x0152)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0098)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x003F)
+            Package ()
             {
                 "FOOTSWITCH",
-                Package (0x002C)
+                Package ()
                 {
                     "gcc_hlos1_vote_gpu_smmu_gds",
                     0x0000000000000001,
                 },
             },
-            Package (0x003A)
+            Package ()
             {
                 "CLOCK",
-                Package (0x002C)
+                Package ()
                 {
                     "gcc_hlos1_vote_gpu_smmu_clk",
                     0x0000000000000001,
                 },
             },
         },
-        Package (0x0098)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x003A)
+            Package ()
             {
                 "CLOCK",
-                Package (0x002C)
+                Package ()
                 {
                     "gcc_hlos1_vote_gpu_smmu_clk",
                     0x0000000000000002,
                 },
             },
-            Package (0x003F)
+            Package ()
             {
                 "FOOTSWITCH",
-                Package (0x002C)
+                Package ()
                 {
                     "gcc_hlos1_vote_gpu_smmu_gds",
                     0x0000000000000002,

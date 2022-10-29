@@ -1,14 +1,14 @@
-Package (0x01EC)
+Package ()
 {
     "COMPONENT",
     0x0000000000000000,
-    Package (0x0093)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_ife_0_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -19,13 +19,13 @@ Package (0x01EC)
             0x0000000017D78400,
         },
     },
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_ife_0_csid_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -36,13 +36,13 @@ Package (0x01EC)
             0x0000000017D78400,
         },
     },
-    Package (0x009B)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_ife_0_cphy_rx_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -54,17 +54,17 @@ Package (0x01EC)
         },
     },
 },
-Package (0x01EC)
+Package ()
 {
     "COMPONENT",
     0x0000000000000001,
-    Package (0x0093)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_ife_1_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -75,13 +75,13 @@ Package (0x01EC)
             0x0000000017D78400,
         },
     },
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_ife_1_csid_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -92,13 +92,13 @@ Package (0x01EC)
             0x0000000017D78400,
         },
     },
-    Package (0x009B)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_ife_1_cphy_rx_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -110,17 +110,17 @@ Package (0x01EC)
         },
     },
 },
-Package (0x01EC)
+Package ()
 {
     "COMPONENT",
     0x0000000000000002,
-    Package (0x0093)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_ife_2_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -131,13 +131,13 @@ Package (0x01EC)
             0x0000000017D78400,
         },
     },
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_ife_2_csid_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -148,13 +148,13 @@ Package (0x01EC)
             0x0000000017D78400,
         },
     },
-    Package (0x009B)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_ife_2_cphy_rx_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -166,17 +166,17 @@ Package (0x01EC)
         },
     },
 },
-Package (0x01EC)
+Package ()
 {
     "COMPONENT",
     0x0000000000000003,
-    Package (0x0093)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_ife_3_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -187,13 +187,13 @@ Package (0x01EC)
             0x0000000017D78400,
         },
     },
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_ife_3_csid_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -204,13 +204,13 @@ Package (0x01EC)
             0x0000000017D78400,
         },
     },
-    Package (0x009B)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_ife_3_cphy_rx_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -222,17 +222,17 @@ Package (0x01EC)
         },
     },
 },
-Package (0x01FC)
+Package ()
 {
     "COMPONENT",
     0x0000000000000004,
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_ife_lite_0_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -243,13 +243,13 @@ Package (0x01FC)
             0x000000001312D000,
         },
     },
-    Package (0x009E)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         " cam_cc_ife_lite_0_csid_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -260,13 +260,13 @@ Package (0x01FC)
             0x0000000017D78400,
         },
     },
-    Package (0x00A0)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_ife_lite_0_cphy_rx_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -278,17 +278,17 @@ Package (0x01FC)
         },
     },
 },
-Package (0x01FB)
+Package ()
 {
     "COMPONENT",
     0x0000000000000005,
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_ife_lite_1_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -299,13 +299,13 @@ Package (0x01FB)
             0x000000001312D000,
         },
     },
-    Package (0x009D)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_ife_lite_1_csid_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -316,13 +316,13 @@ Package (0x01FB)
             0x0000000017D78400,
         },
     },
-    Package (0x00A0)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_ife_lite_1_cphy_rx_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -334,17 +334,17 @@ Package (0x01FB)
         },
     },
 },
-Package (0x01FB)
+Package ()
 {
     "COMPONENT",
     0x0000000000000006,
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_ife_lite_2_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -355,13 +355,13 @@ Package (0x01FB)
             0x000000001312D000,
         },
     },
-    Package (0x009D)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_ife_lite_2_csid_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -372,13 +372,13 @@ Package (0x01FB)
             0x0000000017D78400,
         },
     },
-    Package (0x00A0)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_ife_lite_2_cphy_rx_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -390,17 +390,17 @@ Package (0x01FB)
         },
     },
 },
-Package (0x01FB)
+Package ()
 {
     "COMPONENT",
     0x0000000000000007,
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_ife_lite_3_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -411,13 +411,13 @@ Package (0x01FB)
             0x000000001312D000,
         },
     },
-    Package (0x009D)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_ife_lite_3_csid_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -428,13 +428,13 @@ Package (0x01FB)
             0x0000000017D78400,
         },
     },
-    Package (0x00A0)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_ife_lite_3_cphy_rx_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -446,17 +446,17 @@ Package (0x01FB)
         },
     },
 },
-Package (0x00AF)
+Package ()
 {
     "COMPONENT",
     0x0000000000000008,
-    Package (0x0091)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_icp_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -468,17 +468,17 @@ Package (0x00AF)
         },
     },
 },
-Package (0x0280)
+Package ()
 {
     "COMPONENT",
     0x0000000000000009,
-    Package (0x0093)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_ipe_0_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -489,13 +489,13 @@ Package (0x0280)
             0x000000001312D000,
         },
     },
-    Package (0x0093)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_ipe_1_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -506,13 +506,13 @@ Package (0x0280)
             0x000000001312D000,
         },
     },
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_ipe_0_areg_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -523,13 +523,13 @@ Package (0x0280)
             0x0000000005F5E100,
         },
     },
-    Package (0x0098)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000003,
         0x0000000000000000,
         "cam_cc_ipe_1_areg_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -541,17 +541,17 @@ Package (0x0280)
         },
     },
 },
-Package (0x0149)
+Package ()
 {
     "COMPONENT",
     0x000000000000000A,
-    Package (0x0091)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_bps_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -562,13 +562,13 @@ Package (0x0149)
             0x000000000BEBC200,
         },
     },
-    Package (0x0096)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_bps_areg_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -580,17 +580,17 @@ Package (0x0149)
         },
     },
 },
-Package (0x00B0)
+Package ()
 {
     "COMPONENT",
     0x000000000000000B,
-    Package (0x0092)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_lrme_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,

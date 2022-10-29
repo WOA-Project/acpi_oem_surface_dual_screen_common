@@ -1,20 +1,20 @@
 "DEBUGGERS",
-Package (0x02F0)
+Package ()
 {
     "TYPE",
     "SERIAL",
-    Package (0x001C)
+    Package ()
     {
         "INSTANCES",
         "\_SB.UARD",
     },
-    Package (0x02A6)
+    Package ()
     {
         "DEBUG_ON",
-        Package (0x0070)
+        Package ()
         {
             "BUSARB",
-            Package (0x0061)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_QUP_2",
@@ -24,10 +24,10 @@ Package (0x02F0)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x0076)
+        Package ()
         {
             "BUSARB",
-            Package (0x0067)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_APPSS_PROC",
@@ -37,10 +37,10 @@ Package (0x02F0)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x007B)
+        Package ()
         {
             "BUSARB",
-            Package (0x006C)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_QUP_CORE_2",
@@ -50,73 +50,73 @@ Package (0x02F0)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x0037)
+        Package ()
         {
             "CLOCK",
-            Package (0x0029)
+            Package ()
             {
                 "gcc_qupv3_wrap2_core_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x003A)
+        Package ()
         {
             "CLOCK",
-            Package (0x002C)
+            Package ()
             {
                 "gcc_qupv3_wrap2_core_2x_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0039)
+        Package ()
         {
             "CLOCK",
-            Package (0x002B)
+            Package ()
             {
                 "gcc_qupv3_wrap_2_m_ahb_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0039)
+        Package ()
         {
             "CLOCK",
-            Package (0x002B)
+            Package ()
             {
                 "gcc_qupv3_wrap_2_s_ahb_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0035)
+        Package ()
         {
             "CLOCK",
-            Package (0x0027)
+            Package ()
             {
                 "gcc_qupv3_wrap2_s1_clk",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x000E)
+    Package ()
     {
         "DEBUG_OFF",
     },
 },
-Package (0x0BFD)
+Package ()
 {
     "TYPE",
     "KDNETEEM",
-    Package (0x001C)
+    Package ()
     {
         "INSTANCES",
         "\_SB.URS1",
     },
-    Package (0x080B)
+    Package ()
     {
         "DEBUG_ON",
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO1_C",
                 0x0000000000000001,
@@ -126,10 +126,10 @@ Package (0x0BFD)
                 0x0000000000000000,
             },
         },
-        Package (0x006D)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0058)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO13_C",
                 0x0000000000000001,
@@ -139,10 +139,10 @@ Package (0x0BFD)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO3_B",
                 0x0000000000000001,
@@ -152,10 +152,10 @@ Package (0x0BFD)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO4_B",
                 0x0000000000000001,
@@ -165,10 +165,10 @@ Package (0x0BFD)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO6_B",
                 0x0000000000000001,
@@ -178,46 +178,46 @@ Package (0x0BFD)
                 0x0000000000000000,
             },
         },
-        Package (0x0036)
+        Package ()
         {
             "FOOTSWITCH",
-            Package (0x0023)
+            Package ()
             {
                 "gcc_usb30_sec_gdsc",
                 0x0000000000000001,
             },
         },
-        Package (0x004C)
+        Package ()
         {
             "FOOTSWITCH",
-            Package (0x0039)
+            Package ()
             {
                 "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_gds",
                 0x0000000000000001,
             },
         },
-        Package (0x0036)
+        Package ()
         {
             "CLOCK",
-            Package (0x0028)
+            Package ()
             {
                 "gcc_usb30_sec_sleep_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0038)
+        Package ()
         {
             "CLOCK",
-            Package (0x002A)
+            Package ()
             {
                 "gcc_usb3_sec_phy_pipe_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0051)
+        Package ()
         {
             "CLOCK",
-            Package (0x0043)
+            Package ()
             {
                 "gcc_aggre_usb3_sec_axi_clk",
                 0x0000000000000008,
@@ -225,10 +225,10 @@ Package (0x0BFD)
                 0x0000000000000009,
             },
         },
-        Package (0x0053)
+        Package ()
         {
             "CLOCK",
-            Package (0x0045)
+            Package ()
             {
                 "gcc_cfg_noc_usb3_sec_axi_clk",
                 0x0000000000000008,
@@ -236,20 +236,20 @@ Package (0x0BFD)
                 0x0000000000000009,
             },
         },
-        Package (0x0043)
+        Package ()
         {
             "CLOCK",
-            Package (0x0035)
+            Package ()
             {
                 "gcc_usb30_sec_master_clk",
                 0x0000000000000009,
                 0x0000000000000012,
             },
         },
-        Package (0x004F)
+        Package ()
         {
             "CLOCK",
-            Package (0x0041)
+            Package ()
             {
                 "gcc_usb30_sec_master_clk",
                 0x0000000000000008,
@@ -257,10 +257,10 @@ Package (0x0BFD)
                 0x0000000000000009,
             },
         },
-        Package (0x004F)
+        Package ()
         {
             "CLOCK",
-            Package (0x0041)
+            Package ()
             {
                 "gcc_usb3_sec_phy_aux_clk",
                 0x0000000000000008,
@@ -268,10 +268,10 @@ Package (0x0BFD)
                 0x0000000000000007,
             },
         },
-        Package (0x0053)
+        Package ()
         {
             "CLOCK",
-            Package (0x0045)
+            Package ()
             {
                 "gcc_usb3_sec_phy_com_aux_clk",
                 0x0000000000000008,
@@ -279,55 +279,55 @@ Package (0x0BFD)
                 0x0000000000000007,
             },
         },
-        Package (0x0038)
+        Package ()
         {
             "CLOCK",
-            Package (0x002A)
+            Package ()
             {
                 "gcc_aggre_usb_noc_axi_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x003E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0030)
+            Package ()
             {
                 "gcc_aggre_usb_noc_north_axi_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x003E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0030)
+            Package ()
             {
                 "gcc_aggre_usb_noc_south_axi_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0036)
+        Package ()
         {
             "CLOCK",
-            Package (0x0028)
+            Package ()
             {
                 "gcc_sys_noc_usb_axi_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0047)
+        Package ()
         {
             "CLOCK",
-            Package (0x0039)
+            Package ()
             {
                 "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0084)
+        Package ()
         {
             "BUSARB",
-            Package (0x0075)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_APPSS_PROC",
@@ -338,10 +338,10 @@ Package (0x0BFD)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x007E)
+        Package ()
         {
             "BUSARB",
-            Package (0x006F)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_USB3_1",
@@ -352,19 +352,19 @@ Package (0x0BFD)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x0031)
+        Package ()
         {
             "CLOCK",
-            Package (0x0023)
+            Package ()
             {
                 "gcc_usb4_clkref_en",
                 0x0000000000000001,
             },
         },
-        Package (0x0055)
+        Package ()
         {
             "NPARESOURCE",
-            Package (0x0041)
+            Package ()
             {
                 0x0000000000000001,
                 "/arc/client/rail_cx",
@@ -373,22 +373,22 @@ Package (0x0BFD)
             },
         },
     },
-    Package (0x03B4)
+    Package ()
     {
         "DEBUG_OFF",
-        Package (0x0031)
+        Package ()
         {
             "CLOCK",
-            Package (0x0023)
+            Package ()
             {
                 "gcc_usb4_clkref_en",
                 0x0000000000000002,
             },
         },
-        Package (0x0053)
+        Package ()
         {
             "CLOCK",
-            Package (0x0045)
+            Package ()
             {
                 "gcc_usb3_sec_phy_com_aux_clk",
                 0x000000000000000C,
@@ -396,10 +396,10 @@ Package (0x0BFD)
                 0x0000000000000007,
             },
         },
-        Package (0x004F)
+        Package ()
         {
             "CLOCK",
-            Package (0x0041)
+            Package ()
             {
                 "gcc_usb3_sec_phy_aux_clk",
                 0x000000000000000C,
@@ -407,10 +407,10 @@ Package (0x0BFD)
                 0x0000000000000007,
             },
         },
-        Package (0x004F)
+        Package ()
         {
             "CLOCK",
-            Package (0x0041)
+            Package ()
             {
                 "gcc_usb30_sec_master_clk",
                 0x000000000000000C,
@@ -418,20 +418,20 @@ Package (0x0BFD)
                 0x0000000000000009,
             },
         },
-        Package (0x0043)
+        Package ()
         {
             "CLOCK",
-            Package (0x0035)
+            Package ()
             {
                 "gcc_usb30_sec_master_clk",
                 0x0000000000000009,
                 0x0000000000000012,
             },
         },
-        Package (0x0053)
+        Package ()
         {
             "CLOCK",
-            Package (0x0045)
+            Package ()
             {
                 "gcc_cfg_noc_usb3_sec_axi_clk",
                 0x000000000000000C,
@@ -439,10 +439,10 @@ Package (0x0BFD)
                 0x0000000000000009,
             },
         },
-        Package (0x0051)
+        Package ()
         {
             "CLOCK",
-            Package (0x0043)
+            Package ()
             {
                 "gcc_aggre_usb3_sec_axi_clk",
                 0x000000000000000C,
@@ -450,55 +450,55 @@ Package (0x0BFD)
                 0x0000000000000009,
             },
         },
-        Package (0x0038)
+        Package ()
         {
             "CLOCK",
-            Package (0x002A)
+            Package ()
             {
                 "gcc_usb3_sec_phy_pipe_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0038)
+        Package ()
         {
             "CLOCK",
-            Package (0x002A)
+            Package ()
             {
                 "gcc_aggre_usb_noc_axi_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x003E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0030)
+            Package ()
             {
                 "gcc_aggre_usb_noc_north_axi_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x003E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0030)
+            Package ()
             {
                 "gcc_aggre_usb_noc_south_axi_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0036)
+        Package ()
         {
             "CLOCK",
-            Package (0x0028)
+            Package ()
             {
                 "gcc_sys_noc_usb_axi_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0047)
+        Package ()
         {
             "CLOCK",
-            Package (0x0039)
+            Package ()
             {
                 "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_clk",
                 0x0000000000000002,
@@ -506,22 +506,22 @@ Package (0x0BFD)
         },
     },
 },
-Package (0x0C14)
+Package ()
 {
     "TYPE",
     "KDNETEEM",
-    Package (0x001C)
+    Package ()
     {
         "INSTANCES",
         "\_SB.URS0",
     },
-    Package (0x0817)
+    Package ()
     {
         "DEBUG_ON",
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO1_C",
                 0x0000000000000001,
@@ -531,10 +531,10 @@ Package (0x0C14)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO7_D",
                 0x0000000000000001,
@@ -544,10 +544,10 @@ Package (0x0C14)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO4_D",
                 0x0000000000000001,
@@ -557,10 +557,10 @@ Package (0x0C14)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO9_D",
                 0x0000000000000001,
@@ -570,10 +570,10 @@ Package (0x0C14)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO6_D",
                 0x0000000000000001,
@@ -583,46 +583,46 @@ Package (0x0C14)
                 0x0000000000000000,
             },
         },
-        Package (0x0037)
+        Package ()
         {
             "FOOTSWITCH",
-            Package (0x0024)
+            Package ()
             {
                 "gcc_usb30_prim_gdsc",
                 0x0000000000000001,
             },
         },
-        Package (0x004C)
+        Package ()
         {
             "FOOTSWITCH",
-            Package (0x0039)
+            Package ()
             {
                 "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_gds",
                 0x0000000000000001,
             },
         },
-        Package (0x0037)
+        Package ()
         {
             "CLOCK",
-            Package (0x0029)
+            Package ()
             {
                 "gcc_usb30_prim_sleep_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0039)
+        Package ()
         {
             "CLOCK",
-            Package (0x002B)
+            Package ()
             {
                 "gcc_usb3_prim_phy_pipe_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0052)
+        Package ()
         {
             "CLOCK",
-            Package (0x0044)
+            Package ()
             {
                 "gcc_aggre_usb3_prim_axi_clk",
                 0x0000000000000008,
@@ -630,10 +630,10 @@ Package (0x0C14)
                 0x0000000000000009,
             },
         },
-        Package (0x0054)
+        Package ()
         {
             "CLOCK",
-            Package (0x0046)
+            Package ()
             {
                 "gcc_cfg_noc_usb3_prim_axi_clk",
                 0x0000000000000008,
@@ -641,20 +641,20 @@ Package (0x0C14)
                 0x0000000000000009,
             },
         },
-        Package (0x0044)
+        Package ()
         {
             "CLOCK",
-            Package (0x0036)
+            Package ()
             {
                 "gcc_usb30_prim_master_clk",
                 0x0000000000000009,
                 0x0000000000000012,
             },
         },
-        Package (0x0050)
+        Package ()
         {
             "CLOCK",
-            Package (0x0042)
+            Package ()
             {
                 "gcc_usb30_prim_master_clk",
                 0x0000000000000008,
@@ -662,10 +662,10 @@ Package (0x0C14)
                 0x0000000000000009,
             },
         },
-        Package (0x0050)
+        Package ()
         {
             "CLOCK",
-            Package (0x0042)
+            Package ()
             {
                 "gcc_usb3_prim_phy_aux_clk",
                 0x0000000000000008,
@@ -673,10 +673,10 @@ Package (0x0C14)
                 0x0000000000000007,
             },
         },
-        Package (0x0054)
+        Package ()
         {
             "CLOCK",
-            Package (0x0046)
+            Package ()
             {
                 "gcc_usb3_prim_phy_com_aux_clk",
                 0x0000000000000008,
@@ -684,55 +684,55 @@ Package (0x0C14)
                 0x0000000000000007,
             },
         },
-        Package (0x0038)
+        Package ()
         {
             "CLOCK",
-            Package (0x002A)
+            Package ()
             {
                 "gcc_aggre_usb_noc_axi_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x003E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0030)
+            Package ()
             {
                 "gcc_aggre_usb_noc_north_axi_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x003E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0030)
+            Package ()
             {
                 "gcc_aggre_usb_noc_south_axi_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0036)
+        Package ()
         {
             "CLOCK",
-            Package (0x0028)
+            Package ()
             {
                 "gcc_sys_noc_usb_axi_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0047)
+        Package ()
         {
             "CLOCK",
-            Package (0x0039)
+            Package ()
             {
                 "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0084)
+        Package ()
         {
             "BUSARB",
-            Package (0x0075)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_APPSS_PROC",
@@ -743,10 +743,10 @@ Package (0x0C14)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x007E)
+        Package ()
         {
             "BUSARB",
-            Package (0x006F)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_USB3_0",
@@ -757,19 +757,19 @@ Package (0x0C14)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x0035)
+        Package ()
         {
             "CLOCK",
-            Package (0x0027)
+            Package ()
             {
                 "gcc_usb4_eud_clkref_en",
                 0x0000000000000001,
             },
         },
-        Package (0x0055)
+        Package ()
         {
             "NPARESOURCE",
-            Package (0x0041)
+            Package ()
             {
                 0x0000000000000001,
                 "/arc/client/rail_cx",
@@ -778,22 +778,22 @@ Package (0x0C14)
             },
         },
     },
-    Package (0x03BF)
+    Package ()
     {
         "DEBUG_OFF",
-        Package (0x0035)
+        Package ()
         {
             "CLOCK",
-            Package (0x0027)
+            Package ()
             {
                 "gcc_usb4_eud_clkref_en",
                 0x0000000000000002,
             },
         },
-        Package (0x0054)
+        Package ()
         {
             "CLOCK",
-            Package (0x0046)
+            Package ()
             {
                 "gcc_usb3_prim_phy_com_aux_clk",
                 0x000000000000000C,
@@ -801,10 +801,10 @@ Package (0x0C14)
                 0x0000000000000007,
             },
         },
-        Package (0x0050)
+        Package ()
         {
             "CLOCK",
-            Package (0x0042)
+            Package ()
             {
                 "gcc_usb3_prim_phy_aux_clk",
                 0x000000000000000C,
@@ -812,10 +812,10 @@ Package (0x0C14)
                 0x0000000000000007,
             },
         },
-        Package (0x0050)
+        Package ()
         {
             "CLOCK",
-            Package (0x0042)
+            Package ()
             {
                 "gcc_usb30_prim_master_clk",
                 0x000000000000000C,
@@ -823,20 +823,20 @@ Package (0x0C14)
                 0x0000000000000009,
             },
         },
-        Package (0x0044)
+        Package ()
         {
             "CLOCK",
-            Package (0x0036)
+            Package ()
             {
                 "gcc_usb30_prim_master_clk",
                 0x0000000000000009,
                 0x0000000000000012,
             },
         },
-        Package (0x0054)
+        Package ()
         {
             "CLOCK",
-            Package (0x0046)
+            Package ()
             {
                 "gcc_cfg_noc_usb3_prim_axi_clk",
                 0x000000000000000C,
@@ -844,10 +844,10 @@ Package (0x0C14)
                 0x0000000000000009,
             },
         },
-        Package (0x0052)
+        Package ()
         {
             "CLOCK",
-            Package (0x0044)
+            Package ()
             {
                 "gcc_aggre_usb3_prim_axi_clk",
                 0x000000000000000C,
@@ -855,55 +855,55 @@ Package (0x0C14)
                 0x0000000000000009,
             },
         },
-        Package (0x0039)
+        Package ()
         {
             "CLOCK",
-            Package (0x002B)
+            Package ()
             {
                 "gcc_usb3_prim_phy_pipe_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0038)
+        Package ()
         {
             "CLOCK",
-            Package (0x002A)
+            Package ()
             {
                 "gcc_aggre_usb_noc_axi_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x003E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0030)
+            Package ()
             {
                 "gcc_aggre_usb_noc_north_axi_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x003E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0030)
+            Package ()
             {
                 "gcc_aggre_usb_noc_south_axi_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0036)
+        Package ()
         {
             "CLOCK",
-            Package (0x0028)
+            Package ()
             {
                 "gcc_sys_noc_usb_axi_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0047)
+        Package ()
         {
             "CLOCK",
-            Package (0x0039)
+            Package ()
             {
                 "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_clk",
                 0x0000000000000002,

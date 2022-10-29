@@ -1,33 +1,33 @@
-Package (0x00C3)
+Package ()
 {
     "DEVICE",
     "\_SB.ADSP.SLM1",
-    Package (0x0035)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000000,
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000001,
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000002,
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000003,

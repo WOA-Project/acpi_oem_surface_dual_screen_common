@@ -1,151 +1,151 @@
-Package (0x018B)
+Package ()
 {
     "CHIP_INFO",
     0x0000000000000153,
     0x0000000000000001,
     0x0000000000000000,
     0x0000000000000002,
-    Package (0x008B)
+    Package ()
     {
         "BIG",
         0x0000000000000004,
         "apcs_gold_post_acd_clk",
-        Package (0x0024)
+        Package ()
         {
             0x000000000000028D,
             0x00000000000003D3,
             0x00000000000005ED,
         },
         0x0000000000000003,
-        Package (0x0024)
+        Package ()
         {
             0x0000000000000000,
             0x0000000000000003,
             0x0000000000000008,
         },
     },
-    Package (0x0090)
+    Package ()
     {
         "LITTLE",
         0x0000000000000004,
         "apcs_silver_post_acd_clk",
-        Package (0x0024)
+        Package ()
         {
             0x000000000000012C,
             0x00000000000003C0,
             0x000000000000051A,
         },
         0x0000000000000003,
-        Package (0x0024)
+        Package ()
         {
             0x0000000000000000,
             0x0000000000000006,
             0x0000000000000009,
         },
     },
-    Package (0x0026)
+    Package ()
     {
         "L3_CACHE",
         "apcs_l3_post_acd_clk",
     },
 },
-Package (0x018B)
+Package ()
 {
     "CHIP_INFO",
     0x0000000000000153,
     0x0000000000000002,
     0x0000000000000000,
     0x0000000000000002,
-    Package (0x008B)
+    Package ()
     {
         "BIG",
         0x0000000000000004,
         "apcs_gold_post_acd_clk",
-        Package (0x0024)
+        Package ()
         {
             0x000000000000033A,
             0x000000000000058D,
             0x0000000000000853,
         },
         0x0000000000000003,
-        Package (0x0024)
+        Package ()
         {
             0x0000000000000000,
             0x0000000000000005,
             0x000000000000000B,
         },
     },
-    Package (0x0090)
+    Package ()
     {
         "LITTLE",
         0x0000000000000004,
         "apcs_silver_post_acd_clk",
-        Package (0x0024)
+        Package ()
         {
             0x000000000000012C,
             0x000000000000045A,
             0x00000000000005C6,
         },
         0x0000000000000003,
-        Package (0x0024)
+        Package ()
         {
             0x0000000000000000,
             0x0000000000000007,
             0x000000000000000A,
         },
     },
-    Package (0x0026)
+    Package ()
     {
         "L3_CACHE",
         "apcs_l3_post_acd_clk",
     },
 },
-Package (0x018B)
+Package ()
 {
     "CHIP_INFO",
     0x0000000000000194,
     0x0000000000000002,
     0x0000000000000000,
     0x0000000000000002,
-    Package (0x008B)
+    Package ()
     {
         "BIG",
         0x0000000000000004,
         "apcs_gold_post_acd_clk",
-        Package (0x0024)
+        Package ()
         {
             0x000000000000033A,
             0x000000000000058D,
             0x0000000000000853,
         },
         0x0000000000000003,
-        Package (0x0024)
+        Package ()
         {
             0x0000000000000000,
             0x0000000000000005,
             0x000000000000000B,
         },
     },
-    Package (0x0090)
+    Package ()
     {
         "LITTLE",
         0x0000000000000004,
         "apcs_silver_post_acd_clk",
-        Package (0x0024)
+        Package ()
         {
             0x000000000000012C,
             0x000000000000045A,
             0x00000000000005C6,
         },
         0x0000000000000003,
-        Package (0x0024)
+        Package ()
         {
             0x0000000000000000,
             0x0000000000000007,
             0x000000000000000A,
         },
     },
-    Package (0x0026)
+    Package ()
     {
         "L3_CACHE",
         "apcs_l3_post_acd_clk",

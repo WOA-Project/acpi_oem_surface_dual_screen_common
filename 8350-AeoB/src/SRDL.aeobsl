@@ -1,16 +1,16 @@
 "DEFAULT_RESOURCES",
-Package (0x022D)
+Package ()
 {
     "OPTIMIZATION",
     "CPU_CNOC_VOTE",
     "BOOT",
-    Package (0x01FD)
+    Package ()
     {
         "RESOURCES",
-        Package (0x0078)
+        Package ()
         {
             "BUSARB",
-            Package (0x0069)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_APPSS_PROC",
@@ -20,10 +20,10 @@ Package (0x022D)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x0076)
+        Package ()
         {
             "BUSARB",
-            Package (0x0067)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_APPSS_PROC",
@@ -33,10 +33,10 @@ Package (0x022D)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x0072)
+        Package ()
         {
             "BUSARB",
-            Package (0x0063)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_PCIE_2A",
@@ -46,10 +46,10 @@ Package (0x022D)
                 "SUPPRESSIBLE",
             },
         },
-        Package (0x007F)
+        Package ()
         {
             "BUSARB",
-            Package (0x0070)
+            Package ()
             {
                 0x0000000000000003,
                 "ICBID_MASTER_PCIE_2A",
@@ -61,18 +61,18 @@ Package (0x022D)
         },
     },
 },
-Package (0x00BA)
+Package ()
 {
     "WORKAROUND",
     "SAR_SENSOR_POWER_REGULATOR",
     "BOOT",
-    Package (0x007F)
+    Package ()
     {
         "RESOURCES",
-        Package (0x006D)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0058)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO12_C",
                 0x0000000000000001,
@@ -84,18 +84,18 @@ Package (0x00BA)
         },
     },
 },
-Package (0x020F)
+Package ()
 {
     "OPTIONAL_FEATURE",
     "EUD_SUPPORT",
     "BOOT_WITH_CONDITION",
-    Package (0x01CE)
+    Package ()
     {
         "RESOURCES",
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO1_C",
                 0x0000000000000001,
@@ -105,10 +105,10 @@ Package (0x020F)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO9_D",
                 0x0000000000000001,
@@ -118,10 +118,10 @@ Package (0x020F)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO7_D",
                 0x0000000000000001,
@@ -131,10 +131,10 @@ Package (0x020F)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO6_D",
                 0x0000000000000001,

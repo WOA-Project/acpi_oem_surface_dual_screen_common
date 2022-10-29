@@ -1,39 +1,39 @@
-Package (0x0037)
+Package ()
 {
     "/arc/client/rail_cx",
     "RAIL_VOLTAGE_LEVEL_NOMINAL",
 },
-Package (0x003B)
+Package ()
 {
     "/arc/client/display/rail_cx",
     "RAIL_VOLTAGE_LEVEL_OFF",
 },
-Package (0x0037)
+Package ()
 {
     "/arc/client/rail_mx",
     "RAIL_VOLTAGE_LEVEL_NOMINAL",
 },
-Package (0x003B)
+Package ()
 {
     "/arc/client/display/rail_mx",
     "RAIL_VOLTAGE_LEVEL_OFF",
 },
-Package (0x0028)
+Package ()
 {
     "/arc/client/rail_xo",
     "XO_LEVEL_ON",
 },
-Package (0x0039)
+Package ()
 {
     "/arc/client/display/rail_xo",
     "XO_LEVEL_CRYSTAL_OFF",
 },
-Package (0x0039)
+Package ()
 {
     "/arc/client/rail_mmcx",
     "RAIL_VOLTAGE_LEVEL_NOMINAL",
 },
-Package (0x003D)
+Package ()
 {
     "/arc/client/display/rail_mmcx",
     "RAIL_VOLTAGE_LEVEL_OFF",

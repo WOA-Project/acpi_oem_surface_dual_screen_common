@@ -1,65 +1,65 @@
-Package (0x06BE)
+Package ()
 {
     "DEVICE",
     0x0000000000000003,
     "\_SB.NSP0",
-    Package (0x065F)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x020A)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_cx",
                     0x0000000000000180,
                 },
             },
-            Package (0x0045)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0031)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_mxc",
                     0x0000000000000180,
                 },
             },
-            Package (0x0045)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0031)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_nsp",
                     0x0000000000000180,
                 },
             },
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
                     0x0000000000000080,
                 },
             },
-            Package (0x0063)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0054)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_CDSP_PROC",
@@ -68,10 +68,10 @@ Package (0x06BE)
                     0x0000000000000001,
                 },
             },
-            Package (0x0066)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0057)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_CDSP_PROC",
@@ -81,54 +81,54 @@ Package (0x06BE)
                 },
             },
         },
-        Package (0x020A)
+        Package ()
         {
             "PSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_cx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0045)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0031)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_mxc",
                     0x0000000000000000,
                 },
             },
-            Package (0x0045)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0031)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_nsp",
                     0x0000000000000000,
                 },
             },
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
                     0x0000000000000000,
                 },
             },
-            Package (0x0063)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0054)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_CDSP_PROC",
@@ -137,10 +137,10 @@ Package (0x06BE)
                     0x0000000000000000,
                 },
             },
-            Package (0x0066)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0057)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_CDSP_PROC",
@@ -150,54 +150,54 @@ Package (0x06BE)
                 },
             },
         },
-        Package (0x020A)
+        Package ()
         {
             "PSTATE",
             0x0000000000000002,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_cx",
                     0x0000000000000000,
                 },
             },
-            Package (0x0045)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0031)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_mxc",
                     0x0000000000000000,
                 },
             },
-            Package (0x0045)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0031)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_nsp",
                     0x0000000000000000,
                 },
             },
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
                     0x0000000000000000,
                 },
             },
-            Package (0x0063)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0054)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_CDSP_PROC",
@@ -206,10 +206,10 @@ Package (0x06BE)
                     0x0000000000000000,
                 },
             },
-            Package (0x0066)
+            Package ()
             {
                 "BUSARB",
-                Package (0x0057)
+                Package ()
                 {
                     0x0000000000000003,
                     "ICBID_MASTER_CDSP_PROC",
@@ -220,12 +220,12 @@ Package (0x06BE)
             },
         },
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000000,
     },
-    Package (0x0017)
+    Package ()
     {
         "DSTATE",
         0x0000000000000003,

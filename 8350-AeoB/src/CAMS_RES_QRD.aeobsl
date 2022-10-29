@@ -1,89 +1,89 @@
-Package (0x09C7)
+Package ()
 {
     "DEVICE",
     "\_SB.CAMS",
-    Package (0x0035)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
     },
-    Package (0x04F4)
+    Package ()
     {
         "DSTATE",
         0x0000000000000000,
-        Package (0x0046)
+        Package ()
         {
             "NPARESOURCE",
-            Package (0x0032)
+            Package ()
             {
                 0x0000000000000001,
                 "/arc/client/rail_mmcx",
                 0x0000000000000030,
             },
         },
-        Package (0x0030)
+        Package ()
         {
             "CLOCK",
-            Package (0x0022)
+            Package ()
             {
                 "gcc_camera_xo_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0031)
+        Package ()
         {
             "CLOCK",
-            Package (0x0023)
+            Package ()
             {
                 "gcc_camera_ahb_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x002E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0020)
+            Package ()
             {
                 "cam_cc_gdsc_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0039)
+        Package ()
         {
             "FOOTSWITCH",
-            Package (0x0026)
+            Package ()
             {
                 "cam_cc_titan_top_gdsc",
                 0x0000000000000001,
             },
         },
-        Package (0x0034)
+        Package ()
         {
             "CLOCK",
-            Package (0x0026)
+            Package ()
             {
                 "cam_cc_camnoc_axi_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0032)
+        Package ()
         {
             "CLOCK",
-            Package (0x0024)
+            Package ()
             {
                 "cam_cc_cpas_ahb_clk",
                 0x0000000000000001,
             },
         },
-        Package (0x0059)
+        Package ()
         {
             "TLMMGPIO",
-            Package (0x0048)
+            Package ()
             {
                 0x000000000000001D,
                 0x0000000000000000,
@@ -93,19 +93,19 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x0048)
+        Package ()
         {
             "CAM_PMIC_CNTRL_VOTE",
-            Package (0x002C)
+            Package ()
             {
                 "PPP_RESOURCE_ID_FIXED_VREG2",
                 0x0000000000000001,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO4_Q",
                 0x0000000000000001,
@@ -115,10 +115,10 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO5_Q",
                 0x0000000000000001,
@@ -128,10 +128,10 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO1_Q",
                 0x0000000000000001,
@@ -141,10 +141,10 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO9_C",
                 0x0000000000000001,
@@ -154,10 +154,10 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x0047)
+        Package ()
         {
             "CLOCK",
-            Package (0x0039)
+            Package ()
             {
                 "cam_cc_mclk2_clk",
                 0x0000000000000008,
@@ -165,18 +165,18 @@ Package (0x09C7)
                 0x0000000000000003,
             },
         },
-        Package (0x001A)
+        Package ()
         {
             "DELAY",
-            Package (0x000C)
+            Package ()
             {
                 0x0000000000000001,
             },
         },
-        Package (0x0059)
+        Package ()
         {
             "TLMMGPIO",
-            Package (0x0048)
+            Package ()
             {
                 0x000000000000001D,
                 0x0000000000000001,
@@ -186,23 +186,23 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x001A)
+        Package ()
         {
             "DELAY",
-            Package (0x000C)
+            Package ()
             {
                 0x000000000000000A,
             },
         },
     },
-    Package (0x0479)
+    Package ()
     {
         "DSTATE",
         0x0000000000000003,
-        Package (0x0059)
+        Package ()
         {
             "TLMMGPIO",
-            Package (0x0048)
+            Package ()
             {
                 0x000000000000001D,
                 0x0000000000000000,
@@ -212,18 +212,18 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x001A)
+        Package ()
         {
             "DELAY",
-            Package (0x000C)
+            Package ()
             {
                 0x0000000000000001,
             },
         },
-        Package (0x0047)
+        Package ()
         {
             "CLOCK",
-            Package (0x0039)
+            Package ()
             {
                 "cam_cc_mclk2_clk",
                 0x000000000000000C,
@@ -231,10 +231,10 @@ Package (0x09C7)
                 0x0000000000000003,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO9_C",
                 0x0000000000000001,
@@ -244,10 +244,10 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO1_Q",
                 0x0000000000000001,
@@ -257,10 +257,10 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO5_Q",
                 0x0000000000000001,
@@ -270,10 +270,10 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x006C)
+        Package ()
         {
             "PMICVREGVOTE",
-            Package (0x0057)
+            Package ()
             {
                 "PPP_RESOURCE_ID_LDO4_Q",
                 0x0000000000000001,
@@ -283,73 +283,73 @@ Package (0x09C7)
                 0x0000000000000000,
             },
         },
-        Package (0x0048)
+        Package ()
         {
             "CAM_PMIC_CNTRL_VOTE",
-            Package (0x002C)
+            Package ()
             {
                 "PPP_RESOURCE_ID_FIXED_VREG2",
                 0x0000000000000000,
             },
         },
-        Package (0x0032)
+        Package ()
         {
             "CLOCK",
-            Package (0x0024)
+            Package ()
             {
                 "cam_cc_cpas_ahb_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0034)
+        Package ()
         {
             "CLOCK",
-            Package (0x0026)
+            Package ()
             {
                 "cam_cc_camnoc_axi_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0039)
+        Package ()
         {
             "FOOTSWITCH",
-            Package (0x0026)
+            Package ()
             {
                 "cam_cc_titan_top_gdsc",
                 0x0000000000000002,
             },
         },
-        Package (0x002E)
+        Package ()
         {
             "CLOCK",
-            Package (0x0020)
+            Package ()
             {
                 "cam_cc_gdsc_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0031)
+        Package ()
         {
             "CLOCK",
-            Package (0x0023)
+            Package ()
             {
                 "gcc_camera_ahb_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0030)
+        Package ()
         {
             "CLOCK",
-            Package (0x0022)
+            Package ()
             {
                 "gcc_camera_xo_clk",
                 0x0000000000000002,
             },
         },
-        Package (0x0046)
+        Package ()
         {
             "NPARESOURCE",
-            Package (0x0032)
+            Package ()
             {
                 0x0000000000000001,
                 "/arc/client/rail_mmcx",

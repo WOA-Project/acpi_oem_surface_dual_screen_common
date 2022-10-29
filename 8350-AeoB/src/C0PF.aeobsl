@@ -1,14 +1,14 @@
-Package (0x00B0)
+Package ()
 {
     "COMPONENT",
     0x0000000000000000,
-    Package (0x0092)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_jpeg_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -20,17 +20,17 @@ Package (0x00B0)
         },
     },
 },
-Package (0x00B0)
+Package ()
 {
     "COMPONENT",
     0x0000000000000001,
-    Package (0x0092)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_jpeg_clk",
-        Package (0x0053)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,

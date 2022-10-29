@@ -1,14 +1,14 @@
-Package (0x0785)
+Package ()
 {
     "COMPONENT",
     0x0000000000000000,
-    Package (0x009F)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000000,
         0x0000000000000000,
         "cam_cc_cci_0_clk",
-        Package (0x005F)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -20,13 +20,13 @@ Package (0x0785)
             0x000000000124F800,
         },
     },
-    Package (0x009F)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000001,
         0x0000000000000000,
         "cam_cc_cci_1_clk",
-        Package (0x005F)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -38,13 +38,13 @@ Package (0x0785)
             0x000000000124F800,
         },
     },
-    Package (0x009F)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000002,
         0x0000000000000000,
         "cam_cc_cci_2_clk",
-        Package (0x005F)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -56,13 +56,13 @@ Package (0x0785)
             0x000000000124F800,
         },
     },
-    Package (0x009F)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000003,
         0x0000000000000000,
         "cam_cc_cci_3_clk",
-        Package (0x005F)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -74,13 +74,13 @@ Package (0x0785)
             0x000000000124F800,
         },
     },
-    Package (0x021C)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000004,
         0x0000000000000001,
         "NRT_BANDWIDTH",
-        Package (0x01DF)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -124,13 +124,13 @@ Package (0x0785)
             0x0000000000000000,
         },
     },
-    Package (0x01C0)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000005,
         0x0000000000000001,
         "RT_COMP_BANDWIDTH",
-        Package (0x017F)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -166,13 +166,13 @@ Package (0x0785)
             0x0000000000000000,
         },
     },
-    Package (0x008C)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000006,
         0x0000000000000000,
         "cam_cc_camnoc_axi_clk",
-        Package (0x0047)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,
@@ -182,13 +182,13 @@ Package (0x0785)
             0x0000000008F0D180,
         },
     },
-    Package (0x0067)
+    Package ()
     {
         "PSTATE_SET",
         0x0000000000000007,
         0x0000000000000002,
         "CAM_PRLD",
-        Package (0x002F)
+        Package ()
         {
             "PSTATE",
             0x0000000000000000,

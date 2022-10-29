@@ -1,7 +1,7 @@
-Package (0x00CC)
+Package ()
 {
     0x0000000000000002,
-    Package (0x005C)
+    Package ()
     {
         "CPU",
         0x0000000000000001,
@@ -12,7 +12,7 @@ Package (0x00CC)
         0x00000000000005DC,
         0x0000000000000096,
     },
-    Package (0x005C)
+    Package ()
     {
         "CPU",
         0x0000000000000000,

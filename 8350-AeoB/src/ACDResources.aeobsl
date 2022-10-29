@@ -1,93 +1,93 @@
-Package (0x2A63)
+Package ()
 {
     "DEVICE",
     "\_SB.ADSP.ADCM.AUCD",
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000000,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000001,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x0189)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000002,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0135)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0089)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x006E)
+                Package ()
                 {
                     "PMICVREGVOTE",
-                    Package (0x0059)
+                    Package ()
                     {
                         "PPP_RESOURCE_ID_SMPS10_B",
                         0x0000000000000002,
@@ -98,14 +98,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0089)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x006E)
+                Package ()
                 {
                     "PMICVREGVOTE",
-                    Package (0x0059)
+                    Package ()
                     {
                         "PPP_RESOURCE_ID_SMPS10_B",
                         0x0000000000000002,
@@ -118,62 +118,62 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000003,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x0189)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000004,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0135)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0089)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x006E)
+                Package ()
                 {
                     "PMICVREGVOTE",
-                    Package (0x0059)
+                    Package ()
                     {
                         "PPP_RESOURCE_ID_SMPS10_B",
                         0x0000000000000002,
@@ -184,14 +184,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0089)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x006E)
+                Package ()
                 {
                     "PMICVREGVOTE",
-                    Package (0x0059)
+                    Package ()
                     {
                         "PPP_RESOURCE_ID_SMPS10_B",
                         0x0000000000000002,
@@ -204,18 +204,18 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x04DD)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000005,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -223,14 +223,14 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -238,18 +238,18 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x03F9)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x01EB)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000000,
                         0x0000000000000001,
@@ -261,10 +261,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000001,
                         0x0000000000000001,
@@ -276,10 +276,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000002,
                         0x0000000000000001,
@@ -291,10 +291,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000E,
                         0x0000000000000001,
@@ -307,14 +307,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x01EB)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000000,
                         0x0000000000000001,
@@ -326,10 +326,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000001,
                         0x0000000000000001,
@@ -341,10 +341,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000002,
                         0x0000000000000001,
@@ -356,10 +356,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000E,
                         0x0000000000000001,
@@ -374,18 +374,18 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x03F3)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000006,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -393,14 +393,14 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -408,18 +408,18 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x030F)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0176)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000003,
                         0x0000000000000001,
@@ -431,10 +431,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000004,
                         0x0000000000000001,
@@ -446,10 +446,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000005,
                         0x0000000000000001,
@@ -462,14 +462,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0176)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000003,
                         0x0000000000000001,
@@ -481,10 +481,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000004,
                         0x0000000000000001,
@@ -496,10 +496,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000005,
                         0x0000000000000001,
@@ -514,18 +514,18 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x0309)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000007,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -533,14 +533,14 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -548,18 +548,18 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x0225)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000A,
                         0x0000000000000001,
@@ -571,10 +571,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000B,
                         0x0000000000000001,
@@ -587,14 +587,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000A,
                         0x0000000000000001,
@@ -606,10 +606,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000B,
                         0x0000000000000001,
@@ -624,18 +624,18 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x0309)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000008,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -643,14 +643,14 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -658,18 +658,18 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x0225)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000006,
                         0x0000000000000001,
@@ -681,10 +681,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000007,
                         0x0000000000000001,
@@ -697,14 +697,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000006,
                         0x0000000000000000,
@@ -716,10 +716,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000007,
                         0x0000000000000001,
@@ -734,18 +734,18 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x0309)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000009,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -753,14 +753,14 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -768,18 +768,18 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x0225)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000008,
                         0x0000000000000001,
@@ -791,10 +791,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000009,
                         0x0000000000000001,
@@ -807,14 +807,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000008,
                         0x0000000000000000,
@@ -826,10 +826,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000009,
                         0x0000000000000001,
@@ -844,18 +844,18 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x0309)
+    Package ()
     {
         "COMPONENT",
         0x000000000000000A,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -863,14 +863,14 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -878,18 +878,18 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x0225)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000C,
                         0x0000000000000001,
@@ -901,10 +901,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000D,
                         0x0000000000000001,
@@ -917,14 +917,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000C,
                         0x0000000000000000,
@@ -936,10 +936,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000D,
                         0x0000000000000001,
@@ -954,18 +954,18 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x0309)
+    Package ()
     {
         "COMPONENT",
         0x000000000000000B,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -973,14 +973,14 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -988,18 +988,18 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x0225)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000F,
                         0x0000000000000001,
@@ -1011,10 +1011,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000010,
                         0x0000000000000001,
@@ -1027,14 +1027,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x000000000000000F,
                         0x0000000000000001,
@@ -1046,10 +1046,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000010,
                         0x0000000000000001,
@@ -1064,18 +1064,18 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x0309)
+    Package ()
     {
         "COMPONENT",
         0x000000000000000C,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -1083,14 +1083,14 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -1098,18 +1098,18 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x0225)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000011,
                         0x0000000000000001,
@@ -1121,10 +1121,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000012,
                         0x0000000000000001,
@@ -1137,14 +1137,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0101)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000011,
                         0x0000000000000000,
@@ -1156,10 +1156,10 @@ Package (0x2A63)
                         0x0000000000000001,
                     },
                 },
-                Package (0x0071)
+                Package ()
                 {
                     "TLMMGPIO",
-                    Package (0x0060)
+                    Package ()
                     {
                         0x0000000000000012,
                         0x0000000000000001,
@@ -1174,32 +1174,32 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x0185)
+    Package ()
     {
         "COMPONENT",
         0x000000000000000D,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0131)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0087)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
-                Package (0x006C)
+                Package ()
                 {
                     "PMICVREGVOTE",
-                    Package (0x0057)
+                    Package ()
                     {
                         "PPP_RESOURCE_ID_LDO2_C",
                         0x0000000000000001,
@@ -1210,14 +1210,14 @@ Package (0x2A63)
                     },
                 },
             },
-            Package (0x0087)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
-                Package (0x006C)
+                Package ()
                 {
                     "PMICVREGVOTE",
-                    Package (0x0057)
+                    Package ()
                     {
                         "PPP_RESOURCE_ID_LDO2_C",
                         0x0000000000000001,
@@ -1230,18 +1230,18 @@ Package (0x2A63)
             },
         },
     },
-    Package (0x0135)
+    Package ()
     {
         "COMPONENT",
         0x000000000000000E,
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -1249,14 +1249,14 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x005F)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
-            Package (0x0044)
+            Package ()
             {
                 "NPARESOURCE",
-                Package (0x0030)
+                Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_xo",
@@ -1264,346 +1264,346 @@ Package (0x2A63)
                 },
             },
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x000000000000000F,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000010,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000011,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000012,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000013,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000014,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000015,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000016,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000017,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000018,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,
             },
         },
     },
-    Package (0x00A5)
+    Package ()
     {
         "COMPONENT",
         0x0000000000000019,
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000000,
         },
-        Package (0x0017)
+        Package ()
         {
             "FSTATE",
             0x0000000000000001,
         },
-        Package (0x0051)
+        Package ()
         {
             "PSTATE_SET",
             0x0000000000000000,
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000000,
             },
-            Package (0x0017)
+            Package ()
             {
                 "PSTATE",
                 0x0000000000000001,

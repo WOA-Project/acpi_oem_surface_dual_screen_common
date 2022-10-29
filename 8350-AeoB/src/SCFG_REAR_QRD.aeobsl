@@ -1,4 +1,4 @@
-Package (0x0077)
+Package ()
 {
     "com.surface.sensormodule.rfc_ov13858.bin",
     "com.surface.tuned.rfc_ov13858.bin",

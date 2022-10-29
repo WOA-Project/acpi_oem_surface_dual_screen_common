@@ -82,15 +82,6 @@ Package ()
         },
         Package ()
         {
-            "CAM_PMIC_CNTRL_VOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_FIXED_VREG2",
-                0x0000000000000001,
-            },
-        },
-        Package ()
-        {
             "TLMMGPIO",
             Package ()
             {
@@ -131,49 +122,10 @@ Package ()
         },
         Package ()
         {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO3_Q",
-                0x0000000000000001,
-                0x00000000001B7740,
-                0x0000000000000001,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
-        Package ()
-        {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO2_Q",
-                0x0000000000000001,
-                0x0000000000118C30,
-                0x0000000000000001,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
-        Package ()
-        {
             "DELAY",
             Package ()
             {
                 0x0000000000000002,
-            },
-        },
-        Package ()
-        {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO7_Q",
-                0x0000000000000001,
-                0x00000000002AB980,
-                0x0000000000000001,
-                0x0000000000000007,
-                0x0000000000000000,
             },
         },
         Package ()
@@ -244,58 +196,10 @@ Package ()
         },
         Package ()
         {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO7_Q",
-                0x0000000000000001,
-                0x0000000000000000,
-                0x0000000000000000,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
-        Package ()
-        {
             "DELAY",
             Package ()
             {
                 0x0000000000000002,
-            },
-        },
-        Package ()
-        {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO2_Q",
-                0x0000000000000001,
-                0x0000000000000000,
-                0x0000000000000000,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
-        Package ()
-        {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO3_Q",
-                0x0000000000000001,
-                0x0000000000000000,
-                0x0000000000000000,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
-        Package ()
-        {
-            "CAM_PMIC_CNTRL_VOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_FIXED_VREG2",
-                0x0000000000000000,
             },
         },
         Package ()

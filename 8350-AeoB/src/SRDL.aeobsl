@@ -69,19 +69,6 @@ Package ()
     Package ()
     {
         "RESOURCES",
-        Package ()
-        {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO12_C",
-                0x0000000000000001,
-                0x00000000001B7740,
-                0x0000000000000001,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
     },
 },
 Package ()
@@ -92,57 +79,5 @@ Package ()
     Package ()
     {
         "RESOURCES",
-        Package ()
-        {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO1_C",
-                0x0000000000000001,
-                0x00000000001B7740,
-                0x0000000000000001,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
-        Package ()
-        {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO9_D",
-                0x0000000000000001,
-                0x00000000000DEA80,
-                0x0000000000000001,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
-        Package ()
-        {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO7_D",
-                0x0000000000000001,
-                0x00000000002EE000,
-                0x0000000000000001,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
-        Package ()
-        {
-            "PMICVREGVOTE",
-            Package ()
-            {
-                "PPP_RESOURCE_ID_LDO6_D",
-                0x0000000000000001,
-                0x00000000000D6D80,
-                0x0000000000000001,
-                0x0000000000000007,
-                0x0000000000000000,
-            },
-        },
     },
 },

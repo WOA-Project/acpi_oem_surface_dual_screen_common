@@ -10,9 +10,3 @@ Package ()
     0x0000000000000009,
     "/icb/arbiter/display",
 },
-Package ()
-{
-    "PCIE_DRV",
-    0x0000000000000010,
-    "/icb/arbiter/pcie",
-},

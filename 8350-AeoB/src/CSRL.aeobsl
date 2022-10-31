@@ -34,15 +34,6 @@ Package ()
         },
         Package ()
         {
-            "FOOTSWITCH",
-            Package ()
-            {
-                "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_gds",
-                0x0000000000000005,
-            },
-        },
-        Package ()
-        {
             "CLOCK",
             Package ()
             {

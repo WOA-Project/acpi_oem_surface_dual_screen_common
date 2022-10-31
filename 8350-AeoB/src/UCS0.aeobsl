@@ -27,15 +27,6 @@ Package ()
             },
             Package ()
             {
-                "FOOTSWITCH",
-                Package ()
-                {
-                    "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_gds",
-                    0x0000000000000001,
-                },
-            },
-            Package ()
-            {
                 "CLOCK",
                 Package ()
                 {
@@ -94,64 +85,6 @@ Package ()
                     0x0000000000000008,
                     0x0000000000004B00,
                     0x0000000000000007,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_usb3_prim_phy_aux_clk",
-                    0x0000000000000008,
-                    0x0000000000004B00,
-                    0x0000000000000007,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_usb3_prim_phy_com_aux_clk",
-                    0x0000000000000008,
-                    0x0000000000004B00,
-                    0x0000000000000007,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_aggre_usb_noc_axi_clk",
-                    0x0000000000000001,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_aggre_usb_noc_north_axi_clk",
-                    0x0000000000000001,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_aggre_usb_noc_south_axi_clk",
-                    0x0000000000000001,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_sys_noc_usb_axi_clk",
-                    0x0000000000000001,
                 },
             },
             Package ()
@@ -294,28 +227,6 @@ Package ()
                 "CLOCK",
                 Package ()
                 {
-                    "gcc_usb3_sec_phy_aux_clk",
-                    0x0000000000000008,
-                    0x0000000000004B00,
-                    0x0000000000000007,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_usb3_sec_phy_com_aux_clk",
-                    0x0000000000000008,
-                    0x0000000000004B00,
-                    0x0000000000000007,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
                     "gcc_usb4_clkref_en",
                     0x0000000000000001,
                 },
@@ -431,60 +342,6 @@ Package ()
                 "CLOCK",
                 Package ()
                 {
-                    "gcc_usb3_prim_phy_aux_clk",
-                    0x0000000000000002,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_usb3_prim_phy_com_aux_clk",
-                    0x0000000000000002,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_aggre_usb_noc_axi_clk",
-                    0x0000000000000002,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_aggre_usb_noc_north_axi_clk",
-                    0x0000000000000002,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_aggre_usb_noc_south_axi_clk",
-                    0x0000000000000002,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_sys_noc_usb_axi_clk",
-                    0x0000000000000002,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
                     "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_clk",
                     0x0000000000000002,
                 },
@@ -528,15 +385,6 @@ Package ()
                 Package ()
                 {
                     "gcc_usb30_prim_gdsc",
-                    0x0000000000000002,
-                },
-            },
-            Package ()
-            {
-                "FOOTSWITCH",
-                Package ()
-                {
-                    "gcc_hlos1_vote_aggre_noc_mmu_usb_tbu_gds",
                     0x0000000000000002,
                 },
             },
@@ -612,24 +460,6 @@ Package ()
                 Package ()
                 {
                     "gcc_usb30_sec_mock_utmi_clk",
-                    0x0000000000000002,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_usb3_sec_phy_aux_clk",
-                    0x0000000000000002,
-                },
-            },
-            Package ()
-            {
-                "CLOCK",
-                Package ()
-                {
-                    "gcc_usb3_sec_phy_com_aux_clk",
                     0x0000000000000002,
                 },
             },

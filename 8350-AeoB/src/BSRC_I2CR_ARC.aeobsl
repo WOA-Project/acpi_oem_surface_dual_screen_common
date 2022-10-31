@@ -341,17 +341,6 @@ Package ()
         },
         Package ()
         {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap0_s1_clk",
-                0x0000000000000008,
-                0x000000000124F800,
-                0x0000000000000004,
-            },
-        },
-        Package ()
-        {
             "TLMMGPIO",
             Package ()
             {
@@ -391,15 +380,6 @@ Package ()
     {
         "DSTATE",
         0x0000000000000003,
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap0_s1_clk",
-                0x0000000000000002,
-            },
-        },
         Package ()
         {
             "CLOCK",
@@ -4357,17 +4337,6 @@ Package ()
         },
         Package ()
         {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap2_s1_clk",
-                0x0000000000000008,
-                0x000000000124F800,
-                0x0000000000000004,
-            },
-        },
-        Package ()
-        {
             "TLMMGPIO",
             Package ()
             {
@@ -4407,15 +4376,6 @@ Package ()
     {
         "DSTATE",
         0x0000000000000003,
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap2_s1_clk",
-                0x0000000000000002,
-            },
-        },
         Package ()
         {
             "CLOCK",
@@ -5110,17 +5070,6 @@ Package ()
         },
         Package ()
         {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap2_s4_clk",
-                0x0000000000000008,
-                0x000000000124F800,
-                0x0000000000000004,
-            },
-        },
-        Package ()
-        {
             "TLMMGPIO",
             Package ()
             {
@@ -5160,15 +5109,6 @@ Package ()
     {
         "DSTATE",
         0x0000000000000003,
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap2_s4_clk",
-                0x0000000000000002,
-            },
-        },
         Package ()
         {
             "CLOCK",

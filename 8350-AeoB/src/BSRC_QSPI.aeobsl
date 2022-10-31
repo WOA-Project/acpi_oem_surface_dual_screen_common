@@ -318,12 +318,6 @@ Package ()
             "FSTATE",
             0x0000000000000000,
         },
-        Package ()
-        {
-            "DISCOVERABLE_PSTATE",
-            "CLOCK",
-            "gcc_qupv3_wrap0_s1_clk",
-        },
     },
     Package ()
     {
@@ -403,15 +397,6 @@ Package ()
         },
         Package ()
         {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap0_s1_clk",
-                0x0000000000000001,
-            },
-        },
-        Package ()
-        {
             "TLMMGPIO",
             Package ()
             {
@@ -477,15 +462,6 @@ Package ()
     {
         "DSTATE",
         0x0000000000000003,
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap0_s1_clk",
-                0x0000000000000002,
-            },
-        },
         Package ()
         {
             "CLOCK",
@@ -5282,12 +5258,6 @@ Package ()
             "FSTATE",
             0x0000000000000000,
         },
-        Package ()
-        {
-            "DISCOVERABLE_PSTATE",
-            "CLOCK",
-            "gcc_qupv3_wrap2_s1_clk",
-        },
     },
     Package ()
     {
@@ -5367,15 +5337,6 @@ Package ()
         },
         Package ()
         {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap2_s1_clk",
-                0x0000000000000001,
-            },
-        },
-        Package ()
-        {
             "TLMMGPIO",
             Package ()
             {
@@ -5441,15 +5402,6 @@ Package ()
     {
         "DSTATE",
         0x0000000000000003,
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap2_s1_clk",
-                0x0000000000000002,
-            },
-        },
         Package ()
         {
             "CLOCK",
@@ -6203,12 +6155,6 @@ Package ()
             "FSTATE",
             0x0000000000000000,
         },
-        Package ()
-        {
-            "DISCOVERABLE_PSTATE",
-            "CLOCK",
-            "gcc_qupv3_wrap2_s4_clk",
-        },
     },
     Package ()
     {
@@ -6283,15 +6229,6 @@ Package ()
             Package ()
             {
                 "gcc_qupv3_wrap_2_s_ahb_clk",
-                0x0000000000000001,
-            },
-        },
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap2_s4_clk",
                 0x0000000000000001,
             },
         },
@@ -6388,15 +6325,6 @@ Package ()
     {
         "DSTATE",
         0x0000000000000003,
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap2_s4_clk",
-                0x0000000000000002,
-            },
-        },
         Package ()
         {
             "CLOCK",

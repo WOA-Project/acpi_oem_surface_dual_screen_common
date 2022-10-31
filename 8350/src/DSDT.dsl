@@ -2504,7 +2504,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x18)
+                                Package (0x14)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -2643,37 +2643,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_rscc_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_rscc_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
                                             One
                                         }
                                     }, 
@@ -2724,18 +2694,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_dptx3_link_intf_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
                                             One
                                         }
                                     }, 
@@ -2794,7 +2752,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 One, 
-                                Package (0x10)
+                                Package (0x0D)
                                 {
                                     "PSTATE", 
                                     Zero, 
@@ -2859,37 +2817,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_rscc_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_rscc_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
                                             One
                                         }
                                     }, 
@@ -2956,22 +2884,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 0x02, 
-                                Package (0x04)
+                                Package (0x03)
                                 {
                                     "PSTATE", 
                                     Zero, 
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
-                                            One
-                                        }
-                                    }, 
-
                                     Package (0x02)
                                     {
                                         "BUSARB", 
@@ -3099,7 +3015,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x18)
+                                Package (0x12)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -3238,37 +3154,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_rscc_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
                                             One
                                         }
                                     }, 
@@ -3299,38 +3185,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_dptx2_pixel0_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx2_link_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx2_link_intf_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
                                             One
                                         }
                                     }, 
@@ -3389,22 +3243,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 One, 
-                                Package (0x04)
+                                Package (0x03)
                                 {
                                     "PSTATE", 
                                     Zero, 
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
-                                            One
-                                        }
-                                    }, 
-
                                     Package (0x02)
                                     {
                                         "BUSARB", 
@@ -3514,7 +3356,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 0x04, 
-                                Package (0x06)
+                                Package (0x04)
                                 {
                                     "PSTATE", 
                                     Zero, 
@@ -3534,26 +3376,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_dptx2_pixel0_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx2_link_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx2_link_intf_clk", 
                                             One
                                         }
                                     }
@@ -3588,7 +3410,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x18)
+                                Package (0x11)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -3727,37 +3549,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_rscc_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
                                             One
                                         }
                                     }, 
@@ -3777,49 +3569,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_dptx2_pixel1_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_dptx2_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx2_link_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx2_link_intf_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
                                             One
                                         }
                                     }, 
@@ -3878,22 +3628,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 One, 
-                                Package (0x04)
+                                Package (0x03)
                                 {
                                     "PSTATE", 
                                     Zero, 
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
-                                            One
-                                        }
-                                    }, 
-
                                     Package (0x02)
                                     {
                                         "BUSARB", 
@@ -4003,7 +3741,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 0x04, 
-                                Package (0x06)
+                                Package (0x03)
                                 {
                                     "PSTATE", 
                                     Zero, 
@@ -4012,37 +3750,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_dptx2_pixel1_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_dptx2_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx2_link_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx2_link_intf_clk", 
                                             One
                                         }
                                     }
@@ -4077,7 +3785,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x1E)
+                                Package (0x18)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -4226,26 +3934,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "gcc_usb3_prim_phy_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_usb3_prim_phy_com_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "gcc_edp0_phy_clkref_en", 
                                             One
                                         }
@@ -4276,37 +3964,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_rscc_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
                                             One
                                         }
                                     }, 
@@ -4357,18 +4015,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_dptx0_link_intf_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
                                             One
                                         }
                                     }, 
@@ -4427,22 +4073,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 One, 
-                                Package (0x04)
+                                Package (0x03)
                                 {
                                     "PSTATE", 
                                     Zero, 
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
-                                            One
-                                        }
-                                    }, 
-
                                     Package (0x02)
                                     {
                                         "BUSARB", 
@@ -4652,7 +4286,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x1E)
+                                Package (0x18)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -4801,26 +4435,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "gcc_usb3_prim_phy_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_usb3_prim_phy_com_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "gcc_edp0_phy_clkref_en", 
                                             One
                                         }
@@ -4851,37 +4465,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_rscc_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
                                             One
                                         }
                                     }, 
@@ -4932,18 +4516,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_dptx0_link_intf_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
                                             One
                                         }
                                     }, 
@@ -5002,22 +4574,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 One, 
-                                Package (0x04)
+                                Package (0x03)
                                 {
                                     "PSTATE", 
                                     Zero, 
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
-                                            One
-                                        }
-                                    }, 
-
                                     Package (0x02)
                                     {
                                         "BUSARB", 
@@ -5227,7 +4787,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x1E)
+                                Package (0x18)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -5396,26 +4956,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "gcc_usb3_sec_phy_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_usb3_sec_phy_com_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_rscc_ahb_clk", 
                                             One
                                         }
@@ -5426,37 +4966,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_rscc_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
                                             One
                                         }
                                     }, 
@@ -5507,18 +5017,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_dptx1_link_intf_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
                                             One
                                         }
                                     }, 
@@ -5577,22 +5075,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 One, 
-                                Package (0x04)
+                                Package (0x03)
                                 {
                                     "PSTATE", 
                                     Zero, 
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
-                                            One
-                                        }
-                                    }, 
-
                                     Package (0x02)
                                     {
                                         "BUSARB", 
@@ -5802,7 +5288,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x1E)
+                                Package (0x18)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -5951,26 +5437,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "gcc_usb3_sec_phy_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_usb3_sec_phy_com_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "gcc_top_edp1_phy_clkref_en", 
                                             One
                                         }
@@ -6001,37 +5467,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_rscc_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_vsync_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
                                             One
                                         }
                                     }, 
@@ -6082,18 +5518,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_dptx1_link_intf_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
                                             One
                                         }
                                     }, 
@@ -6152,22 +5576,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 One, 
-                                Package (0x04)
+                                Package (0x03)
                                 {
                                     "PSTATE", 
                                     Zero, 
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x04)
-                                        {
-                                            "mdss_0_disp_cc_mdss_mdp_clk", 
-                                            0x03, 
-                                            0x165A0BC0, 
-                                            One
-                                        }
-                                    }, 
-
                                     Package (0x02)
                                     {
                                         "BUSARB", 
@@ -10591,34 +10003,16 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         {
                             "PSTATE_SET", 
                             Zero, 
-                            Package (0x03)
+                            Package (0x02)
                             {
                                 "PSTATE", 
-                                Zero, 
-                                Package (0x02)
-                                {
-                                    "FOOTSWITCH", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_gdsc", 
-                                        One
-                                    }
-                                }
+                                Zero
                             }, 
 
-                            Package (0x03)
+                            Package (0x02)
                             {
                                 "PSTATE", 
-                                One, 
-                                Package (0x02)
-                                {
-                                    "FOOTSWITCH", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_gdsc", 
-                                        0x02
-                                    }
-                                }
+                                One
                             }
                         }, 
 
@@ -10626,241 +10020,16 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         {
                             "PSTATE_SET", 
                             One, 
-                            Package (0x0E)
+                            Package (0x02)
                             {
                                 "PSTATE", 
-                                Zero, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x04)
-                                    {
-                                        "gcc_ufs_phy_axi_clk", 
-                                        0x08, 
-                                        0x11E1A300, 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x04)
-                                    {
-                                        "gcc_ufs_phy_unipro_core_clk", 
-                                        0x08, 
-                                        0x11E1A300, 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_ice_core_clk", 
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x03)
-                                    {
-                                        "gcc_ufs_phy_ice_core_clk", 
-                                        0x09, 
-                                        0x12
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x04)
-                                    {
-                                        "gcc_ufs_phy_ice_core_clk", 
-                                        0x03, 
-                                        0x11E1A300, 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_aggre_ufs_phy_axi_clk", 
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_ahb_clk", 
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_phy_aux_clk", 
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_tx_symbol_0_clk", 
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_rx_symbol_0_clk", 
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_rx_symbol_1_clk", 
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_ref_clkref_en", 
-                                        One
-                                    }
-                                }
+                                Zero
                             }, 
 
-                            Package (0x0C)
+                            Package (0x02)
                             {
                                 "PSTATE", 
-                                One, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_aggre_ufs_phy_axi_clk", 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_ahb_clk", 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_phy_aux_clk", 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_tx_symbol_0_clk", 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_rx_symbol_0_clk", 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_rx_symbol_1_clk", 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_ice_core_clk", 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_unipro_core_clk", 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_phy_axi_clk", 
-                                        0x02
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_ufs_ref_clkref_en", 
-                                        0x02
-                                    }
-                                }
+                                One
                             }
                         }, 
 
@@ -10868,66 +10037,16 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         {
                             "PSTATE_SET", 
                             0x02, 
-                            Package (0x04)
+                            Package (0x02)
                             {
                                 "PSTATE", 
-                                Zero, 
-                                Package (0x02)
-                                {
-                                    "BUSARB", 
-                                    Package (0x05)
-                                    {
-                                        0x03, 
-                                        "ICBID_MASTER_UFS_MEM", 
-                                        "ICBID_SLAVE_EBI1", 
-                                        0x8F0D1800, 
-                                        0x8F0D1800
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "BUSARB", 
-                                    Package (0x05)
-                                    {
-                                        0x03, 
-                                        "ICBID_MASTER_APPSS_PROC", 
-                                        "ICBID_SLAVE_UFS_MEM_CFG", 
-                                        0x11D260C0, 
-                                        Zero
-                                    }
-                                }
+                                Zero
                             }, 
 
-                            Package (0x04)
+                            Package (0x02)
                             {
                                 "PSTATE", 
-                                One, 
-                                Package (0x02)
-                                {
-                                    "BUSARB", 
-                                    Package (0x05)
-                                    {
-                                        0x03, 
-                                        "ICBID_MASTER_APPSS_PROC", 
-                                        "ICBID_SLAVE_UFS_MEM_CFG", 
-                                        Zero, 
-                                        Zero
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "BUSARB", 
-                                    Package (0x05)
-                                    {
-                                        0x03, 
-                                        "ICBID_MASTER_UFS_MEM", 
-                                        "ICBID_SLAVE_EBI1", 
-                                        Zero, 
-                                        Zero
-                                    }
-                                }
+                                One
                             }
                         }
                     }, 
@@ -11938,11 +11057,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }, 
 
-                Package (0x09)
+                Package (0x07)
                 {
                     "DEVICE", 
                     "\\_SB.PCI2", 
-                    Package (0x05)
+                    Package (0x04)
                     {
                         "COMPONENT", 
                         Zero, 
@@ -11956,315 +11075,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         {
                             "FSTATE", 
                             One
-                        }, 
-
-                        Package (0x05)
-                        {
-                            "PSTATE_SET", 
-                            Zero, 
-                            Package (0x06)
-                            {
-                                "PSTATE", 
-                                Zero, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_2a_aux_clk", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_2a_phy_bcr", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "PSTATE", 
-                                One
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "INIT_PSTATE", 
-                                Zero
-                            }
                         }
                     }, 
 
-                    Package (0x18)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        Zero, 
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_gdsc", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_2a_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_south_sf_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_cfg_ahb_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_aux_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a2b_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_pipe_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_pipediv2_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_slv_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_slv_q2a_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_mstr_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie_2a_aux_clk", 
-                                0x08, 
-                                0x0124F800, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie2a_phy_rchng_clk", 
-                                0x08, 
-                                0x05F5E100, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x03)
-                            {
-                                "PCIE_PLIM_ENABLE_DISABLE_CMD", 
-                                One, 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_2A", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x000F4240, 
-                                0x000F4240, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_2A", 
-                                "ICBID_SLAVE_EBI1", 
-                                0xEE6B2800, 
-                                0x77359400, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_2A_CFG", 
-                                0x047868C0, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }
+                        Zero
                     }, 
 
                     Package (0x02)
@@ -12279,255 +11096,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x02
                     }, 
 
-                    Package (0x17)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        0x03, 
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_2A", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_2A", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_2A_CFG", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie2a_phy_rchng_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_slv_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_slv_q2a_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_mstr_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_cfg_ahb_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_south_sf_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_pipediv2_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_pipe_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a2b_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_2a_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                0x02, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_aux_clk", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_phy_bcr", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "DELAY", 
-                            Package (0x01)
-                            {
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a_gdsc", 
-                                0x02
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_EXCEPTION", 
-                        Package (0x02)
-                        {
-                            "EXECUTE_FUNCTION", 
-                            Package (0x01)
-                            {
-                                "ExecuteOcdPCIeExceptions"
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_DSTATE", 
-                        Zero
+                        0x03
                     }
                 }, 
 
@@ -12577,11 +11149,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }, 
 
-                Package (0x09)
+                Package (0x07)
                 {
                     "DEVICE", 
                     "\\_SB.PCI3", 
-                    Package (0x05)
+                    Package (0x04)
                     {
                         "COMPONENT", 
                         Zero, 
@@ -12595,315 +11167,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         {
                             "FSTATE", 
                             One
-                        }, 
-
-                        Package (0x05)
-                        {
-                            "PSTATE_SET", 
-                            Zero, 
-                            Package (0x06)
-                            {
-                                "PSTATE", 
-                                Zero, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_2b_aux_clk", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_2b_phy_bcr", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "PSTATE", 
-                                One
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "INIT_PSTATE", 
-                                Zero
-                            }
                         }
                     }, 
 
-                    Package (0x18)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        Zero, 
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_gdsc", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_2b_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_south_sf_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_cfg_ahb_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_aux_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a2b_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_pipe_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_pipediv2_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_slv_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_slv_q2a_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_mstr_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie_2b_aux_clk", 
-                                0x08, 
-                                0x0124F800, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie2b_phy_rchng_clk", 
-                                0x08, 
-                                0x05F5E100, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x03)
-                            {
-                                "PCIE_PLIM_ENABLE_DISABLE_CMD", 
-                                One, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_2B", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x000F4240, 
-                                0x000F4240, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_2B", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x3B9ACA00, 
-                                0x3B9ACA00, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_2B_CFG", 
-                                0x047868C0, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }
+                        Zero
                     }, 
 
                     Package (0x02)
@@ -12918,255 +11188,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x02
                     }, 
 
-                    Package (0x17)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        0x03, 
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_2B", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_2B", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_2B_CFG", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie2b_phy_rchng_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_slv_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_slv_q2a_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_mstr_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_cfg_ahb_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_south_sf_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_pipediv2_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_pipe_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2a2b_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_2b_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                0x02, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_aux_clk", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_phy_bcr", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "DELAY", 
-                            Package (0x01)
-                            {
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_2b_gdsc", 
-                                0x02
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_EXCEPTION", 
-                        Package (0x02)
-                        {
-                            "EXECUTE_FUNCTION", 
-                            Package (0x01)
-                            {
-                                "ExecuteOcdPCIeExceptions"
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_DSTATE", 
-                        Zero
+                        0x03
                     }
                 }, 
 
@@ -13216,11 +11241,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }, 
 
-                Package (0x09)
+                Package (0x07)
                 {
                     "DEVICE", 
                     "\\_SB.PCI4", 
-                    Package (0x05)
+                    Package (0x04)
                     {
                         "COMPONENT", 
                         Zero, 
@@ -13234,315 +11259,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         {
                             "FSTATE", 
                             One
-                        }, 
-
-                        Package (0x05)
-                        {
-                            "PSTATE_SET", 
-                            Zero, 
-                            Package (0x06)
-                            {
-                                "PSTATE", 
-                                Zero, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_3a_aux_clk", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_3a_phy_bcr", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "PSTATE", 
-                                One
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "INIT_PSTATE", 
-                                Zero
-                            }
                         }
                     }, 
 
-                    Package (0x18)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        Zero, 
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_gdsc", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_3a_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_south_sf_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_cfg_ahb_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_aux_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a3b_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_pipe_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_pipediv2_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_slv_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_slv_q2a_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_mstr_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie_3a_aux_clk", 
-                                0x08, 
-                                0x0124F800, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie3a_phy_rchng_clk", 
-                                0x08, 
-                                0x05F5E100, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x03)
-                            {
-                                "PCIE_PLIM_ENABLE_DISABLE_CMD", 
-                                One, 
-                                0x04
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_3A", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x000F4240, 
-                                0x000F4240, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_3A", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x3B9ACA00, 
-                                0x3B9ACA00, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_3A_CFG", 
-                                0x047868C0, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }
+                        Zero
                     }, 
 
                     Package (0x02)
@@ -13557,255 +11280,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x02
                     }, 
 
-                    Package (0x17)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        0x03, 
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_3A", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_3A", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_3A_CFG", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie3a_phy_rchng_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_slv_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_slv_q2a_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_mstr_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_cfg_ahb_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_south_sf_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_pipediv2_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_pipe_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a3b_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_3a_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                0x02, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_aux_clk", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_phy_bcr", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "DELAY", 
-                            Package (0x01)
-                            {
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a_gdsc", 
-                                0x02
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_EXCEPTION", 
-                        Package (0x02)
-                        {
-                            "EXECUTE_FUNCTION", 
-                            Package (0x01)
-                            {
-                                "ExecuteOcdPCIeExceptions"
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_DSTATE", 
-                        Zero
+                        0x03
                     }
                 }, 
 
@@ -13855,11 +11333,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }, 
 
-                Package (0x09)
+                Package (0x07)
                 {
                     "DEVICE", 
                     "\\_SB.PCI5", 
-                    Package (0x05)
+                    Package (0x04)
                     {
                         "COMPONENT", 
                         Zero, 
@@ -13873,315 +11351,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         {
                             "FSTATE", 
                             One
-                        }, 
-
-                        Package (0x05)
-                        {
-                            "PSTATE_SET", 
-                            Zero, 
-                            Package (0x06)
-                            {
-                                "PSTATE", 
-                                Zero, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_3b_aux_clk", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_3b_phy_bcr", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "PSTATE", 
-                                One
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "INIT_PSTATE", 
-                                Zero
-                            }
                         }
                     }, 
 
-                    Package (0x18)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        Zero, 
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_gdsc", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_3b_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_south_sf_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_cfg_ahb_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_aux_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a3b_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_pipe_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_pipediv2_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_slv_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_slv_q2a_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_mstr_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie_3b_aux_clk", 
-                                0x08, 
-                                0x0124F800, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie3b_phy_rchng_clk", 
-                                0x08, 
-                                0x05F5E100, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x03)
-                            {
-                                "PCIE_PLIM_ENABLE_DISABLE_CMD", 
-                                One, 
-                                0x05
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_3B", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x000F4240, 
-                                0x000F4240, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_3B", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x3B9ACA00, 
-                                0x3B9ACA00, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_3B_CFG", 
-                                0x047868C0, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }
+                        Zero
                     }, 
 
                     Package (0x02)
@@ -14196,255 +11372,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x02
                     }, 
 
-                    Package (0x17)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        0x03, 
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_3B", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_3B", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_3B_CFG", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie3b_phy_rchng_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_slv_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_slv_q2a_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_mstr_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_cfg_ahb_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_south_sf_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_pipediv2_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_pipe_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3a3b_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_3b_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                0x02, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_aux_clk", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_phy_bcr", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "DELAY", 
-                            Package (0x01)
-                            {
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_3b_gdsc", 
-                                0x02
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_EXCEPTION", 
-                        Package (0x02)
-                        {
-                            "EXECUTE_FUNCTION", 
-                            Package (0x01)
-                            {
-                                "ExecuteOcdPCIeExceptions"
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_DSTATE", 
-                        Zero
+                        0x03
                     }
                 }, 
 
@@ -14494,11 +11425,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }, 
 
-                Package (0x09)
+                Package (0x07)
                 {
                     "DEVICE", 
                     "\\_SB.PCI6", 
-                    Package (0x05)
+                    Package (0x04)
                     {
                         "COMPONENT", 
                         Zero, 
@@ -14512,325 +11443,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         {
                             "FSTATE", 
                             One
-                        }, 
-
-                        Package (0x05)
-                        {
-                            "PSTATE_SET", 
-                            Zero, 
-                            Package (0x06)
-                            {
-                                "PSTATE", 
-                                Zero, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_4_aux_clk", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_pcie_4_phy_bcr", 
-                                        0x0B
-                                    }
-                                }, 
-
-                                Package (0x02)
-                                {
-                                    "DELAY", 
-                                    Package (0x01)
-                                    {
-                                        One
-                                    }
-                                }
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "PSTATE", 
-                                One
-                            }, 
-
-                            Package (0x02)
-                            {
-                                "INIT_PSTATE", 
-                                Zero
-                            }
                         }
                     }, 
 
-                    Package (0x19)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        Zero, 
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_gdsc", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE_ADJUST", 
-                            Package (0x02)
-                            {
-                                Zero, 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_4_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_cnoc_pcie4_qx_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_4_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_cfg_ahb_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_aux_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_pipe_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_pipediv2_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_slv_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_slv_q2a_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_mstr_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie_4_aux_clk", 
-                                0x08, 
-                                0x0124F800, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_pcie4_phy_rchng_clk", 
-                                0x08, 
-                                0x05F5E100, 
-                                0x03
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x03)
-                            {
-                                "PCIE_PLIM_ENABLE_DISABLE_CMD", 
-                                One, 
-                                0x06
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_4", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x000F4240, 
-                                0x000F4240, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_4", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x3B9ACA00, 
-                                0x3B9ACA00, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_4_CFG", 
-                                0x047868C0, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }
+                        Zero
                     }, 
 
                     Package (0x02)
@@ -14845,265 +11464,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x02
                     }, 
 
-                    Package (0x18)
+                    Package (0x02)
                     {
                         "DSTATE", 
-                        0x03, 
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x07)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_4", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV", 
-                                "SUPPRESSIBLE"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x06)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_PCIE_4", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero, 
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_PCIE_4_CFG", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "RPMH_COMMIT", 
-                            Package (0x01)
-                            {
-                                "PCIE_DRV"
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PCIE_HW_DRV_RESOURCE", 
-                            Package (0x02)
-                            {
-                                "PCIE_FORCE_WAKE_CMD", 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie4_phy_rchng_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_slv_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_slv_q2a_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_mstr_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_cfg_ahb_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_noc_pcie_4_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_cnoc_pcie4_qx_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_pipediv2_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_pipe_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x09)
-                            {
-                                "gcc_pcie_4_pipe_clk", 
-                                0x06, 
-                                Zero, 
-                                Zero, 
-                                0x02, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_aux_clk", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_phy_bcr", 
-                                0x0A
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "DELAY", 
-                            Package (0x01)
-                            {
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_pcie_4_gdsc", 
-                                0x02
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_EXCEPTION", 
-                        Package (0x02)
-                        {
-                            "EXECUTE_FUNCTION", 
-                            Package (0x01)
-                            {
-                                "ExecuteOcdPCIeExceptions"
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "CRASHDUMP_DSTATE", 
-                        Zero
+                        0x03
                     }
                 }, 
 
@@ -15159,139 +11523,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         {
             Name (_HID, "QCOM1AD0")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
-        }
-
-        Scope (\_SB.PEP0)
-        {
-            Method (LPNF, 0, NotSerialized)
-            {
-                Return (LPNX) /* \_SB_.PEP0.LPNX */
-            }
-
-            Name (LPNX, Package (0x01)
-            {
-                Package (0x07)
-                {
-                    "DEVICE", 
-                    "\\_SB.NFCD", 
-                    Package (0x03)
-                    {
-                        "COMPONENT", 
-                        Zero, 
-                        Package (0x02)
-                        {
-                            "FSTATE", 
-                            Zero
-                        }
-                    }, 
-
-                    Package (0x05)
-                    {
-                        "DSTATE", 
-                        Zero, 
-                        Package (0x02)
-                        {
-                            "PMICVREGVOTE", 
-                            Package (0x06)
-                            {
-                                "PPP_RESOURCE_ID_LDO8_C", 
-                                One, 
-                                0x001B7740, 
-                                One, 
-                                0x04, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PMICVREGVOTE", 
-                            Package (0x06)
-                            {
-                                "PPP_RESOURCE_ID_SMPS10_B", 
-                                0x02, 
-                                0x001B7740, 
-                                One, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "TLMMGPIO", 
-                            Package (0x06)
-                            {
-                                0x08, 
-                                One, 
-                                Zero, 
-                                One, 
-                                0x03, 
-                                0x03
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "DSTATE", 
-                        One
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "DSTATE", 
-                        0x02
-                    }, 
-
-                    Package (0x05)
-                    {
-                        "DSTATE", 
-                        0x03, 
-                        Package (0x02)
-                        {
-                            "TLMMGPIO", 
-                            Package (0x06)
-                            {
-                                0x08, 
-                                Zero, 
-                                Zero, 
-                                One, 
-                                One, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PMICVREGVOTE", 
-                            Package (0x06)
-                            {
-                                "PPP_RESOURCE_ID_SMPS10_B", 
-                                0x02, 
-                                0x001B7740, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PMICVREGVOTE", 
-                            Package (0x06)
-                            {
-                                "PPP_RESOURCE_ID_LDO8_C", 
-                                One, 
-                                Zero, 
-                                Zero, 
-                                Zero, 
-                                Zero
-                            }
-                        }
-                    }
-                }
-            })
         }
 
         Scope (\_SB.PEP0)
@@ -16095,6 +12326,40 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
+        Device (UARD)
+        {
+            Name (_HID, "QCOM1A16")  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+            Name (_UID, 0x04)  // _UID: Unique ID
+            Name (_DEP, Package (0x01)  // _DEP: Dependencies
+            {
+                \_SB.PEP0
+            })
+            Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
+            Name (_STR, Unicode ("QUP_0_SE_3,DBG"))  // _STR: Description String
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    Memory32Fixed (ReadWrite,
+                        0x0098C000,         // Address Base
+                        0x00004000,         // Address Length
+                        )
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x0000027C,
+                    }
+                    GpioInt (Edge, ActiveLow, Exclusive, PullDown, 0x0000,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0013
+                        }
+                })
+                Return (RBUF) /* \_SB_.UARD._CRS.RBUF */
+            }
+        }
+
         Device (SPI5)
         {
             Name (_HID, "QCOM1A0E")  // _HID: Hardware ID
@@ -16204,7 +12469,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     {
                         0x00000186,
                     }
-                    GpioInt (Edge, ActiveLow, Exclusive, PullDown, 0x0000,
+                    GpioInt (Level, ActiveHigh, Exclusive, PullDown, 0x0000,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
@@ -16245,40 +12510,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 })
                 Return (RBUF) /* \_SB_.IC18._CRS.RBUF */
-            }
-        }
-
-        Device (UARD)
-        {
-            Name (_HID, "QCOM1A16")  // _HID: Hardware ID
-            Alias (\_SB.PSUB, _SUB)
-            Name (_UID, 0x04)  // _UID: Unique ID
-            Name (_DEP, Package (0x01)  // _DEP: Dependencies
-            {
-                \_SB.PEP0
-            })
-            Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
-            Name (_STR, Unicode ("QUP_0_SE_3,DBG"))  // _STR: Description String
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    Memory32Fixed (ReadWrite,
-                        0x0098C000,         // Address Base
-                        0x00004000,         // Address Length
-                        )
-                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
-                    {
-                        0x0000027C,
-                    }
-                    GpioInt (Edge, ActiveLow, Exclusive, PullDown, 0x0000,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0013
-                        }
-                })
-                Return (RBUF) /* \_SB_.UARD._CRS.RBUF */
             }
         }
 
@@ -22682,7 +18913,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         {
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (0x0F)
+                Return (Zero)
             }
         }
 
@@ -24232,11 +20463,27 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         )
                     Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
                     {
-                        0x00000114,
+                        0x00000115,
                     }
                     Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
                     {
-                        0x00000115,
+                        0x00000116,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000117,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000118,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000119,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x0000011A,
                     }
                 })
                 Return (RBUF) /* \_SB_.QGP0._CRS.RBUF */
@@ -24265,6 +20512,46 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     {
                         0x00000138,
                     }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000139,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x0000013A,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x0000013B,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x0000013C,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000145,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000146,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000147,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000148,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000149,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x0000014A,
+                    }
                 })
                 Return (RBUF) /* \_SB_.QGP1._CRS.RBUF */
             }
@@ -24291,6 +20578,46 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
                     {
                         0x0000026D,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x0000026E,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x0000026F,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000270,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000271,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000272,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000273,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000274,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000275,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000276,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000277,
                     }
                 })
                 Return (RBUF) /* \_SB_.QGP2._CRS.RBUF */
@@ -24334,211 +20661,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x00070000,         // Address Length
                         )
                 })
-            }
-        }
-
-        Device (NFCD)
-        {
-            Name (_HID, "PN557")  // _HID: Hardware ID
-            Name (_CID, "ACPIPN557")  // _CID: Compatible ID
-            Alias (\_SB.PSUB, _SUB)
-            Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
-            {
-                I2cSerialBusV2 (0x0028, ControllerInitiated, 0x000186A0,
-                    AddressingMode7Bit, "\\_SB.IC18",
-                    0x00, ResourceConsumer, , Exclusive,
-                    )
-                GpioInt (Level, ActiveHigh, Exclusive, PullDefault, 0x0000,
-                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                    )
-                    {   // Pin list
-                        0x0057
-                    }
-            })
-            Name (NFCS, ResourceTemplate ()
-            {
-                GpioIo (Exclusive, PullDefault, 0x0000, 0x0000, IoRestrictionNone,
-                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                    )
-                    {   // Pin list
-                        0x003F
-                    }
-            })
-            Name (NFCP, ResourceTemplate ()
-            {
-                GpioIo (Exclusive, PullDefault, 0x0000, 0x0000, IoRestrictionNone,
-                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                    )
-                    {   // Pin list
-                        0x003E
-                    }
-            })
-            Scope (GIO0)
-            {
-                OperationRegion (NFPO, GeneralPurposeIo, Zero, One)
-            }
-
-            Field (\_SB.GIO0.NFPO, ByteAcc, NoLock, Preserve)
-            {
-                Connection (\_SB.NFCD.NFCP), 
-                MGPE,   1
-            }
-
-            Method (POON, 0, NotSerialized)
-            {
-                MGPE = One
-            }
-
-            Method (POOF, 0, NotSerialized)
-            {
-                MGPE = Zero
-            }
-
-            Name (NFCF, ResourceTemplate ()
-            {
-                GpioIo (Exclusive, PullDefault, 0x0000, 0x0000, IoRestrictionNone,
-                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                    )
-                    {   // Pin list
-                        0x0056
-                    }
-            })
-            Scope (GIO0)
-            {
-                OperationRegion (NFFO, GeneralPurposeIo, Zero, One)
-            }
-
-            Field (\_SB.GIO0.NFFO, ByteAcc, NoLock, Preserve)
-            {
-                Connection (\_SB.NFCD.NFCF), 
-                MGFE,   1
-            }
-
-            Method (FWON, 0, NotSerialized)
-            {
-                MGFE = One
-            }
-
-            Method (FWOF, 0, NotSerialized)
-            {
-                MGFE = Zero
-            }
-
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                Debug = "Method NFC _DSM begin"
-                If ((Arg0 == ToUUID ("a2e7f6c4-9638-4485-9f12-6b4e20b60d63") /* Unknown UUID */))
-                {
-                    If ((Arg2 == Zero))
-                    {
-                        Debug = "Method NFC _DSM QUERY"
-                        If ((Arg1 == One))
-                        {
-                            \_SB.NFCD.POOF ()
-                            Sleep (0x14)
-                            Return (Buffer (One)
-                            {
-                                 0x0F                                             // .
-                            })
-                        }
-                    }
-
-                    If ((Arg2 == 0x02))
-                    {
-                        Debug = "Method NFC _DSM SETPOWERMODE"
-                        If ((Arg3 == One))
-                        {
-                            \_SB.NFCD.POON ()
-                            Sleep (0x14)
-                        }
-
-                        If ((Arg3 == Zero))
-                        {
-                            \_SB.NFCD.POOF ()
-                            Sleep (0x14)
-                        }
-                    }
-
-                    If ((Arg2 == One))
-                    {
-                        Debug = "Method NFC _DSM SETFWMODE"
-                        If ((Arg3 == One))
-                        {
-                            \_SB.NFCD.FWON ()
-                            Sleep (0x14)
-                            \_SB.NFCD.POOF ()
-                            Sleep (0x14)
-                            \_SB.NFCD.POON ()
-                            Sleep (0x14)
-                        }
-
-                        If ((Arg3 == Zero))
-                        {
-                            \_SB.NFCD.FWOF ()
-                            Sleep (0x14)
-                            \_SB.NFCD.POOF ()
-                            Sleep (0x14)
-                            \_SB.NFCD.POON ()
-                            Sleep (0x14)
-                        }
-                    }
-
-                    If ((Arg2 == 0x03))
-                    {
-                        Debug = "Method NFC _DSM EEPROM Config"
-                        Return (Buffer (0x13)
-                        {
-                            /* 0000 */  0x9C, 0x1F, 0x38, 0x19, 0xA8, 0xB9, 0x4B, 0xAB,  // ..8...K.
-                            /* 0008 */  0xA1, 0xBA, 0xD0, 0x20, 0x76, 0x88, 0x2A, 0xE0,  // ... v.*.
-                            /* 0010 */  0x03, 0x01, 0x11                                 // ...
-                        })
-                    }
-                }
-            }
-
-            Name (PGID, Buffer (0x0A)
-            {
-                "\\_SB.NFCD"
-            })
-            Name (DBUF, Buffer (DBFL){})
-            CreateByteField (DBUF, Zero, STAT)
-            CreateByteField (DBUF, 0x02, DVAL)
-            CreateField (DBUF, 0x18, 0xA0, DEID)
-            Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
-            {
-                Return (0x03)
-            }
-
-            Method (_S2D, 0, NotSerialized)  // _S2D: S2 Device State
-            {
-                Return (0x03)
-            }
-
-            Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
-            {
-                Return (0x03)
-            }
-
-            Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
-            {
-                DEID = Buffer (ESNL){}
-                DVAL = Zero
-                DEID = PGID /* \_SB_.NFCD.PGID */
-                If (\_SB.ABD.AVBL)
-                {
-                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.NFCD.DBUF */
-                }
-            }
-
-            Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
-            {
-                DEID = Buffer (ESNL){}
-                DVAL = 0x03
-                DEID = PGID /* \_SB_.NFCD.PGID */
-                If (\_SB.ABD.AVBL)
-                {
-                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.NFCD.DBUF */
-                }
             }
         }
 
@@ -25966,6 +22088,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 }
             }
 
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (Zero)
+            }
+
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (CRS0, ResourceTemplate ()
@@ -26707,25 +22834,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
-        ThermalZone (TZ6)
-        {
-            Name (_HID, "QCOM1AB7")  // _HID: Hardware ID
-            Name (_UID, Zero)  // _UID: Unique ID
-            Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
-            {
-                Return (Package (0x01)
-                {
-                    \_SB.PEP0
-                })
-            }
-
-            Name (TTSP, 0x32)
-            Method (_TSP, 0, NotSerialized)  // _TSP: Thermal Sampling Period
-            {
-                Return (\_SB.TZ6.TTSP)
-            }
-        }
-
         ThermalZone (TZ7)
         {
             Name (_HID, "QCOM1AC4")  // _HID: Hardware ID
@@ -26780,25 +22888,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Method (_TSP, 0, NotSerialized)  // _TSP: Thermal Sampling Period
             {
                 Return (\_SB.TZ9.TTSP)
-            }
-        }
-
-        ThermalZone (TZ10)
-        {
-            Name (_HID, "QCOM1AB6")  // _HID: Hardware ID
-            Name (_UID, Zero)  // _UID: Unique ID
-            Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
-            {
-                Return (Package (0x01)
-                {
-                    \_SB.PEP0
-                })
-            }
-
-            Name (TTSP, 0x32)
-            Method (_TSP, 0, NotSerialized)  // _TSP: Thermal Sampling Period
-            {
-                Return (\_SB.TZ10.TTSP)
             }
         }
 

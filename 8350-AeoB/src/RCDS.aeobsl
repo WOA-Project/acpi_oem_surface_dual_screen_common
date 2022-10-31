@@ -42,16 +42,6 @@ Package ()
                 Package ()
                 {
                     0x0000000000000001,
-                    "/arc/client/rail_nsp",
-                    0x0000000000000180,
-                },
-            },
-            Package ()
-            {
-                "NPARESOURCE",
-                Package ()
-                {
-                    0x0000000000000001,
                     "/arc/client/rail_xo",
                     0x0000000000000080,
                 },
@@ -111,16 +101,6 @@ Package ()
                 Package ()
                 {
                     0x0000000000000001,
-                    "/arc/client/rail_nsp",
-                    0x0000000000000000,
-                },
-            },
-            Package ()
-            {
-                "NPARESOURCE",
-                Package ()
-                {
-                    0x0000000000000001,
                     "/arc/client/rail_xo",
                     0x0000000000000000,
                 },
@@ -171,16 +151,6 @@ Package ()
                 {
                     0x0000000000000001,
                     "/arc/client/rail_mxc",
-                    0x0000000000000000,
-                },
-            },
-            Package ()
-            {
-                "NPARESOURCE",
-                Package ()
-                {
-                    0x0000000000000001,
-                    "/arc/client/rail_nsp",
                     0x0000000000000000,
                 },
             },

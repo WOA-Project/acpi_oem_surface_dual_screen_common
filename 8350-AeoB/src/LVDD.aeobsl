@@ -38,8 +38,3 @@ Package ()
     "/arc/client/rail_lpimx",
     "RAIL_VOLTAGE_LEVEL_NOMINAL",
 },
-Package ()
-{
-    "/arc/client/rail_nsp",
-    "RAIL_VOLTAGE_LEVEL_NOMINAL",
-},

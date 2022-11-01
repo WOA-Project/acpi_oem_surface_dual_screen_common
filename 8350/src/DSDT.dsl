@@ -2472,6 +2472,81 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Scope (\_SB.PEP0)
         {
+            Method (APMD, 0, NotSerialized)
+            {
+                Return (APCC) /* \_SB_.PEP0.APCC */
+            }
+
+            Name (APCC, Package (0x01)
+            {
+                Package (0x06)
+                {
+                    "DEVICE", 
+                    "\\_SB.ADSP.ADCM.AUCD.QCRT", 
+                    Package (0x03)
+                    {
+                        "COMPONENT", 
+                        Zero, 
+                        Package (0x02)
+                        {
+                            "FSTATE", 
+                            Zero
+                        }
+                    }, 
+
+                    Package (0x03)
+                    {
+                        "DSTATE", 
+                        Zero, 
+                        Package (0x02)
+                        {
+                            "NPARESOURCE", 
+                            Package (0x03)
+                            {
+                                One, 
+                                "/arc/client/rail_xo", 
+                                0x80
+                            }
+                        }
+                    }, 
+
+                    Package (0x03)
+                    {
+                        "DSTATE", 
+                        One, 
+                        Package (0x02)
+                        {
+                            "NPARESOURCE", 
+                            Package (0x03)
+                            {
+                                One, 
+                                "/arc/client/rail_xo", 
+                                Zero
+                            }
+                        }
+                    }, 
+
+                    Package (0x03)
+                    {
+                        "DSTATE", 
+                        0x02, 
+                        Package (0x02)
+                        {
+                            "NPARESOURCE", 
+                            Package (0x03)
+                            {
+                                One, 
+                                "/arc/client/rail_xo", 
+                                Zero
+                            }
+                        }
+                    }
+                }
+            })
+        }
+
+        Scope (\_SB.PEP0)
+        {
             Method (PREL, 0, NotSerialized)
             {
                 Name (PREX, Package (0x07)
@@ -2504,7 +2579,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x14)
+                                Package (0x13)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -2653,16 +2728,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_rot_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_dptx3_pixel0_clk", 
                                             One
                                         }
@@ -2752,7 +2817,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 One, 
-                                Package (0x0D)
+                                Package (0x0C)
                                 {
                                     "PSTATE", 
                                     Zero, 
@@ -2818,16 +2883,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_rscc_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_rot_clk", 
                                             One
                                         }
                                     }, 
@@ -3015,7 +3070,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x12)
+                                Package (0x11)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -3155,16 +3210,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_rot_clk", 
                                             One
                                         }
                                     }, 
@@ -3410,7 +3455,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x11)
+                                Package (0x10)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -3550,16 +3595,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_rot_clk", 
                                             One
                                         }
                                     }, 
@@ -3785,7 +3820,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x18)
+                                Package (0x17)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -3965,16 +4000,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_rot_clk", 
                                             One
                                         }
                                     }, 
@@ -4286,7 +4311,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x18)
+                                Package (0x17)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -4466,16 +4491,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_rot_clk", 
                                             One
                                         }
                                     }, 
@@ -4787,7 +4802,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x18)
+                                Package (0x17)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -4967,16 +4982,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_rot_clk", 
                                             One
                                         }
                                     }, 
@@ -5288,7 +5293,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x18)
+                                Package (0x17)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -5468,16 +5473,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_rot_clk", 
                                             One
                                         }
                                     }, 
@@ -15186,7 +15181,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (ROE3, 3, NotSerialized)
             {
-                Name (PCFG, Buffer (0x49)
+                Name (PCFG, Buffer (0x66)
                 {
                     /* 0000 */  0x3C, 0x3F, 0x78, 0x6D, 0x6C, 0x20, 0x76, 0x65,  // <?xml ve
                     /* 0008 */  0x72, 0x73, 0x69, 0x6F, 0x6E, 0x3D, 0x27, 0x31,  // rsion='1
@@ -15197,7 +15192,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     /* 0030 */  0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x30, 0x3C,  // arity>0<
                     /* 0038 */  0x2F, 0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F,  // /DPAUXPo
                     /* 0040 */  0x6C, 0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x0A,  // larity>.
-                    /* 0048 */  0x00                                             // .
+                    /* 0048 */  0x3C, 0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C,  // <DPEnabl
+                    /* 0050 */  0x65, 0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F,  // eSSC>1</
+                    /* 0058 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
+                    /* 0060 */  0x53, 0x53, 0x43, 0x3E, 0x0A, 0x00               // SSC>..
                 })
                 Local2 = PCFG /* \_SB_.GPU0.ROE3.PCFG */
                 If ((Arg0 >= SizeOf (Local2)))
@@ -15232,7 +15230,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (ROE4, 3, NotSerialized)
             {
-                Name (PCFG, Buffer (0x49)
+                Name (PCFG, Buffer (0x66)
                 {
                     /* 0000 */  0x3C, 0x3F, 0x78, 0x6D, 0x6C, 0x20, 0x76, 0x65,  // <?xml ve
                     /* 0008 */  0x72, 0x73, 0x69, 0x6F, 0x6E, 0x3D, 0x27, 0x31,  // rsion='1
@@ -15243,7 +15241,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     /* 0030 */  0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x30, 0x3C,  // arity>0<
                     /* 0038 */  0x2F, 0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F,  // /DPAUXPo
                     /* 0040 */  0x6C, 0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x0A,  // larity>.
-                    /* 0048 */  0x00                                             // .
+                    /* 0048 */  0x3C, 0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C,  // <DPEnabl
+                    /* 0050 */  0x65, 0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F,  // eSSC>1</
+                    /* 0058 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
+                    /* 0060 */  0x53, 0x53, 0x43, 0x3E, 0x0A, 0x00               // SSC>..
                 })
                 Local2 = PCFG /* \_SB_.GPU0.ROE4.PCFG */
                 If ((Arg0 >= SizeOf (Local2)))
@@ -15278,7 +15279,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (ROE5, 3, NotSerialized)
             {
-                Name (PCFG, Buffer (0x49)
+                Name (PCFG, Buffer (0x66)
                 {
                     /* 0000 */  0x3C, 0x3F, 0x78, 0x6D, 0x6C, 0x20, 0x76, 0x65,  // <?xml ve
                     /* 0008 */  0x72, 0x73, 0x69, 0x6F, 0x6E, 0x3D, 0x27, 0x31,  // rsion='1
@@ -15289,7 +15290,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     /* 0030 */  0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x30, 0x3C,  // arity>0<
                     /* 0038 */  0x2F, 0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F,  // /DPAUXPo
                     /* 0040 */  0x6C, 0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x0A,  // larity>.
-                    /* 0048 */  0x00                                             // .
+                    /* 0048 */  0x3C, 0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C,  // <DPEnabl
+                    /* 0050 */  0x65, 0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F,  // eSSC>1</
+                    /* 0058 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
+                    /* 0060 */  0x53, 0x53, 0x43, 0x3E, 0x0A, 0x00               // SSC>..
                 })
                 Local2 = PCFG /* \_SB_.GPU0.ROE5.PCFG */
                 If ((Arg0 >= SizeOf (Local2)))
@@ -15324,7 +15328,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (ROE6, 3, NotSerialized)
             {
-                Name (PCFG, Buffer (0x49)
+                Name (PCFG, Buffer (0x66)
                 {
                     /* 0000 */  0x3C, 0x3F, 0x78, 0x6D, 0x6C, 0x20, 0x76, 0x65,  // <?xml ve
                     /* 0008 */  0x72, 0x73, 0x69, 0x6F, 0x6E, 0x3D, 0x27, 0x31,  // rsion='1
@@ -15335,7 +15339,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     /* 0030 */  0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x30, 0x3C,  // arity>0<
                     /* 0038 */  0x2F, 0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F,  // /DPAUXPo
                     /* 0040 */  0x6C, 0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x0A,  // larity>.
-                    /* 0048 */  0x00                                             // .
+                    /* 0048 */  0x3C, 0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C,  // <DPEnabl
+                    /* 0050 */  0x65, 0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F,  // eSSC>1</
+                    /* 0058 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
+                    /* 0060 */  0x53, 0x53, 0x43, 0x3E, 0x0A, 0x00               // SSC>..
                 })
                 Local2 = PCFG /* \_SB_.GPU0.ROE6.PCFG */
                 If ((Arg0 >= SizeOf (Local2)))

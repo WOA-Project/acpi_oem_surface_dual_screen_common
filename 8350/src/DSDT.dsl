@@ -5785,7 +5785,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 Return (LPCC) /* \_SB_.PEP0.LPCC */
             }
 
-            Name (LPCC, Package (0x07)
+            Name (LPCC, Package (0x06)
             {
                 Package (0x07)
                 {
@@ -5860,7 +5860,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         Zero, 
@@ -5956,70 +5956,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         Package (0x02)
                         {
                             "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_prim_phy_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_prim_phy_com_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
                             Package (0x02)
                             {
                                 "gcc_usb4_eud_clkref_en", 
@@ -6065,7 +6001,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         One, 
@@ -6147,66 +6083,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "CLOCK", 
                             Package (0x02)
                             {
-                                "gcc_usb3_prim_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_prim_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
                                 "gcc_usb4_eud_clkref_en", 
                                 0x02
                             }
@@ -6260,7 +6136,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         0x02, 
@@ -6342,66 +6218,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "CLOCK", 
                             Package (0x02)
                             {
-                                "gcc_usb3_prim_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_prim_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
                                 "gcc_usb4_eud_clkref_en", 
                                 0x02
                             }
@@ -6455,7 +6271,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x15)
+                    Package (0x0F)
                     {
                         "DSTATE", 
                         0x03, 
@@ -6538,66 +6354,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             Package (0x02)
                             {
                                 "gcc_usb30_prim_mock_utmi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_prim_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_prim_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
                                 0x02
                             }
                         }, 
@@ -6688,7 +6444,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         Zero, 
@@ -6784,70 +6540,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         Package (0x02)
                         {
                             "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_prim_phy_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_prim_phy_com_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
                             Package (0x02)
                             {
                                 "gcc_usb4_eud_clkref_en", 
@@ -6899,7 +6591,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         One
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         0x02, 
@@ -6981,66 +6673,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "CLOCK", 
                             Package (0x02)
                             {
-                                "gcc_usb3_prim_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_prim_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
                                 "gcc_usb4_eud_clkref_en", 
                                 0x02
                             }
@@ -7094,7 +6726,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x15)
+                    Package (0x0F)
                     {
                         "DSTATE", 
                         0x03, 
@@ -7177,66 +6809,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             Package (0x02)
                             {
                                 "gcc_usb30_prim_mock_utmi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_prim_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_prim_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
                                 0x02
                             }
                         }, 
@@ -7379,7 +6951,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         Zero, 
@@ -7475,70 +7047,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         Package (0x02)
                         {
                             "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_sec_phy_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_sec_phy_com_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
                             Package (0x02)
                             {
                                 "gcc_usb4_clkref_en", 
@@ -7584,7 +7092,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         One, 
@@ -7666,66 +7174,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "CLOCK", 
                             Package (0x02)
                             {
-                                "gcc_usb3_sec_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_sec_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
                                 "gcc_usb4_clkref_en", 
                                 0x02
                             }
@@ -7779,7 +7227,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         0x02, 
@@ -7861,66 +7309,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "CLOCK", 
                             Package (0x02)
                             {
-                                "gcc_usb3_sec_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_sec_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
                                 "gcc_usb4_clkref_en", 
                                 0x02
                             }
@@ -7974,7 +7362,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x15)
+                    Package (0x0F)
                     {
                         "DSTATE", 
                         0x03, 
@@ -8057,66 +7445,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             Package (0x02)
                             {
                                 "gcc_usb30_sec_mock_utmi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_sec_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_sec_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
                                 0x02
                             }
                         }, 
@@ -8207,7 +7535,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         Zero, 
@@ -8297,70 +7625,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                 0x08, 
                                 0x4B00, 
                                 0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_sec_phy_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_sec_phy_com_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                One
                             }
                         }, 
 
@@ -8418,7 +7682,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         One
                     }, 
 
-                    Package (0x14)
+                    Package (0x0E)
                     {
                         "DSTATE", 
                         0x02, 
@@ -8500,66 +7764,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "CLOCK", 
                             Package (0x02)
                             {
-                                "gcc_usb3_sec_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_sec_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
                                 "gcc_usb4_clkref_en", 
                                 0x02
                             }
@@ -8613,7 +7817,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x15)
+                    Package (0x0F)
                     {
                         "DSTATE", 
                         0x03, 
@@ -8705,66 +7909,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "CLOCK", 
                             Package (0x02)
                             {
-                                "gcc_usb3_sec_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_sec_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
                                 "gcc_usb4_clkref_en", 
                                 0x02
                             }
@@ -8802,1074 +7946,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             Package (0x02)
                             {
                                 "gcc_usb30_sec_gdsc", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "NPARESOURCE", 
-                            Package (0x03)
-                            {
-                                One, 
-                                "/arc/client/rail_cx", 
-                                Zero
-                            }
-                        }
-                    }, 
-
-                    Package (0x02)
-                    {
-                        "ABANDON_DSTATE", 
-                        0x03
-                    }
-                }, 
-
-                Package (0x08)
-                {
-                    "DEVICE", 
-                    "\\_SB.USB2", 
-                    Package (0x04)
-                    {
-                        "COMPONENT", 
-                        Zero, 
-                        Package (0x02)
-                        {
-                            "FSTATE", 
-                            Zero
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "PSTATE", 
-                            Zero
-                        }
-                    }, 
-
-                    Package (0x1A)
-                    {
-                        "DSTATE", 
-                        Zero, 
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_gdsc", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_sleep_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_pipe_0_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_pipe_1_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_aggre_usb3_mp_axi_clk", 
-                                0x08, 
-                                0xC8, 
-                                0x09
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_cfg_noc_usb3_mp_axi_clk", 
-                                0x08, 
-                                0xC8, 
-                                0x09
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x03)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x09, 
-                                0x12
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x08, 
-                                0xC8, 
-                                0x09
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb30_mp_mock_utmi_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_mp_phy_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb3_mp_phy_com_aux_clk", 
-                                0x08, 
-                                0x4B00, 
-                                0x07
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp0_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp1_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs0_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs1_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs2_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs3_clkref_en", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "NPARESOURCE", 
-                            Package (0x03)
-                            {
-                                One, 
-                                "/arc/client/rail_cx", 
-                                0x0100
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_USB3_MP", 
-                                "ICBID_SLAVE_EBI1", 
-                                0x28000000, 
-                                0x28000000
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_USB3_MP", 
-                                0x0BEBC200, 
-                                Zero
-                            }
-                        }
-                    }, 
-
-                    Package (0x1A)
-                    {
-                        "DSTATE", 
-                        One, 
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_pipe_0_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_pipe_1_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x03, 
-                                0x2580, 
-                                0x05
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x03)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x09, 
-                                0x12
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb3_mp_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_cfg_noc_usb3_mp_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_mock_utmi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp0_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp1_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs0_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs1_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs2_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs3_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_USB3_MP", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_USB3_MP", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_gdsc", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "NPARESOURCE", 
-                            Package (0x03)
-                            {
-                                One, 
-                                "/arc/client/rail_cx", 
-                                Zero
-                            }
-                        }
-                    }, 
-
-                    Package (0x1A)
-                    {
-                        "DSTATE", 
-                        0x02, 
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_pipe_0_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_pipe_1_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x03, 
-                                0x2580, 
-                                0x05
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x03)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x09, 
-                                0x12
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb3_mp_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_cfg_noc_usb3_mp_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_mock_utmi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp0_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp1_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs0_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs1_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs2_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs3_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_USB3_MP", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_USB3_MP", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_gdsc", 
-                                One
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "NPARESOURCE", 
-                            Package (0x03)
-                            {
-                                One, 
-                                "/arc/client/rail_cx", 
-                                Zero
-                            }
-                        }
-                    }, 
-
-                    Package (0x1B)
-                    {
-                        "DSTATE", 
-                        0x03, 
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_sleep_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_pipe_0_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_pipe_1_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x04)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x03, 
-                                0x2580, 
-                                0x05
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x03)
-                            {
-                                "gcc_usb30_mp_master_clk", 
-                                0x09, 
-                                0x13
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb3_mp_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_cfg_noc_usb3_mp_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_mock_utmi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp_phy_com_aux_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_north_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_aggre_usb_noc_south_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_sys_noc_usb_axi_clk", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp0_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb3_mp1_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs0_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs1_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs2_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "CLOCK", 
-                            Package (0x02)
-                            {
-                                "gcc_usb2_hs3_clkref_en", 
-                                0x02
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_USB3_MP", 
-                                "ICBID_SLAVE_EBI1", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "BUSARB", 
-                            Package (0x05)
-                            {
-                                0x03, 
-                                "ICBID_MASTER_APPSS_PROC", 
-                                "ICBID_SLAVE_USB3_MP", 
-                                Zero, 
-                                Zero
-                            }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "FOOTSWITCH", 
-                            Package (0x02)
-                            {
-                                "gcc_usb30_mp_gdsc", 
                                 0x02
                             }
                         }, 
@@ -15851,7 +13927,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         {
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If ((PRP4 == One))
+                If ((PRP1 == One))
                 {
                     Return (0x0F)
                 }
@@ -16169,9 +14245,14 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 })
                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
                 {
-                    Name (RBF0, Buffer (0x02)
+                    Name (RBF0, ResourceTemplate ()
                     {
-                         0x79, 0x00                                       // y.
+                        GpioInt (Edge, ActiveLow, ExclusiveAndWake, PullUp, 0x0000,
+                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                            )
+                            {   // Pin list
+                                0x0060
+                            }
                     })
                     Return (RBF0) /* \_SB_.PCI0.RP1_._CRS.RBF0 */
                 }
@@ -16288,7 +14369,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             0x01
                         })
                         {   // Pin list
-                            0x005E
+                            0x0061
                         }
                     GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
@@ -16297,7 +14378,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             0x01
                         })
                         {   // Pin list
-                            0x008F
+                            0x00FF
                         }
                     GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x01, ResourceConsumer, ,
@@ -16306,7 +14387,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             0x01
                         })
                         {   // Pin list
-                            0x0093
+                            0x00FF
                         }
                     GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x02, ResourceConsumer, ,
@@ -16315,7 +14396,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             0x01
                         })
                         {   // Pin list
-                            0x0097
+                            0x00FF
                         }
                     GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x03, ResourceConsumer, ,
@@ -16324,7 +14405,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             0x01
                         })
                         {   // Pin list
-                            0x0099
+                            0x00FF
                         }
                     GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x03, ResourceConsumer, ,
@@ -16333,7 +14414,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             0x01
                         })
                         {   // Pin list
-                            0x008D
+                            0x00FF
                         }
                 })
                 Return (RBUF) /* \_SB_.QPPX._CRS.RBUF */
@@ -16359,7 +14440,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                     )
                     {   // Pin list
-                        0x0060
+                        0x0040
                     }
             })
             Scope (\_SB.GIO0)
@@ -16418,7 +14499,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     0xFFFF, 
                     Zero, 
                     Zero, 
-                    0x64
+                    0x01D2
                 }, 
 
                 Package (0x04)
@@ -16426,7 +14507,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     0xFFFF, 
                     One, 
                     Zero, 
-                    0x65
+                    0x01D3
                 }, 
 
                 Package (0x04)
@@ -16434,7 +14515,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     0xFFFF, 
                     0x02, 
                     Zero, 
-                    0x66
+                    0x01D6
                 }, 
 
                 Package (0x04)
@@ -16442,7 +14523,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     0xFFFF, 
                     0x03, 
                     Zero, 
-                    0x67
+                    0x01D7
                 }
             })
             Method (_CCA, 0, NotSerialized)  // _CCA: Cache Coherency Attribute
@@ -16706,9 +14787,14 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 })
                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
                 {
-                    Name (RBUF, Buffer (0x02)
+                    Name (RBUF, ResourceTemplate ()
                     {
-                         0x79, 0x00                                       // y.
+                        GpioInt (Edge, ActiveLow, ExclusiveAndWake, PullUp, 0x0000,
+                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                            )
+                            {   // Pin list
+                                0x0063
+                            }
                     })
                     Return (RBUF) /* \_SB_.PCI1.RP1_._CRS.RBUF */
                 }
@@ -21432,15 +19518,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 {
                     Interrupt (ResourceConsumer, Level, ActiveHigh, Shared, ,, )
                     {
-                        0x00000343,
+                        0x000000A5,
                     }
                     Interrupt (ResourceConsumer, Level, ActiveHigh, SharedAndWake, ,, )
                     {
-                        0x00000344,
+                        0x000000A2,
                     }
                     Interrupt (ResourceConsumer, Level, ActiveHigh, SharedAndWake, ,, )
                     {
-                        0x0000028F,
+                        0x00000211,
                     }
                     Interrupt (ResourceConsumer, Edge, ActiveHigh, SharedAndWake, ,, )
                     {
@@ -21659,11 +19745,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 {
                     Interrupt (ResourceConsumer, Level, ActiveHigh, Shared, ,, )
                     {
-                        0x00000343,
+                        0x000000A5,
                     }
                     Interrupt (ResourceConsumer, Level, ActiveHigh, SharedAndWake, ,, )
                     {
-                        0x00000344,
+                        0x000000A2,
                     }
                 })
                 Method (CCVL, 0, NotSerialized)
@@ -21807,6 +19893,438 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 {
                     Name (CFG0, Package (0x00){})
                     Return (CFG0) /* \_SB_.URS0.UFN0.PHYC.CFG0 */
+                }
+            }
+        }
+
+        Device (URS1)
+        {
+            Name (_HID, "QCOM1A8C")  // _HID: Hardware ID
+            Name (_CID, Package (0x02)  // _CID: Compatible ID
+            {
+                "PNP0CA1", 
+                "QCOMFFE1"
+            })
+            Alias (\_SB.PSUB, _SUB)
+            Name (_UID, One)  // _UID: Unique ID
+            Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
+            Name (_DEP, Package (0x02)  // _DEP: Dependencies
+            {
+                \_SB.PEP0, 
+                \_SB.UCS0
+            })
+            Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
+            {
+                Memory32Fixed (ReadWrite,
+                    0x0A800000,         // Address Base
+                    0x000FFFFF,         // Address Length
+                    )
+            })
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (Zero)
+            }
+
+            Device (USB1)
+            {
+                Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
+                Name (_ADR, Zero)  // _ADR: Address
+                Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
+                {
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Shared, ,, )
+                    {
+                        0x000000AA,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, SharedAndWake, ,, )
+                    {
+                        0x000000A7,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, SharedAndWake, ,, )
+                    {
+                        0x00000233,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, SharedAndWake, ,, )
+                    {
+                        0x0000020D,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, SharedAndWake, ,, )
+                    {
+                        0x0000020C,
+                    }
+                })
+                Device (RHUB)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Device (PRT1)
+                    {
+                        Name (_ADR, One)  // _ADR: Address
+                        Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
+                        {
+                            One, 
+                            0x09, 
+                            Zero, 
+                            Zero
+                        })
+                        Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
+                        {
+                            ToPLD (
+                                PLD_Revision           = 0x2,
+                                PLD_IgnoreColor        = 0x1,
+                                PLD_Red                = 0x0,
+                                PLD_Green              = 0x0,
+                                PLD_Blue               = 0x0,
+                                PLD_Width              = 0x0,
+                                PLD_Height             = 0x0,
+                                PLD_UserVisible        = 0x1,
+                                PLD_Dock               = 0x0,
+                                PLD_Lid                = 0x0,
+                                PLD_Panel              = "BACK",
+                                PLD_VerticalPosition   = "CENTER",
+                                PLD_HorizontalPosition = "LEFT",
+                                PLD_Shape              = "VERTICALRECTANGLE",
+                                PLD_GroupOrientation   = 0x0,
+                                PLD_GroupToken         = 0x0,
+                                PLD_GroupPosition      = 0x1,
+                                PLD_Bay                = 0x0,
+                                PLD_Ejectable          = 0x0,
+                                PLD_EjectRequired      = 0x0,
+                                PLD_CabinetNumber      = 0x0,
+                                PLD_CardCageNumber     = 0x0,
+                                PLD_Reference          = 0x0,
+                                PLD_Rotation           = 0x0,
+                                PLD_Order              = 0x0,
+                                PLD_VerticalOffset     = 0xFFFF,
+                                PLD_HorizontalOffset   = 0xFFFF)
+
+                        })
+                    }
+                }
+
+                Name (STVL, 0x0F)
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    Return (STVL) /* \_SB_.URS1.USB1.STVL */
+                }
+
+                Method (CCVL, 0, NotSerialized)
+                {
+                    Return (\_SB.UCS0.ECC1)
+                }
+
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    While (One)
+                    {
+                        Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                        {
+                             0x00                                             // .
+                        })
+                        CopyObject (ToBuffer (Arg0), _T_0) /* \_SB_.URS1.USB1._DSM._T_0 */
+                        If ((_T_0 == ToUUID ("ce2ee385-00e6-48cb-9f05-2edb927c4899") /* USB Controller */))
+                        {
+                            While (One)
+                            {
+                                Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                _T_1 = ToInteger (Arg2)
+                                If ((_T_1 == Zero))
+                                {
+                                    While (One)
+                                    {
+                                        Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                        _T_2 = ToInteger (Arg1)
+                                        If ((_T_2 == Zero))
+                                        {
+                                            Return (Buffer (One)
+                                            {
+                                                 0x1D                                             // .
+                                            })
+                                            Break
+                                        }
+                                        Else
+                                        {
+                                            Return (Buffer (One)
+                                            {
+                                                 0x01                                             // .
+                                            })
+                                            Break
+                                        }
+
+                                        Break
+                                    }
+
+                                    Return (Buffer (One)
+                                    {
+                                         0x00                                             // .
+                                    })
+                                    Break
+                                }
+                                ElseIf ((_T_1 == 0x02))
+                                {
+                                    Return (Zero)
+                                    Break
+                                }
+                                ElseIf ((_T_1 == 0x03))
+                                {
+                                    Return (Zero)
+                                    Break
+                                }
+                                ElseIf ((_T_1 == 0x04))
+                                {
+                                    Return (0x02)
+                                    Break
+                                }
+                                Else
+                                {
+                                    Return (Buffer (One)
+                                    {
+                                         0x00                                             // .
+                                    })
+                                    Break
+                                }
+
+                                Break
+                            }
+                        }
+                        Else
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x00                                             // .
+                            })
+                            Break
+                        }
+
+                        Break
+                    }
+                }
+
+                Method (_DIS, 0, NotSerialized)  // _DIS: Disable Device
+                {
+                }
+
+                Method (REMD, 0, NotSerialized)
+                {
+                    STVL = Zero
+                    Notify (\_SB.URS1.USB1, One) // Device Check
+                }
+
+                Method (ADDD, 0, NotSerialized)
+                {
+                    STVL = 0x0F
+                    Notify (\_SB.URS1.USB1, One) // Device Check
+                }
+
+                Method (PHYC, 0, NotSerialized)
+                {
+                    Name (CFG0, Package (0x00){})
+                    Return (CFG0) /* \_SB_.URS1.USB1.PHYC.CFG0 */
+                }
+            }
+
+            Device (UFN1)
+            {
+                Name (_ADR, One)  // _ADR: Address
+                Name (_S0W, 0x03)  // _S0W: S0 Device Wake State
+                Device (RHUB)
+                {
+                    Name (_ADR, Zero)  // _ADR: Address
+                    Device (PRT1)
+                    {
+                        Name (_ADR, One)  // _ADR: Address
+                        Name (_UPC, Package (0x04)  // _UPC: USB Port Capabilities
+                        {
+                            One, 
+                            0x09, 
+                            Zero, 
+                            Zero
+                        })
+                        Name (_PLD, Package (0x01)  // _PLD: Physical Location of Device
+                        {
+                            ToPLD (
+                                PLD_Revision           = 0x2,
+                                PLD_IgnoreColor        = 0x1,
+                                PLD_Red                = 0x0,
+                                PLD_Green              = 0x0,
+                                PLD_Blue               = 0x0,
+                                PLD_Width              = 0x0,
+                                PLD_Height             = 0x0,
+                                PLD_UserVisible        = 0x1,
+                                PLD_Dock               = 0x0,
+                                PLD_Lid                = 0x0,
+                                PLD_Panel              = "BACK",
+                                PLD_VerticalPosition   = "CENTER",
+                                PLD_HorizontalPosition = "LEFT",
+                                PLD_Shape              = "VERTICALRECTANGLE",
+                                PLD_GroupOrientation   = 0x0,
+                                PLD_GroupToken         = 0x0,
+                                PLD_GroupPosition      = 0x1,
+                                PLD_Bay                = 0x0,
+                                PLD_Ejectable          = 0x0,
+                                PLD_EjectRequired      = 0x0,
+                                PLD_CabinetNumber      = 0x0,
+                                PLD_CardCageNumber     = 0x0,
+                                PLD_Reference          = 0x0,
+                                PLD_Rotation           = 0x0,
+                                PLD_Order              = 0x0,
+                                PLD_VerticalOffset     = 0xFFFF,
+                                PLD_HorizontalOffset   = 0xFFFF)
+
+                        })
+                    }
+                }
+
+                Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
+                {
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Shared, ,, )
+                    {
+                        0x000000AA,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, SharedAndWake, ,, )
+                    {
+                        0x000000A7,
+                    }
+                })
+                Method (CCVL, 0, NotSerialized)
+                {
+                    Return (\_SB.UCS0.ECC1)
+                }
+
+                Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+                {
+                    While (One)
+                    {
+                        Name (_T_0, Buffer (0x01)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                        {
+                             0x00                                             // .
+                        })
+                        CopyObject (ToBuffer (Arg0), _T_0) /* \_SB_.URS1.UFN1._DSM._T_0 */
+                        If ((_T_0 == ToUUID ("fe56cfeb-49d5-4378-a8a2-2978dbe54ad2") /* Unknown UUID */))
+                        {
+                            While (One)
+                            {
+                                Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                _T_1 = ToInteger (Arg2)
+                                If ((_T_1 == Zero))
+                                {
+                                    While (One)
+                                    {
+                                        Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                        _T_2 = ToInteger (Arg1)
+                                        If ((_T_2 == Zero))
+                                        {
+                                            Return (Buffer (One)
+                                            {
+                                                 0x03                                             // .
+                                            })
+                                            Break
+                                        }
+                                        Else
+                                        {
+                                            Return (Buffer (One)
+                                            {
+                                                 0x01                                             // .
+                                            })
+                                            Break
+                                        }
+
+                                        Break
+                                    }
+
+                                    Return (Buffer (One)
+                                    {
+                                         0x00                                             // .
+                                    })
+                                    Break
+                                }
+                                ElseIf ((_T_1 == One))
+                                {
+                                    Return (0x20)
+                                    Break
+                                }
+                                Else
+                                {
+                                    Return (Buffer (One)
+                                    {
+                                         0x00                                             // .
+                                    })
+                                    Break
+                                }
+
+                                Break
+                            }
+                        }
+                        ElseIf ((_T_0 == ToUUID ("18de299f-9476-4fc9-b43b-8aeb713ed751") /* Unknown UUID */))
+                        {
+                            While (One)
+                            {
+                                Name (_T_3, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                _T_3 = ToInteger (Arg2)
+                                If ((_T_3 == Zero))
+                                {
+                                    While (One)
+                                    {
+                                        Name (_T_4, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                        _T_4 = ToInteger (Arg1)
+                                        If ((_T_4 == Zero))
+                                        {
+                                            Return (Buffer (One)
+                                            {
+                                                 0x03                                             // .
+                                            })
+                                            Break
+                                        }
+                                        Else
+                                        {
+                                            Return (Buffer (One)
+                                            {
+                                                 0x01                                             // .
+                                            })
+                                            Break
+                                        }
+
+                                        Break
+                                    }
+
+                                    Return (Buffer (One)
+                                    {
+                                         0x00                                             // .
+                                    })
+                                    Break
+                                }
+                                ElseIf ((_T_3 == One))
+                                {
+                                    Return (0x39)
+                                    Break
+                                }
+                                Else
+                                {
+                                    Return (Buffer (One)
+                                    {
+                                         0x00                                             // .
+                                    })
+                                    Break
+                                }
+
+                                Break
+                            }
+                        }
+                        Else
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x00                                             // .
+                            })
+                            Break
+                        }
+
+                        Break
+                    }
+                }
+
+                Method (PHYC, 0, NotSerialized)
+                {
+                    Name (CFG0, Package (0x00){})
+                    Return (CFG0) /* \_SB_.URS1.UFN1.PHYC.CFG0 */
                 }
             }
         }
@@ -22031,104 +20549,104 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x808A0040,         // Address Base
                         0x00000020,         // Address Length
                         )
-                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x00A6
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x00A5
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x00A4
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x00A7
+                            0x00FF
                         }
-                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x0031
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x0030
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x002F
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x0032
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x0065
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x001A
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x001B
+                            0x00FF
                         }
                     I2cSerialBusV2 (0x0008, ControllerInitiated, 0x00061A80,
                         AddressingMode7Bit, "\\_SB.IC22",
@@ -22145,104 +20663,104 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x808A0040,         // Address Base
                         0x00000020,         // Address Length
                         )
-                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x00A6
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x00A5
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x00A4
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x00A7
+                            0x00FF
                         }
-                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x0031
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x0030
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x002F
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x0032
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x0065
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x001A
+                            0x00FF
                         }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
                         "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                         RawDataBuffer (0x01)  // Vendor Data
                         {
                             0x01
                         })
                         {   // Pin list
-                            0x001B
+                            0x00FF
                         }
                 })
                 If (((\_SB.PSUB == "QRD08350") && (\_SB.PLST == 0x03)))
@@ -24033,6 +22551,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
                 Name (_CID, "PNP0C51")  // _CID: Compatible ID
                 Name (_S0W, 0x02)  // _S0W: S0 Device Wake State
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    Return (Zero)
+                }
+
                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
                 {
                     Name (RBUF, ResourceTemplate ()
@@ -25100,7 +23623,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (0x0F)
+                Return (Zero)
             }
         }
 

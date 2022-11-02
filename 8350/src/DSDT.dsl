@@ -12839,18 +12839,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 \_SB.PILC, 
                 \_SB.RPEN
             })
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    Memory32Fixed (ReadWrite,
-                        0x8DE00000,         // Address Base
-                        0x00600000,         // Address Length
-                        )
-                })
-                Return (RBUF) /* \_SB_.QSM_._CRS.RBUF */
-            }
-
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 Return (0x0F)

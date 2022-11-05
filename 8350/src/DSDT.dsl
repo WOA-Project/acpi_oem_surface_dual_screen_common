@@ -9600,10 +9600,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         {
             Method (LPMX, 0, NotSerialized)
             {
-                Return (LPXX) /* \_SB_.PEP0.LPXX */
+                Return (LPXC) /* \_SB_.PEP0.LPXC */
             }
 
-            Name (LPXX, Package (0x01)
+            Name (LPXC, Package (0x01)
             {
                 Package (0x07)
                 {
@@ -9620,7 +9620,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x04)
+                    Package (0x06)
                     {
                         "DSTATE", 
                         Zero, 
@@ -9643,12 +9643,35 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "TLMMGPIO", 
                             Package (0x06)
                             {
+                                0x17, 
+                                One, 
+                                Zero, 
+                                One, 
+                                Zero, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "DELAY", 
+                            Package (0x01)
+                            {
+                                0x03E8
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "TLMMGPIO", 
+                            Package (0x06)
+                            {
                                 0x08, 
                                 One, 
                                 Zero, 
                                 One, 
-                                0x03, 
-                                0x03
+                                Zero, 
+                                Zero
                             }
                         }
                     }, 
@@ -9665,7 +9688,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x02
                     }, 
 
-                    Package (0x04)
+                    Package (0x06)
                     {
                         "DSTATE", 
                         0x03, 
@@ -9678,7 +9701,30 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                 Zero, 
                                 Zero, 
                                 One, 
+                                Zero, 
+                                Zero
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "DELAY", 
+                            Package (0x01)
+                            {
+                                0x0A
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "TLMMGPIO", 
+                            Package (0x06)
+                            {
+                                0x17, 
+                                Zero, 
+                                Zero, 
                                 One, 
+                                Zero, 
                                 Zero
                             }
                         }, 
@@ -19684,7 +19730,1072 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
                 Method (PHYC, 0, NotSerialized)
                 {
-                    Name (CFG0, Package (0x00){})
+                    Name (CFG0, Package (0x98)
+                    {
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9010, 
+                            One
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E901C, 
+                            0x31
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9020, 
+                            One
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9024, 
+                            0xDE
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9028, 
+                            0x07
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9030, 
+                            0xDE
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9034, 
+                            0x07
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9050, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9060, 
+                            0x20
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9074, 
+                            0x06
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9078, 
+                            0x06
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E907C, 
+                            0x16
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9080, 
+                            0x16
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9084, 
+                            0x36
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9088, 
+                            0x36
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9094, 
+                            0x1A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90A4, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90AC, 
+                            0x14
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90B0, 
+                            0x34
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90B4, 
+                            0x34
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90B8, 
+                            0x82
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90BC, 
+                            0x82
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90C4, 
+                            0x82
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90CC, 
+                            0xAB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90D0, 
+                            0xEA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90D4, 
+                            0x02
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90D8, 
+                            0xAB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90DC, 
+                            0xEA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90E0, 
+                            0x02
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E910C, 
+                            0x02
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9110, 
+                            0x24
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9118, 
+                            0x24
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E911C, 
+                            0x02
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9158, 
+                            One
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E916C, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91AC, 
+                            0xCA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91B0, 
+                            0x1E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91B4, 
+                            0xCA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91B8, 
+                            0x1E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91BC, 
+                            0x11
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9234, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9238, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E923C, 
+                            0x16
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9240, 
+                            0x0E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9284, 
+                            0x35
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E928C, 
+                            0x3F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9290, 
+                            0x7F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9294, 
+                            0x3F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E92A4, 
+                            0x12
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E92E4, 
+                            0x21
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9408, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9414, 
+                            0x03
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9430, 
+                            0x2F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9434, 
+                            0x7F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E943C, 
+                            0xFF
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9440, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9444, 
+                            0x99
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E944C, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9450, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9454, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9458, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94D4, 
+                            0x54
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94D8, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94EC, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94F0, 
+                            0x4A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94F4, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94F8, 
+                            0xC0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94FC, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9510, 
+                            0x47
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E951C, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9524, 
+                            0x0E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E955C, 
+                            0xBB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9560, 
+                            0x7B
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9564, 
+                            0xBB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9568, 
+                            0x3D
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E956C, 
+                            0xDB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9570, 
+                            0x64
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9574, 
+                            0x24
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9578, 
+                            0xD2
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E957C, 
+                            0x13
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9580, 
+                            0xA9
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E95A0, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E95A4, 
+                            0x38
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9460, 
+                            0xA0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E95A8, 
+                            0x0C
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94DC, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E95B0, 
+                            0x10
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9634, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9638, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E963C, 
+                            0x16
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9640, 
+                            0x0E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9684, 
+                            0x35
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E968C, 
+                            0x3F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9690, 
+                            0x7F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9694, 
+                            0x3F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E96A4, 
+                            0x12
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E96E4, 
+                            0x21
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9814, 
+                            0x03
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9808, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9830, 
+                            0x2F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9834, 
+                            0x7F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E983C, 
+                            0xFF
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9840, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9844, 
+                            0x99
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E984C, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9850, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9854, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9858, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98D4, 
+                            0x54
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98D8, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98EC, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98F0, 
+                            0x4A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98F4, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98F8, 
+                            0xC0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98FC, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9910, 
+                            0x47
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E991C, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9924, 
+                            0x0E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E995C, 
+                            0xBB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9960, 
+                            0x7B
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9964, 
+                            0xBB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9968, 
+                            0x3C
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E996C, 
+                            0xDB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9970, 
+                            0x64
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9974, 
+                            0x24
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9978, 
+                            0xD2
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E997C, 
+                            0x13
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9980, 
+                            0xA9
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E99A0, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E99A4, 
+                            0x38
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9860, 
+                            0xA0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E99A8, 
+                            0x0C
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98DC, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9F40, 
+                            0x40
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9F44, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9D90, 
+                            0xE7
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9D94, 
+                            0x03
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E99B0, 
+                            0x10
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CC4, 
+                            0xD0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CC8, 
+                            0x07
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CCC, 
+                            0x20
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CD8, 
+                            0x13
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CDC, 
+                            0x21
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9D88, 
+                            0xAA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DB0, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DC0, 
+                            0x88
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DC4, 
+                            0x13
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DD0, 
+                            0x0C
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DDC, 
+                            0x4B
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DEC, 
+                            0x10
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9F18, 
+                            0xF8
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9F3C, 
+                            0x07
+                        }
+                    })
                     Return (CFG0) /* \_SB_.URS0.USB0.PHYC.CFG0 */
                 }
             }
@@ -19891,7 +21002,1072 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
                 Method (PHYC, 0, NotSerialized)
                 {
-                    Name (CFG0, Package (0x00){})
+                    Name (CFG0, Package (0x98)
+                    {
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9010, 
+                            One
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E901C, 
+                            0x31
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9020, 
+                            One
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9024, 
+                            0xDE
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9028, 
+                            0x07
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9030, 
+                            0xDE
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9034, 
+                            0x07
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9050, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9060, 
+                            0x20
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9074, 
+                            0x06
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9078, 
+                            0x06
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E907C, 
+                            0x16
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9080, 
+                            0x16
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9084, 
+                            0x36
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9088, 
+                            0x36
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9094, 
+                            0x1A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90A4, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90AC, 
+                            0x14
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90B0, 
+                            0x34
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90B4, 
+                            0x34
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90B8, 
+                            0x82
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90BC, 
+                            0x82
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90C4, 
+                            0x82
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90CC, 
+                            0xAB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90D0, 
+                            0xEA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90D4, 
+                            0x02
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90D8, 
+                            0xAB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90DC, 
+                            0xEA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E90E0, 
+                            0x02
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E910C, 
+                            0x02
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9110, 
+                            0x24
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9118, 
+                            0x24
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E911C, 
+                            0x02
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9158, 
+                            One
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E916C, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91AC, 
+                            0xCA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91B0, 
+                            0x1E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91B4, 
+                            0xCA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91B8, 
+                            0x1E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E91BC, 
+                            0x11
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9234, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9238, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E923C, 
+                            0x16
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9240, 
+                            0x0E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9284, 
+                            0x35
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E928C, 
+                            0x3F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9290, 
+                            0x7F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9294, 
+                            0x3F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E92A4, 
+                            0x12
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E92E4, 
+                            0x21
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9408, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9414, 
+                            0x03
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9430, 
+                            0x2F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9434, 
+                            0x7F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E943C, 
+                            0xFF
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9440, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9444, 
+                            0x99
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E944C, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9450, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9454, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9458, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94D4, 
+                            0x54
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94D8, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94EC, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94F0, 
+                            0x4A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94F4, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94F8, 
+                            0xC0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94FC, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9510, 
+                            0x47
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E951C, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9524, 
+                            0x0E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E955C, 
+                            0xBB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9560, 
+                            0x7B
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9564, 
+                            0xBB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9568, 
+                            0x3D
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E956C, 
+                            0xDB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9570, 
+                            0x64
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9574, 
+                            0x24
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9578, 
+                            0xD2
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E957C, 
+                            0x13
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9580, 
+                            0xA9
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E95A0, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E95A4, 
+                            0x38
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9460, 
+                            0xA0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E95A8, 
+                            0x0C
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E94DC, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E95B0, 
+                            0x10
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9634, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9638, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E963C, 
+                            0x16
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9640, 
+                            0x0E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9684, 
+                            0x35
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E968C, 
+                            0x3F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9690, 
+                            0x7F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9694, 
+                            0x3F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E96A4, 
+                            0x12
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E96E4, 
+                            0x21
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9814, 
+                            0x03
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9808, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9830, 
+                            0x2F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9834, 
+                            0x7F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E983C, 
+                            0xFF
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9840, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9844, 
+                            0x99
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E984C, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9850, 
+                            0x08
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9854, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9858, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98D4, 
+                            0x54
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98D8, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98EC, 
+                            0x0F
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98F0, 
+                            0x4A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98F4, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98F8, 
+                            0xC0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98FC, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9910, 
+                            0x47
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E991C, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9924, 
+                            0x0E
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E995C, 
+                            0xBB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9960, 
+                            0x7B
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9964, 
+                            0xBB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9968, 
+                            0x3C
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E996C, 
+                            0xDB
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9970, 
+                            0x64
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9974, 
+                            0x24
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9978, 
+                            0xD2
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E997C, 
+                            0x13
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9980, 
+                            0xA9
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E99A0, 
+                            0x04
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E99A4, 
+                            0x38
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9860, 
+                            0xA0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E99A8, 
+                            0x0C
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E98DC, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9F40, 
+                            0x40
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9F44, 
+                            Zero
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9D90, 
+                            0xE7
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9D94, 
+                            0x03
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E99B0, 
+                            0x10
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CC4, 
+                            0xD0
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CC8, 
+                            0x07
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CCC, 
+                            0x20
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CD8, 
+                            0x13
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9CDC, 
+                            0x21
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9D88, 
+                            0xAA
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DB0, 
+                            0x0A
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DC0, 
+                            0x88
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DC4, 
+                            0x13
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DD0, 
+                            0x0C
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DDC, 
+                            0x4B
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9DEC, 
+                            0x10
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9F18, 
+                            0xF8
+                        }, 
+
+                        Package (0x03)
+                        {
+                            Zero, 
+                            0x088E9F3C, 
+                            0x07
+                        }
+                    })
                     Return (CFG0) /* \_SB_.URS0.UFN0.PHYC.CFG0 */
                 }
             }
@@ -22544,18 +24720,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         {
             Device (GTCH)
             {
-                Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
-                {
-                    Return ("MSHW0274")
-                }
-
+                Name (_HID, "MSHW0274")  // _HID: Hardware ID
                 Name (_CID, "PNP0C51")  // _CID: Compatible ID
                 Name (_S0W, 0x02)  // _S0W: S0 Device Wake State
-                Method (_STA, 0, NotSerialized)  // _STA: Status
+                Name (_HRV, One)  // _HRV: Hardware Revision
+                Name (_DEP, Package (0x02)  // _DEP: Dependencies
                 {
-                    Return (Zero)
-                }
-
+                    \_SB.GIO0, 
+                    \_SB.SPI5
+                })
                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
                 {
                     Name (RBUF, ResourceTemplate ()
@@ -22565,11 +24738,23 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             ClockPhaseFirst, "\\_SB.SPI5",
                             0x00, ResourceConsumer, , Exclusive,
                             )
-                        GpioInt (Edge, ActiveHigh, ExclusiveAndWake, PullDown, 0x0000,
+                        GpioInt (Edge, ActiveLow, ExclusiveAndWake, PullNone, 0x0000,
                             "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                             )
                             {   // Pin list
                                 0x0054
+                            }
+                        GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionNone,
+                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                            )
+                            {   // Pin list
+                                0x0017
+                            }
+                        GpioInt (Edge, ActiveHigh, ExclusiveAndWake, PullDown, 0x0000,
+                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                            )
+                            {   // Pin list
+                                0x0380
                             }
                     })
                     Return (RBUF) /* \_SB_.GTCH._CRS.RBUF */
@@ -22582,37 +24767,87 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         While (One)
                         {
                             Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_0 = Arg2
-                            If ((_T_0 == Zero))
+                            _T_0 = ToInteger (Arg1)
+                            If ((_T_0 == One))
                             {
                                 While (One)
                                 {
                                     Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_1 = ToInteger (Arg1)
-                                    If ((_T_1 == One))
+                                    _T_1 = Arg2
+                                    If ((_T_1 == Zero))
                                     {
                                         Return (Buffer (One)
                                         {
                                              0x03                                             // .
                                         })
                                     }
+                                    ElseIf ((_T_1 == One))
+                                    {
+                                        Return (One)
+                                    }
                                     Else
                                     {
-                                        Return (Buffer (One)
-                                        {
-                                             0x00                                             // .
-                                        })
                                     }
 
                                     Break
                                 }
                             }
-                            ElseIf ((_T_0 == One))
+                            ElseIf ((_T_0 == 0x03))
                             {
-                                Return (One)
+                                While (One)
+                                {
+                                    Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_2 = Arg2
+                                    If ((_T_2 == Zero))
+                                    {
+                                        Return (Buffer (One)
+                                        {
+                                             0x7F                                             // .
+                                        })
+                                    }
+                                    ElseIf ((_T_2 == One))
+                                    {
+                                        Return (0x1000)
+                                    }
+                                    ElseIf ((_T_2 == 0x02))
+                                    {
+                                        Return (0x1004)
+                                    }
+                                    ElseIf ((_T_2 == 0x03))
+                                    {
+                                        Return (0x2000)
+                                    }
+                                    ElseIf ((_T_2 == 0x04))
+                                    {
+                                        Return (Buffer (One)
+                                        {
+                                             0xEB                                             // .
+                                        })
+                                    }
+                                    ElseIf ((_T_2 == 0x05))
+                                    {
+                                        Return (Buffer (One)
+                                        {
+                                             0xE2                                             // .
+                                        })
+                                    }
+                                    ElseIf ((_T_2 == 0x06))
+                                    {
+                                        Return (0xA000)
+                                    }
+                                    Else
+                                    {
+                                    }
+
+                                    Break
+                                }
                             }
                             Else
                             {
+                                Return (Buffer (One)
+                                {
+                                     0x00                                             // .
+                                })
                             }
 
                             Break
@@ -22627,15 +24862,33 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }
 
-                Name (PGID, Buffer (0x0A)
+                OperationRegion (GI23, SystemMemory, 0x0F117000, 0x18)
+                Field (GI23, DWordAcc, NoLock, Preserve)
                 {
-                    "\\_SB.GTCH"
-                })
-                Name (FLAG, 0x03)
-                Name (DBUF, Buffer (DBFL){})
-                CreateByteField (DBUF, Zero, STAT)
-                CreateByteField (DBUF, 0x02, DVAL)
-                CreateField (DBUF, 0x18, 0xA0, DEID)
+                    Offset (0x04), 
+                    VSTE,   32, 
+                    Offset (0x0C), 
+                    Offset (0x10), 
+                    Offset (0x14), 
+                    Offset (0x18)
+                }
+
+                OperationRegion (GI08, SystemMemory, 0x0F108000, 0x18)
+                Field (GI08, DWordAcc, NoLock, Preserve)
+                {
+                    Offset (0x04), 
+                    RSTE,   32, 
+                    Offset (0x0C), 
+                    Offset (0x10), 
+                    Offset (0x14), 
+                    Offset (0x18)
+                }
+
+                Method (_STA, 0, NotSerialized)  // _STA: Status
+                {
+                    Return (Zero)
+                }
+
                 Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
                 {
                     Return (0x03)
@@ -22653,60 +24906,27 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
                 Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
                 {
-                    If ((FLAG == 0x03))
+                    If (((VSTE & 0x02) == Zero))
                     {
+                        VSTE = 0x02
                         Sleep (0x012C)
-                        OperationRegion (GI08, SystemMemory, 0x0F108000, 0x20)
-                        Field (GI08, DWordAcc, NoLock, Preserve)
-                        {
-                            DWD1,   32, 
-                            DWD2,   32
-                        }
-
-                        DWD2 = 0x02
-                        Sleep (0x96)
                     }
 
-                    DEID = Buffer (ESNL){}
-                    DVAL = Zero
-                    DEID = PGID /* \_SB_.GTCH.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.GTCH.DBUF */
-                    }
-
-                    FLAG = Zero
-                }
-
-                Method (_PS2, 0, NotSerialized)  // _PS2: Power State 2
-                {
+                    RSTE = 0x02
                 }
 
                 Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
                 {
-                    DEID = Buffer (ESNL){}
-                    DVAL = 0x03
-                    DEID = PGID /* \_SB_.GTCH.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.GTCH.DBUF */
-                    }
-
-                    FLAG = 0x03
+                    RSTE = Zero
+                    Sleep (0x0A)
+                    VSTE = Zero
                 }
 
                 Method (_RST, 0, NotSerialized)  // _RST: Device Reset
                 {
-                    OperationRegion (GI08, SystemMemory, 0x0F108000, 0x20)
-                    Field (GI08, DWordAcc, NoLock, Preserve)
-                    {
-                        DWD1,   32, 
-                        DWD2,   32
-                    }
-
-                    DWD2 = Zero
+                    RSTE = Zero
                     Sleep (0x012C)
-                    DWD2 = 0x02
+                    RSTE = 0x02
                 }
             }
         }
@@ -22746,15 +24966,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_2 = Arg2
-                            If ((_T_2 == Zero))
+                            Name (_T_3, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_3 = Arg2
+                            If ((_T_3 == Zero))
                             {
                                 While (One)
                                 {
-                                    Name (_T_3, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_3 = ToInteger (Arg1)
-                                    If ((_T_3 == Zero))
+                                    Name (_T_4, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_4 = ToInteger (Arg1)
+                                    If ((_T_4 == Zero))
                                     {
                                         Return (Buffer (One)
                                         {
@@ -22772,13 +24992,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_2 == One))
+                            ElseIf ((_T_3 == One))
                             {
                                 While (One)
                                 {
-                                    Name (_T_4, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_4 = ToInteger (Arg1)
-                                    If ((_T_4 == Zero))
+                                    Name (_T_5, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_5 = ToInteger (Arg1)
+                                    If ((_T_5 == Zero))
                                     {
                                         Name (PBUF, Package (0x08)
                                         {
@@ -22804,13 +25024,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_2 == 0x02))
+                            ElseIf ((_T_3 == 0x02))
                             {
                                 While (One)
                                 {
-                                    Name (_T_5, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_5 = ToInteger (Arg1)
-                                    If ((_T_5 == Zero))
+                                    Name (_T_6, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_6 = ToInteger (Arg1)
+                                    If ((_T_6 == Zero))
                                     {
                                         Name (CBUF, Package (0x01)
                                         {
@@ -22928,15 +25148,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_6, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_6 = Arg2
-                            If ((_T_6 == Zero))
+                            Name (_T_7, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_7 = Arg2
+                            If ((_T_7 == Zero))
                             {
                                 While (One)
                                 {
-                                    Name (_T_7, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_7 = ToInteger (Arg1)
-                                    If ((_T_7 == Zero))
+                                    Name (_T_8, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_8 = ToInteger (Arg1)
+                                    If ((_T_8 == Zero))
                                     {
                                         Return (Buffer (One)
                                         {
@@ -22954,13 +25174,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_6 == One))
+                            ElseIf ((_T_7 == One))
                             {
                                 While (One)
                                 {
-                                    Name (_T_8, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_8 = ToInteger (Arg1)
-                                    If ((_T_8 == Zero))
+                                    Name (_T_9, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_9 = ToInteger (Arg1)
+                                    If ((_T_9 == Zero))
                                     {
                                         Name (PBUF, Package (0x08)
                                         {
@@ -22986,13 +25206,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_6 == 0x02))
+                            ElseIf ((_T_7 == 0x02))
                             {
                                 While (One)
                                 {
-                                    Name (_T_9, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_9 = ToInteger (Arg1)
-                                    If ((_T_9 == Zero))
+                                    Name (_T_A, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_A = ToInteger (Arg1)
+                                    If ((_T_A == Zero))
                                     {
                                         Name (CBUF, Package (0x01)
                                         {
@@ -23110,15 +25330,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_A, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_A = Arg2
-                            If ((_T_A == Zero))
+                            Name (_T_B, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_B = Arg2
+                            If ((_T_B == Zero))
                             {
                                 While (One)
                                 {
-                                    Name (_T_B, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_B = ToInteger (Arg1)
-                                    If ((_T_B == Zero))
+                                    Name (_T_C, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_C = ToInteger (Arg1)
+                                    If ((_T_C == Zero))
                                     {
                                         Return (Buffer (One)
                                         {
@@ -23136,13 +25356,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_A == One))
+                            ElseIf ((_T_B == One))
                             {
                                 While (One)
                                 {
-                                    Name (_T_C, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_C = ToInteger (Arg1)
-                                    If ((_T_C == Zero))
+                                    Name (_T_D, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_D = ToInteger (Arg1)
+                                    If ((_T_D == Zero))
                                     {
                                         Name (PBUF, Package (0x08)
                                         {
@@ -23168,13 +25388,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_A == 0x02))
+                            ElseIf ((_T_B == 0x02))
                             {
                                 While (One)
                                 {
-                                    Name (_T_D, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_D = ToInteger (Arg1)
-                                    If ((_T_D == Zero))
+                                    Name (_T_E, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_E = ToInteger (Arg1)
+                                    If ((_T_E == Zero))
                                     {
                                         Name (CBUF, Package (0x01)
                                         {
@@ -23292,15 +25512,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_E, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_E = Arg2
-                            If ((_T_E == Zero))
+                            Name (_T_F, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_F = Arg2
+                            If ((_T_F == Zero))
                             {
                                 While (One)
                                 {
-                                    Name (_T_F, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_F = ToInteger (Arg1)
-                                    If ((_T_F == Zero))
+                                    Name (_T_G, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_G = ToInteger (Arg1)
+                                    If ((_T_G == Zero))
                                     {
                                         Return (Buffer (One)
                                         {
@@ -23318,13 +25538,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_E == One))
+                            ElseIf ((_T_F == One))
                             {
                                 While (One)
                                 {
-                                    Name (_T_G, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_G = ToInteger (Arg1)
-                                    If ((_T_G == Zero))
+                                    Name (_T_H, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_H = ToInteger (Arg1)
+                                    If ((_T_H == Zero))
                                     {
                                         Name (PBUF, Package (0x08)
                                         {
@@ -23350,13 +25570,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_E == 0x02))
+                            ElseIf ((_T_F == 0x02))
                             {
                                 While (One)
                                 {
-                                    Name (_T_H, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_H = ToInteger (Arg1)
-                                    If ((_T_H == Zero))
+                                    Name (_T_I, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_I = ToInteger (Arg1)
+                                    If ((_T_I == Zero))
                                     {
                                         Name (CBUF, Package (0x01)
                                         {

@@ -13832,7 +13832,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (IPCC)
         {
             Name (_HID, "QCOM1AC2")  // _HID: Hardware ID
-            Name (_CID, "QCOMFFE2")  // _CID: Compatible ID
+            Name (_CID, "QCOMFFE5")  // _CID: Compatible ID
             Name (_UID, Zero)  // _UID: Unique ID
             Alias (\_SB.PSUB, _SUB)
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -14386,7 +14386,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (QPPX)
         {
             Name (_HID, "QCOM1A96")  // _HID: Hardware ID
-            Name (_CID, "QCOMFFE4")  // _CID: Compatible ID
+            Name (_CID, "QCOMFFE2")  // _CID: Compatible ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Alias (\_SB.PSUB, _SUB)

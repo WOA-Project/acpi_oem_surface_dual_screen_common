@@ -429,7 +429,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Buffer (0x14)
                 {
                     /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xA4, 0x0B, 0xBC, 0x07,  // ........
-                    /* 0008 */  0x40, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // @.......
+                    /* 0008 */  0x60, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00,  // `.......
                     /* 0010 */  0x0A, 0x00, 0x0A, 0x00                           // ....
                 }
             })
@@ -460,7 +460,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Buffer (0x14)
                 {
                     /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xA4, 0x0B, 0xBC, 0x07,  // ........
-                    /* 0008 */  0x60, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00,  // `.......
+                    /* 0008 */  0x40, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // @.......
                     /* 0010 */  0x0A, 0x00, 0x0A, 0x00                           // ....
                 }
             })
@@ -82165,56 +82165,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_0 == 0x03))
-                            {
-                                While (One)
-                                {
-                                    Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_2 = Arg2
-                                    If ((_T_2 == Zero))
-                                    {
-                                        Return (Buffer (One)
-                                        {
-                                             0x7F                                             // .
-                                        })
-                                    }
-                                    ElseIf ((_T_2 == One))
-                                    {
-                                        Return (0x1000)
-                                    }
-                                    ElseIf ((_T_2 == 0x02))
-                                    {
-                                        Return (0x1004)
-                                    }
-                                    ElseIf ((_T_2 == 0x03))
-                                    {
-                                        Return (0x2000)
-                                    }
-                                    ElseIf ((_T_2 == 0x04))
-                                    {
-                                        Return (Buffer (One)
-                                        {
-                                             0xEB                                             // .
-                                        })
-                                    }
-                                    ElseIf ((_T_2 == 0x05))
-                                    {
-                                        Return (Buffer (One)
-                                        {
-                                             0xE2                                             // .
-                                        })
-                                    }
-                                    ElseIf ((_T_2 == 0x06))
-                                    {
-                                        Return (0xA000)
-                                    }
-                                    Else
-                                    {
-                                    }
-
-                                    Break
-                                }
-                            }
                             Else
                             {
                                 Return (Buffer (One)
@@ -82354,15 +82304,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_3, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_3 = Arg2
-                            If ((_T_3 == Zero))
+                            Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_2 = Arg2
+                            If ((_T_2 == Zero))
                             {
                                 While (One)
                                 {
-                                    Name (_T_4, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_4 = ToInteger (Arg1)
-                                    If ((_T_4 == Zero))
+                                    Name (_T_3, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_3 = ToInteger (Arg1)
+                                    If ((_T_3 == Zero))
                                     {
                                         Return (Buffer (One)
                                         {
@@ -82380,13 +82330,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_3 == One))
+                            ElseIf ((_T_2 == One))
                             {
                                 While (One)
                                 {
-                                    Name (_T_5, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_5 = ToInteger (Arg1)
-                                    If ((_T_5 == Zero))
+                                    Name (_T_4, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_4 = ToInteger (Arg1)
+                                    If ((_T_4 == Zero))
                                     {
                                         Name (PBUF, Package (0x08)
                                         {
@@ -82412,13 +82362,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_3 == 0x02))
+                            ElseIf ((_T_2 == 0x02))
                             {
                                 While (One)
                                 {
-                                    Name (_T_6, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_6 = ToInteger (Arg1)
-                                    If ((_T_6 == Zero))
+                                    Name (_T_5, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_5 = ToInteger (Arg1)
+                                    If ((_T_5 == Zero))
                                     {
                                         Name (CBUF, Package (0x01)
                                         {
@@ -82536,15 +82486,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_7, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_7 = Arg2
-                            If ((_T_7 == Zero))
+                            Name (_T_6, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_6 = Arg2
+                            If ((_T_6 == Zero))
                             {
                                 While (One)
                                 {
-                                    Name (_T_8, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_8 = ToInteger (Arg1)
-                                    If ((_T_8 == Zero))
+                                    Name (_T_7, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_7 = ToInteger (Arg1)
+                                    If ((_T_7 == Zero))
                                     {
                                         Return (Buffer (One)
                                         {
@@ -82562,13 +82512,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_7 == One))
+                            ElseIf ((_T_6 == One))
                             {
                                 While (One)
                                 {
-                                    Name (_T_9, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_9 = ToInteger (Arg1)
-                                    If ((_T_9 == Zero))
+                                    Name (_T_8, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_8 = ToInteger (Arg1)
+                                    If ((_T_8 == Zero))
                                     {
                                         Name (PBUF, Package (0x08)
                                         {
@@ -82594,13 +82544,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_7 == 0x02))
+                            ElseIf ((_T_6 == 0x02))
                             {
                                 While (One)
                                 {
-                                    Name (_T_A, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_A = ToInteger (Arg1)
-                                    If ((_T_A == Zero))
+                                    Name (_T_9, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_9 = ToInteger (Arg1)
+                                    If ((_T_9 == Zero))
                                     {
                                         Name (CBUF, Package (0x01)
                                         {
@@ -82718,15 +82668,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_B, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_B = Arg2
-                            If ((_T_B == Zero))
+                            Name (_T_A, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_A = Arg2
+                            If ((_T_A == Zero))
                             {
                                 While (One)
                                 {
-                                    Name (_T_C, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_C = ToInteger (Arg1)
-                                    If ((_T_C == Zero))
+                                    Name (_T_B, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_B = ToInteger (Arg1)
+                                    If ((_T_B == Zero))
                                     {
                                         Return (Buffer (One)
                                         {
@@ -82744,13 +82694,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_B == One))
+                            ElseIf ((_T_A == One))
                             {
                                 While (One)
                                 {
-                                    Name (_T_D, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_D = ToInteger (Arg1)
-                                    If ((_T_D == Zero))
+                                    Name (_T_C, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_C = ToInteger (Arg1)
+                                    If ((_T_C == Zero))
                                     {
                                         Name (PBUF, Package (0x08)
                                         {
@@ -82776,13 +82726,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_B == 0x02))
+                            ElseIf ((_T_A == 0x02))
                             {
                                 While (One)
                                 {
-                                    Name (_T_E, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_E = ToInteger (Arg1)
-                                    If ((_T_E == Zero))
+                                    Name (_T_D, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_D = ToInteger (Arg1)
+                                    If ((_T_D == Zero))
                                     {
                                         Name (CBUF, Package (0x01)
                                         {
@@ -82903,15 +82853,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_F, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_F = Arg2
-                            If ((_T_F == Zero))
+                            Name (_T_E, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_E = Arg2
+                            If ((_T_E == Zero))
                             {
                                 While (One)
                                 {
-                                    Name (_T_G, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_G = ToInteger (Arg1)
-                                    If ((_T_G == Zero))
+                                    Name (_T_F, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_F = ToInteger (Arg1)
+                                    If ((_T_F == Zero))
                                     {
                                         Return (Buffer (One)
                                         {
@@ -82929,13 +82879,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_F == One))
+                            ElseIf ((_T_E == One))
                             {
                                 While (One)
                                 {
-                                    Name (_T_H, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_H = ToInteger (Arg1)
-                                    If ((_T_H == Zero))
+                                    Name (_T_G, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_G = ToInteger (Arg1)
+                                    If ((_T_G == Zero))
                                     {
                                         Name (PBUF, Package (0x08)
                                         {
@@ -82961,13 +82911,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     Break
                                 }
                             }
-                            ElseIf ((_T_F == 0x02))
+                            ElseIf ((_T_E == 0x02))
                             {
                                 While (One)
                                 {
-                                    Name (_T_I, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_I = ToInteger (Arg1)
-                                    If ((_T_I == Zero))
+                                    Name (_T_H, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                                    _T_H = ToInteger (Arg1)
+                                    If ((_T_H == Zero))
                                     {
                                         Name (CBUF, Package (0x01)
                                         {

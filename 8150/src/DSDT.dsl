@@ -720,7 +720,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     Zero, 
                     One, 
                     Zero, 
-                    "8150_MTP"
+                    "CUST_PMIC"
                 })
                 CFG0 [0x04] = CUST /* \_SB_.CUST */
                 Return (CFG0) /* \_SB_.PMBT.BMNR.CFG0 */

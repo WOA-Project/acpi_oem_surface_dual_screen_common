@@ -64,24 +64,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         Name (PRP1, 0xFFFFFFFF)
         Name (PRP2, 0xFFFFFFFF)
         Name (PRP3, 0xFFFFFFFF)
-        Name (R2PL, Package (0x01)
-        {
-            Buffer (0x14)
-            {
-                /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xA4, 0x0B, 0xBC, 0x07,  // ........
-                /* 0008 */  0x60, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00,  // `.......
-                /* 0010 */  0x0A, 0x00, 0x0A, 0x00                           // ....
-            }
-        })
-        Name (C3PL, Package (0x01)
-        {
-            Buffer (0x14)
-            {
-                /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xA4, 0x0B, 0xBC, 0x07,  // ........
-                /* 0008 */  0x40, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // @.......
-                /* 0010 */  0x0A, 0x00, 0x0A, 0x00                           // ....
-            }
-        })
         Device (AUDS)
         {
             Name (_HID, "QCOM05D2")  // _HID: Hardware ID
@@ -452,8 +434,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 })
                 Return (RBUF) /* \_SB_.BAT1._CRS.RBUF */
             }
-
-            Alias (\_SB.R2PL, _PLD)
         }
 
         Device (BAT2)
@@ -475,8 +455,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 })
                 Return (RBUF) /* \_SB_.BAT2._CRS.RBUF */
             }
-
-            Alias (\_SB.C3PL, _PLD)
         }
 
         Device (SCHG)
@@ -558,8 +536,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 })
                 Return (CFG0) /* \_SB_.SCHG.BCLQ.CFG0 */
             }
-
-            Alias (\_SB.R2PL, _PLD)
         }
 
         Name (BFCC, 0x33CC)
@@ -61926,16 +61902,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 {
                     Return (Zero)
                 }
-
-                Name (_PLD, Package (One)  // _PLD: Physical Location of Device
-                {
-                    Buffer (0x14)
-                    {
-                        /* 0000 */  0x02, 0xFF, 0x00, 0xFF, 0x7C, 0x0B, 0x94, 0x07,  // ....|...
-                        /* 0008 */  0x41, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // A.......
-                        /* 0010 */  0x1E, 0x00, 0x1E, 0x00                           // ....
-                    }
-                })
             }
 
             Device (MON1)
@@ -61944,16 +61910,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 {
                     Return (One)
                 }
-
-                Name (_PLD, Package (One)  // _PLD: Physical Location of Device
-                {
-                    Buffer (0x14)
-                    {
-                        /* 0000 */  0x02, 0xFF, 0x00, 0xFF, 0x7C, 0x0B, 0x94, 0x07,  // ....|...
-                        /* 0008 */  0x61, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x00, 0x00,  // a.......
-                        /* 0010 */  0x1E, 0x00, 0x1E, 0x00                           // ....
-                    }
-                })
             }
 
             Name (_DEP, Package (0x0B)  // _DEP: Dependencies
@@ -78868,7 +78824,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Name (_HID, "QCOM059F")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Name (_CID, "QCOM056C")  // _CID: Compatible ID
-            Alias (\_SB.R2PL, _PLD)
         }
 
         Device (SEN3)
@@ -78883,7 +78838,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Name (_HID, "QCOM05A0")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Name (_CID, "QCOM056C")  // _CID: Compatible ID
-            Alias (\_SB.C3PL, _PLD)
         }
 
         Device (SEN4)
@@ -82586,24 +82540,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     }
                 }
 
-                Device (PEN2)
+                Device (PEN1)
                 {
                     Method (_ADR, 0, NotSerialized)  // _ADR: Address
                     {
                         Return (0x02)
                     }
-
-                    Alias (\_SB.R2PL, _PLD)
                 }
 
-                Device (PEN1)
+                Device (PEN2)
                 {
                     Method (_ADR, 0, NotSerialized)  // _ADR: Address
                     {
                         Return (0x03)
                     }
-
-                    Alias (\_SB.C3PL, _PLD)
                 }
 
                 Device (DTUT)
@@ -82630,24 +82580,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     }
                 }
 
-                Device (TCH2)
+                Device (TCH1)
                 {
                     Method (_ADR, 0, NotSerialized)  // _ADR: Address
                     {
                         Return (0x07)
                     }
-
-                    Alias (\_SB.R2PL, _PLD)
                 }
 
-                Device (TCH1)
+                Device (TCH2)
                 {
                     Method (_ADR, 0, NotSerialized)  // _ADR: Address
                     {
                         Return (0x08)
                     }
-
-                    Alias (\_SB.C3PL, _PLD)
                 }
             }
         }
@@ -86359,470 +86305,226 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
     Scope (\_SB)
     {
-        Device (WSLT)
+        Name (C3PL, Package (One)
         {
-            Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
+            Buffer (0x14)
             {
-                Return ("MSHW0005")
-            }
-
-            Name (_CID, "PNP0C60" /* Display Sensor Device */)  // _CID: Compatible ID
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (0x0F)
-            }
-        }
-    }
-
-    Scope (\_SB)
-    {
-        Device (SHPS)
-        {
-            Name (_HID, "MSHW0153")  // _HID: Hardware ID
-            Method (_STA, 0, Serialized)  // _STA: Status
-            {
-                Return (Zero)
-            }
-
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 == ToUUID ("5515a847-ed55-4b27-8352-cd320e10360a") /* Unknown UUID */))
-                {
-                    If ((ToInteger (Arg1) == One))
-                    {
-                        If ((ToInteger (Arg2) == Zero))
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x41                                             // A
-                            })
-                        }
-
-                        If ((ToInteger (Arg2) == 0x06))
-                        {
-                            Local0 = 0x0E
-                            Return (Local0)
-                        }
-                    }
-                }
-
-                Return (Buffer (One)
-                {
-                     0x00                                             // .
-                })
-            }
-        }
-    }
-
-    Scope (\_SB)
-    {
-        Device (WSID)
-        {
-            Name (_HID, "MSHW0115")  // _HID: Hardware ID
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (Zero)
-            }
-
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 == ToUUID ("a653cdf4-476c-44fb-b366-a73cedf6e14c") /* Unknown UUID */))
-                {
-                    If ((Arg1 == Zero))
-                    {
-                        If ((Arg2 == Zero))
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x09                                             // .
-                            })
-                        }
-
-                        If ((Arg2 == 0x03))
-                        {
-                            Return (OCEL) /* \OCEL */
-                        }
-
-                        Return (Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                    }
-                    Else
-                    {
-                        Return (Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                    }
-                }
-                Else
-                {
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
-                }
-            }
-        }
-    }
-
-    ThermalZone (TPOL)
-    {
-        Name (_HID, "MSHW0187")  // _HID: Hardware ID
-        Name (_UID, One)  // _UID: Unique ID
-        Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
-        {
-            Return (Package (One)
-            {
-                \_SB.PEP0
-            })
-        }
-
-        Method (_STA, 0, NotSerialized)  // _STA: Status
-        {
-            Return (0x0F)
-        }
-
-        Method (INPS, 0, NotSerialized)
-        {
-            Name (CFG0, Package (0x02)
-            {
-                "\\_SB.TZ2", 
-                "\\_SB.TZ5"
-            })
-            Return (CFG0) /* \TPOL.INPS.CFG0 */
-        }
-
-        Method (OPTS, 0, NotSerialized)
-        {
-            Name (CFG0, Package (0x05)
-            {
-                "\\_SB.SYSM.CLUS.CPU4", 
-                "\\_SB.SYSM.CLUS.CPU5", 
-                "\\_SB.SYSM.CLUS.CPU6", 
-                "\\_SB.SYSM.CLUS.CPU7", 
-                "\\_SB.GPU0"
-            })
-            Return (CFG0) /* \TPOL.OPTS.CFG0 */
-        }
-    }
-
-    Scope (\_SB)
-    {
-        Device (MSBT)
-        {
-            Name (_DEP, Package (0x01)  // _DEP: Dependencies
-            {
-                \_SB.PM01
-            })
-            Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
-            {
-                Return ("MSHW0040")
-            }
-
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (Zero)
-            }
-
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    GpioInt (Edge, ActiveBoth, SharedAndWake, PullDown, 0x0000,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0000
-                        }
-                    GpioIo (Shared, PullDown, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0000
-                        }
-                    GpioInt (Edge, ActiveBoth, Shared, PullUp, 0x0000,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0085
-                        }
-                    GpioIo (Shared, PullUp, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0085
-                        }
-                    GpioInt (Edge, ActiveBoth, Shared, PullDown, 0x0000,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0001
-                        }
-                    GpioIo (Shared, PullUp, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0001
-                        }
-                })
-                Return (RBUF) /* \_SB_.MSBT._CRS.RBUF */
-            }
-
-            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
-            {
-                If ((Arg0 == ToUUID ("6fd05c69-cde3-49f4-95ed-ab1665498035") /* Unknown UUID */))
-                {
-                    If ((Arg1 == One))
-                    {
-                        If ((Arg2 == Zero))
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x0F                                             // .
-                            })
-                        }
-
-                        If ((Arg2 == One)){}
-                        If ((Arg2 == 0x02))
-                        {
-                            Local0 = 0x06
-                            Return (Local0)
-                        }
-
-                        If ((Arg2 == 0x03))
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0x0C                                             // .
-                            })
-                        }
-                        Else
-                        {
-                            Return (Buffer (One)
-                            {
-                                 0xFF                                             // .
-                            })
-                        }
-                    }
-                    Else
-                    {
-                        Return (Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                    }
-                }
-                Else
-                {
-                    Return (Buffer (One)
-                    {
-                         0x00                                             // .
-                    })
-                }
-            }
-        }
-    }
-
-    Scope (\_SB)
-    {
-        Name (_PLD, Package (0x12)  // _PLD: Physical Location of Device
-        {
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0xD0, 0x07,  // ........
-                    /* 0008 */  0x41, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // A.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0xD0, 0x07,  // ........
-                    /* 0008 */  0x49, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // I.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xD0, 0x07, 0x3C, 0x00,  // ......<.
-                    /* 0008 */  0x51, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // Q.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xD0, 0x07, 0x3C, 0x00,  // ......<.
-                    /* 0008 */  0x59, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // Y.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0x3C, 0x00,  // ......<.
-                    /* 0008 */  0x61, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // a.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0x3C, 0x00,  // ......<.
-                    /* 0008 */  0x69, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // i.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0x01, 0x00,  // ........
-                    /* 0008 */  0x41, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // A.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0x01, 0x00,  // ........
-                    /* 0008 */  0x49, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // I.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0xE8, 0x03,  // ........
-                    /* 0008 */  0x51, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // Q.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x01, 0x00, 0xE8, 0x03,  // ........
-                    /* 0008 */  0x59, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // Y.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (0x03)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0xE8, 0x03,  // ........
-                    /* 0008 */  0x61, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // a.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }, 
-
-                ToUUID ("f01cfc40-3c75-4523-9e44-215cb154bda6") /* Unknown UUID */, 
-                Buffer (0x10)
-                {
-                    /* 0000 */  0x41, 0x02, 0x00, 0x80, 0x5A, 0x00, 0x5A, 0x00,  // A...Z.Z.
-                    /* 0008 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0xE8, 0x03,  // ........
-                    /* 0008 */  0x69, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // i.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0x3C, 0x00,  // ......<.
-                    /* 0008 */  0x41, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x04, 0x00,  // A.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0x3C, 0x00,  // ......<.
-                    /* 0008 */  0x49, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x04, 0x00,  // I.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x3C, 0x00, 0xD0, 0x07,  // ....<...
-                    /* 0008 */  0x51, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x04, 0x00,  // Q.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x3C, 0x00, 0xD0, 0x07,  // ....<...
-                    /* 0008 */  0x59, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x04, 0x00,  // Y.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
-            }, 
-
-            Package (0x03)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0xD0, 0x07,  // ........
-                    /* 0008 */  0x61, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x04, 0x00,  // a.......
-                    /* 0010 */  0xE8, 0x03, 0x00, 0x00                           // ....
-                }, 
-
-                ToUUID ("f01cfc40-3c75-4523-9e44-215cb154bda6") /* Unknown UUID */, 
-                Buffer (0x10)
-                {
-                    /* 0000 */  0x41, 0x12, 0x50, 0x80, 0xB4, 0x00, 0x00, 0x00,  // A.P.....
-                    /* 0008 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
-                }
-            }, 
-
-            Package (One)
-            {
-                Buffer (0x14)
-                {
-                    /* 0000 */  0x02, 0x00, 0x00, 0x00, 0xB8, 0x0B, 0xD0, 0x07,  // ........
-                    /* 0008 */  0x69, 0x0D, 0x00, 0x00, 0x08, 0x00, 0x04, 0x00,  // i.......
-                    /* 0010 */  0xFF, 0xFF, 0xFF, 0xFF                           // ....
-                }
+                /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x5C, 0x03, 0x74, 0x04,  // ....\.t.
+                /* 0008 */  0x21, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,  // !.......
+                /* 0010 */  0xBE, 0x00, 0x1E, 0x00                           // ....
             }
         })
+        Name (R2PL, Package (One)
+        {
+            Buffer (0x14)
+            {
+                /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x5C, 0x03, 0x74, 0x04,  // ....\.t.
+                /* 0008 */  0x21, 0x0C, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,  // !.......
+                /* 0010 */  0xBE, 0x00, 0x0A, 0x00                           // ....
+            }
+        })
+        Device (CAB0)
+        {
+            Name (_HID, "PNP0000" /* 8259-compatible Programmable Interrupt Controller */)  // _HID: Hardware ID
+            Name (_CID, "PLD_CAB0")  // _CID: Compatible ID
+            Name (_UID, One)  // _UID: Unique ID
+            Name (_STR, Unicode ("Primary Front"))  // _STR: Description String
+            Name (_PLD, Package (0x06)  // _PLD: Physical Location of Device
+            {
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x84, 0x03, 0xF0, 0x05,  // ........
+                        /* 0008 */  0x21, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // !.......
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x84, 0x03, 0xF0, 0x05,  // ........
+                        /* 0008 */  0x29, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // ).......
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x5C, 0x5C, 0x5C, 0x28, 0x00, 0xF0, 0x05,  // .\\\(...
+                        /* 0008 */  0x11, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // ........
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x5C, 0x5C, 0x5C, 0x28, 0x00, 0xF0, 0x05,  // .\\\(...
+                        /* 0008 */  0x19, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // ........
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x5C, 0x5C, 0x5C, 0x84, 0x03, 0x28, 0x00,  // .\\\..(.
+                        /* 0008 */  0x01, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // ........
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x5C, 0x5C, 0x5C, 0x84, 0x03, 0x28, 0x00,  // .\\\..(.
+                        /* 0008 */  0x09, 0x0C, 0x00, 0x00, 0x00, 0x00, 0x04, 0x00,  // ........
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }
+            })
+        }
+
+        Device (CAB1)
+        {
+            Name (_HID, "PNP0000" /* 8259-compatible Programmable Interrupt Controller */)  // _HID: Hardware ID
+            Name (_CID, "PLD_CAB1")  // _CID: Compatible ID
+            Name (_UID, 0x0C)  // _UID: Unique ID
+            Name (_STR, Unicode ("Secondary Front"))  // _STR: Description String
+            Name (_PLD, Package (0x06)  // _PLD: Physical Location of Device
+            {
+                Package (0x03)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x84, 0x03, 0xF0, 0x05,  // ........
+                        /* 0008 */  0x21, 0x0C, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // !.......
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }, 
+
+                    ToUUID ("f01cfc40-3c75-4523-9e44-215cb154bda6") /* Unknown UUID */, 
+                    Buffer (0x10)
+                    {
+                        /* 0000 */  0x41, 0x04, 0xC0, 0x01, 0xB4, 0x00, 0xB4, 0x00,  // A.......
+                        /* 0008 */  0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00   // ........
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x00, 0x00, 0x00, 0x84, 0x03, 0xF0, 0x05,  // ........
+                        /* 0008 */  0x29, 0x0C, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // ).......
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x5C, 0x5C, 0x5C, 0x28, 0x00, 0xF0, 0x05,  // .\\\(...
+                        /* 0008 */  0x11, 0x0C, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // ........
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x5C, 0x5C, 0x5C, 0x28, 0x00, 0xF0, 0x05,  // .\\\(...
+                        /* 0008 */  0x19, 0x0C, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // ........
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x5C, 0x5C, 0x5C, 0x84, 0x03, 0x28, 0x00,  // .\\\..(.
+                        /* 0008 */  0x01, 0x0C, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // ........
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }, 
+
+                Package (One)
+                {
+                    Buffer (0x14)
+                    {
+                        /* 0000 */  0x02, 0x5C, 0x5C, 0x5C, 0x84, 0x03, 0x28, 0x00,  // .\\\..(.
+                        /* 0008 */  0x09, 0x0C, 0x00, 0x00, 0x04, 0x00, 0x04, 0x00,  // ........
+                        /* 0010 */  0x00, 0x00, 0x00, 0x00                           // ....
+                    }
+                }
+            })
+        }
+
+        Scope (SEN2)
+        {
+            Alias (\_SB.R2PL, _PLD)
+        }
+
+        Scope (SEN3)
+        {
+            Alias (\_SB.C3PL, _PLD)
+        }
+
+        Scope (GPU0)
+        {
+            Scope (MON0)
+            {
+                Alias (\_SB.C3PL, _PLD)
+            }
+
+            Scope (MON1)
+            {
+                Alias (\_SB.R2PL, _PLD)
+            }
+        }
+
+        Scope (BAT1)
+        {
+            Alias (\_SB.R2PL, _PLD)
+        }
+
+        Scope (BAT2)
+        {
+            Alias (\_SB.C3PL, _PLD)
+        }
+
+        Scope (GTCH)
+        {
+            Scope (PEN1)
+            {
+                Alias (\_SB.R2PL, _PLD)
+            }
+
+            Scope (PEN2)
+            {
+                Alias (\_SB.C3PL, _PLD)
+            }
+
+            Scope (TCH1)
+            {
+                Alias (\_SB.R2PL, _PLD)
+            }
+
+            Scope (TCH2)
+            {
+                Alias (\_SB.C3PL, _PLD)
+            }
+        }
     }
 
     OperationRegion (XBLH, SystemMemory, 0x146BFA94, 0x64)

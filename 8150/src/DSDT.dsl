@@ -82411,7 +82411,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                 While (One)
                                 {
                                     Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                                    _T_1 = Arg2
+                                    _T_1 = ToInteger (Arg2)
                                     If ((_T_1 == Zero))
                                     {
                                         Return (Buffer (One)
@@ -82423,31 +82423,19 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     {
                                         Return (One)
                                     }
-                                    Else
-                                    {
-                                    }
 
                                     Break
                                 }
-                            }
-                            Else
-                            {
-                                Return (Buffer (One)
-                                {
-                                     0x00                                             // .
-                                })
                             }
 
                             Break
                         }
                     }
-                    Else
+
+                    Return (Buffer (One)
                     {
-                        Return (Buffer (One)
-                        {
-                             0x00                                             // .
-                        })
-                    }
+                         0x00                                             // .
+                    })
                 }
 
                 Name (PGID, Buffer (0x0A)

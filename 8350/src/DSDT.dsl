@@ -19169,6 +19169,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     \_SB.PEP0.FLD0 = DBUF /* \_SB_.NFCD.DBUF */
                 }
             }
+
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (Zero)
+            }
         }
 
         Device (SARM)
@@ -25172,12 +25177,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {   // Pin list
                                 0x0017
                             }
-                        GpioInt (Edge, ActiveHigh, ExclusiveAndWake, PullDown, 0x0000,
-                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                            )
-                            {   // Pin list
-                                0x0380
-                            }
                     })
                     Return (RBUF) /* \_SB_.GTCH._CRS.RBUF */
                 }
@@ -25222,33 +25221,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     })
                 }
 
-                OperationRegion (GI23, SystemMemory, 0x0F117000, 0x18)
-                Field (GI23, DWordAcc, NoLock, Preserve)
-                {
-                    Offset (0x04), 
-                    VSTE,   32, 
-                    Offset (0x0C), 
-                    Offset (0x10), 
-                    Offset (0x14), 
-                    Offset (0x18)
-                }
-
-                OperationRegion (GI08, SystemMemory, 0x0F108000, 0x18)
-                Field (GI08, DWordAcc, NoLock, Preserve)
-                {
-                    Offset (0x04), 
-                    RSTE,   32, 
-                    Offset (0x0C), 
-                    Offset (0x10), 
-                    Offset (0x14), 
-                    Offset (0x18)
-                }
-
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    Return (0x0F)
-                }
-
+                Name (FLAG, 0x03)
                 Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
                 {
                     Return (0x03)
@@ -25266,27 +25239,44 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
                 Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
                 {
-                    If (((VSTE & 0x02) == Zero))
+                    If ((FLAG == 0x03))
                     {
-                        VSTE = 0x02
                         Sleep (0x012C)
+                        OperationRegion (GI08, SystemMemory, 0x0F108000, 0x18)
+                        Field (GI08, DWordAcc, NoLock, Preserve)
+                        {
+                            DWD1,   32, 
+                            DWD2,   32
+                        }
+
+                        DWD2 = 0x02
+                        Sleep (0x96)
                     }
 
-                    RSTE = 0x02
+                    FLAG = Zero
+                }
+
+                Method (_PS2, 0, NotSerialized)  // _PS2: Power State 2
+                {
                 }
 
                 Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
                 {
-                    RSTE = Zero
-                    Sleep (0x0A)
-                    VSTE = Zero
+                    FLAG = 0x03
                 }
 
                 Method (_RST, 0, NotSerialized)  // _RST: Device Reset
                 {
-                    RSTE = Zero
+                    OperationRegion (GI08, SystemMemory, 0x0F108000, 0x18)
+                    Field (GI08, DWordAcc, NoLock, Preserve)
+                    {
+                        DWD1,   32, 
+                        DWD2,   32
+                    }
+
+                    DWD2 = Zero
                     Sleep (0x012C)
-                    RSTE = 0x02
+                    DWD2 = 0x02
                 }
 
                 Device (TCOM)
@@ -25302,6 +25292,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     Method (_ADR, 0, NotSerialized)  // _ADR: Address
                     {
                         Return (0x02)
+                    }
+
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        Return (Zero)
                     }
                 }
 
@@ -25321,7 +25316,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }
 
-                Device (PBLE)
+                Device (SDHB)
                 {
                     Method (_ADR, 0, NotSerialized)  // _ADR: Address
                     {
@@ -25329,7 +25324,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }
 
-                Device (PCFU)
+                Device (STPD)
                 {
                     Method (_ADR, 0, NotSerialized)  // _ADR: Address
                     {
@@ -25343,6 +25338,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     {
                         Return (0x07)
                     }
+
+                    Method (_STA, 0, NotSerialized)  // _STA: Status
+                    {
+                        Return (Zero)
+                    }
                 }
 
                 Device (TCH2)
@@ -25350,6 +25350,38 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     Method (_ADR, 0, NotSerialized)  // _ADR: Address
                     {
                         Return (0x08)
+                    }
+                }
+
+                Device (PBLE)
+                {
+                    Method (_ADR, 0, NotSerialized)  // _ADR: Address
+                    {
+                        Return (0x09)
+                    }
+                }
+
+                Device (FWUP)
+                {
+                    Method (_ADR, 0, NotSerialized)  // _ADR: Address
+                    {
+                        Return (0x0A)
+                    }
+                }
+
+                Device (PCFU)
+                {
+                    Method (_ADR, 0, NotSerialized)  // _ADR: Address
+                    {
+                        Return (0x0B)
+                    }
+                }
+
+                Device (HPID)
+                {
+                    Method (_ADR, 0, NotSerialized)  // _ADR: Address
+                    {
+                        Return (0x0C)
                     }
                 }
             }
@@ -25493,14 +25525,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }
 
-                Name (PGID, Buffer (0x0A)
-                {
-                    "\\_SB.PA01"
-                })
-                Name (DBUF, Buffer (DBFL){})
-                CreateByteField (DBUF, Zero, STAT)
-                CreateByteField (DBUF, 0x02, DVAL)
-                CreateField (DBUF, 0x18, 0xA0, DEID)
                 Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
                 {
                     Return (0x03)
@@ -25514,28 +25538,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
                 {
                     Return (0x03)
-                }
-
-                Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
-                {
-                    DEID = Buffer (ESNL){}
-                    DVAL = Zero
-                    DEID = PGID /* \_SB_.I2C6.PA00.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.I2C6.PA00.DBUF */
-                    }
-                }
-
-                Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
-                {
-                    DEID = Buffer (ESNL){}
-                    DVAL = 0x03
-                    DEID = PGID /* \_SB_.I2C6.PA00.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.I2C6.PA00.DBUF */
-                    }
                 }
             }
 
@@ -25675,14 +25677,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }
 
-                Name (PGID, Buffer (0x0A)
-                {
-                    "\\_SB.PA01"
-                })
-                Name (DBUF, Buffer (DBFL){})
-                CreateByteField (DBUF, Zero, STAT)
-                CreateByteField (DBUF, 0x02, DVAL)
-                CreateField (DBUF, 0x18, 0xA0, DEID)
                 Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
                 {
                     Return (0x03)
@@ -25696,28 +25690,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
                 {
                     Return (0x03)
-                }
-
-                Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
-                {
-                    DEID = Buffer (ESNL){}
-                    DVAL = Zero
-                    DEID = PGID /* \_SB_.I2C6.PA01.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.I2C6.PA01.DBUF */
-                    }
-                }
-
-                Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
-                {
-                    DEID = Buffer (ESNL){}
-                    DVAL = 0x03
-                    DEID = PGID /* \_SB_.I2C6.PA01.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.I2C6.PA01.DBUF */
-                    }
                 }
             }
 
@@ -25857,14 +25829,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }
 
-                Name (PGID, Buffer (0x0A)
-                {
-                    "\\_SB.PA01"
-                })
-                Name (DBUF, Buffer (DBFL){})
-                CreateByteField (DBUF, Zero, STAT)
-                CreateByteField (DBUF, 0x02, DVAL)
-                CreateField (DBUF, 0x18, 0xA0, DEID)
                 Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
                 {
                     Return (0x03)
@@ -25878,28 +25842,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
                 {
                     Return (0x03)
-                }
-
-                Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
-                {
-                    DEID = Buffer (ESNL){}
-                    DVAL = Zero
-                    DEID = PGID /* \_SB_.I2C6.PA03.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.I2C6.PA03.DBUF */
-                    }
-                }
-
-                Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
-                {
-                    DEID = Buffer (ESNL){}
-                    DVAL = 0x03
-                    DEID = PGID /* \_SB_.I2C6.PA03.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.I2C6.PA03.DBUF */
-                    }
                 }
             }
 
@@ -26039,14 +25981,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }
 
-                Name (PGID, Buffer (0x0A)
-                {
-                    "\\_SB.PA05"
-                })
-                Name (DBUF, Buffer (DBFL){})
-                CreateByteField (DBUF, Zero, STAT)
-                CreateByteField (DBUF, 0x02, DVAL)
-                CreateField (DBUF, 0x18, 0xA0, DEID)
                 Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
                 {
                     Return (0x03)
@@ -26060,28 +25994,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
                 {
                     Return (0x03)
-                }
-
-                Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
-                {
-                    DEID = Buffer (ESNL){}
-                    DVAL = Zero
-                    DEID = PGID /* \_SB_.I2C6.PA05.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.I2C6.PA05.DBUF */
-                    }
-                }
-
-                Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
-                {
-                    DEID = Buffer (ESNL){}
-                    DVAL = 0x03
-                    DEID = PGID /* \_SB_.I2C6.PA05.PGID */
-                    If (\_SB.ABD.AVBL)
-                    {
-                        \_SB.PEP0.FLD0 = DBUF /* \_SB_.I2C6.PA05.DBUF */
-                    }
                 }
             }
         }
@@ -26354,15 +26266,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 Return (RBUF) /* \_SB_.FPC1._CRS.RBUF */
             }
 
-            Name (PGID, Buffer (0x0A)
-            {
-                "\\_SB.FPC1"
-            })
             Name (FLAG, 0x03)
-            Name (DBUF, Buffer (DBFL){})
-            CreateByteField (DBUF, Zero, STAT)
-            CreateByteField (DBUF, 0x02, DVAL)
-            CreateField (DBUF, 0x18, 0xA0, DEID)
             Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
             {
                 Return (0x03)
@@ -26394,14 +26298,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     Sleep (0x05)
                 }
 
-                DEID = Buffer (ESNL){}
-                DVAL = Zero
-                DEID = PGID /* \_SB_.FPC1.PGID */
-                If (\_SB.ABD.AVBL)
-                {
-                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.FPC1.DBUF */
-                }
-
                 FLAG = Zero
             }
 
@@ -26411,14 +26307,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
             {
-                DEID = Buffer (ESNL){}
-                DVAL = 0x03
-                DEID = PGID /* \_SB_.FPC1.PGID */
-                If (\_SB.ABD.AVBL)
-                {
-                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.FPC1.DBUF */
-                }
-
                 FLAG = 0x03
             }
 

@@ -16,7 +16,7 @@
 //     akin to old Intel Precise Touch and Pen hardware, as well
 //     as a custom HEAT map hid descriptor requiring the use of a
 //     custom Touch and Pen Processor loaded via HeatCore/ISM.
-//     This digitizer predating the specification completition
+//     This digitizer predating the specification completion
 //     notably lacks advanced power management features enabling
 //     tap to wake in Windows 11 and later versions.
 //

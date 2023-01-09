@@ -19848,7 +19848,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
-        Device (SEN2)
+        Device (SEN1)
         {
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
@@ -19861,6 +19861,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Name (_CID, "QCOM1A67")  // _CID: Compatible ID
         }
 
+        Device (SEN2)
+        {
+            Name (_DEP, Package (0x04)  // _DEP: Dependencies
+            {
+                \_SB.IPC0, 
+                \_SB.SCSS, 
+                \_SB.ARPC, 
+                \_SB.SEN1
+            })
+            Name (_HID, "QCOM1A94")  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+            Name (_CID, "QCOM1A67")  // _CID: Compatible ID
+        }
+
         Device (SEN3)
         {
             Name (_DEP, Package (0x04)  // _DEP: Dependencies
@@ -19868,21 +19882,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 \_SB.IPC0, 
                 \_SB.SCSS, 
                 \_SB.ARPC, 
-                \_SB.SEN2
-            })
-            Name (_HID, "QCOM1A94")  // _HID: Hardware ID
-            Alias (\_SB.PSUB, _SUB)
-            Name (_CID, "QCOM1A67")  // _CID: Compatible ID
-        }
-
-        Device (SEN4)
-        {
-            Name (_DEP, Package (0x04)  // _DEP: Dependencies
-            {
-                \_SB.IPC0, 
-                \_SB.SCSS, 
-                \_SB.ARPC, 
-                \_SB.SEN3
+                \_SB.SEN1
             })
             Name (_HID, "QCOM1AD1")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
@@ -26543,7 +26543,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         }
     }
 
-    OperationRegion (XBLH, SystemMemory, 0xE3400000, 0x1000)
+    OperationRegion (XBLH, SystemMemory, 0xE3400000, 0x04C9)
     Field (XBLH, AnyAcc, NoLock, Preserve)
     {
         BDID,   8, 
@@ -26553,13 +26553,18 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         ISAM,   8, 
         PMRR,   8, 
         TFWV,   128, 
+        PRID,   16, 
         OCEL,   16, 
         IRAM,   8, 
         RDID,   24, 
         FUTR,   8, 
         PPBK,   3408, 
-        PSD1,   1024, 
-        PSD5,   1024
+        PS48,   1024, 
+        PS08,   1024, 
+        PS07,   1024, 
+        PS06,   1024, 
+        PS05,   1024, 
+        PS01,   1024
     }
 }
 

@@ -78813,7 +78813,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             }
         }
 
-        Device (SEN2)
+        Device (SEN1)
         {
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
@@ -78826,6 +78826,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Name (_CID, "QCOM056C")  // _CID: Compatible ID
         }
 
+        Device (SEN2)
+        {
+            Name (_DEP, Package (0x04)  // _DEP: Dependencies
+            {
+                \_SB.IPC0, 
+                \_SB.SCSS, 
+                \_SB.ARPC, 
+                \_SB.SEN1
+            })
+            Name (_HID, "QCOM05A0")  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+            Name (_CID, "QCOM056C")  // _CID: Compatible ID
+        }
+
         Device (SEN3)
         {
             Name (_DEP, Package (0x04)  // _DEP: Dependencies
@@ -78833,21 +78847,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 \_SB.IPC0, 
                 \_SB.SCSS, 
                 \_SB.ARPC, 
-                \_SB.SEN2
-            })
-            Name (_HID, "QCOM05A0")  // _HID: Hardware ID
-            Alias (\_SB.PSUB, _SUB)
-            Name (_CID, "QCOM056C")  // _CID: Compatible ID
-        }
-
-        Device (SEN4)
-        {
-            Name (_DEP, Package (0x04)  // _DEP: Dependencies
-            {
-                \_SB.IPC0, 
-                \_SB.SCSS, 
-                \_SB.ARPC, 
-                \_SB.SEN3
+                \_SB.SEN1
             })
             Name (_HID, "QCOM05D1")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
@@ -86515,7 +86515,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         }
     }
 
-    OperationRegion (XBLH, SystemMemory, 0x146BFA94, 0x64)
+    OperationRegion (XBLH, SystemMemory, 0x146BFA94, 0x18)
     Field (XBLH, AnyAcc, NoLock, Preserve)
     {
         BDID,   8, 

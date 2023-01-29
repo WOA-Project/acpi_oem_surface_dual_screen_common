@@ -48,7 +48,7 @@ DefinitionBlock ("TPMDev.dat", "SSDT", 2, "MSFT  ", "fTPM    ", 0x00000002)
         Device (FSIM)
         {
             Name (_ADR, Zero)  // _ADR: Address
-            Name (_HID, "FTPM8888")  // _HID: Hardware ID
+            Name (_HID, "MPTF8888")  // _HID: Hardware ID
             Name (_UID, One)  // _UID: Unique ID
             Name (_DDN, "Microsoft fTPM Simulator")  // _DDN: DOS Device Name
             Name (_STR, Unicode ("Microsoft fTPM Simulator"))  // _STR: Description String

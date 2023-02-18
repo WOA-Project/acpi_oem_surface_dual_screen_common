@@ -47,6 +47,16 @@ Device(SCHG)
         Return (RBUF)
     }
 
+    Method (_STA)
+    {
+        if(LEqual(BTPS, 0)) {
+            Return (0)
+        }
+        else {
+            Return (0x0F)
+        }
+    }
+
     Method (BCLQ)
     {
         Name (CFG0,

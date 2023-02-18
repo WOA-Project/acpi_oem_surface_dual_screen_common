@@ -47,6 +47,16 @@ Device(BAT1)
         })
         Return (RBUF)
     }
+
+    Method (_STA)
+    {
+        if(LEqual(BTPS, 0)) {
+            Return (0)
+        }
+        else {
+            Return (0x0F)
+        }
+    }
 }
 
 // Fuel Gauge (C3)
@@ -71,5 +81,15 @@ Device(BAT2)
             I2CSerialBus(0x55,, 100000, AddressingMode7Bit, "\\_SB.I2C2",,,,)
         })
         Return (RBUF)
+    }
+
+    Method (_STA)
+    {
+        if(LEqual(BTPS, 0)) {
+            Return (0)
+        }
+        else {
+            Return (0x0F)
+        }
     }
 }

@@ -1,9 +1,5 @@
 DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 {
-    External (_BID, UnknownObj)
-    External (_SB_.DPP1, IntObj)
-    External (_SB_.MPP0, IntObj)
-    External (_SB_.MPP1, IntObj)
     External (_SB_.TZ22._PSV, IntObj)
     External (_SB_.TZ22._TC1, IntObj)
     External (_SB_.TZ22._TC2, IntObj)
@@ -28,8 +24,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
     External (_SB_.TZ41.TTC1, UnknownObj)
     External (_SB_.TZ41.TTC2, UnknownObj)
     External (_SB_.TZ41.TTSP, UnknownObj)
-    External (BREV, UnknownObj)
-    External (BSID, UnknownObj)
 
     Scope (\_SB)
     {
@@ -404,7 +398,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Alias (\_SB.PSUB, _SUB)
         }
 
-        Device (PCFG)
+        Device (PCHG)
         {
             Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
@@ -601,7 +595,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             {
                 \_SB.PMIC, 
                 \_SB.PEXT, 
-                \_SB.PCFG, 
+                \_SB.PCHG, 
                 \_SB.ADC1, 
                 \_SB.ADC2, 
                 \_SB.ADC3, 
@@ -2812,7 +2806,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 }
                 ElseIf ((\_SB.PSUB == "CLS08150"))
                 {
-                    If ((_BID == Zero))
+                    If ((_BID () == Zero))
                     {
                         If (((\_SB.SOID == 0x0169) && (\_SB.PLST == One)))
                         {
@@ -3341,17 +3335,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
             Method (DMRF, 0, NotSerialized)
             {
-                Return (\_SB.DPP1) /* External reference */
+                Return (\_SB.DPP1)
             }
 
             Method (MPRF, 0, NotSerialized)
             {
-                Return (\_SB.MPP0) /* External reference */
+                Return (\_SB.MPP0)
             }
 
             Method (MMRF, 0, NotSerialized)
             {
-                Return (\_SB.MPP1) /* External reference */
+                Return (\_SB.MPP1)
             }
         }
 
@@ -39688,7 +39682,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 }
                 ElseIf ((\_SB.PSUB == "CLS08150"))
                 {
-                    If (((\_SB.SOID == 0x0169) && ((BSID == 0x02) || (BSID == 0x03))))
+                    If (((\_SB.SOID == 0x0169) && ((BSID () == 0x02) || (BSID () == 0x03))))
                     {
                         Return (WBRX) /* \_SB_.PEP0.WBRX */
                     }
@@ -40114,7 +40108,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     }
                     ElseIf ((\_SB.PSUB == "CLS08150"))
                     {
-                        If (((\_SB.SOID == 0x0169) && ((BSID == 0x02) || (BSID == 0x03))))
+                        If (((\_SB.SOID == 0x0169) && ((BSID () == 0x02) || (BSID () == 0x03))))
                         {
                             Return (PEMH) /* \_SB_.PEP0.PEMH */
                         }
@@ -75785,7 +75779,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         }
                         ElseIf ((\_SB.PSUB == "CLS08150"))
                         {
-                            If (((\_SB.SOID == 0x0169) && ((BSID == 0x02) || (BSID == 0x03))))
+                            If (((\_SB.SOID == 0x0169) && ((BSID () == 0x02) || (BSID () == 0x03))))
                             {
                                 \_SB.QPPX.WLEN = Zero
                                 Sleep (0x05)
@@ -75799,7 +75793,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         If ((\_SB.PSUB == "CLS08150"))
                         {
-                            If ((BREV == Zero))
+                            If ((BREV () == Zero))
                             {
                                 \_SB.QPPX.PMON = Zero
                                 \_SB.QPPX.PMDR = Zero
@@ -80822,6 +80816,21 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Return (Zero)
         }
 
+        Method (_BID, 0, Serialized)
+        {
+            Return (0x03)
+        }
+
+        Method (BSID, 0, Serialized)
+        {
+            Return (0x03)
+        }
+
+        Method (BREV, 0, Serialized)
+        {
+            Return (0x03)
+        }
+
         Name (QUFN, Zero)
         Name (HPDB, Zero)
         Name (HPDS, Buffer (One)
@@ -80856,6 +80865,18 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
              0x00                                             // .
         })
         Name (DPP0, Buffer (One)
+        {
+             0x00                                             // .
+        })
+        Name (DPP1, Buffer (One)
+        {
+             0x00                                             // .
+        })
+        Name (MPP0, Buffer (One)
+        {
+             0x00                                             // .
+        })
+        Name (MPP1, Buffer (One)
         {
              0x00                                             // .
         })
@@ -82006,7 +82027,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                 Method (DPM0, 1, NotSerialized)
                 {
-                    \_SB.DPP0 = Arg0
+                    \_SB.DPP1 = Arg0
                     Notify (\_SB.PEP0, 0xA0) // Device-Specific
                 }
 
@@ -85394,7 +85415,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 }
                 ElseIf ((\_SB.PSUB == "CLS08150"))
                 {
-                    If (((\_SB.SOID == 0x0169) && ((BSID == 0x02) || (BSID == 0x03))))
+                    If (((\_SB.SOID == 0x0169) && ((BSID () == 0x02) || (BSID () == 0x03))))
                     {
                         Return (PBUF) /* \_SB_.BTH0.PBUF */
                     }

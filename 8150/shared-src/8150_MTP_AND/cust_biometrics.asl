@@ -107,11 +107,14 @@
                     DWD2,   32
                 }
 
+                // Pull Down
+                DWD2 = 0x01
+
+                // Wait 1ms
+                Sleep (1)
+
                 // Pull Up
                 DWD2 = 0x02
-
-                // Wait 5ms
-                Sleep (5)
             }
 
             Store(Buffer(ESNL){}, DEID)
@@ -155,7 +158,7 @@
             Sleep (1)
 
             // Pull Down
-            DWD2 = Zero
+            DWD2 = 0x01
 
             // Wait 5ms
             Sleep (5)

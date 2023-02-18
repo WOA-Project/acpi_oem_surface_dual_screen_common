@@ -26,7 +26,7 @@
 //
 // The XBL Apps Hob is located in the SMEM OEM Specific area on Surface Duo 1
 //
-OperationRegion(XBLH, SystemMemory, 0x146BFA94, 0x0064)
+OperationRegion(XBLH, SystemMemory, 0x146BFA94, 0x0018)
 Field(XBLH, AnyAcc, NoLock, Preserve)
 {
     BDID,   8,   // Board ID               // (00)

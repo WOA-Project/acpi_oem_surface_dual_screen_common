@@ -26294,8 +26294,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         DWD2,   32
                     }
 
+                    DWD2 = One
+                    Sleep (One)
                     DWD2 = 0x02
-                    Sleep (0x05)
                 }
 
                 FLAG = Zero
@@ -26321,7 +26322,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
                 DWD2 = 0x02
                 Sleep (One)
-                DWD2 = Zero
+                DWD2 = One
                 Sleep (0x05)
                 DWD2 = 0x02
                 Sleep (0x05)

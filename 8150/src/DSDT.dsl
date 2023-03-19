@@ -74974,7 +74974,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         Package (0x02)
                         {
                             "DisableMiracast", 
-                            One
+                            Zero
                         }, 
 
                         Package (0x02)
@@ -74998,13 +74998,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         Package (0x02)
                         {
                             "DisableMDPBLT", 
-                            One
+                            Zero
                         }, 
 
                         Package (0x02)
                         {
                             "DisableExternal", 
-                            0x3B
+                            Zero
                         }
                     }
                 })

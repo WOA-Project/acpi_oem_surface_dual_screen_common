@@ -398,17 +398,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Alias (\_SB.PSUB, _SUB)
         }
 
-        Device (PCHG)
-        {
-            Name (_DEP, Package (0x02)  // _DEP: Dependencies
-            {
-                \_SB.PMIC, 
-                \_SB.SPMI
-            })
-            Name (_HID, "QCOM0580")  // _HID: Hardware ID
-            Alias (\_SB.PSUB, _SUB)
-        }
-
         Device (BAT1)
         {
             Name (_HID, "BQ27742")  // _HID: Hardware ID
@@ -627,11 +616,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         {
             Name (_HID, "QCOM0531")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
-            Name (_DEP, Package (0x0A)  // _DEP: Dependencies
+            Name (_DEP, Package (0x09)  // _DEP: Dependencies
             {
                 \_SB.PMIC, 
                 \_SB.PEXT, 
-                \_SB.PCHG, 
                 \_SB.ADC1, 
                 \_SB.ADC2, 
                 \_SB.ADC3, 

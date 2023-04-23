@@ -37,15 +37,15 @@ Scope(\_SB_.PEP0)
 {
     Method(LPMX)
     {
-        Return(LPXX)
+        Return(LPXC)
     }
 
-    Name(LPXX,
+    Name(LPXC,
     Package ()
     {
         Package()
         {
-            "DEVICE", "\\_SB.GTCH",
+            "DEVICE", "\\_SB.TSPI",
 
             Package()
             {

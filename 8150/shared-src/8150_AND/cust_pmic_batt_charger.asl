@@ -49,7 +49,7 @@ Device(SCHG)
 
     Method (_STA)
     {
-        if(LEqual(BTPS, 0)) {
+        if(LEqual(BATP, 0)) {
             Return (0)
         }
         else {

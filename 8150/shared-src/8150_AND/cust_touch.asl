@@ -35,17 +35,20 @@
 
 Scope (\_SB)
 {
-    Device (GTCH)
+    Device (TSPI)
     {
-        Name(_HID, "MSHW0235")  // _HID: Hardware ID
+        Method(_HID) {
+            Return("MSHW0162")
+        }
         Name(_CID, "PNP0C51")
-        Name(_S0W, 0x02)
-        Name(_HRV, 0x1)
+        Alias(\_SB.PSUB, _SUB)
+        Name(_UID, 0x0)
 
         Name(_DEP, Package()
         {
-            \_SB.GIO0,
-            \_SB.SPI8
+            \_SB.PEP0,
+            \_SB.SPI8,
+            \_SB.GIO0
         })
 
         Method (_CRS, 0x0, NotSerialized)
@@ -112,7 +115,7 @@ Scope (\_SB)
         }
 
         // PEP Proxy Support
-        Name(PGID, Buffer(10) {"\\_SB.GTCH"})       // Device ID buffer - PGID (Pep given ID)
+        Name(PGID, Buffer(10) {"\\_SB.TSPI"})       // Device ID buffer - PGID (Pep given ID)
 
         Name (FLAG, 0x03)
 
@@ -193,84 +196,123 @@ Scope (\_SB)
             DWD2 = 0x02
         }
 
-        Device (TCOM)
+        Device (COL1)
         {
-            Method(_ADR)
-            {
-                // 1 is always the address assigned for the Surface Touch Communications
-                //
-                Return(1)
+            // 1 is always the address assigned for the Surface Touch Communications
+            //
+            Name(_ADR, 1)
+        }
+
+        Device (COL2)
+        {
+            // 2 is always the address assigned for the Surface Touch Pen Processor (Right)
+            //
+            Name(_ADR, 2)
+
+            // Right
+            Method(_PLD, 0, Serialized) {
+                Name(PLDP, Package(0x01) {
+                    Buffer(0x14) {
+                        0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
+                        0x61, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
+                        0x8D, 0x00, 0x16, 0x00
+                    }
+                })
+                Return(PLDP)
             }
         }
 
-        Device (PEN1)
+        Device (COL3)
         {
-            Method(_ADR)
-            {
-                // 2 is always the address assigned for the Surface Touch Pen Processor (Right)
-                //
-                Return(2)
+            // 3 is always the address assigned for the Surface Touch Pen Processor (Left)
+            //
+            Name(_ADR, 3)
+
+            // Left
+            Method(_PLD, 0, Serialized) {
+                Name(PLDP, Package(0x01) {
+                    Buffer(0x14) {
+                        0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
+                        0x61, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        0x8D, 0x00, 0x16, 0x00
+                    }
+                })
+                Return(PLDP)
             }
         }
 
-        Device (PEN2)
+        Device (COL4)
         {
-            Method(_ADR)
-            {
-                // 3 is always the address assigned for the Surface Touch Pen Processor (Left)
-                //
-                Return(3)
+            // 4 is always the address assigned for the Surface Digitizer Utility
+            //
+            Name(_ADR, 4)
+        }
+
+        Device (COL5)
+        {
+            // 5 is always the address assigned for the Surface Pen BLE LC Adaptation Driver
+            //
+            Name(_ADR, 5)
+        }
+
+        Device (COL6)
+        {
+            // 6 is always the address assigned for the Surface Pen Cfu Over Ble LC Connection
+            //
+            Name(_ADR, 6)
+        }
+
+        Device (COL7)
+        {
+            // 7 is always the address assigned for the Surface Touch Screen Device (Right)
+            //
+            Name(_ADR, 7)
+
+            // Right
+            Method(_PLD, 0, Serialized) {
+                Name(PLDP, Package(0x01) {
+                    Buffer(0x14) {
+                        0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
+                        0x61, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
+                        0x8D, 0x00, 0x16, 0x00
+                    }
+                })
+                Return(PLDP)
             }
         }
 
-        Device (DTUT)
+        Device (COL8)
         {
-            Method(_ADR)
-            {
-                // 4 is always the address assigned for the Surface Digitizer Utility
-                //
-                Return(4)
+            // 8 is always the address assigned for the Surface Touch Screen Device (Left)
+            //
+            Name(_ADR, 8)
+
+            // Left
+            Method(_PLD, 0, Serialized) {
+                Name(PLDP, Package(0x01) {
+                    Buffer(0x14) {
+                        0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
+                        0x61, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+                        0x8D, 0x00, 0x16, 0x00
+                    }
+                })
+                Return(PLDP)
             }
         }
+    }
 
-        Device (PBLE)
+    Device (TFWU)
+    {
+        Name(_HID, "MSHW0145")
+        Name(_UID, 0)
+        Name(_DEP, Package()
         {
-            Method(_ADR)
-            {
-                // 5 is always the address assigned for the Surface Pen BLE LC Adaptation Driver
-                //
-                Return(5)
-            }
-        }
+            \_SB.TSPI
+        })
 
-        Device (PCFU)
+        Method(_STA)
         {
-            Method(_ADR)
-            {
-                // 6 is always the address assigned for the Surface Pen Cfu Over Ble LC Connection
-                //
-                Return(6)
-            }
-        }
-
-        Device (TCH1)
-        {
-            Method(_ADR)
-            {
-                // 7 is always the address assigned for the Surface Touch Screen Device (Right)
-                //
-                Return(7)
-            }
-        }
-
-        Device (TCH2)
-        {
-            Method(_ADR)
-            {
-                // 8 is always the address assigned for the Surface Touch Screen Device (Left)
-                //
-                Return(8)
-            }
+            Return(0x00)
         }
     }
 }

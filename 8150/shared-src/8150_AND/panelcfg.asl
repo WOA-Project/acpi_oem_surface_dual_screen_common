@@ -126,14 +126,49 @@ Name (PCFG,
         <DSITEvSyncContinueLines>4000</DSITEvSyncContinueLines>
         <DSITEvSyncStartLineDivisor>4</DSITEvSyncStartLineDivisor>
         <DSITEPercentVariance>0xa0000</DSITEPercentVariance>
-        <DSITEvSyncSelect>1</DSITEvSyncSelect>
+        <DSITEvSyncSelect>0</DSITEvSyncSelect>
         <DSIFlags>2</DSIFlags>
         <DSIEscapeClockFrequency>6000000</DSIEscapeClockFrequency>
     </Group>
     <DSIInitSequence>
+        07 11 00
+        0A 11 00 00 89 30 80 07 08 05 46 03 84 02 A3 02 A3 02 00 02 51 00 20 5F 4B 00 09 00 0C 00 1C 00 18 18 00 10 F0 03 0C 20 00 06 0B 0B 33 0E 1C 2A 38 46 54 62 69 70 77 79 7B 7D 7E 01 02 01 00 09 40 09 BE 19 FC 19 FA 19 F8 1A 38 1A 78 1A B6 2A F6 2B 34 2B 74 3B 74 6B F4 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+        15 B0 AC
+        39 2A 00 00 05 45
+        39 2B 00 00 07 07
+        15 26 02
+        39 44 03 84
+        05 35
+        39 51 01 47
+        39 53 0C 30
+        39 55 04 70 DB 00 78 DB
+        15 EE 24
+        15 FB AC
+        15 B0 CA
+        05 11
+        FF 5A
+        05 29
+        FF 32
+        15 B0 AC
+        39 E9 32 32 55 06 00 1C 00 00 55 50 4B
+        39 D0 80 10 81 02 0B 00 00 00 00 00 00 00 01 0C 00 D4 0B 00 11 00 1C
+        15 B0 CA
+        39 53 0D 30
     </DSIInitSequence>
+    <Group id='DSI Timing parameters'>
+        <DSITimingHSPrepareOverride>False</DSITimingHSPrepareOverride>
+        <DSITimingHSPrepareValue>21</DSITimingHSPrepareValue>
+        <DSITimingHSExitValue>22</DSITimingHSExitValue>
+    </Group>
     <DSITermSequence>
+        05 28
+        FF 01
+        05 10
+        FF 78
     </DSITermSequence>
+    <Group id='Connection Configuration'>
+        <Display1Reset1Info>DSI_PANEL_RESET, 0, 40</Display1Reset1Info>
+    </Group>
     <Group id='Backlight Configuration'>
         <AdaptiveBrightnessFeature>1</AdaptiveBrightnessFeature>
         <BacklightSteps>100</BacklightSteps>

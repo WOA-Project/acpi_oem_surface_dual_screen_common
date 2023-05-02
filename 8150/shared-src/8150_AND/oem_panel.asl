@@ -33,13 +33,13 @@ Device (DISP)
     {
         Name (RBUF, ResourceTemplate ()
         {
-            // TLMM GPIO used to reset the DSI panel
+            /*// TLMM GPIO used to reset the DSI panel
             //
             GpioIo(Exclusive, PullNone, 0, 0, , "\\_SB.GIO0", ,) {5}
 
             // TLMM GPIO used to reset the DSI panel
             //
-            GpioIo(Exclusive, PullNone, 0, 0, , "\\_SB.GIO0", ,) {6}
+            GpioIo(Exclusive, PullNone, 0, 0, , "\\_SB.GIO0", ,) {6}*/
         })
         Return(RBUF)
     }

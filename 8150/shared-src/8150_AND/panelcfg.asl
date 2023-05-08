@@ -129,6 +129,22 @@ Name (PCFG,
         <DSITEvSyncSelect>0</DSITEvSyncSelect>
         <DSIFlags>2</DSIFlags>
         <DSIEscapeClockFrequency>6000000</DSIEscapeClockFrequency>
+        <DSIHsaHseAfterVsVe>False</DSIHsaHseAfterVsVe>
+        <DSILowPowerModeInHFP>False</DSILowPowerModeInHFP>
+        <DSILowPowerModeInHBP>False</DSILowPowerModeInHBP>
+        <DSILowPowerModeInHSA>False</DSILowPowerModeInHSA>
+        <DSILowPowerModeInBLLPEOF>True</DSILowPowerModeInBLLPEOF>
+        <DSILowPowerModeInBLLP>True</DSILowPowerModeInBLLP>
+        <DSIEnableAutoRefresh>True</DSIEnableAutoRefresh>
+        <DSIPhyDCDCMode>False</DSIPhyDCDCMode>
+        <DSIPacketTransferHS>False</DSIPacketTransferHS>
+        <DSILP11AtInit>True</DSILP11AtInit>
+        <DSIForceCmdInVideoHS>True</DSIForceCmdInVideoHS>
+        <DSITEvSyncInitVal>1800</DSITEvSyncInitVal>
+        <DSIDSCSlicePerPacket>2</DSIDSCSlicePerPacket>
+        <DSICmdModeIdleTime>1</DSICmdModeIdleTime>
+        <DSINullpacketInsertionBytes>1</DSINullpacketInsertionBytes>
+        <DSIPixelXferTiming>3</DSIPixelXferTiming>
     </Group>
     <DSIInitSequence>
         07 11 00

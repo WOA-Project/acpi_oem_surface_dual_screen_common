@@ -22,7 +22,7 @@
 //     SPDX-License-Identifier: MIT
 //
 
-Name (PCFG,
+Name (PCF2,
     Buffer() {"<?xml version='1.0' encoding='utf-8'?>
 <Group id='Main Panel - Secondary'>
     <PanelName>LGSW43408</PanelName>

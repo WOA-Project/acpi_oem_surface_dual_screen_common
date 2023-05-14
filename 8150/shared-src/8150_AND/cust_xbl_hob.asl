@@ -38,24 +38,33 @@ Scope(\_SB) {
         PMRR,   8,   // Pmic Reset Reason      // (05) PmicResetReason: 9 - battery driver triggered
         TFWV,   128, // Touch FW Version       // (06) Current Touch Firmware version number
         OCEL,   16,  // OCP Error Location     // (07) Identify which power rail has the OCP Error
-                                            //      Bit(s)     Meaning
-                                            //      15         More than one OCP error occurred
-                                            //      14-12      PMIC
-                                            //      11-7       SMPS
-                                            //      6-2        LDO
-                                            //      1-0        BOB
+                                               //      Bit(s)     Meaning
+                                               //      15         More than one OCP error occurred
+                                               //      14-12      PMIC
+                                               //      11-7       SMPS
+                                               //      6-2        LDO
+                                               //      1-0        BOB
     }
 
+    //
+    // Epsilon A Subtype
+    //
     Method (MSDA, 0, NotSerialized)
     {
         Return ((\_SB.BDID == 6) || (\_SB.BDID == 9) || (\_SB.BDID == 11) || (\_SB.BDID == 13) || (\_SB.BDID == 16))
     }
 
+    //
+    // Epsilon B Subtype
+    //
     Method (MSDB, 0, NotSerialized)
     {
         Return ((\_SB.BDID == 7) || (\_SB.BDID == 10) || (\_SB.BDID == 12) || (\_SB.BDID == 14) || (\_SB.BDID == 17))
     }
 
+    //
+    // Epsilon C Subtype
+    //
     Method (MSDC, 0, NotSerialized)
     {
         Return ((\_SB.BDID == 8) || (\_SB.BDID == 15) || (\_SB.BDID == 18))

@@ -25,23 +25,24 @@
 //     SPDX-License-Identifier: MIT
 //
 
-    Device (FPS1)
+//
+// Biometric Sensor Device - SPI
+//
+Device (FPS1)
+{
+    Name (_HID, "MSHW0133")
+    Name (_UID, 0)
+    Method (_CRS, 0x0, NotSerialized)
     {
-        Name (_HID, "MSHW0133")
-        Name (_UID, 0)
-
-        Method (_CRS, 0x0, NotSerialized)
-        {
-            Name (RBUF,
-                ResourceTemplate ()
-                {
-                    // IPC IRQ
-                    GpioInt(Edge, ActiveHigh, ExclusiveAndWake, PullUp, 0, "\\_SB.GIO0", 0 , ResourceConsumer, , ) {118}
-
-                    // Reset GPIO
-                    GpioIo(Exclusive, PullNone, 0, 0, , "\\_SB.GIO0", ,) {95}
-                }
-            )
-            Return(RBUF)
-        }
+        Name (RBUF,
+            ResourceTemplate ()
+            {
+                // IPC IRQ
+                GpioInt(Edge, ActiveHigh, ExclusiveAndWake, PullUp, 0, "\\_SB.GIO0", 0 , ResourceConsumer, , ) {118}
+                // Reset GPIO
+                GpioIo(Exclusive, PullNone, 0, 0, , "\\_SB.GIO0", ,) {95}
+            }
+        )
+        Return(RBUF)
     }
+}

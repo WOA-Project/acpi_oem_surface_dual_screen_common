@@ -218,6 +218,36 @@ Device (TSPI)
         Method(_PLD, 0, Serialized) {
             Name(PLDP, Package(0x01) {
                 Buffer(0x14) {
+                    /*
+                    ToPLD (
+                        PLD_Revision           = 0,
+                        PLD_IgnoreColor        = 0,
+                        PLD_Red                = 0,
+                        PLD_Green              = 0,
+                        PLD_Blue               = 130,
+                        PLD_Width              = 29956,
+                        PLD_Height             = 22531,
+                        PLD_UserVisible        = 0,
+                        PLD_Dock               = 0,
+                        PLD_Lid                = 0,
+                        PLD_Panel              = "TOP",
+                        PLD_VerticalPosition   = "UPPER",
+                        PLD_HorizontalPosition = "LEFT",
+                        PLD_Shape              = "ROUND",
+                        PLD_GroupOrientation   = 0,
+                        PLD_GroupToken         = 26,
+                        PLD_GroupPosition      = 194,
+                        PLD_Bay                = 0,
+                        PLD_Ejectable          = 0,
+                        PLD_EjectRequired      = 0,
+                        PLD_CabinetNumber      = 0,
+                        PLD_CardCageNumber     = 0,
+                        PLD_Reference          = 0,
+                        PLD_Rotation           = 0,
+                        PLD_Order              = 8,
+                        PLD_VerticalOffset     = 5632,
+                        PLD_HorizontalOffset   = 36096)
+                    */
                     0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
                     0x61, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
                     0x8D, 0x00, 0x16, 0x00
@@ -237,6 +267,36 @@ Device (TSPI)
         Method(_PLD, 0, Serialized) {
             Name(PLDP, Package(0x01) {
                 Buffer(0x14) {
+                    /*
+                    ToPLD (
+                        PLD_Revision           = 0,
+                        PLD_IgnoreColor        = 0,
+                        PLD_Red                = 0,
+                        PLD_Green              = 0,
+                        PLD_Blue               = 130,
+                        PLD_Width              = 29956,
+                        PLD_Height             = 22531,
+                        PLD_UserVisible        = 0,
+                        PLD_Dock               = 0,
+                        PLD_Lid                = 0,
+                        PLD_Panel              = "TOP",
+                        PLD_VerticalPosition   = "UPPER",
+                        PLD_HorizontalPosition = "LEFT",
+                        PLD_Shape              = "ROUND",
+                        PLD_GroupOrientation   = 0,
+                        PLD_GroupToken         = 26,
+                        PLD_GroupPosition      = 194,
+                        PLD_Bay                = 0,
+                        PLD_Ejectable          = 0,
+                        PLD_EjectRequired      = 0,
+                        PLD_CabinetNumber      = 0,
+                        PLD_CardCageNumber     = 0,
+                        PLD_Reference          = 0,
+                        PLD_Rotation           = 0,
+                        PLD_Order              = 0,
+                        PLD_VerticalOffset     = 5632,
+                        PLD_HorizontalOffset   = 36096)
+                    */
                     0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
                     0x61, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
                     0x8D, 0x00, 0x16, 0x00
@@ -277,6 +337,36 @@ Device (TSPI)
         Method(_PLD, 0, Serialized) {
             Name(PLDP, Package(0x01) {
                 Buffer(0x14) {
+                    /*
+                    ToPLD (
+                        PLD_Revision           = 0,
+                        PLD_IgnoreColor        = 0,
+                        PLD_Red                = 0,
+                        PLD_Green              = 0,
+                        PLD_Blue               = 130,
+                        PLD_Width              = 29956,
+                        PLD_Height             = 22531,
+                        PLD_UserVisible        = 0,
+                        PLD_Dock               = 0,
+                        PLD_Lid                = 0,
+                        PLD_Panel              = "TOP",
+                        PLD_VerticalPosition   = "UPPER",
+                        PLD_HorizontalPosition = "LEFT",
+                        PLD_Shape              = "ROUND",
+                        PLD_GroupOrientation   = 0,
+                        PLD_GroupToken         = 26,
+                        PLD_GroupPosition      = 194,
+                        PLD_Bay                = 0,
+                        PLD_Ejectable          = 0,
+                        PLD_EjectRequired      = 0,
+                        PLD_CabinetNumber      = 0,
+                        PLD_CardCageNumber     = 0,
+                        PLD_Reference          = 0,
+                        PLD_Rotation           = 0,
+                        PLD_Order              = 8,
+                        PLD_VerticalOffset     = 5632,
+                        PLD_HorizontalOffset   = 36096)
+                    */
                     0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
                     0x61, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
                     0x8D, 0x00, 0x16, 0x00
@@ -296,6 +386,36 @@ Device (TSPI)
         Method(_PLD, 0, Serialized) {
             Name(PLDP, Package(0x01) {
                 Buffer(0x14) {
+                    /*
+                    ToPLD (
+                        PLD_Revision           = 0,
+                        PLD_IgnoreColor        = 0,
+                        PLD_Red                = 0,
+                        PLD_Green              = 0,
+                        PLD_Blue               = 130,
+                        PLD_Width              = 29956,
+                        PLD_Height             = 22531,
+                        PLD_UserVisible        = 0,
+                        PLD_Dock               = 0,
+                        PLD_Lid                = 0,
+                        PLD_Panel              = "TOP",
+                        PLD_VerticalPosition   = "UPPER",
+                        PLD_HorizontalPosition = "LEFT",
+                        PLD_Shape              = "ROUND",
+                        PLD_GroupOrientation   = 0,
+                        PLD_GroupToken         = 26,
+                        PLD_GroupPosition      = 194,
+                        PLD_Bay                = 0,
+                        PLD_Ejectable          = 0,
+                        PLD_EjectRequired      = 0,
+                        PLD_CabinetNumber      = 0,
+                        PLD_CardCageNumber     = 0,
+                        PLD_Reference          = 0,
+                        PLD_Rotation           = 0,
+                        PLD_Order              = 0,
+                        PLD_VerticalOffset     = 5632,
+                        PLD_HorizontalOffset   = 36096)
+                    */
                     0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
                     0x61, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
                     0x8D, 0x00, 0x16, 0x00

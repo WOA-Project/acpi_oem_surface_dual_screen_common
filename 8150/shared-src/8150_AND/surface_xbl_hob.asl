@@ -27,7 +27,7 @@
 // The XBL Apps Hob is located in the SMEM OEM Specific area on Surface Duo 1
 //
 Scope(\_SB) {
-    OperationRegion(XACA, SystemMemory, 0x146BFA94, 0x18)
+    OperationRegion(XACA, SystemMemory, 0x146BFA94, 0x64)
     Field(XACA, AnyAcc, NoLock, Preserve)
     {
         BDID,   8,   // Board ID               // (00)
@@ -49,7 +49,7 @@ Scope(\_SB) {
     //
     // Epsilon A Subtype
     //
-    Method (MSDA, 0, NotSerialized)
+    Method (MSDA)
     {
         Return ((\_SB.BDID == 6) || (\_SB.BDID == 9) || (\_SB.BDID == 11) || (\_SB.BDID == 13) || (\_SB.BDID == 16))
     }
@@ -57,7 +57,7 @@ Scope(\_SB) {
     //
     // Epsilon B Subtype
     //
-    Method (MSDB, 0, NotSerialized)
+    Method (MSDB)
     {
         Return ((\_SB.BDID == 7) || (\_SB.BDID == 10) || (\_SB.BDID == 12) || (\_SB.BDID == 14) || (\_SB.BDID == 17))
     }
@@ -65,7 +65,7 @@ Scope(\_SB) {
     //
     // Epsilon C Subtype
     //
-    Method (MSDC, 0, NotSerialized)
+    Method (MSDC)
     {
         Return ((\_SB.BDID == 8) || (\_SB.BDID == 15) || (\_SB.BDID == 18))
     }

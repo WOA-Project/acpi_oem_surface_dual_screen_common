@@ -38,9 +38,9 @@ Device (FPS1)
             ResourceTemplate ()
             {
                 // IPC IRQ
-                GpioInt(Edge, ActiveHigh, ExclusiveAndWake, PullUp, 0, "\\_SB.GIO0", 0 , ResourceConsumer, , ) {118}
+                GpioInt(Edge, ActiveHigh, ExclusiveAndWake, PullUp, 0, "\\_SB.GIO0", 0, ResourceConsumer, , ){118}
                 // Reset GPIO
-                GpioIo(Exclusive, PullNone, 0, 0, , "\\_SB.GIO0", ,) {95}
+                GpioIo(Exclusive, PullNone, 0, 0, IoRestrictionNone, "\\_SB.GIO0", 0, ResourceConsumer, , ){95}
             }
         )
         Return(RBUF)

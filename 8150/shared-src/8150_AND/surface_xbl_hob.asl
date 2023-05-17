@@ -49,7 +49,7 @@ Scope(\_SB) {
     //
     // Epsilon A Subtype
     //
-    Method (MSDA)
+    Method(MSDA)
     {
         Return ((\_SB.BDID == 6) || (\_SB.BDID == 9) || (\_SB.BDID == 11) || (\_SB.BDID == 13) || (\_SB.BDID == 16))
     }
@@ -57,7 +57,7 @@ Scope(\_SB) {
     //
     // Epsilon B Subtype
     //
-    Method (MSDB)
+    Method(MSDB)
     {
         Return ((\_SB.BDID == 7) || (\_SB.BDID == 10) || (\_SB.BDID == 12) || (\_SB.BDID == 14) || (\_SB.BDID == 17))
     }
@@ -65,7 +65,7 @@ Scope(\_SB) {
     //
     // Epsilon C Subtype
     //
-    Method (MSDC)
+    Method(MSDC)
     {
         Return ((\_SB.BDID == 8) || (\_SB.BDID == 15) || (\_SB.BDID == 18))
     }

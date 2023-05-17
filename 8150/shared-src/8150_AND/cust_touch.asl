@@ -201,14 +201,14 @@ Device (TSPI)
         DWD2 = 0x02
     }
 
-    Device (COL1)
+    Device(COL1)
     {
         // 1 is always the address assigned for the Surface Touch Communications
         //
         Name(_ADR, 1)
     }
 
-    Device (COL2)
+    Device(COL2)
     {
         // 2 is always the address assigned for the Surface Touch Pen Processor (Right)
         //
@@ -216,37 +216,37 @@ Device (TSPI)
 
         // Right
         Method(_PLD, 0, Serialized) {
-            Name(PLDP, Package(0x01) {
+            Name(PLDP, Package() {
                 Buffer(0x14) {
                     /*
                     ToPLD (
-                        PLD_Revision           = 0,
-                        PLD_IgnoreColor        = 0,
+                        PLD_Revision           = 2,
+                        PLD_IgnoreColor        = 1,
                         PLD_Red                = 0,
                         PLD_Green              = 0,
-                        PLD_Blue               = 130,
-                        PLD_Width              = 29956,
-                        PLD_Height             = 22531,
-                        PLD_UserVisible        = 0,
+                        PLD_Blue               = 0,
+                        PLD_Width              = 856,
+                        PLD_Height             = 1141,
+                        PLD_UserVisible        = 1,
                         PLD_Dock               = 0,
                         PLD_Lid                = 0,
-                        PLD_Panel              = "TOP",
-                        PLD_VerticalPosition   = "UPPER",
-                        PLD_HorizontalPosition = "LEFT",
-                        PLD_Shape              = "ROUND",
+                        PLD_Panel              = "FRONT",
+                        PLD_VerticalPosition   = "CENTER",
+                        PLD_HorizontalPosition = "CENTER",
+                        PLD_Shape              = "VERTICALRECTANGLE",
                         PLD_GroupOrientation   = 0,
-                        PLD_GroupToken         = 26,
-                        PLD_GroupPosition      = 194,
+                        PLD_GroupToken         = 0,
+                        PLD_GroupPosition      = 0,
                         PLD_Bay                = 0,
                         PLD_Ejectable          = 0,
                         PLD_EjectRequired      = 0,
-                        PLD_CabinetNumber      = 0,
+                        PLD_CabinetNumber      = 1,
                         PLD_CardCageNumber     = 0,
                         PLD_Reference          = 0,
                         PLD_Rotation           = 0,
-                        PLD_Order              = 8,
-                        PLD_VerticalOffset     = 5632,
-                        PLD_HorizontalOffset   = 36096)
+                        PLD_Order              = 0,
+                        PLD_VerticalOffset     = 141,
+                        PLD_HorizontalOffset   = 22)
                     */
                     0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
                     0x61, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
@@ -257,7 +257,7 @@ Device (TSPI)
         }
     }
 
-    Device (COL3)
+    Device(COL3)
     {
         // 3 is always the address assigned for the Surface Touch Pen Processor (Left)
         //
@@ -265,27 +265,27 @@ Device (TSPI)
 
         // Left
         Method(_PLD, 0, Serialized) {
-            Name(PLDP, Package(0x01) {
+            Name(PLDP, Package() {
                 Buffer(0x14) {
                     /*
                     ToPLD (
-                        PLD_Revision           = 0,
-                        PLD_IgnoreColor        = 0,
+                        PLD_Revision           = 2,
+                        PLD_IgnoreColor        = 1,
                         PLD_Red                = 0,
                         PLD_Green              = 0,
-                        PLD_Blue               = 130,
-                        PLD_Width              = 29956,
-                        PLD_Height             = 22531,
-                        PLD_UserVisible        = 0,
+                        PLD_Blue               = 0,
+                        PLD_Width              = 856,
+                        PLD_Height             = 1141,
+                        PLD_UserVisible        = 1,
                         PLD_Dock               = 0,
                         PLD_Lid                = 0,
-                        PLD_Panel              = "TOP",
-                        PLD_VerticalPosition   = "UPPER",
-                        PLD_HorizontalPosition = "LEFT",
-                        PLD_Shape              = "ROUND",
+                        PLD_Panel              = "FRONT",
+                        PLD_VerticalPosition   = "CENTER",
+                        PLD_HorizontalPosition = "CENTER",
+                        PLD_Shape              = "VERTICALRECTANGLE",
                         PLD_GroupOrientation   = 0,
-                        PLD_GroupToken         = 26,
-                        PLD_GroupPosition      = 194,
+                        PLD_GroupToken         = 0,
+                        PLD_GroupPosition      = 0,
                         PLD_Bay                = 0,
                         PLD_Ejectable          = 0,
                         PLD_EjectRequired      = 0,
@@ -294,8 +294,8 @@ Device (TSPI)
                         PLD_Reference          = 0,
                         PLD_Rotation           = 0,
                         PLD_Order              = 0,
-                        PLD_VerticalOffset     = 5632,
-                        PLD_HorizontalOffset   = 36096)
+                        PLD_VerticalOffset     = 141,
+                        PLD_HorizontalOffset   = 22)
                     */
                     0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
                     0x61, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
@@ -306,28 +306,28 @@ Device (TSPI)
         }
     }
 
-    Device (COL4)
+    Device(COL4)
     {
         // 4 is always the address assigned for the Surface Digitizer Utility
         //
         Name(_ADR, 4)
     }
 
-    Device (COL5)
+    Device(COL5)
     {
         // 5 is always the address assigned for the Surface Pen BLE LC Adaptation Driver
         //
         Name(_ADR, 5)
     }
 
-    Device (COL6)
+    Device(COL6)
     {
         // 6 is always the address assigned for the Surface Pen Cfu Over Ble LC Connection
         //
         Name(_ADR, 6)
     }
 
-    Device (COL7)
+    Device(COL7)
     {
         // 7 is always the address assigned for the Surface Touch Screen Device (Right)
         //
@@ -335,37 +335,37 @@ Device (TSPI)
 
         // Right
         Method(_PLD, 0, Serialized) {
-            Name(PLDP, Package(0x01) {
+            Name(PLDP, Package() {
                 Buffer(0x14) {
                     /*
                     ToPLD (
-                        PLD_Revision           = 0,
-                        PLD_IgnoreColor        = 0,
+                        PLD_Revision           = 2,
+                        PLD_IgnoreColor        = 1,
                         PLD_Red                = 0,
                         PLD_Green              = 0,
-                        PLD_Blue               = 130,
-                        PLD_Width              = 29956,
-                        PLD_Height             = 22531,
-                        PLD_UserVisible        = 0,
+                        PLD_Blue               = 0,
+                        PLD_Width              = 856,
+                        PLD_Height             = 1141,
+                        PLD_UserVisible        = 1,
                         PLD_Dock               = 0,
                         PLD_Lid                = 0,
-                        PLD_Panel              = "TOP",
-                        PLD_VerticalPosition   = "UPPER",
-                        PLD_HorizontalPosition = "LEFT",
-                        PLD_Shape              = "ROUND",
+                        PLD_Panel              = "FRONT",
+                        PLD_VerticalPosition   = "CENTER",
+                        PLD_HorizontalPosition = "CENTER",
+                        PLD_Shape              = "VERTICALRECTANGLE",
                         PLD_GroupOrientation   = 0,
-                        PLD_GroupToken         = 26,
-                        PLD_GroupPosition      = 194,
+                        PLD_GroupToken         = 0,
+                        PLD_GroupPosition      = 0,
                         PLD_Bay                = 0,
                         PLD_Ejectable          = 0,
                         PLD_EjectRequired      = 0,
-                        PLD_CabinetNumber      = 0,
+                        PLD_CabinetNumber      = 1,
                         PLD_CardCageNumber     = 0,
                         PLD_Reference          = 0,
                         PLD_Rotation           = 0,
-                        PLD_Order              = 8,
-                        PLD_VerticalOffset     = 5632,
-                        PLD_HorizontalOffset   = 36096)
+                        PLD_Order              = 0,
+                        PLD_VerticalOffset     = 141,
+                        PLD_HorizontalOffset   = 22)
                     */
                     0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
                     0x61, 0x0D, 0x00, 0x00, 0x04, 0x00, 0x00, 0x00,
@@ -376,7 +376,7 @@ Device (TSPI)
         }
     }
 
-    Device (COL8)
+    Device(COL8)
     {
         // 8 is always the address assigned for the Surface Touch Screen Device (Left)
         //
@@ -384,27 +384,27 @@ Device (TSPI)
 
         // Left
         Method(_PLD, 0, Serialized) {
-            Name(PLDP, Package(0x01) {
+            Name(PLDP, Package() {
                 Buffer(0x14) {
                     /*
                     ToPLD (
-                        PLD_Revision           = 0,
-                        PLD_IgnoreColor        = 0,
+                        PLD_Revision           = 2,
+                        PLD_IgnoreColor        = 1,
                         PLD_Red                = 0,
                         PLD_Green              = 0,
-                        PLD_Blue               = 130,
-                        PLD_Width              = 29956,
-                        PLD_Height             = 22531,
-                        PLD_UserVisible        = 0,
+                        PLD_Blue               = 0,
+                        PLD_Width              = 856,
+                        PLD_Height             = 1141,
+                        PLD_UserVisible        = 1,
                         PLD_Dock               = 0,
                         PLD_Lid                = 0,
-                        PLD_Panel              = "TOP",
-                        PLD_VerticalPosition   = "UPPER",
-                        PLD_HorizontalPosition = "LEFT",
-                        PLD_Shape              = "ROUND",
+                        PLD_Panel              = "FRONT",
+                        PLD_VerticalPosition   = "CENTER",
+                        PLD_HorizontalPosition = "CENTER",
+                        PLD_Shape              = "VERTICALRECTANGLE",
                         PLD_GroupOrientation   = 0,
-                        PLD_GroupToken         = 26,
-                        PLD_GroupPosition      = 194,
+                        PLD_GroupToken         = 0,
+                        PLD_GroupPosition      = 0,
                         PLD_Bay                = 0,
                         PLD_Ejectable          = 0,
                         PLD_EjectRequired      = 0,
@@ -413,8 +413,8 @@ Device (TSPI)
                         PLD_Reference          = 0,
                         PLD_Rotation           = 0,
                         PLD_Order              = 0,
-                        PLD_VerticalOffset     = 5632,
-                        PLD_HorizontalOffset   = 36096)
+                        PLD_VerticalOffset     = 141,
+                        PLD_HorizontalOffset   = 22)
                     */
                     0x82, 0x00, 0x00, 0x00, 0x58, 0x03, 0x75, 0x04,
                     0x61, 0x0D, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,

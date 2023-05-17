@@ -61851,7 +61851,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Name (_ADR, Zero)  // _ADR: Address
                 Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
                 {
-                    Name (PLDP, Package (One)
+                    Name (PLDP, Package (0x01)
                     {
                         Buffer (0x14)
                         {
@@ -61869,7 +61869,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Name (_ADR, One)  // _ADR: Address
                 Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
                 {
-                    Name (PLDP, Package (One)
+                    Name (PLDP, Package (0x01)
                     {
                         Buffer (0x14)
                         {
@@ -81211,7 +81211,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Name (_CID, "QCOM056C")  // _CID: Compatible ID
             Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
             {
-                Name (PLDP, Package (One)
+                Name (PLDP, Package (0x01)
                 {
                     Buffer (0x14)
                     {
@@ -81238,7 +81238,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Name (_CID, "QCOM056C")  // _CID: Compatible ID
             Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
             {
-                Name (PLDP, Package (One)
+                Name (PLDP, Package (0x01)
                 {
                     Buffer (0x14)
                     {
@@ -86237,7 +86237,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Name (_ADR, 0x02)  // _ADR: Address
                 Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
                 {
-                    Name (PLDP, Package (One)
+                    Name (PLDP, Package (0x01)
                     {
                         Buffer (0x14)
                         {
@@ -86255,7 +86255,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Name (_ADR, 0x03)  // _ADR: Address
                 Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
                 {
-                    Name (PLDP, Package (One)
+                    Name (PLDP, Package (0x01)
                     {
                         Buffer (0x14)
                         {
@@ -86288,7 +86288,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Name (_ADR, 0x07)  // _ADR: Address
                 Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
                 {
-                    Name (PLDP, Package (One)
+                    Name (PLDP, Package (0x01)
                     {
                         Buffer (0x14)
                         {
@@ -86306,7 +86306,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Name (_ADR, 0x08)  // _ADR: Address
                 Method (_PLD, 0, Serialized)  // _PLD: Physical Location of Device
                 {
-                    Name (PLDP, Package (One)
+                    Name (PLDP, Package (0x01)
                     {
                         Buffer (0x14)
                         {

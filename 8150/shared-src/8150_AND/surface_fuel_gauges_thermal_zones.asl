@@ -12,17 +12,17 @@ Scope (\_SB.IC18)
 
     Field (ORFG, BufferAcc, NoLock, Preserve)
     {
-        Connection (FGTS), 
-        AccessAs (BufferAcc, AttribWord), 
-        Offset (0x28), 
+        Connection (FGTS),
+        AccessAs (BufferAcc, AttribWord),
+        Offset (0x28),
         TMP1,   8
     }
 
     Field (ORFG, BufferAcc, NoLock, Preserve)
     {
-        Connection (FGTS), 
-        AccessAs (BufferAcc, AttribWord), 
-        Offset (0x06), 
+        Connection (FGTS),
+        AccessAs (BufferAcc, AttribWord),
+        Offset (0x06),
         TMP2,   8
     }
 
@@ -51,9 +51,9 @@ Scope (\_SB.I2C2)
 
     Field (ORFG, BufferAcc, NoLock, Preserve)
     {
-        Connection (FGTS), 
-        AccessAs (BufferAcc, AttribWord), 
-        Offset (0x28), 
+        Connection (FGTS),
+        AccessAs (BufferAcc, AttribWord),
+        Offset (0x28),
         TMP1,   8
     }
 
@@ -61,9 +61,9 @@ Scope (\_SB.I2C2)
 
     Field (ORFG, BufferAcc, NoLock, Preserve)
     {
-        Connection (FGTS), 
-        AccessAs (BufferAcc, AttribWord), 
-        Offset (0x06), 
+        Connection (FGTS),
+        AccessAs (BufferAcc, AttribWord),
+        Offset (0x06),
         TMP2,   8
     }
 }

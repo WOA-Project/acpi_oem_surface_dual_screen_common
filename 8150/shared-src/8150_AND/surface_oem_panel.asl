@@ -66,7 +66,7 @@ Device (DISP)
                 {
                     Name (PFG1, Buffer (0x08)
                     {
-                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 
+                         0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
                     })
                     CreateDWordField (PFG1, 0, DAT1)
                     CreateDWordField (PFG1, 4, DAT2)

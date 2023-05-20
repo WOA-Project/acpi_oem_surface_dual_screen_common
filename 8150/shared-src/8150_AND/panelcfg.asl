@@ -25,7 +25,7 @@
 Name (PCFG,
     Buffer() {"<?xml version='1.0' encoding='utf-8'?>
 <Group id='Main Panel - Primary'>
-    <PanelName>LGSW43408</PanelName>
+    <PanelName>LGSW43416</PanelName>
     <PanelDescription>LG Primary DSI Command Mode AMOLED Panel with DSC DV (1350x1800 24bpp)</PanelDescription>
     <Group id='EDID Configuration'>
         <ManufactureID>0xAF0D</ManufactureID>

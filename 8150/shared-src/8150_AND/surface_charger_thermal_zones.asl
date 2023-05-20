@@ -12,17 +12,17 @@ Scope (\_SB.I2C2)
 
     Field (SMBO, BufferAcc, NoLock, Preserve)
     {
-        Connection (SMBC), 
-        AccessAs (BufferAcc, AttribWord), 
-        Offset (0x236), 
+        Connection (SMBC),
+        AccessAs (BufferAcc, AttribWord),
+        Offset (0x236),
         TMP3,   16
     }
 
     Field (SMBO, BufferAcc, NoLock, Preserve)
     {
-        Connection (SMBC), 
-        AccessAs (BufferAcc, AttribWord), 
-        Offset (0x436), 
+        Connection (SMBC),
+        AccessAs (BufferAcc, AttribWord),
+        Offset (0x436),
         TMP4,   16
     }
 }

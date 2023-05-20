@@ -51,7 +51,7 @@ Scope(\_SB) {
     //
     Method(MSDA)
     {
-        Return ((\_SB.BDID == 6) || (\_SB.BDID == 9) || (\_SB.BDID == 11) || (\_SB.BDID == 13) || (\_SB.BDID == 16))
+        Return (\_SB.BDID == 6 || \_SB.BDID == 9 || \_SB.BDID == 11 || \_SB.BDID == 13 || \_SB.BDID == 16)
     }
 
     //
@@ -59,7 +59,7 @@ Scope(\_SB) {
     //
     Method(MSDB)
     {
-        Return ((\_SB.BDID == 7) || (\_SB.BDID == 10) || (\_SB.BDID == 12) || (\_SB.BDID == 14) || (\_SB.BDID == 17))
+        Return (\_SB.BDID == 7 || \_SB.BDID == 10 || \_SB.BDID == 12 || \_SB.BDID == 14 || \_SB.BDID == 17)
     }
 
     //
@@ -67,6 +67,46 @@ Scope(\_SB) {
     //
     Method(MSDC)
     {
-        Return ((\_SB.BDID == 8) || (\_SB.BDID == 15) || (\_SB.BDID == 18))
+        Return (\_SB.BDID == 8 || \_SB.BDID == 15 || \_SB.BDID == 18)
+    }
+
+    //
+    // Epsilon EV1 Subtype
+    //
+    Method(TEV1)
+    {
+        Return (\_SB.BDID == 6 || \_SB.BDID == 7 || \_SB.BDID == 8)
+    }
+
+    //
+    // Epsilon EV1.5 Subtype
+    //
+    Method(TE15)
+    {
+        Return (\_SB.BDID == 9 || \_SB.BDID == 10)
+    }
+
+    //
+    // Epsilon EV2 Subtype
+    //
+    Method(TEV2)
+    {
+        Return (\_SB.BDID == 11 || \_SB.BDID == 12)
+    }
+
+    //
+    // Epsilon EV2_1 Subtype
+    //
+    Method(TE21)
+    {
+        Return (\_SB.BDID == 13 || \_SB.BDID == 14 || \_SB.BDID == 15)
+    }
+
+    //
+    // Epsilon DV Subtype
+    //
+    Method(TDVM)
+    {
+        Return (\_SB.BDID == 16 || \_SB.BDID == 17 || \_SB.BDID == 18)
     }
 }

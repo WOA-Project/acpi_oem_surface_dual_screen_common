@@ -26,11 +26,15 @@
 //     SPDX-License-Identifier: MIT
 //
 
+//
+// Power Meter Max34417
+//
 Device (PA01)
 {
     Name (_HID, "MAX34417")
     Name (_CID, "MAX34417")
     Name (_UID, 1)
+
     Method (_CRS, 0x0, NotSerialized)
     {
         Name (RBUF,
@@ -51,13 +55,19 @@ Device (PA01)
         )
         Return(RBUF)
     }
+
     Method (_STA)
     {
-        If(BDID >= 0x0D) {
-            Return (0)
+        If (TE21() || TDVM())
+        {
+            Return (0x0)
         }
-        Return (0x0F)
+        Else
+        {
+            Return (0xf)
+        }
     }
+
     // _DSM - Device-Specific Method
     //
     // Arg0: UUID Unique function identifier
@@ -127,6 +137,7 @@ Device (PA01)
             return (Buffer() {0})
         }
     }
+
     // PEP Proxy Support
     Name(PGID, Buffer(10) {"\\_SB.PA01"})       // Device ID buffer - PGID (Pep given ID)
     Name(DBUF, Buffer(DBFL) {})                 // Device ID buffer - PGID (Pep given ID)
@@ -134,9 +145,11 @@ Device (PA01)
                                                 // HIDDEN 1 BYTE (SIZE)
     CreateByteField(DBUF, 2, DVAL)              // Packet value, 1 BYTES Device Status
     CreateField(DBUF, 24, 160, DEID)            // Device ID, 20 BYTES (160 Bits)
+
     Method (_S1D, 0) { Return (3) }             // S1 => D3
     Method (_S2D, 0) { Return (3) }             // S2 => D3
     Method (_S3D, 0) { Return (3) }             // S3 => D3
+
     Method(_PS0, 0x0, NotSerialized)
     {
         Store(Buffer(ESNL){}, DEID)
@@ -147,6 +160,7 @@ Device (PA01)
             Store(DBUF, \_SB.PEP0.FLD0)
         }
     }
+
     Method(_PS3, 0x0, NotSerialized)
     {
         Store(Buffer(ESNL){}, DEID)
@@ -158,11 +172,13 @@ Device (PA01)
         }
     }
 }
+
 Device (PA05)
 {
     Name (_HID, "MAX34417")
     Name (_CID, "MAX34417")
     Name (_UID, 5)
+
     Method (_CRS, 0x0, NotSerialized)
     {
         Name (RBUF,
@@ -183,13 +199,19 @@ Device (PA05)
         )
         Return(RBUF)
     }
+
     Method (_STA)
     {
-        If(BDID >= 0x0D) {
-            Return (0)
+        If (TE21() || TDVM())
+        {
+            Return (0x0)
         }
-        Return (0x0F)
+        Else
+        {
+            Return (0xf)
+        }
     }
+
     // _DSM - Device-Specific Method
     //
     // Arg0: UUID Unique function identifier
@@ -259,6 +281,7 @@ Device (PA05)
             return (Buffer() {0})
         }
     }
+
     // PEP Proxy Support
     Name(PGID, Buffer(10) {"\\_SB.PA05"})       // Device ID buffer - PGID (Pep given ID)
     Name(DBUF, Buffer(DBFL) {})                 // Device ID buffer - PGID (Pep given ID)
@@ -266,9 +289,11 @@ Device (PA05)
                                                 // HIDDEN 1 BYTE (SIZE)
     CreateByteField(DBUF, 2, DVAL)              // Packet value, 1 BYTES Device Status
     CreateField(DBUF, 24, 160, DEID)            // Device ID, 20 BYTES (160 Bits)
+
     Method (_S1D, 0) { Return (3) }             // S1 => D3
     Method (_S2D, 0) { Return (3) }             // S2 => D3
     Method (_S3D, 0) { Return (3) }             // S3 => D3
+
     Method(_PS0, 0x0, NotSerialized)
     {
         Store(Buffer(ESNL){}, DEID)
@@ -279,6 +304,7 @@ Device (PA05)
             Store(DBUF, \_SB.PEP0.FLD0)
         }
     }
+
     Method(_PS3, 0x0, NotSerialized)
     {
         Store(Buffer(ESNL){}, DEID)
@@ -290,11 +316,13 @@ Device (PA05)
         }
     }
 }
+
 Device (PA07)
 {
     Name (_HID, "MAX34417")
     Name (_CID, "MAX34417")
     Name (_UID, 7)
+
     Method (_CRS, 0x0, NotSerialized)
     {
         Name (RBUF,
@@ -315,13 +343,19 @@ Device (PA07)
         )
         Return(RBUF)
     }
+
     Method (_STA)
     {
-        If(BDID >= 0x0D) {
-            Return (0)
+        If (TE21() || TDVM())
+        {
+            Return (0x0)
         }
-        Return (0x0F)
+        Else
+        {
+            Return (0xf)
+        }
     }
+
     // _DSM - Device-Specific Method
     //
     // Arg0: UUID Unique function identifier
@@ -391,6 +425,7 @@ Device (PA07)
             return (Buffer() {0})
         }
     }
+
     // PEP Proxy Support
     Name(PGID, Buffer(10) {"\\_SB.PA07"})       // Device ID buffer - PGID (Pep given ID)
     Name(DBUF, Buffer(DBFL) {})                 // Device ID buffer - PGID (Pep given ID)
@@ -398,9 +433,11 @@ Device (PA07)
                                                 // HIDDEN 1 BYTE (SIZE)
     CreateByteField(DBUF, 2, DVAL)              // Packet value, 1 BYTES Device Status
     CreateField(DBUF, 24, 160, DEID)            // Device ID, 20 BYTES (160 Bits)
+
     Method (_S1D, 0) { Return (3) }             // S1 => D3
     Method (_S2D, 0) { Return (3) }             // S2 => D3
     Method (_S3D, 0) { Return (3) }             // S3 => D3
+
     Method(_PS0, 0x0, NotSerialized)
     {
         Store(Buffer(ESNL){}, DEID)
@@ -411,6 +448,7 @@ Device (PA07)
             Store(DBUF, \_SB.PEP0.FLD0)
         }
     }
+
     Method(_PS3, 0x0, NotSerialized)
     {
         Store(Buffer(ESNL){}, DEID)
@@ -422,11 +460,13 @@ Device (PA07)
         }
     }
 }
+
 Device (PA06)
 {
     Name (_HID, "MAX34417")
     Name (_CID, "MAX34417")
     Name (_UID, 6)
+
     Method (_CRS, 0x0, NotSerialized)
     {
         Name (RBUF,
@@ -447,13 +487,19 @@ Device (PA06)
         )
         Return(RBUF)
     }
+
     Method (_STA)
     {
-        If(BDID >= 0x0D) {
-            Return (0)
+        If (TE21() || TDVM())
+        {
+            Return (0x0)
         }
-        Return (0x0F)
+        Else
+        {
+            Return (0xf)
+        }
     }
+
     // _DSM - Device-Specific Method
     //
     // Arg0: UUID Unique function identifier

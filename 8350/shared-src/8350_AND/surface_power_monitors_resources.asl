@@ -38,24 +38,24 @@ Scope(\_SB_.PEP0)
     {
         Package()
         {
-            "DEVICE", "\\_SB.PA00", 
+            "DEVICE", "\\_SB.PA00",
 
             Package()
             {
                 "COMPONENT", 0,
 
                 Package() {"FSTATE",  0},
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 0,
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO2_B",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         3072000,                       // Voltage is in micro volts
@@ -69,7 +69,7 @@ Scope(\_SB_.PEP0)
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V
@@ -78,27 +78,27 @@ Scope(\_SB_.PEP0)
                         0,                                          // Head room voltage
                     },
                 }
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 1
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 2
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 3,
-                
+
                 Package()
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V
@@ -108,11 +108,11 @@ Scope(\_SB_.PEP0)
                     },
                 },
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO2_B",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         0,                             // Voltage is in micro volts
@@ -123,27 +123,27 @@ Scope(\_SB_.PEP0)
                 }
             }
         },
-        
+
         Package()
         {
-            "DEVICE", "\\_SB.PA01", 
+            "DEVICE", "\\_SB.PA01",
 
             Package()
             {
                 "COMPONENT", 0,
 
                 Package() {"FSTATE",  0},
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 0,
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO2_B",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         3072000,                       // Voltage is in micro volts
@@ -157,7 +157,7 @@ Scope(\_SB_.PEP0)
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V
@@ -166,27 +166,27 @@ Scope(\_SB_.PEP0)
                         0,                                          // Head room voltage
                     },
                 }
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 1
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 2
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 3,
-                
+
                 Package()
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V
@@ -196,11 +196,11 @@ Scope(\_SB_.PEP0)
                     },
                 },
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO2_B",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         0,                             // Voltage is in micro volts
@@ -211,27 +211,27 @@ Scope(\_SB_.PEP0)
                 }
             }
         },
-        
+
         Package()
         {
-            "DEVICE", "\\_SB.PA03", 
+            "DEVICE", "\\_SB.PA03",
 
             Package()
             {
                 "COMPONENT", 0,
 
                 Package() {"FSTATE",  0},
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 0,
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO2_B",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         3072000,                       // Voltage is in micro volts
@@ -245,7 +245,7 @@ Scope(\_SB_.PEP0)
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V
@@ -254,27 +254,27 @@ Scope(\_SB_.PEP0)
                         0,                                          // Head room voltage
                     },
                 }
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 1
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 2
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 3,
-                
+
                 Package()
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V
@@ -284,11 +284,11 @@ Scope(\_SB_.PEP0)
                     },
                 },
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO2_B",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         0,                             // Voltage is in micro volts
@@ -299,27 +299,27 @@ Scope(\_SB_.PEP0)
                 }
             }
         },
-        
+
         Package()
         {
-            "DEVICE", "\\_SB.PA05", 
+            "DEVICE", "\\_SB.PA05",
 
             Package()
             {
                 "COMPONENT", 0,
 
                 Package() {"FSTATE",  0},
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 0,
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO2_B",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         3072000,                       // Voltage is in micro volts
@@ -333,7 +333,7 @@ Scope(\_SB_.PEP0)
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V
@@ -342,27 +342,27 @@ Scope(\_SB_.PEP0)
                         0,                                          // Head room voltage
                     },
                 }
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 1
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 2
-            }, 
+            },
 
             Package()
             {
                 "DSTATE", 3,
-                
+
                 Package()
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V
@@ -372,11 +372,11 @@ Scope(\_SB_.PEP0)
                     },
                 },
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO2_B",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         0,                             // Voltage is in micro volts

@@ -37,7 +37,7 @@ Scope(\_SB_.PEP0)
     {
         Package()
         {
-            "DEVICE", "\\_SB.FPC1",
+            "DEVICE", "\\_SB.FPS1",
 
             Package()
             {
@@ -54,7 +54,7 @@ Scope(\_SB_.PEP0)
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V
@@ -145,7 +145,7 @@ Scope(\_SB_.PEP0)
                 {
                     "PMICVREGVOTE", // PMICVREGVOTE resource
                     Package()
-                    {   
+                    {
                         "PPP_RESOURCE_ID_SMPS10_B",                  // Resource ID
                         2,                                          // Voltage Regulator type = SMPS
                         1800000,                                    // 1.8V

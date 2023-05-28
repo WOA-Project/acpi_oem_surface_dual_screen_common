@@ -45,7 +45,7 @@ Scope(\_SB_.PEP0)
     {
         Package()
         {
-            "DEVICE", "\\_SB.GTCH",
+            "DEVICE", "\\_SB.TSPI",
 
             Package()
             {
@@ -58,11 +58,11 @@ Scope(\_SB_.PEP0)
             {
                 "DSTATE", 0,
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO3_C",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         3008000,                       // Voltage is in micro volts
@@ -147,11 +147,11 @@ Scope(\_SB_.PEP0)
                     },
                 },
 
-                Package()    
+                Package()
                 {
-                    "PMICVREGVOTE",   
+                    "PMICVREGVOTE",
                     Package()
-                    {                                    
+                    {
                         "PPP_RESOURCE_ID_LDO3_C",     // VREG ID
                         1,                             // Voltage Regulator type = LDO
                         0,                             // Voltage is in micro volts

@@ -373,165 +373,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Alias (\_SB.PSUB, _SUB)
         }
 
-        Device (BAT1)
-        {
-            Name (_HID, "BQ27742")  // _HID: Hardware ID
-            Name (_UID, One)  // _UID: Unique ID
-            Name (_DEP, Package (0x01)  // _DEP: Dependencies
-            {
-                \_SB.IC18
-            })
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    I2cSerialBusV2 (0x0055, ControllerInitiated, 0x000186A0,
-                        AddressingMode7Bit, "\\_SB.IC18",
-                        0x00, ResourceConsumer, , Exclusive,
-                        )
-                })
-                Return (RBUF) /* \_SB_.BAT1._CRS.RBUF */
-            }
-
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If ((BATP == Zero))
-                {
-                    Return (Zero)
-                }
-                Else
-                {
-                    Return (0x0F)
-                }
-            }
-        }
-
-        Device (BAT2)
-        {
-            Name (_HID, "BQ27742")  // _HID: Hardware ID
-            Name (_UID, 0x02)  // _UID: Unique ID
-            Name (_DEP, Package (0x01)  // _DEP: Dependencies
-            {
-                \_SB.I2C2
-            })
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    I2cSerialBusV2 (0x0055, ControllerInitiated, 0x000186A0,
-                        AddressingMode7Bit, "\\_SB.I2C2",
-                        0x00, ResourceConsumer, , Exclusive,
-                        )
-                })
-                Return (RBUF) /* \_SB_.BAT2._CRS.RBUF */
-            }
-
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If ((BATP == Zero))
-                {
-                    Return (Zero)
-                }
-                Else
-                {
-                    Return (0x0F)
-                }
-            }
-        }
-
-        Device (SCHG)
-        {
-            Name (_HID, "SMB1380")  // _HID: Hardware ID
-            Name (_DEP, Package (0x02)  // _DEP: Dependencies
-            {
-                \_SB.BAT1, 
-                \_SB.BAT2
-            })
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x020F
-                        }
-                    GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x020C
-                        }
-                    GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0212
-                        }
-                    GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0211
-                        }
-                    GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0208
-                        }
-                    GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0209
-                        }
-                    GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x020A
-                        }
-                    GpioIo (Exclusive, PullDown, 0x0000, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.PM01", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x020B
-                        }
-                })
-                Return (RBUF) /* \_SB_.SCHG._CRS.RBUF */
-            }
-
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                If ((BATP == Zero))
-                {
-                    Return (Zero)
-                }
-                Else
-                {
-                    Return (0x0F)
-                }
-            }
-
-            Method (BCLQ, 0, NotSerialized)
-            {
-                Name (CFG0, Package (0x08)
-                {
-                    "CELL_PACK1_DISC", 
-                    "CELL_PACK2_DISC", 
-                    "BYPASS_SHDN_N", 
-                    "RSHARE_CTRL", 
-                    "VREF_CTRL_1", 
-                    "VREF_CTRL_2", 
-                    "VREF_CTRL_3", 
-                    "VREF_CTRL_4"
-                })
-                Return (CFG0) /* \_SB_.SCHG.BCLQ.CFG0 */
-            }
-        }
-
         Name (BFCC, 0x3766)
         Name (PCT1, 0x02)
         Name (PCT2, 0x07)
@@ -582,7 +423,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (Zero)
+                Return (0x0F)
             }
 
             Method (PMCF, 0, NotSerialized)
@@ -617,7 +458,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (Zero)
+                Return (0x0F)
             }
 
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -1128,7 +969,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (Zero)
+                Return (0x0F)
             }
         }
 
@@ -1151,7 +992,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (Zero)
+                Return (0x0F)
             }
         }
 

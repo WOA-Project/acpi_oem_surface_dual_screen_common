@@ -182,9 +182,6 @@ Name (PCFG,
         05 10
         FF 78
     </DSITermSequence>
-    <Group id='Connection Configuration'>
-        <Display1Reset1Info>DSI_PANEL_RESET, 0, 40</Display1Reset1Info>
-    </Group>
     <Group id='Backlight Configuration'>
         <AdaptiveBrightnessFeature>1</AdaptiveBrightnessFeature>
         <BacklightSteps>100</BacklightSteps>

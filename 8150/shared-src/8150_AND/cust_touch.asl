@@ -33,13 +33,20 @@
 //     SPDX-License-Identifier: MIT
 //
 
+Name(TCSS, 1)
+
 //
 // HIDSPI Touch Driver
 //
 Device (TSPI)
 {
     Method(_HID) {
-        Return("MSHW0162")
+        if(LEqual(TCSS, 1)) {
+            Return("MSHW0162")
+        }
+        else {
+            Return("MSHW0134")
+        }
     }
     Name(_CID, "PNP0C51")
     Alias(\_SB.PSUB, _SUB)

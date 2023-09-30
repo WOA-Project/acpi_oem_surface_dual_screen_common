@@ -1,4 +1,29 @@
 //
+// Copyright (c) 2021-2023 DuoWoA authors. All Rights Reserved.
+//
+// Module Name:
+//
+//     surface_fuel_gauges_thermal_zones.asl
+//
+// Abstract:
+//
+//     Contains device definitions for additional Thermal
+//     Zones, required by the Andromeda Fueling Hardware.
+//
+// Environment:
+//
+//     Advanced Configuration and Power Interface (ACPI)
+//
+// Revision History:
+//
+//     2023-09-30 - @gus33000 - Initial revision
+//
+// License:
+//
+//     SPDX-License-Identifier: MIT
+//
+
+//
 // Temperature Sensor Interface for Fuel Gauge (R2)
 //
 Scope (\_SB.IC18)

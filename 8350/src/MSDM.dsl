@@ -1,7 +1,7 @@
 [000h 0000   4]                    Signature : "MSDM"    [Microsoft Data Management Table]
 [004h 0004   4]                 Table Length : 00000055
 [008h 0008   1]                     Revision : 01
-[009h 0009   1]                     Checksum : 3B
+[009h 0009   1]                     Checksum : 00
 [00Ah 0010   6]                       Oem ID : "MSFT  "
 [010h 0016   8]                 Oem Table ID : ""
 [018h 0024   4]                 Oem Revision : 00000001

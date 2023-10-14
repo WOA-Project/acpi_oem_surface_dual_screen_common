@@ -105,7 +105,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             {
                 \_SB.PEP0
             })
-            Name (_HID, "QCOM0427")  // _HID: Hardware ID
+            Name (_HID, "QCOM0527")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Name (_UID, Zero)  // _UID: Unique ID
             OperationRegion (ROP1, GenericSerialBus, Zero, 0x0100)
@@ -14042,7 +14042,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (SCM0)
         {
-            Name (_HID, "QCOM04DD")  // _HID: Hardware ID
+            Name (_HID, "QCOM05DD")  // _HID: Hardware ID
             Name (_DEP, Package (0x01)  // _DEP: Dependencies
             {
                 \_SB.PEP0
@@ -14060,7 +14060,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (TREE)
         {
-            Name (_HID, "QCOM04DE")  // _HID: Hardware ID
+            Name (_HID, "QCOM05DE")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -19270,7 +19270,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (SERB)
         {
-            Name (_HID, "QCOM04B2")  // _HID: Hardware ID
+            Name (_HID, "QCOM05B2")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
         }
 
@@ -19428,7 +19428,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Name (_HID, "GEM7001")  // _HID: Hardware ID
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (Zero)
+                Return (0x0F)
             }
         }
 
@@ -19446,11 +19446,14 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Name (_HID, EisaId ("PNP0C0D") /* Lid Device */)  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_STA, 0x0F)  // _STA: Status
-            Name (_DEP, Package (0x02)  // _DEP: Dependencies
+            Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
-                \_SB.GIO0, 
-                \_SB.SCM0
-            })
+                Return (Package (0x01)
+                {
+                    \_SB.GIO0
+                })
+            }
+
             Method (_LID, 0, NotSerialized)  // _LID: Lid Status
             {
                 If ((\_SB.GIO0.GPH0 == Zero))
@@ -20042,6 +20045,12 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
+        Device (AOCV)
+        {
+            Name (_HID, "QCOM1AE3")  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+        }
+
         Device (SEN2)
         {
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
@@ -20108,6 +20117,12 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Name (_HID, "MSHW0174")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Name (_CID, "QCOM1A67")  // _CID: Compatible ID
+        }
+
+        Device (HPS0)
+        {
+            Name (_HID, "QCOM1AD9")  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
         }
 
         Device (SARP)
@@ -20937,68 +20952,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                 })
                 Return (RBUF) /* \_SB_.FPS1._CRS.RBUF */
-            }
-
-            Name (FLAG, 0x03)
-            Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
-            {
-                Return (0x03)
-            }
-
-            Method (_S2D, 0, NotSerialized)  // _S2D: S2 Device State
-            {
-                Return (0x03)
-            }
-
-            Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
-            {
-                Return (0x03)
-            }
-
-            Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
-            {
-                If ((FLAG == 0x03))
-                {
-                    Sleep (0x012C)
-                    OperationRegion (GI09, SystemMemory, 0x0F109000, 0x20)
-                    Field (GI09, DWordAcc, NoLock, Preserve)
-                    {
-                        DWD1,   32, 
-                        DWD2,   32
-                    }
-
-                    DWD2 = One
-                    Sleep (One)
-                    DWD2 = 0x02
-                }
-
-                FLAG = Zero
-            }
-
-            Method (_PS2, 0, NotSerialized)  // _PS2: Power State 2
-            {
-            }
-
-            Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
-            {
-                FLAG = 0x03
-            }
-
-            Method (_RST, 0, NotSerialized)  // _RST: Device Reset
-            {
-                OperationRegion (GI09, SystemMemory, 0x0F109000, 0x20)
-                Field (GI09, DWordAcc, NoLock, Preserve)
-                {
-                    DWD1,   32, 
-                    DWD2,   32
-                }
-
-                DWD2 = 0x02
-                Sleep (One)
-                DWD2 = One
-                Sleep (0x05)
-                DWD2 = 0x02
-                Sleep (0x05)
             }
         }
 
@@ -24585,7 +24538,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MPA)
         {
-            Name (_HID, "QCOM04B4")  // _HID: Hardware ID
+            Name (_HID, "QCOM05B4")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24595,7 +24548,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MPA1)
         {
-            Name (_HID, "QCOM04B5")  // _HID: Hardware ID
+            Name (_HID, "QCOM05B5")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24605,7 +24558,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MBJ0)
         {
-            Name (_HID, "QCOM04B6")  // _HID: Hardware ID
+            Name (_HID, "QCOM05B6")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24615,7 +24568,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MBJ1)
         {
-            Name (_HID, "QCOM04B7")  // _HID: Hardware ID
+            Name (_HID, "QCOM05B7")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24625,7 +24578,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MBJ2)
         {
-            Name (_HID, "QCOM04B8")  // _HID: Hardware ID
+            Name (_HID, "QCOM05B8")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24635,7 +24588,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MBJ3)
         {
-            Name (_HID, "QCOM04B9")  // _HID: Hardware ID
+            Name (_HID, "QCOM05B9")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24645,7 +24598,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MBS0)
         {
-            Name (_HID, "QCOM04BA")  // _HID: Hardware ID
+            Name (_HID, "QCOM05BA")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24655,7 +24608,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MBS1)
         {
-            Name (_HID, "QCOM04BB")  // _HID: Hardware ID
+            Name (_HID, "QCOM05BB")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24665,7 +24618,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MBS2)
         {
-            Name (_HID, "QCOM04BC")  // _HID: Hardware ID
+            Name (_HID, "QCOM05BC")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24675,7 +24628,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MBS3)
         {
-            Name (_HID, "QCOM04BD")  // _HID: Hardware ID
+            Name (_HID, "QCOM05BD")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24685,7 +24638,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MSKN)
         {
-            Name (_HID, "QCOM04BE")  // _HID: Hardware ID
+            Name (_HID, "QCOM05BE")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24695,7 +24648,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (MJCT)
         {
-            Name (_HID, "QCOM04BF")  // _HID: Hardware ID
+            Name (_HID, "QCOM05BF")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -24715,7 +24668,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ51)
         {
-            Name (_HID, "QCOM04C0")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C0")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -24732,7 +24685,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ52)
         {
-            Name (_HID, "QCOM04C1")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C1")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -24749,7 +24702,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ53)
         {
-            Name (_HID, "QCOM04C2")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C2")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -24766,7 +24719,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ54)
         {
-            Name (_HID, "QCOM04C3")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C3")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -24783,7 +24736,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ55)
         {
-            Name (_HID, "QCOM04C4")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C4")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -24800,7 +24753,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ56)
         {
-            Name (_HID, "QCOM04C5")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C5")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -24817,7 +24770,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ60)
         {
-            Name (_HID, "QCOM04CC")  // _HID: Hardware ID
+            Name (_HID, "QCOM05CC")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -24834,7 +24787,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ62)
         {
-            Name (_HID, "QCOM04CB")  // _HID: Hardware ID
+            Name (_HID, "QCOM05CB")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -26066,7 +26019,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ36)
         {
-            Name (_HID, "QCOM04C6")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C6")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
@@ -26116,7 +26069,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ37)
         {
-            Name (_HID, "QCOM04C7")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C7")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
@@ -26166,7 +26119,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ38)
         {
-            Name (_HID, "QCOM04C8")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C8")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
@@ -26214,7 +26167,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
-        Name (HWNH, One)
+        Name (HWNH, Zero)
         Device (HWN1)
         {
             Name (_HID, "QCOM1A69")  // _HID: Hardware ID
@@ -26487,11 +26440,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     })
                     Return (PLDP) /* \_SB_.TSPI.COL2._PLD.PLDP */
                 }
-
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    Return (Zero)
-                }
             }
 
             Device (COL3)
@@ -26542,11 +26490,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     })
                     Return (PLDP) /* \_SB_.TSPI.COL7._PLD.PLDP */
-                }
-
-                Method (_STA, 0, NotSerialized)  // _STA: Status
-                {
-                    Return (Zero)
                 }
             }
 

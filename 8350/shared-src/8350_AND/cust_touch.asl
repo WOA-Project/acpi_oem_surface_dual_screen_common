@@ -255,11 +255,6 @@ Device (TSPI)
             })
             Return(PLDP)
         }
-
-        Method(_STA, 0)
-        {
-            Return (0x0)
-        }
     }
 
     Device(COL3)
@@ -378,11 +373,6 @@ Device (TSPI)
                 }
             })
             Return(PLDP)
-        }
-
-        Method(_STA, 0)
-        {
-            Return (0x0)
         }
     }
 

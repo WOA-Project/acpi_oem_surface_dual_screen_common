@@ -7,9 +7,10 @@
 //
 // Abstract:
 //
-//     Contains device definitions for the Fingerprints
-//     AB FPC1020 Fingerprint Scanner over Qualcomm Secure
-//     Element Extension Communication bus (QSEECOM)
+//     Contains device definitions for the Qualcomm button device
+//     and Fingerprints AB FPC1020 Fingerprint Scanner over
+//     Qualcomm Secure Element Extension Communication bus
+//     (QSEECOM)
 //
 // Environment:
 //
@@ -43,76 +44,5 @@ Device (FPS1)
             }
         )
         Return(RBUF)
-    }
-
-    Name (FLAG, 0x03)
-
-    Method (_S1D, 0) { Return (3) }             // S1 => D3
-    Method (_S2D, 0) { Return (3) }             // S2 => D3
-    Method (_S3D, 0) { Return (3) }             // S3 => D3
-
-    Method(_PS0, 0x0, NotSerialized)
-    {
-        // Are we in sleep state?
-        If ((FLAG == 0x03))
-        {
-            // Wait 300ms
-            Sleep(300)
-
-            // TLMM GPIO_9 FPC_RESET
-            OperationRegion(GI09, SystemMemory, 0x0F109000, 0x20)
-            Field(GI09, DWordAcc, NoLock, Preserve)
-            {
-                DWD1,   32,
-                DWD2,   32
-            }
-
-            // Pull Down
-            DWD2 = 0x01
-
-            // Wait 1ms
-            Sleep (1)
-
-            // Pull Up
-            DWD2 = 0x02
-        }
-
-        Store(0, FLAG)
-    }
-
-    Method(_PS2, 0x0, NotSerialized) {}
-
-    Method(_PS3, 0x0, NotSerialized)
-    {
-        Store(3, FLAG)
-    }
-
-    Method(_RST, 0x0, NotSerialized)
-    {
-        // TLMM GPIO_9 FPC_RESET
-        OperationRegion (GI09, SystemMemory, 0x0F109000, 0x20)
-        Field (GI09, DWordAcc, NoLock, Preserve)
-        {
-            DWD1,   32,
-            DWD2,   32
-        }
-
-        // Pull Up
-        DWD2 = 0x02
-
-        // Wait 1ms
-        Sleep (1)
-
-        // Pull Down
-        DWD2 = 0x01
-
-        // Wait 5ms
-        Sleep (5)
-
-        // Pull Up
-        DWD2 = 0x02
-
-        // Wait 5ms
-        Sleep (5)
     }
 }

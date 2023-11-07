@@ -1141,7 +1141,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         "\\_SB.PM01", 0x00, ResourceConsumer, ,
                         )
                         {   // Pin list
-                            0x00D9
+                            0x00DA
                         }
                     GpioInt (Edge, ActiveBoth, Exclusive, PullUp, 0x0000,
                         "\\_SB.PM01", 0x00, ResourceConsumer, ,

@@ -3364,7 +3364,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x04)
+                    Package (0x05)
                     {
                         "COMPONENT", 
                         One, 
@@ -3378,6 +3378,47 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         {
                             "FSTATE", 
                             One
+                        }, 
+
+                        Package (0x04)
+                        {
+                            "PSTATE_SET", 
+                            Zero, 
+                            Package (0x03)
+                            {
+                                "PSTATE", 
+                                Zero, 
+                                Package (0x02)
+                                {
+                                    "PMICVREGVOTE", 
+                                    Package (0x05)
+                                    {
+                                        "PPP_RESOURCE_ID_BUCK_BOOST1_C", 
+                                        0x0C, 
+                                        0x00325AA0, 
+                                        One, 
+                                        0x06
+                                    }
+                                }
+                            }, 
+
+                            Package (0x03)
+                            {
+                                "PSTATE", 
+                                One, 
+                                Package (0x02)
+                                {
+                                    "PMICVREGVOTE", 
+                                    Package (0x05)
+                                    {
+                                        "PPP_RESOURCE_ID_BUCK_BOOST1_C", 
+                                        0x0C, 
+                                        0x00325AA0, 
+                                        Zero, 
+                                        0x02
+                                    }
+                                }
+                            }
                         }
                     }, 
 
@@ -3419,44 +3460,16 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         "COMPONENT", 
                         0x04, 
-                        Package (0x03)
+                        Package (0x02)
                         {
                             "FSTATE", 
-                            Zero, 
-                            Package (0x02)
-                            {
-                                "PMICVREGVOTE", 
-                                Package (0x07)
-                                {
-                                    "PPP_RESOURCE_ID_BUCK_BOOST1_C", 
-                                    0x0C, 
-                                    0x00325AA0, 
-                                    One, 
-                                    0x02, 
-                                    "HLOS_DRV", 
-                                    "SUPPRESSIBLE"
-                                }
-                            }
+                            Zero
                         }, 
 
-                        Package (0x03)
+                        Package (0x02)
                         {
                             "FSTATE", 
-                            One, 
-                            Package (0x02)
-                            {
-                                "PMICVREGVOTE", 
-                                Package (0x07)
-                                {
-                                    "PPP_RESOURCE_ID_BUCK_BOOST1_C", 
-                                    0x0C, 
-                                    Zero, 
-                                    Zero, 
-                                    0x02, 
-                                    "HLOS_DRV", 
-                                    "SUPPRESSIBLE"
-                                }
-                            }
+                            One
                         }
                     }, 
 
@@ -53837,15 +53850,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         Package (0x02)
                         {
                             "PMICVREGVOTE", 
-                            Package (0x07)
+                            Package (0x05)
                             {
                                 "PPP_RESOURCE_ID_BUCK_BOOST1_C", 
                                 0x0C, 
                                 0x00328980, 
                                 One, 
-                                0x02, 
-                                "HLOS_DRV", 
-                                "SUPPRESSIBLE"
+                                0x06
                             }
                         }, 
 
@@ -53955,15 +53966,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         Package (0x02)
                         {
                             "PMICVREGVOTE", 
-                            Package (0x07)
+                            Package (0x05)
                             {
                                 "PPP_RESOURCE_ID_BUCK_BOOST1_C", 
                                 0x0C, 
+                                0x00328980, 
                                 Zero, 
-                                Zero, 
-                                0x02, 
-                                "HLOS_DRV", 
-                                "SUPPRESSIBLE"
+                                0x02
                             }
                         }, 
 
@@ -54186,15 +54195,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         Package (0x02)
                         {
                             "PMICVREGVOTE", 
-                            Package (0x07)
+                            Package (0x05)
                             {
                                 "PPP_RESOURCE_ID_BUCK_BOOST1_C", 
                                 0x0C, 
                                 0x00328980, 
                                 One, 
-                                0x02, 
-                                "HLOS_DRV", 
-                                "SUPPRESSIBLE"
+                                0x06
                             }
                         }, 
 
@@ -54304,15 +54311,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         Package (0x02)
                         {
                             "PMICVREGVOTE", 
-                            Package (0x07)
+                            Package (0x05)
                             {
                                 "PPP_RESOURCE_ID_BUCK_BOOST1_C", 
                                 0x0C, 
+                                0x00328980, 
                                 Zero, 
-                                Zero, 
-                                0x02, 
-                                "HLOS_DRV", 
-                                "SUPPRESSIBLE"
+                                0x02
                             }
                         }, 
 
@@ -64346,17 +64351,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     {   // Pin list
                                         0x008F
                                     }
+                                GpioIo (Exclusive, PullNone, 0x0000, 0x0640, IoRestrictionNone,
+                                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                                    )
+                                    {   // Pin list
+                                        0x008E
+                                    }
                                 GpioInt (Edge, ActiveHigh, Exclusive, PullDown, 0x0000,
                                     "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                                     )
                                     {   // Pin list
                                         0x0085
-                                    }
-                                GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionOutputOnly,
-                                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                                    )
-                                    {   // Pin list
-                                        0x008E
                                     }
                                 SpiSerialBusV2 (0x0000, PolarityLow, FourWireMode, 0x08,
                                     ControllerInitiated, 0x016E3600, ClockPolarityLow,

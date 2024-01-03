@@ -40,31 +40,16 @@ Device (TPXY)
     Device(\_SB.TPXY.ANG0)
     {
         Name(_ADR, 0)
-
-        Alias (\_SB.PSUB, _SUB)
-        Name (_HID, "TPXYANG0")
-        Name (_UID, 0)
-        Name (_DDN, "Thermal Proxy Angle Sensor")
     }
 
     Device(\_SB.TPXY.RSC0)
     {
         Name(_ADR, 1)
-
-        Name (_HID, "TPXYRSC0")
-        Alias (\_SB.PSUB, _SUB)
-        Name (_UID, 1)
-        Name (_DDN, "Thermal Proxy Resistance Sensor")
     }
 
     Device(\_SB.TPXY.VTS0)
     {
         Name(_ADR, 2)
-
-        Name (_HID, "TPXYVTS0")
-        Alias (\_SB.PSUB, _SUB)
-        Name (_UID, 2)
-        Name (_DDN, "Thermal Proxy Voltage Sensor")
     }
 
     Name (_CRS, ResourceTemplate ()

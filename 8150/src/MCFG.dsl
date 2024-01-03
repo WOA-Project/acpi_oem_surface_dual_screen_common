@@ -1,5 +1,5 @@
 [000h 0000   4]                    Signature : "MCFG"    [Memory Mapped Configuration Table]
-[004h 0004   4]                 Table Length : 0000006C
+[004h 0004   4]                 Table Length : 0000004C
 [008h 0008   1]                     Revision : 01
 [009h 0009   1]                     Checksum : 00
 [00Ah 0010   6]                       Oem ID : "QCOM  "
@@ -16,20 +16,8 @@
 [037h 0055   1]               End Bus Number : 01
 [038h 0056   4]                     Reserved : 00000000
 
-[03Ch 0060   8]                 Base Address : 0000000068000000
+[03Ch 0060   8]                 Base Address : 0000000040000000
 [044h 0068   2]         Segment Group Number : 0001
 [046h 0070   1]             Start Bus Number : 00
 [047h 0071   1]               End Bus Number : 01
 [048h 0072   4]                     Reserved : 00000000
-
-[04Ch 0076   8]                 Base Address : 0000000070000000
-[054h 0084   2]         Segment Group Number : 0002
-[056h 0086   1]             Start Bus Number : 00
-[057h 0087   1]               End Bus Number : 01
-[058h 0088   4]                     Reserved : 00000000
-
-[05Ch 0092   8]                 Base Address : 0000000040000000
-[064h 0100   2]         Segment Group Number : 0003
-[066h 0102   1]             Start Bus Number : 00
-[067h 0103   1]               End Bus Number : 01
-[068h 0104   4]                     Reserved : 00000000

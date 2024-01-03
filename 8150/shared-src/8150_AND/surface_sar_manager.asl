@@ -22,21 +22,15 @@
 //     SPDX-License-Identifier: MIT
 //
 
-Scope (\_SB.SEN2)
+//
+// Surface Sar Manager
+//
+Device (SARP)
 {
-    //
-    // Surface Sar Manager
-    //
-    Device (SARP)
+    Name (_HID, "MSHW0131")
+    Name (_UID, 0)
+    Name (_DEP, Package ()
     {
-        Name (_ADR, 0)
-        Name (_DDN, "Surface Sar Manager")
-
-        Name (_HID, "MSHW0131")
-        Name (_UID, 0)
-        Name (_DEP, Package ()
-        {
-            \_SB.SEN2
-        })
-    }
+        \_SB.SEN2
+    })
 }

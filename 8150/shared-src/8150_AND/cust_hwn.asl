@@ -26,52 +26,46 @@
 
 Name(HWNH, 1)
 
-Scope (\_SB.I2C2)
+//
+// HWN Haptics
+//
+Device (HWN1)
 {
-    //
-    // HWN Haptics
-    //
-    Device (HWN1)
+    Name (_HID, "DA7280")
+    Name (_UID, 1)
+    Alias(\_SB.PSUB, _SUB)
+
+    Method (_STA)
     {
-        Name (_ADR, 0x4A)
-        Name (_DDN, "Surface Haptics Device")
-
-        Name (_HID, "DA7280")
-        Name (_UID, 1)
-        Alias(\_SB.PSUB, _SUB)
-
-        Method (_STA)
-        {
-            if(LEqual(\_SB_.HWNH, 0)) {
-                Return (0)
-            }
-            else {
-                Return (0x0F)
-            }
+        if(LEqual(\_SB_.HWNH, 0)) {
+            Return (0)
         }
-
-        Method (_CRS, 0x0, NotSerialized)
-        {
-            Name (RBUF,
-                ResourceTemplate ()
-                {
-                    // I2C
-                    I2CSerialBus(
-                        0x004A,
-                        ControllerInitiated,
-                        400000,
-                        AddressingMode7Bit,
-                        "\\_SB.I2C2",
-                        ,
-                        ,
-                        ,
-                        )
-
-                    // HAPTICS_ASSERT
-                    GpioInt(Edge, ActiveLow, ExclusiveAndWake, PullUp, 0, "\\_SB.GIO0", 0 , ResourceConsumer, , ) {42}
-                }
-            )
-            Return(RBUF)
+        else {
+            Return (0x0F)
         }
+    }
+
+    Method (_CRS, 0x0, NotSerialized)
+    {
+        Name (RBUF,
+            ResourceTemplate ()
+            {
+                // I2C
+                I2CSerialBus(
+                    0x004A,
+                    ControllerInitiated,
+                    400000,
+                    AddressingMode7Bit,
+                    "\\_SB.I2C2",
+                    ,
+                    ,
+                    ,
+                    )
+
+                // HAPTICS_ASSERT
+                GpioInt(Edge, ActiveLow, ExclusiveAndWake, PullUp, 0, "\\_SB.GIO0", 0 , ResourceConsumer, , ) {42}
+            }
+        )
+        Return(RBUF)
     }
 }

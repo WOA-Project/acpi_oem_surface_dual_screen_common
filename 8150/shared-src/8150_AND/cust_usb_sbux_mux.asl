@@ -24,28 +24,22 @@
 //     SPDX-License-Identifier: MIT
 //
 
-Scope (\_SB.I2C5)
+//
+// FSA4480 Audio Driver
+//
+Device (CFSA)
 {
-    //
-    // FSA4480 Audio Driver
-    //
-    Device (CFSA)
+    Name (_HID, "FSA4480")
+    Alias(\_SB.PSUB, _SUB)
+
+    Method (_CRS, 0x0, NotSerialized)
     {
-        Name (_ADR, 0x43)
-        Name (_DDN, "FSA4480 Audio Device")
-
-        Name (_HID, "FSA4480")
-        Alias(\_SB.PSUB, _SUB)
-
-        Method (_CRS, 0x0, NotSerialized)
+        Name (RBUF, ResourceTemplate ()
         {
-            Name (RBUF, ResourceTemplate ()
-            {
-                I2CSerialBus (0x43, , 100000, AddressingMode7Bit, "\\_SB.I2C5",,,,)
-                GpioIo (Shared, PullNone, 0, 0, IoRestrictionNone, "\\_SB.GIO0", 0, ResourceConsumer, , RawDataBuffer(0x1){0x01}) {38} // CC_OUT
-                GpioIo (Exclusive, PullUp, 0, 0, , "\\_SB.GIO0", ,) {2} // Enable default GPIO
-            })
-            Return (RBUF)
-        }
+            I2CSerialBus (0x43, , 100000, AddressingMode7Bit, "\\_SB.I2C5",,,,)
+            GpioIo (Shared, PullNone, 0, 0, IoRestrictionNone, "\\_SB.GIO0", 0, ResourceConsumer, , RawDataBuffer(0x1){0x01}) {38} // CC_OUT
+            GpioIo (Exclusive, PullUp, 0, 0, , "\\_SB.GIO0", ,) {2} // Enable default GPIO
+        })
+        Return (RBUF)
     }
 }

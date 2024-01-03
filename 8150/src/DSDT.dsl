@@ -31,8 +31,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         Name (SOSI, 0xDEADBEEFFFFFFFFF)
         Name (PRP0, 0xFFFFFFFF)
         Name (PRP1, 0xFFFFFFFF)
-        Name (PRP2, 0xFFFFFFFF)
-        Name (PRP3, 0xFFFFFFFF)
         Device (AUDS)
         {
             Name (_HID, "QCOM05D2")  // _HID: Hardware ID
@@ -77579,14 +77577,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If ((PRP2 == One))
-                {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
+                Return (Zero)
             }
 
             Method (_PSC, 0, NotSerialized)  // _PSC: Power State Current
@@ -77978,14 +77969,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If ((PRP3 == One))
-                {
-                    Return (0x0F)
-                }
-                Else
-                {
-                    Return (Zero)
-                }
+                Return (Zero)
             }
 
             Method (_PSC, 0, NotSerialized)  // _PSC: Power State Current

@@ -343,9 +343,9 @@ ThermalZone (VMX6)
 
     Name (_TZD, Package (0x04)
     {
-        \_SB.SYSM.CLUS.CPU4, 
-        \_SB.SYSM.CLUS.CPU5, 
-        \_SB.SYSM.CLUS.CPU6, 
+        \_SB.SYSM.CLUS.CPU4,
+        \_SB.SYSM.CLUS.CPU5,
+        \_SB.SYSM.CLUS.CPU6,
         \_SB.SYSM.CLUS.CPU7
     })
 
@@ -377,9 +377,9 @@ ThermalZone (VMX7)
 
     Name (_TZD, Package (0x04)
     {
-        \_SB.SYSM.CLUS.CPU0, 
-        \_SB.SYSM.CLUS.CPU1, 
-        \_SB.SYSM.CLUS.CPU2, 
+        \_SB.SYSM.CLUS.CPU0,
+        \_SB.SYSM.CLUS.CPU1,
+        \_SB.SYSM.CLUS.CPU2,
         \_SB.SYSM.CLUS.CPU3
     })
 

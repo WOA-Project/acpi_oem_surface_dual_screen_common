@@ -45,35 +45,6 @@ Package ()
             "CLOCK",
             Package ()
             {
-                "gcc_qupv3_wrap_1_s_ahb_clk",
-                0x0000000000000001,
-            },
-        },
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap_1_s_ahb_clk",
-                0x0000000000000009,
-                0x0000000000000008,
-            },
-        },
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
-                "gcc_qupv3_wrap_1_s_ahb_clk",
-                0x0000000000000009,
-                0x000000000000000C,
-            },
-        },
-        Package ()
-        {
-            "CLOCK",
-            Package ()
-            {
                 "gcc_qupv3_wrap1_s4_clk",
                 0x0000000000000001,
             },

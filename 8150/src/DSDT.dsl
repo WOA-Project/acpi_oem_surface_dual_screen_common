@@ -58694,17 +58694,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     {   // Pin list
                                         0x008F
                                     }
+                                GpioInt (Edge, ActiveHigh, Exclusive, PullDown, 0x0000,
+                                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                                    )
+                                    {   // Pin list
+                                        0x0100
+                                    }
                                 GpioIo (Exclusive, PullNone, 0x0000, 0x0640, IoRestrictionNone,
                                     "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                                     )
                                     {   // Pin list
                                         0x008E
-                                    }
-                                GpioInt (Edge, ActiveHigh, Exclusive, PullDown, 0x0000,
-                                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                                    )
-                                    {   // Pin list
-                                        0x0085
                                     }
                                 SpiSerialBusV2 (0x0000, PolarityLow, FourWireMode, 0x08,
                                     ControllerInitiated, 0x016E3600, ClockPolarityLow,
@@ -71615,7 +71615,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     }
                     Interrupt (ResourceConsumer, Edge, ActiveHigh, Shared, ,, )
                     {
-                        0x0000025B,
+                        0x00000223,
                     }
                     Interrupt (ResourceConsumer, Level, ActiveHigh, Shared, ,, )
                     {

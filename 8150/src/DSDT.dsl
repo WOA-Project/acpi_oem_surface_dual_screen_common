@@ -58698,7 +58698,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                     "\\_SB.GIO0", 0x00, ResourceConsumer, ,
                                     )
                                     {   // Pin list
-                                        0x0100
+                                        0x00C0
                                     }
                                 GpioIo (Exclusive, PullNone, 0x0000, 0x0640, IoRestrictionNone,
                                     "\\_SB.GIO0", 0x00, ResourceConsumer, ,
@@ -71609,13 +71609,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         0x000000F0,
                     }
-                    Interrupt (ResourceConsumer, Level, ActiveHigh, Shared, ,, )
-                    {
-                        0x00000249,
-                    }
                     Interrupt (ResourceConsumer, Edge, ActiveHigh, Shared, ,, )
                     {
                         0x00000223,
+                    }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Shared, ,, )
+                    {
+                        0x00000249,
                     }
                     Interrupt (ResourceConsumer, Level, ActiveHigh, Shared, ,, )
                     {

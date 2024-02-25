@@ -59069,6 +59069,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             })
         }
 
+        Scope (\_SB.CDSP)
+        {
+            Name (_CID, "QCOMFFE6")  // _CID: Compatible ID
+        }
+
         Scope (\_SB.PILC)
         {
             Method (_SUB, 0, NotSerialized)  // _SUB: Subsystem ID
@@ -71208,6 +71213,12 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Return (\_SB.PINA)
             }
 
+            Name (LIDB, One)
+            Method (_LID, 0, NotSerialized)  // _LID: Lid Status
+            {
+                Return (LIDB) /* \_SB_.GPU0.LIDB */
+            }
+
             Method (REGR, 0, NotSerialized)
             {
                 Name (RBUF, Package (0x1A)
@@ -71589,6 +71600,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Name (_CID, "QCOMFFE3")  // _CID: Compatible ID
             Name (_UID, Zero)  // _UID: Unique ID
             Alias (\_SB.PSUB, _SUB)
+            OperationRegion (GPOR, GeneralPurposeIo, Zero, One)
+            Field (\_SB.GIO0.GPOR, ByteAcc, NoLock, Preserve)
+            {
+                Connection (
+                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0079
+                        }
+                ), 
+                LIDR,   1
+            }
+
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -71651,20 +71676,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 }
             }
 
-            OperationRegion (ORHL, GeneralPurposeIo, Zero, 0x02)
-            Field (ORHL, ByteAcc, NoLock, Preserve)
-            {
-                Connection (
-                    GpioIo (Shared, PullUp, 0x01F4, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0079
-                        }
-                ), 
-                GPH0,   1
-            }
-
             Name (_AEI, ResourceTemplate ()  // _AEI: ACPI Event Interrupts
             {
                 GpioInt (Edge, ActiveHigh, Exclusive, PullDown, 0x01F4,
@@ -71693,6 +71704,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     _T_0 = Arg0
                     If ((_T_0 == 0x0140))
                     {
+                        \_SB.LID0.LIDB = \_SB.GIO0.LIDR
+                        \_SB.GPU0.LIDB = \_SB.GIO0.LIDR
                         Notify (\_SB.LID0, 0x80) // Status Change
                     }
 
@@ -74757,26 +74770,34 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
         Device (LID0)
         {
-            Name (_HID, EisaId ("PNP0C0D") /* Lid Device */)  // _HID: Hardware ID
-            Name (_UID, Zero)  // _UID: Unique ID
-            Name (_STA, 0x0F)  // _STA: Status
-            Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
+            Name (_HID, "PNP0C0D" /* Lid Device */)  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+            Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                Return (Package (0x01)
-                {
-                    \_SB.GIO0
-                })
-            }
-
+                \_SB.GIO0, 
+                \_SB.SCM0
+            })
+            Name (LIDB, One)
             Method (_LID, 0, NotSerialized)  // _LID: Lid Status
             {
-                If ((\_SB.GIO0.GPH0 == Zero))
+                Return (LIDB) /* \_SB_.LID0.LIDB */
+            }
+
+            Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
+            {
+                If (\_SB.GIO0.GABL)
                 {
-                    Return (Zero)
+                    \_SB.LID0.LIDB = \_SB.GIO0.LIDR
+                    Notify (\_SB.LID0, 0x80) // Status Change
                 }
-                Else
+            }
+
+            Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
+            {
+                If (\_SB.GIO0.GABL)
                 {
-                    Return (One)
+                    \_SB.LID0.LIDB = \_SB.GIO0.LIDR
+                    Notify (\_SB.LID0, 0x80) // Status Change
                 }
             }
         }
@@ -79800,7 +79821,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                 }
                                 ElseIf ((_T_1 == 0x03))
                                 {
-                                    Return (One)
+                                    Return (Zero)
                                     Break
                                 }
                                 Else
@@ -82422,17 +82443,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Name (_S0W, 0x02)  // _S0W: S0 Device Wake State
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
-                Return (PBUP) /* \_SB_.BTH0.PBUP */
+                Name (PBUF, ResourceTemplate ()
+                {
+                    UartSerialBusV2 (0x0001C200, DataBitsEight, StopBitsOne,
+                        0xC0, LittleEndian, ParityTypeNone, FlowControlHardware,
+                        0x0020, 0x0020, "\\_SB.UR18",
+                        0x00, ResourceConsumer, , Exclusive,
+                        )
+                })
+                Return (PBUF) /* \_SB_.BTH0._CRS.PBUF */
             }
 
-            Name (PBUP, ResourceTemplate ()
-            {
-                UartSerialBusV2 (0x0001C200, DataBitsEight, StopBitsOne,
-                    0xC0, LittleEndian, ParityTypeNone, FlowControlHardware,
-                    0x0020, 0x0020, "\\_SB.UR18",
-                    0x00, ResourceConsumer, , Exclusive,
-                    )
-            })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
                 Return (0x0F)

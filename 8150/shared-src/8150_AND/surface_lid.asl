@@ -22,31 +22,33 @@
 //     SPDX-License-Identifier: MIT
 //
 
-//
-// LID Hall Effect Sensor
-//
+// Device declaration for Hall Effect Sensor
+// Default LIDB Value is 1 because lid open is 1
 Device (LID0)
 {
-    Name (_HID, EisaId ("PNP0C0D"))
-    Name (_UID, 0)
-    //Name (_STA, 0) // TODO: Figure out why...
-    Name (_STA, 0xf)
-    Method (_DEP, 0, NotSerialized)
-    {
-        Return (Package ()
-        {
-            \_SB.GIO0
-        })
-    }
+    Name (_HID, "PNP0C0D")
+    Alias(\_SB.PSUB, _SUB)
+	Name (_DEP, Package () { \_SB.GIO0, \_SB.SCM0 })
+    Name(LIDB, 1) //LID Buffer value  0=closed, non-zero = open
     Method (_LID, 0, NotSerialized)
     {
-        If ((\_SB.GIO0.GPH0 == 0))
+        Return(LIDB)
+    }
+    Method(_PS0, 0x0, NotSerialized)
+    {
+        If(\_SB.GIO0.GABL)
         {
-            Return (0)
+            Store (\_SB.GIO0.LIDR, \_SB.LID0.LIDB)
+            Notify (\_SB.LID0, 0x80)
         }
-        Else
+    }
+
+    Method(_PS3, 0x0, NotSerialized)
+    {
+        If(\_SB.GIO0.GABL)
         {
-            Return (1)
+            Store (\_SB.GIO0.LIDR, \_SB.LID0.LIDB)
+            Notify (\_SB.LID0, 0x80)
         }
     }
 }

@@ -24224,7 +24224,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (UCS0)
         {
             Name (_HID, "QCOM1AA4")  // _HID: Hardware ID
-            Name (_CID, "QCOMFFE5")  // _CID: Compatible ID
+            Name (_CID, "QCOMFFE4")  // _CID: Compatible ID
             Name (_DEP, Package (One)  // _DEP: Dependencies
             {
                 \_SB.PEP0

@@ -78573,7 +78573,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         {
              0x02                                             // .
         })
-        Name (CCS2, 0x02)
         Name (PORT, Buffer (One)
         {
              0x02                                             // .
@@ -80072,11 +80071,40 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         {
             Name (_HID, "QCOM057D")  // _HID: Hardware ID
             Name (_CID, "QCOMFFE4")  // _CID: Compatible ID
-            Name (_DEP, Package (0x02)  // _DEP: Dependencies
+            Name (_DEP, Package (0x04)  // _DEP: Dependencies
             {
                 \_SB.PEP0, 
-                \_SB.PTCC
+                \_SB.PTCC, 
+                \_SB.I2C5, 
+                \_SB.GIO0
             })
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    I2cSerialBusV2 (0x0043, ControllerInitiated, 0x000186A0,
+                        AddressingMode7Bit, "\\_SB.I2C5",
+                        0x00, ResourceConsumer, , Exclusive,
+                        )
+                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        RawDataBuffer (0x01)  // Vendor Data
+                        {
+                            0x01
+                        })
+                        {   // Pin list
+                            0x0026
+                        }
+                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionNone,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0002
+                        }
+                })
+                Return (RBUF) /* \_SB_.UCP0._CRS.RBUF */
+            }
+
             Device (CON0)
             {
                 Name (_ADR, Zero)  // _ADR: Address
@@ -80309,8 +80337,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             {
                 \_SB.CCST = Arg0
                 \_SB.HSFL = Arg1
-                \_SB.CCS2 = Arg0
-                Notify (\_SB.CFSA, \_SB.CCS2)
             }
 
             Method (CCVL, 0, NotSerialized)
@@ -80350,38 +80376,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             })
             Name (_HID, "QCOM0590")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
-        }
-
-        Device (CFSA)
-        {
-            Name (_HID, "FSA4480")  // _HID: Hardware ID
-            Alias (\_SB.PSUB, _SUB)
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    I2cSerialBusV2 (0x0043, ControllerInitiated, 0x000186A0,
-                        AddressingMode7Bit, "\\_SB.I2C5",
-                        0x00, ResourceConsumer, , Exclusive,
-                        )
-                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x0026
-                        }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0002
-                        }
-                })
-                Return (RBUF) /* \_SB_.CFSA._CRS.RBUF */
-            }
         }
 
         Device (MPA)
@@ -81946,7 +81940,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         Name (HWNH, One)
         Device (HWN1)
         {
-            Name (_HID, "DA7280")  // _HID: Hardware ID
+            Name (_HID, "MSHW0164")  // _HID: Hardware ID
             Name (_UID, One)  // _UID: Unique ID
             Alias (\_SB.PSUB, _SUB)
             Method (_STA, 0, NotSerialized)  // _STA: Status

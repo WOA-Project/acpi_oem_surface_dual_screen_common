@@ -31,7 +31,7 @@ Name(HWNH, 1)
 //
 Device (HWN1)
 {
-    Name (_HID, "DA7280")
+    Name (_HID, "MSHW0164")
     Name (_UID, 1)
     Alias(\_SB.PSUB, _SUB)
 

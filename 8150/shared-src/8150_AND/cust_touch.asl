@@ -432,21 +432,3 @@ Device (TSPI)
         }
     }
 }
-
-//
-// Surface Touch Firmware Update
-//
-Device(TFWU)
-{
-    Name(_HID, "MSHW0145")
-    Name(_UID, 0)
-    Name(_DEP, Package()
-    {
-        \_SB.TSPI
-    })
-
-    Method (_STA, 0, NotSerialized)
-    {
-        Return (0x00)
-    }
-}

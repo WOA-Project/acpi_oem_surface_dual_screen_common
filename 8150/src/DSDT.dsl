@@ -57899,7 +57899,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
         Device (CDSP)
         {
-            Name (_DEP, Package (0x07)  // _DEP: Dependencies
+            Name (_DEP, Package (0x08)  // _DEP: Dependencies
             {
                 \_SB.PEP0, 
                 \_SB.PILC, 
@@ -57907,7 +57907,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 \_SB.IPC0, 
                 \_SB.RPEN, 
                 \_SB.SSDD, 
-                \_SB.ARPC
+                \_SB.ARPC, 
+                \_SB.NSPM
             })
             Name (_HID, "QCOM0523")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
@@ -71704,6 +71705,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Alias (\_SB.PSUB, _SUB)
         }
 
+        Device (NSPM)
+        {
+            Name (_DEP, Package (0x05)  // _DEP: Dependencies
+            {
+                \_SB.MMU0, 
+                \_SB.GLNK, 
+                \_SB.SCM0, 
+                \_SB.IMM0, 
+                \_SB.ARPC
+            })
+            Name (_HID, "QCOM05E5")  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+        }
+
         Device (RFS0)
         {
             Name (_DEP, Package (One)  // _DEP: Dependencies
@@ -77530,6 +77545,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         {
              0x02                                             // .
         })
+        Name (CCS2, 0x02)
         Name (USBC, Buffer (One)
         {
              0x0B                                             // .
@@ -79016,40 +79032,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         {
             Name (_HID, "QCOM057D")  // _HID: Hardware ID
             Name (_CID, "QCOMFFE4")  // _CID: Compatible ID
-            Name (_DEP, Package (0x04)  // _DEP: Dependencies
+            Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
                 \_SB.PEP0, 
-                \_SB.PTCC, 
-                \_SB.I2C5, 
-                \_SB.GIO0
+                \_SB.PTCC
             })
-            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
-            {
-                Name (RBUF, ResourceTemplate ()
-                {
-                    I2cSerialBusV2 (0x0043, ControllerInitiated, 0x000186A0,
-                        AddressingMode7Bit, "\\_SB.I2C5",
-                        0x00, ResourceConsumer, , Exclusive,
-                        )
-                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x0026
-                        }
-                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0002
-                        }
-                })
-                Return (RBUF) /* \_SB_.UCP0._CRS.RBUF */
-            }
-
             Device (CON0)
             {
                 Name (_ADR, Zero)  // _ADR: Address
@@ -79282,6 +79269,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             {
                 \_SB.CCST = Arg0
                 \_SB.HSFL = Arg1
+                \_SB.CCS2 = Arg0
+                Notify (\_SB.CFSA, \_SB.CCS2)
             }
 
             Method (CCVL, 0, NotSerialized)
@@ -79321,6 +79310,38 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             })
             Name (_HID, "QCOM0590")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
+        }
+
+        Device (CFSA)
+        {
+            Name (_HID, "FSA4480")  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    I2cSerialBusV2 (0x0043, ControllerInitiated, 0x000186A0,
+                        AddressingMode7Bit, "\\_SB.I2C5",
+                        0x00, ResourceConsumer, , Exclusive,
+                        )
+                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        RawDataBuffer (0x01)  // Vendor Data
+                        {
+                            0x01
+                        })
+                        {   // Pin list
+                            0x0026
+                        }
+                    GpioIo (Exclusive, PullUp, 0x0000, 0x0000, IoRestrictionNone,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0002
+                        }
+                })
+                Return (RBUF) /* \_SB_.CFSA._CRS.RBUF */
+            }
         }
 
         Device (MPA)

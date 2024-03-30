@@ -1,70 +1,70 @@
-[000h 0000   4]                    Signature : "CSRT"    [Core System Resource Table]
-[004h 0004   4]                 Table Length : 0000C876
-[008h 0008   1]                     Revision : 00
-[009h 0009   1]                     Checksum : 00
-[00Ah 0010   6]                       Oem ID : "QCOM  "
-[010h 0016   8]                 Oem Table ID : "QCOMEDK2"
-[018h 0024   4]                 Oem Revision : 00008280
-[01Ch 0028   4]              Asl Compiler ID : "QCOM"
-[020h 0032   4]        Asl Compiler Revision : 00000001
+[000h 0000 004h]                   Signature : "CSRT"    [Core System Resource Table]
+[004h 0004 004h]                Table Length : 0000C876
+[008h 0008 001h]                    Revision : 00
+[009h 0009 001h]                    Checksum : 00
+[00Ah 0010 006h]                      Oem ID : "QCOM  "
+[010h 0016 008h]                Oem Table ID : "QCOMEDK2"
+[018h 0024 004h]                Oem Revision : 00008350
+[01Ch 0028 004h]             Asl Compiler ID : "QCOM"
+[020h 0032 004h]       Asl Compiler Revision : 00000001
 
 
-[024h 0036   4]                       Length : 00000038
-[028h 0040   4]                    Vendor ID : 4D4F4351
-[02Ch 0044   4]                 Subvendor ID : 00000000
-[030h 0048   2]                    Device ID : 100B
-[032h 0050   2]                 Subdevice ID : 0000
-[034h 0052   2]                     Revision : 0000
-[036h 0054   2]                     Reserved : 0000
-[038h 0056   4]           Shared Info Length : 00000000
+[024h 0036 004h]                      Length : 00000038
+[028h 0040 004h]                   Vendor ID : 4D4F4351
+[02Ch 0044 004h]                Subvendor ID : 00000000
+[030h 0048 002h]                   Device ID : 100B
+[032h 0050 002h]                Subdevice ID : 0000
+[034h 0052 002h]                    Revision : 0000
+[036h 0054 002h]                    Reserved : 0000
+[038h 0056 004h]          Shared Info Length : 00000000
 
-[03Ch 0060   2]                Major Version : 0020
-[03Eh 0062   2]                Minor Version : 0000
-[040h 0064   4]        MMIO Base Address Low : 00000002
-[044h 0068   4]       MMIO Base Address High : 00000001
-[048h 0072   4]                GSI Interrupt : 00000002
-[04Ch 0076   1]           Interrupt Polarity : 00
-[04Dh 0077   1]               Interrupt Mode : 00
-[04Eh 0078   1]                 Num Channels : C1
-[04Fh 0079   1]            DMA Address Width : 17
-[050h 0080   2]            Base Request Line : 0000
-[052h 0082   2]        Num Handshake Signals : 0000
-[054h 0084   4]               Max Block Size : 00007FFD
+[03Ch 0060 002h]               Major Version : 0020
+[03Eh 0062 002h]               Minor Version : 0000
+[040h 0064 004h]       MMIO Base Address Low : 00000002
+[044h 0068 004h]      MMIO Base Address High : 00000001
+[048h 0072 004h]               GSI Interrupt : 00000002
+[04Ch 0076 001h]          Interrupt Polarity : 00
+[04Dh 0077 001h]              Interrupt Mode : 00
+[04Eh 0078 001h]                Num Channels : C1
+[04Fh 0079 001h]           DMA Address Width : 17
+[050h 0080 002h]           Base Request Line : 0000
+[052h 0082 002h]       Num Handshake Signals : 0000
+[054h 0084 004h]              Max Block Size : 00007FFD
 
-[03Ch 0060   4]                       Length : 00000020
-[040h 0064   2]                         Type : 0002
-[042h 0066   2]                      Subtype : 0000
-[044h 0068   4]                          UID : 00000001
-[048h 0072  20]                 ResourceInfo : 43 53 52 54 76 C8 00 00 00 00 51 43 4F 4D 20 20 /* CSRTv.....QCOM   */\
+[03Ch 0060 004h]                      Length : 00000020
+[040h 0064 002h]                        Type : 0002
+[042h 0066 002h]                     Subtype : 0000
+[044h 0068 004h]                         UID : 00000001
+[048h 0072 014h]                ResourceInfo : 43 53 52 54 76 C8 00 00 00 00 51 43 4F 4D 20 20 /* CSRTv.....QCOM   */\
 /* 058h 0088   4 */                            51 43 4F 4D                                     /* QCOM */\
 
-[05Ch 0092   4]                       Length : 0000C81A
-[060h 0096   4]                    Vendor ID : 4D4F4351
-[064h 0100   4]                 Subvendor ID : 00000000
-[068h 0104   2]                    Device ID : 100C
-[06Ah 0106   2]                 Subdevice ID : 0000
-[06Ch 0108   2]                     Revision : 0001
-[06Eh 0110   2]                     Reserved : 0000
-[070h 0112   4]           Shared Info Length : 00000000
+[05Ch 0092 004h]                      Length : 0000C81A
+[060h 0096 004h]                   Vendor ID : 4D4F4351
+[064h 0100 004h]                Subvendor ID : 00000000
+[068h 0104 002h]                   Device ID : 100C
+[06Ah 0106 002h]                Subdevice ID : 0000
+[06Ch 0108 002h]                    Revision : 0001
+[06Eh 0110 002h]                    Reserved : 0000
+[070h 0112 004h]          Shared Info Length : 00000000
 
-[074h 0116   2]                Major Version : C802
-[076h 0118   2]                Minor Version : 0000
-[078h 0120   4]        MMIO Base Address Low : 00010004
-[07Ch 0124   4]       MMIO Base Address High : DEADF00D
-[080h 0128   4]                GSI Interrupt : 00000002
-[084h 0132   1]           Interrupt Polarity : 02
-[085h 0133   1]               Interrupt Mode : 00
-[086h 0134   1]                 Num Channels : 00
-[087h 0135   1]            DMA Address Width : 00
-[088h 0136   2]            Base Request Line : 0048
-[08Ah 0138   2]        Num Handshake Signals : 0000
-[08Ch 0140   4]               Max Block Size : 00000020
+[074h 0116 002h]               Major Version : C802
+[076h 0118 002h]               Minor Version : 0000
+[078h 0120 004h]       MMIO Base Address Low : 00010004
+[07Ch 0124 004h]      MMIO Base Address High : DEADF00D
+[080h 0128 004h]               GSI Interrupt : 00000002
+[084h 0132 001h]          Interrupt Polarity : 02
+[085h 0133 001h]              Interrupt Mode : 00
+[086h 0134 001h]                Num Channels : 00
+[087h 0135 001h]           DMA Address Width : 00
+[088h 0136 002h]           Base Request Line : 0048
+[08Ah 0138 002h]       Num Handshake Signals : 0000
+[08Ch 0140 004h]              Max Block Size : 00000020
 
-[074h 0116   4]                       Length : 0000C802
-[078h 0120   2]                         Type : 0004
-[07Ah 0122   2]                      Subtype : 0001
-[07Ch 0124   4]                          UID : DEADF00D
-[080h 0128 51190]                 ResourceInfo : 43 53 52 54 76 C8 00 00 00 00 51 43 4F 4D 20 20 /* CSRTv.....QCOM   */\
+[074h 0116 004h]                      Length : 0000C802
+[078h 0120 002h]                        Type : 0004
+[07Ah 0122 002h]                     Subtype : 0001
+[07Ch 0124 004h]                         UID : DEADF00D
+[080h 0128 C7F6h]                ResourceInfo : 43 53 52 54 76 C8 00 00 00 00 51 43 4F 4D 20 20 /* CSRTv.....QCOM   */\
 /* 090h 0144  16 */                            51 43 4F 4D 45 44 4B 32 80 82 00 00 51 43 4F 4D /* QCOMEDK2....QCOM */\
 /* 0A0h 0160  16 */                            01 00 00 00 38 00 00 00 51 43 4F 4D 00 00 00 00 /* ....8...QCOM.... */\
 /* 0B0h 0176  16 */                            0B 10 00 00 00 00 00 00 00 00 00 00 20 00 00 00 /* ............ ... */\

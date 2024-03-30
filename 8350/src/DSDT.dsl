@@ -13760,21 +13760,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (ROE3, 3, NotSerialized)
             {
-                Name (PCFG, Buffer (0x66)
+                Name (PCFG, Buffer (0x45)
                 {
                     /* 0000 */  0x3C, 0x3F, 0x78, 0x6D, 0x6C, 0x20, 0x76, 0x65,  // <?xml ve
                     /* 0008 */  0x72, 0x73, 0x69, 0x6F, 0x6E, 0x3D, 0x27, 0x31,  // rsion='1
                     /* 0010 */  0x2E, 0x30, 0x27, 0x20, 0x65, 0x6E, 0x63, 0x6F,  // .0' enco
                     /* 0018 */  0x64, 0x69, 0x6E, 0x67, 0x3D, 0x27, 0x75, 0x74,  // ding='ut
                     /* 0020 */  0x66, 0x2D, 0x38, 0x27, 0x3F, 0x3E, 0x0A, 0x3C,  // f-8'?>.<
-                    /* 0028 */  0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F, 0x6C,  // DPAUXPol
-                    /* 0030 */  0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x30, 0x3C,  // arity>0<
-                    /* 0038 */  0x2F, 0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F,  // /DPAUXPo
-                    /* 0040 */  0x6C, 0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x0A,  // larity>.
-                    /* 0048 */  0x3C, 0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C,  // <DPEnabl
-                    /* 0050 */  0x65, 0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F,  // eSSC>1</
-                    /* 0058 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
-                    /* 0060 */  0x53, 0x53, 0x43, 0x3E, 0x0A, 0x00               // SSC>..
+                    /* 0028 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
+                    /* 0030 */  0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F, 0x44,  // SSC>1</D
+                    /* 0038 */  0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65, 0x53,  // PEnableS
+                    /* 0040 */  0x53, 0x43, 0x3E, 0x0A, 0x00                     // SC>..
                 })
                 Local2 = PCFG /* \_SB_.GPU0.ROE3.PCFG */
                 If ((Arg0 >= SizeOf (Local2)))
@@ -13809,21 +13805,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (ROE4, 3, NotSerialized)
             {
-                Name (PCFG, Buffer (0x66)
+                Name (PCFG, Buffer (0x45)
                 {
                     /* 0000 */  0x3C, 0x3F, 0x78, 0x6D, 0x6C, 0x20, 0x76, 0x65,  // <?xml ve
                     /* 0008 */  0x72, 0x73, 0x69, 0x6F, 0x6E, 0x3D, 0x27, 0x31,  // rsion='1
                     /* 0010 */  0x2E, 0x30, 0x27, 0x20, 0x65, 0x6E, 0x63, 0x6F,  // .0' enco
                     /* 0018 */  0x64, 0x69, 0x6E, 0x67, 0x3D, 0x27, 0x75, 0x74,  // ding='ut
                     /* 0020 */  0x66, 0x2D, 0x38, 0x27, 0x3F, 0x3E, 0x0A, 0x3C,  // f-8'?>.<
-                    /* 0028 */  0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F, 0x6C,  // DPAUXPol
-                    /* 0030 */  0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x30, 0x3C,  // arity>0<
-                    /* 0038 */  0x2F, 0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F,  // /DPAUXPo
-                    /* 0040 */  0x6C, 0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x0A,  // larity>.
-                    /* 0048 */  0x3C, 0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C,  // <DPEnabl
-                    /* 0050 */  0x65, 0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F,  // eSSC>1</
-                    /* 0058 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
-                    /* 0060 */  0x53, 0x53, 0x43, 0x3E, 0x0A, 0x00               // SSC>..
+                    /* 0028 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
+                    /* 0030 */  0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F, 0x44,  // SSC>1</D
+                    /* 0038 */  0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65, 0x53,  // PEnableS
+                    /* 0040 */  0x53, 0x43, 0x3E, 0x0A, 0x00                     // SC>..
                 })
                 Local2 = PCFG /* \_SB_.GPU0.ROE4.PCFG */
                 If ((Arg0 >= SizeOf (Local2)))
@@ -13858,21 +13850,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (ROE5, 3, NotSerialized)
             {
-                Name (PCFG, Buffer (0x66)
+                Name (PCFG, Buffer (0x45)
                 {
                     /* 0000 */  0x3C, 0x3F, 0x78, 0x6D, 0x6C, 0x20, 0x76, 0x65,  // <?xml ve
                     /* 0008 */  0x72, 0x73, 0x69, 0x6F, 0x6E, 0x3D, 0x27, 0x31,  // rsion='1
                     /* 0010 */  0x2E, 0x30, 0x27, 0x20, 0x65, 0x6E, 0x63, 0x6F,  // .0' enco
                     /* 0018 */  0x64, 0x69, 0x6E, 0x67, 0x3D, 0x27, 0x75, 0x74,  // ding='ut
                     /* 0020 */  0x66, 0x2D, 0x38, 0x27, 0x3F, 0x3E, 0x0A, 0x3C,  // f-8'?>.<
-                    /* 0028 */  0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F, 0x6C,  // DPAUXPol
-                    /* 0030 */  0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x30, 0x3C,  // arity>0<
-                    /* 0038 */  0x2F, 0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F,  // /DPAUXPo
-                    /* 0040 */  0x6C, 0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x0A,  // larity>.
-                    /* 0048 */  0x3C, 0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C,  // <DPEnabl
-                    /* 0050 */  0x65, 0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F,  // eSSC>1</
-                    /* 0058 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
-                    /* 0060 */  0x53, 0x53, 0x43, 0x3E, 0x0A, 0x00               // SSC>..
+                    /* 0028 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
+                    /* 0030 */  0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F, 0x44,  // SSC>1</D
+                    /* 0038 */  0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65, 0x53,  // PEnableS
+                    /* 0040 */  0x53, 0x43, 0x3E, 0x0A, 0x00                     // SC>..
                 })
                 Local2 = PCFG /* \_SB_.GPU0.ROE5.PCFG */
                 If ((Arg0 >= SizeOf (Local2)))
@@ -13907,21 +13895,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (ROE6, 3, NotSerialized)
             {
-                Name (PCFG, Buffer (0x66)
+                Name (PCFG, Buffer (0x45)
                 {
                     /* 0000 */  0x3C, 0x3F, 0x78, 0x6D, 0x6C, 0x20, 0x76, 0x65,  // <?xml ve
                     /* 0008 */  0x72, 0x73, 0x69, 0x6F, 0x6E, 0x3D, 0x27, 0x31,  // rsion='1
                     /* 0010 */  0x2E, 0x30, 0x27, 0x20, 0x65, 0x6E, 0x63, 0x6F,  // .0' enco
                     /* 0018 */  0x64, 0x69, 0x6E, 0x67, 0x3D, 0x27, 0x75, 0x74,  // ding='ut
                     /* 0020 */  0x66, 0x2D, 0x38, 0x27, 0x3F, 0x3E, 0x0A, 0x3C,  // f-8'?>.<
-                    /* 0028 */  0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F, 0x6C,  // DPAUXPol
-                    /* 0030 */  0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x30, 0x3C,  // arity>0<
-                    /* 0038 */  0x2F, 0x44, 0x50, 0x41, 0x55, 0x58, 0x50, 0x6F,  // /DPAUXPo
-                    /* 0040 */  0x6C, 0x61, 0x72, 0x69, 0x74, 0x79, 0x3E, 0x0A,  // larity>.
-                    /* 0048 */  0x3C, 0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C,  // <DPEnabl
-                    /* 0050 */  0x65, 0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F,  // eSSC>1</
-                    /* 0058 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
-                    /* 0060 */  0x53, 0x53, 0x43, 0x3E, 0x0A, 0x00               // SSC>..
+                    /* 0028 */  0x44, 0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65,  // DPEnable
+                    /* 0030 */  0x53, 0x53, 0x43, 0x3E, 0x31, 0x3C, 0x2F, 0x44,  // SSC>1</D
+                    /* 0038 */  0x50, 0x45, 0x6E, 0x61, 0x62, 0x6C, 0x65, 0x53,  // PEnableS
+                    /* 0040 */  0x53, 0x43, 0x3E, 0x0A, 0x00                     // SC>..
                 })
                 Local2 = PCFG /* \_SB_.GPU0.ROE6.PCFG */
                 If ((Arg0 >= SizeOf (Local2)))
@@ -19172,7 +19156,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (0x0F)
+                Return (0x0B)
             }
 
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -19210,7 +19194,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (0x0F)
+                Return (0x0B)
             }
 
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
@@ -25710,19 +25694,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 })
             }
 
-            Name (_TZD, Package (0x09)  // _TZD: Thermal Zone Devices
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
-                \_SB.SYSM.CLUS.CPU0, 
-                \_SB.SYSM.CLUS.CPU1, 
-                \_SB.SYSM.CLUS.CPU2, 
-                \_SB.SYSM.CLUS.CPU3, 
-                \_SB.SYSM.CLUS.CPU4, 
-                \_SB.SYSM.CLUS.CPU5, 
-                \_SB.SYSM.CLUS.CPU6, 
-                \_SB.SYSM.CLUS.CPU7, 
-                \_SB.GPU0
+                \_SB.PEP0
             })
-            Name (TPSV, 0x0CD0)
+            Name (TPSV, 0x0E2E)
             Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
             {
                 Return (\_SB.TZ31.TPSV)
@@ -25735,13 +25711,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
 
             Name (_MTL, 0x14)  // _MTL: Minimum Throttle Limit
-            Name (TTC1, 0x04)
+            Name (TTC1, Zero)
             Method (_TC1, 0, NotSerialized)  // _TC1: Thermal Constant 1
             {
                 Return (\_SB.TZ31.TTC1)
             }
 
-            Name (TTC2, 0x03)
+            Name (TTC2, 0x14)
             Method (_TC2, 0, NotSerialized)  // _TC2: Thermal Constant 2
             {
                 Return (\_SB.TZ31.TTC2)
@@ -25768,19 +25744,12 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 })
             }
 
-            Name (_TZD, Package (0x09)  // _TZD: Thermal Zone Devices
+            Name (_TZD, Package (0x02)  // _TZD: Thermal Zone Devices
             {
-                \_SB.SYSM.CLUS.CPU0, 
-                \_SB.SYSM.CLUS.CPU1, 
-                \_SB.SYSM.CLUS.CPU2, 
-                \_SB.SYSM.CLUS.CPU3, 
-                \_SB.SYSM.CLUS.CPU4, 
-                \_SB.SYSM.CLUS.CPU5, 
-                \_SB.SYSM.CLUS.CPU6, 
-                \_SB.SYSM.CLUS.CPU7, 
+                \_SB.PEP0, 
                 \_SB.GPU0
             })
-            Name (TPSV, 0x0D02)
+            Name (TPSV, 0x0E60)
             Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
             {
                 Return (\_SB.TZ32.TPSV)
@@ -25793,13 +25762,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
 
             Name (_MTL, 0x14)  // _MTL: Minimum Throttle Limit
-            Name (TTC1, 0x04)
+            Name (TTC1, Zero)
             Method (_TC1, 0, NotSerialized)  // _TC1: Thermal Constant 1
             {
                 Return (\_SB.TZ32.TTC1)
             }
 
-            Name (TTC2, 0x03)
+            Name (TTC2, 0x14)
             Method (_TC2, 0, NotSerialized)  // _TC2: Thermal Constant 2
             {
                 Return (\_SB.TZ32.TTC2)
@@ -25917,21 +25886,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ35)
         {
-            Name (_HID, "QCOM1A61")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C6")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.ADC1
+                    \_SB.MBS0
                 })
             }
 
-            Name (_TZD, Package (0x02)  // _TZD: Thermal Zone Devices
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
-                \_SB.WLTM, 
-                \_SB.MSKN
+                \_SB.MBS0
             })
             Name (TPSV, 0x0E60)
             Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
@@ -25968,20 +25936,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ36)
         {
-            Name (_HID, "QCOM05C6")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C7")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.MBS0
+                    \_SB.MBS1
                 })
             }
 
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
-                \_SB.MBS0
+                \_SB.MBS1
             })
             Name (TPSV, 0x0E60)
             Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
@@ -26018,20 +25986,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ37)
         {
-            Name (_HID, "QCOM05C7")  // _HID: Hardware ID
+            Name (_HID, "QCOM05C8")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.MBS1
+                    \_SB.MBS2
                 })
             }
 
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
-                \_SB.MBS1
+                \_SB.MBS2
             })
             Name (TPSV, 0x0E60)
             Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
@@ -26068,20 +26036,21 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ38)
         {
-            Name (_HID, "QCOM05C8")  // _HID: Hardware ID
+            Name (_HID, "QCOM1A64")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.MBS2
+                    \_SB.ADC1
                 })
             }
 
-            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            Name (_TZD, Package (0x02)  // _TZD: Thermal Zone Devices
             {
-                \_SB.MBS2
+                \_SB.WLTM, 
+                \_SB.MSKN
             })
             Name (TPSV, 0x0E60)
             Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature

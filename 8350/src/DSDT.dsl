@@ -12,7 +12,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
     Scope (\_SB)
     {
-        Name (PSUB, "MTP08350")
+        Name (PSUB, "AND08350")
         Name (SOID, 0xFFFFFFFF)
         Name (STOR, 0xABCABCAB)
         Name (SIDS, "899800000000000")
@@ -1676,18 +1676,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             })
             Method (_SUB, 0, NotSerialized)  // _SUB: Subsystem ID
             {
-                If ((\_SB.PSUB == "MTP08350"))
-                {
-                    Return ("MTP08350")
-                }
-                ElseIf ((\_SB.PSUB == "QRD08350"))
-                {
-                    Return ("QRD08350")
-                }
-                ElseIf ((\_SB.PSUB == "CDP08350"))
-                {
-                    Return ("CDP08350")
-                }
+                Return ("AND08350")
             }
 
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
@@ -14124,6 +14113,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Name (_CID, "QCOMFFE3")  // _CID: Compatible ID
             Name (_UID, Zero)  // _UID: Unique ID
             Alias (\_SB.PSUB, _SUB)
+            OperationRegion (GPOR, GeneralPurposeIo, Zero, One)
+            Field (\_SB.GIO0.GPOR, ByteAcc, NoLock, Preserve)
+            {
+                Connection (
+                    GpioIo (Shared, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0027
+                        }
+                ), 
+                LIDR,   1
+            }
+
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -14176,6 +14179,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     {
                         0x000002DC,
                     }
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x00000353,
+                    }
                 })
                 Return (RBUF) /* \_SB_.GIO0._CRS.RBUF */
             }
@@ -14198,43 +14205,64 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 }
             }
 
-            OperationRegion (ORHL, GeneralPurposeIo, Zero, 0x02)
-            Field (ORHL, ByteAcc, NoLock, Preserve)
+            Method (_AEI, 0, NotSerialized)  // _AEI: ACPI Event Interrupts
             {
-                Connection (
-                    GpioIo (Shared, PullUp, 0x01F4, 0x0000, IoRestrictionInputOnly,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        )
-                        {   // Pin list
-                            0x0026
-                        }
-                ), 
-                GPH0,   1
+                If ((\_SB.PLST == One))
+                {
+                    Name (RBFC, ResourceTemplate ()
+                    {
+                        GpioInt (Edge, ActiveBoth, SharedAndWake, PullNone, 0x0000,
+                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                            )
+                            {   // Pin list
+                                0x0353
+                            }
+                    })
+                    Return (RBFC) /* \_SB_.GIO0._AEI.RBFC */
+                }
+                Else
+                {
+                    Name (RBUF, ResourceTemplate ()
+                    {
+                        GpioInt (Edge, ActiveHigh, Exclusive, PullDown, 0x01F4,
+                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                            )
+                            {   // Pin list
+                                0x0002
+                            }
+                        GpioInt (Edge, ActiveBoth, SharedAndWake, PullNone, 0x0000,
+                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                            )
+                            {   // Pin list
+                                0x0353
+                            }
+                    })
+                    Return (RBUF) /* \_SB_.GIO0._AEI.RBUF */
+                }
             }
 
-            Name (_AEI, ResourceTemplate ()  // _AEI: ACPI Event Interrupts
-            {
-                GpioInt (Edge, ActiveHigh, Exclusive, PullDown, 0x01F4,
-                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                    )
-                    {   // Pin list
-                        0x0002
-                    }
-                GpioInt (Edge, ActiveBoth, Shared, PullUp, 0x01F4,
-                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                    )
-                    {   // Pin list
-                        0x0026
-                    }
-            })
             Method (_E02, 0, NotSerialized)  // _Exx: Edge-Triggered GPE, xx=0x00-0xFF
             {
-                Notify (\_SB.GPU0, 0x92) // Device-Specific
+                If ((\_SB.PLST != One))
+                {
+                    Notify (\_SB.GPU0, 0x92) // Device-Specific
+                }
             }
 
-            Method (_E26, 0, NotSerialized)  // _Exx: Edge-Triggered GPE, xx=0x00-0xFF
+            Method (_EVT, 1, NotSerialized)  // _EVT: Event
             {
-                Notify (\_SB.LID0, 0x80) // Status Change
+                While (One)
+                {
+                    Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                    _T_0 = Arg0
+                    If ((_T_0 == 0x0353))
+                    {
+                        \_SB.LID0.LIDB = \_SB.GIO0.LIDR
+                        Notify (\_SB.LID0, 0x80) // Status Change
+                    }
+
+                    Break
+                }
             }
 
             Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
@@ -14373,46 +14401,30 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             Method (_MFF, 0, NotSerialized)
             {
                 Debug = "Start SDX55 Power OFF Sequence"
-                If (((\_SB.PSUB == "MTP08350") || (\_SB.PSUB == "QRD08350")))
-                {
-                    Sleep (0x0190)
-                    Debug = "Set GPIO 6D to Low"
-                    \_SB.WWAN.MPON = Zero
-                    Debug = "Set GPIO 9D to Low"
-                    \_SB.WWAN.PMDR = Zero
-                    Sleep (0xD7)
-                    Debug = "Set GPIO 1D to Low"
-                    \_SB.WWAN.PMON = Zero
-                    Sleep (One)
-                }
-                Else
-                {
-                    Debug = "SDX55 Power OFF not supported for this form factor"
-                }
-
+                Sleep (0x0190)
+                Debug = "Set GPIO 6D to Low"
+                \_SB.WWAN.MPON = Zero
+                Debug = "Set GPIO 9D to Low"
+                \_SB.WWAN.PMDR = Zero
+                Sleep (0xD7)
+                Debug = "Set GPIO 1D to Low"
+                \_SB.WWAN.PMON = Zero
+                Sleep (One)
                 Debug = "End SDX55 Power OFF Sequence"
             }
 
             Method (_MNF, 0, NotSerialized)
             {
                 Debug = "Start SDX55 Power OFF Sequence with 3000 ms delay."
-                If (((\_SB.PSUB == "MTP08350") || (\_SB.PSUB == "QRD08350")))
-                {
-                    Sleep (0x0190)
-                    Debug = "Set GPIO 6D to Low"
-                    \_SB.WWAN.MPON = Zero
-                    Debug = "Set GPIO 9D to Low"
-                    \_SB.WWAN.PMDR = Zero
-                    Sleep (0x0BB8)
-                    Debug = "Set GPIO 1D to Low"
-                    \_SB.WWAN.PMON = Zero
-                    Sleep (One)
-                }
-                Else
-                {
-                    Debug = "SDX55 Power OFF not supported for this form factor"
-                }
-
+                Sleep (0x0190)
+                Debug = "Set GPIO 6D to Low"
+                \_SB.WWAN.MPON = Zero
+                Debug = "Set GPIO 9D to Low"
+                \_SB.WWAN.PMDR = Zero
+                Sleep (0x0BB8)
+                Debug = "Set GPIO 1D to Low"
+                \_SB.WWAN.PMON = Zero
+                Sleep (One)
                 Debug = "End SDX55 Power OFF Sequence"
             }
         }
@@ -19421,6 +19433,63 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 PS05,   1024, 
                 PS01,   1024
             }
+
+            Method (MSDR, 0, NotSerialized)
+            {
+                Return ((((\_SB.BDID == 0x08) || (\_SB.BDID == 0x0A)) || (\_SB.BDID == 0x0C)))
+            }
+
+            Method (MSDD, 0, NotSerialized)
+            {
+                Return (((((((((\_SB.BDID == One) || (
+                    \_SB.BDID == 0x02)) || (\_SB.BDID == 0x03)) || (\_SB.BDID == 0x04)) || (\_SB.BDID == 0x05)) || (\_SB.BDID == 
+                    0x06)) || (\_SB.BDID == 0x09)) || (\_SB.BDID == 0x0B)))
+            }
+
+            Method (MSDW, 0, NotSerialized)
+            {
+                Return ((\_SB.BDID == 0x06))
+            }
+
+            Method (TEV1, 0, NotSerialized)
+            {
+                Return ((\_SB.BDID == One))
+            }
+
+            Method (TE11, 0, NotSerialized)
+            {
+                Return ((\_SB.BDID == 0x02))
+            }
+
+            Method (TEV2, 0, NotSerialized)
+            {
+                Return ((\_SB.BDID == 0x03))
+            }
+
+            Method (TE21, 0, NotSerialized)
+            {
+                Return ((\_SB.BDID == 0x04))
+            }
+
+            Method (TE22, 0, NotSerialized)
+            {
+                Return (((\_SB.BDID == 0x05) || (\_SB.BDID == 0x06)))
+            }
+
+            Method (TEV3, 0, NotSerialized)
+            {
+                Return (((\_SB.BDID == 0x08) || (\_SB.BDID == 0x09)))
+            }
+
+            Method (TZDV, 0, NotSerialized)
+            {
+                Return (((\_SB.BDID == 0x0A) || (\_SB.BDID == 0x0B)))
+            }
+
+            Method (TZMP, 0, NotSerialized)
+            {
+                Return ((\_SB.BDID == 0x0C))
+            }
         }
 
         Device (GMLT)
@@ -19443,26 +19512,34 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (LID0)
         {
-            Name (_HID, EisaId ("PNP0C0D") /* Lid Device */)  // _HID: Hardware ID
-            Name (_UID, Zero)  // _UID: Unique ID
-            Name (_STA, 0x0F)  // _STA: Status
-            Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
+            Name (_HID, "PNP0C0D" /* Lid Device */)  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+            Name (_DEP, Package (0x02)  // _DEP: Dependencies
             {
-                Return (Package (0x01)
-                {
-                    \_SB.GIO0
-                })
-            }
-
+                \_SB.GIO0, 
+                \_SB.SCM0
+            })
+            Name (LIDB, One)
             Method (_LID, 0, NotSerialized)  // _LID: Lid Status
             {
-                If ((\_SB.GIO0.GPH0 == Zero))
+                Return (LIDB) /* \_SB_.LID0.LIDB */
+            }
+
+            Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
+            {
+                If (\_SB.GIO0.GABL)
                 {
-                    Return (Zero)
+                    \_SB.LID0.LIDB = \_SB.GIO0.LIDR
+                    Notify (\_SB.LID0, 0x80) // Status Change
                 }
-                Else
+            }
+
+            Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
+            {
+                If (\_SB.GIO0.GABL)
                 {
-                    Return (One)
+                    \_SB.LID0.LIDB = \_SB.GIO0.LIDR
+                    Notify (\_SB.LID0, 0x80) // Status Change
                 }
             }
         }
@@ -20154,7 +20231,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If ((BDID >= 0x07))
+                If (((TEV3 () || TZDV ()) || TZMP ()))
                 {
                     Return (Zero)
                 }
@@ -20308,7 +20385,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If ((BDID >= 0x07))
+                If (((TEV3 () || TZDV ()) || TZMP ()))
                 {
                     Return (Zero)
                 }
@@ -20462,7 +20539,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If ((BDID >= 0x07))
+                If (((TEV3 () || TZDV ()) || TZMP ()))
                 {
                     Return (Zero)
                 }
@@ -20616,7 +20693,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                If ((BDID >= 0x07))
+                If (((TEV3 () || TZDV ()) || TZMP ()))
                 {
                     Return (Zero)
                 }
@@ -24231,132 +24308,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             })
             Method (_SUB, 0, NotSerialized)  // _SUB: Subsystem ID
             {
-                If (((\_SB.PSUB == "QRD08350") && (\_SB.PLST == 0x03)))
-                {
-                    Return ("QRDR8350")
-                }
-                Else
-                {
-                    Return (\_SB.PSUB)
-                }
+                Return (\_SB.PSUB)
             }
 
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
-                Name (CRS0, ResourceTemplate ()
-                {
-                    Memory32Fixed (ReadWrite,
-                        0x808A0040,         // Address Base
-                        0x00000020,         // Address Length
-                        )
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
-                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                        RawDataBuffer (0x01)  // Vendor Data
-                        {
-                            0x01
-                        })
-                        {   // Pin list
-                            0x00FF
-                        }
-                    I2cSerialBusV2 (0x0008, ControllerInitiated, 0x00061A80,
-                        AddressingMode7Bit, "\\_SB.IC22",
-                        0x00, ResourceConsumer, , Exclusive,
-                        )
-                    I2cSerialBusV2 (0x000C, ControllerInitiated, 0x00061A80,
-                        AddressingMode7Bit, "\\_SB.IC22",
-                        0x00, ResourceConsumer, , Exclusive,
-                        )
-                })
                 Name (CRS1, ResourceTemplate ()
                 {
                     Memory32Fixed (ReadWrite,
@@ -24463,14 +24419,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             0x00FF
                         }
                 })
-                If (((\_SB.PSUB == "QRD08350") && (\_SB.PLST == 0x03)))
-                {
-                    Return (CRS0) /* \_SB_.UCS0._CRS.CRS0 */
-                }
-                Else
-                {
-                    Return (CRS1) /* \_SB_.UCS0._CRS.CRS1 */
-                }
+                Return (CRS1) /* \_SB_.UCS0._CRS.CRS1 */
             }
 
             OperationRegion (USBC, SystemMemory, 0x808A0040, 0x20)
@@ -26167,7 +26116,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
-        Name (HWNH, Zero)
+        Name (HWNH, One)
         Device (HWN1)
         {
             Name (_HID, "QCOM1A69")  // _HID: Hardware ID
@@ -26240,11 +26189,19 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
+        Name (TCSS, One)
         Device (TSPI)
         {
             Method (_HID, 0, NotSerialized)  // _HID: Hardware ID
             {
-                Return ("MSHW0162")
+                If ((TCSS == One))
+                {
+                    Return ("MSHW0162")
+                }
+                Else
+                {
+                    Return ("MSHW0134")
+                }
             }
 
             Name (_CID, "PNP0C51")  // _CID: Compatible ID

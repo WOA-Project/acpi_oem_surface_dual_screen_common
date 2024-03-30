@@ -57,7 +57,7 @@ Device (PA00)
 
     Method (_STA)
     {
-        If (BDID >= 0x07)
+        If (TEV3() || TZDV() || TZMP())
         {
             Return (0x0)
         }
@@ -172,7 +172,7 @@ Device (PA01)
 
     Method (_STA)
     {
-        If (BDID >= 0x07)
+        If (TEV3() || TZDV() || TZMP())
         {
             Return (0x0)
         }
@@ -287,7 +287,7 @@ Device (PA03)
 
     Method (_STA)
     {
-        If (BDID >= 0x07)
+        If (TEV3() || TZDV() || TZMP())
         {
             Return (0x0)
         }
@@ -402,7 +402,7 @@ Device (PA05)
 
     Method (_STA)
     {
-        If (BDID >= 0x07)
+        If (TEV3() || TZDV() || TZMP())
         {
             Return (0x0)
         }

@@ -64,4 +64,92 @@ Scope(\_SB) {
         PS05,   1024,// Pmic Sdam Block 05     // PMIC SDAM5  block from 0x7440 to 0x74BF
         PS01,   1024,// Pmic Sdam Block 01     // PMIC SDAM1  block from 0x7040 to 0x70BF
     }
+
+    //
+    // Zeta Retail Subtype
+    //
+    Method(MSDR)
+    {
+        Return (\_SB.BDID == 8 || \_SB.BDID == 10 || \_SB.BDID == 12)
+    }
+
+    //
+    // Zeta Debug Subtype
+    //
+    Method(MSDD)
+    {
+        Return (\_SB.BDID == 1 || \_SB.BDID == 2 || \_SB.BDID == 3 || \_SB.BDID == 4 || \_SB.BDID == 5 || \_SB.BDID == 6 || \_SB.BDID == 9 || \_SB.BDID == 11)
+    }
+
+    //
+    // Zeta Wi-Fi Subtype
+    //
+    Method(MSDW)
+    {
+        Return (\_SB.BDID == 6)
+    }
+
+    //
+    // Zeta EV1 Subtype
+    //
+    Method(TEV1)
+    {
+        Return (\_SB.BDID == 1)
+    }
+
+    //
+    // Zeta EV1.1 Subtype
+    //
+    Method(TE11)
+    {
+        Return (\_SB.BDID == 2)
+    }
+
+    //
+    // Zeta EV2 Subtype
+    //
+    Method(TEV2)
+    {
+        Return (\_SB.BDID == 3)
+    }
+
+    //
+    // Zeta EV2.1 Subtype
+    //
+    Method(TE21)
+    {
+        Return (\_SB.BDID == 4)
+    }
+
+    //
+    // Zeta EV2.2 Subtype
+    //
+    Method(TE22)
+    {
+        Return (\_SB.BDID == 5 || \_SB.BDID == 6)
+    }
+
+    //
+    // Zeta EV3 Subtype
+    //
+    Method(TEV3)
+    {
+        Return (\_SB.BDID == 8 || \_SB.BDID == 9)
+    }
+
+    //
+    // Zeta DV Subtype
+    //
+    Method(TZDV)
+    {
+        Return (\_SB.BDID == 10 || \_SB.BDID == 11)
+    }
+
+    //
+    // Zeta MP Subtype
+    //
+    Method(TZMP)
+    {
+        Return (\_SB.BDID == 12)
+    }
 }

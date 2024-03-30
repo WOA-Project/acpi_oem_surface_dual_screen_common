@@ -7,10 +7,9 @@
 //
 // Abstract:
 //
-//     Contains device definitions for the Qualcomm button device
-//     and Fingerprints AB FPC1020 Fingerprint Scanner over
-//     Qualcomm Secure Element Extension Communication bus
-//     (QSEECOM)
+//     Contains device definitions for the Fingerprints AB
+//     FPC1020 Fingerprint Scanner over Qualcomm Secure Element
+//     Extension Communication bus (QSEECOM)
 //
 // Environment:
 //

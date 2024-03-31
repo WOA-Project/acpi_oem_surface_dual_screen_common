@@ -26894,20 +26894,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
-        Device (TFWU)
-        {
-            Name (_HID, "MSHW0145")  // _HID: Hardware ID
-            Name (_UID, Zero)  // _UID: Unique ID
-            Name (_DEP, Package (0x01)  // _DEP: Dependencies
-            {
-                \_SB.TSPI
-            })
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (Zero)
-            }
-        }
-
         Device (BTNS)
         {
             Name (_HID, "ACPI0011" /* Generic Buttons Device */)  // _HID: Hardware ID

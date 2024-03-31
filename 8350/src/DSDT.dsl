@@ -26999,7 +26999,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 {
                     Package (0x04)
                     {
-                        "DBUS\\QCOM05D0", 
+                        "DBUS\\QCOM1AF0", 
                         Zero, 
                         0x09, 
                         One

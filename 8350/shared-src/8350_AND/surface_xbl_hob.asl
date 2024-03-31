@@ -152,4 +152,80 @@ Scope(\_SB) {
     {
         Return (\_SB.BDID == 12)
     }
+
+    OperationRegion(XPCA, SystemMemory, 0xE3401000, 0x90)
+    Field(XPCA, AnyAcc, NoLock, Preserve)
+    {
+        CBTC,   32,  // Current Boot Cycle     // (00) This variable keeps the total counts of booting of the device.
+                                               //
+                                               // [00] PMIC PON History Information Block
+        BTC0,   32,  // Boot Cycle             //      (01) If BootCycle is zero, it means this record is invalid.
+                                               //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
+                                               //      PMIC PON PON Information Block
+        S3R0,   8,   // S3 Reason              //           (02) S3Reason from SDAM5
+        F1R0,   8,   // Fault 1 Reason         //           (03) Fault1Reason from SDAM5
+        RTR0,   16,  // Reset Trigger          //           (04) ResetTrigger from SDAM5
+                                               //      PMIC PON Battery Status Block
+        SOC0,   32,  // State Of Charge        //           (05) State of Charge of battery (%)
+        IBT0,   32,  // Charge Current         //           (06) Charging Current in mA
+        VBT0,   32,  // Battery Voltage        //           (07) Battery voltage in mV
+        TBT0,   32,  // Battery Temperature    //           (08) Battery temperature in degree C
+        OCV0,   32,  // Open Circuit Voltage   //           (09) Battery Open-Circuit Voltage in mV
+                                               //
+                                               // [01] PMIC PON History Information Block
+        BTC1,   32,  // Boot Cycle             //      (10) If BootCycle is zero, it means this record is invalid.
+                                               //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
+                                               //      PMIC PON PON Information Block
+        S3R1,   8,   // S3 Reason              //           (11) S3Reason from SDAM5
+        F1R1,   8,   // Fault 1 Reason         //           (12) Fault1Reason from SDAM5
+        RTR1,   16,  // Reset Trigger          //           (13) ResetTrigger from SDAM5
+                                               //      PMIC PON Battery Status Block
+        SOC1,   32,  // State Of Charge        //           (14) State of Charge of battery (%)
+        IBT1,   32,  // Charge Current         //           (15) Charging Current in mA
+        VBT1,   32,  // Battery Voltage        //           (16) Battery voltage in mV
+        TBT1,   32,  // Battery Temperature    //           (17) Battery temperature in degree C
+        OCV1,   32,  // Open Circuit Voltage   //           (18) Battery Open-Circuit Voltage in mV
+                                               //
+                                               // [02] PMIC PON History Information Block
+        BTC2,   32,  // Boot Cycle             //      (19) If BootCycle is zero, it means this record is invalid.
+                                               //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
+                                               //      PMIC PON PON Information Block
+        S3R2,   8,   // S3 Reason              //           (20) S3Reason from SDAM5
+        F1R2,   8,   // Fault 1 Reason         //           (21) Fault1Reason from SDAM5
+        RTR2,   16,  // Reset Trigger          //           (22) ResetTrigger from SDAM5
+                                               //      PMIC PON Battery Status Block
+        SOC2,   32,  // State Of Charge        //           (23) State of Charge of battery (%)
+        IBT2,   32,  // Charge Current         //           (24) Charging Current in mA
+        VBT2,   32,  // Battery Voltage        //           (25) Battery voltage in mV
+        TBT2,   32,  // Battery Temperature    //           (26) Battery temperature in degree C
+        OCV2,   32,  // Open Circuit Voltage   //           (26) Battery Open-Circuit Voltage in mV
+                                               //
+                                               // [03] PMIC PON History Information Block
+        BTC3,   32,  // Boot Cycle             //      (28) If BootCycle is zero, it means this record is invalid.
+                                               //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
+                                               //      PMIC PON PON Information Block
+        S3R3,   8,   // S3 Reason              //           (29) S3Reason from SDAM5
+        F1R3,   8,   // Fault 1 Reason         //           (30) Fault1Reason from SDAM5
+        RTR3,   16,  // Reset Trigger          //           (31) ResetTrigger from SDAM5
+                                               //      PMIC PON Battery Status Block
+        SOC3,   32,  // State Of Charge        //           (32) State of Charge of battery (%)
+        IBT3,   32,  // Charge Current         //           (33) Charging Current in mA
+        VBT3,   32,  // Battery Voltage        //           (34) Battery voltage in mV
+        TBT3,   32,  // Battery Temperature    //           (35) Battery temperature in degree C
+        OCV3,   32,  // Open Circuit Voltage   //           (36) Battery Open-Circuit Voltage in mV
+                                               //
+                                               // [04] PMIC PON History Information Block
+        BTC4,   32,  // Boot Cycle             //      (37) If BootCycle is zero, it means this record is invalid.
+                                               //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
+                                               //      PMIC PON PON Information Block
+        S3R4,   8,   // S3 Reason              //           (38) S3Reason from SDAM5
+        F1R4,   8,   // Fault 1 Reason         //           (39) Fault1Reason from SDAM5
+        RTR4,   16,  // Reset Trigger          //           (40) ResetTrigger from SDAM5
+                                               //      PMIC PON Battery Status Block
+        SOC4,   32,  // State Of Charge        //           (41) State of Charge of battery (%)
+        IBT4,   32,  // Charge Current         //           (42) Charging Current in mA
+        VBT4,   32,  // Battery Voltage        //           (43) Battery voltage in mV
+        TBT4,   32,  // Battery Temperature    //           (44) Battery temperature in degree C
+        OCV4,   32,  // Open Circuit Voltage   //           (45) Battery Open-Circuit Voltage in mV
+    }
 }

@@ -24305,7 +24305,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                VERS = 0x0110
+                VERS = 0x0100
                 CCI = Zero
                 MSGI = Zero
                 If ((\_SB.PMGK.LKUP > Zero))
@@ -24475,10 +24475,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         ElseIf ((_T_0 == 0x03))
                         {
                             Return (Zero)
-                        }
-                        ElseIf ((_T_0 == 0x04))
-                        {
-                            Return (One)
                         }
 
                         Break

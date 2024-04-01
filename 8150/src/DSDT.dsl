@@ -57899,7 +57899,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
         Device (CDSP)
         {
-            Name (_DEP, Package (0x08)  // _DEP: Dependencies
+            Name (_DEP, Package (0x07)  // _DEP: Dependencies
             {
                 \_SB.PEP0, 
                 \_SB.PILC, 
@@ -57907,8 +57907,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 \_SB.IPC0, 
                 \_SB.RPEN, 
                 \_SB.SSDD, 
-                \_SB.ARPC, 
-                \_SB.NSPM
+                \_SB.ARPC
             })
             Name (_HID, "QCOM0523")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
@@ -71702,20 +71701,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 \_SB.ARPC
             })
             Name (_HID, "QCOM058A")  // _HID: Hardware ID
-            Alias (\_SB.PSUB, _SUB)
-        }
-
-        Device (NSPM)
-        {
-            Name (_DEP, Package (0x05)  // _DEP: Dependencies
-            {
-                \_SB.MMU0, 
-                \_SB.GLNK, 
-                \_SB.SCM0, 
-                \_SB.IMM0, 
-                \_SB.ARPC
-            })
-            Name (_HID, "QCOM05E5")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
         }
 

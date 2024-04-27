@@ -435,6 +435,29 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             }
         }
 
+        Device (PBM2)
+        {
+            Name (_HID, "QCOM0060")  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.PMGK
+            })
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, Buffer (0x02)
+                {
+                     0x79, 0x00                                       // y.
+                })
+                Return (RBUF) /* \_SB_.PBM2._CRS.RBUF */
+            }
+
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (0x0F)
+            }
+        }
+
         Device (BCL1)
         {
             Name (_HID, "QCOM1A77")  // _HID: Hardware ID
@@ -11164,7 +11187,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (ADSP)
         {
-            Name (_DEP, Package (0x07)  // _DEP: Dependencies
+            Name (_DEP, Package (0x09)  // _DEP: Dependencies
             {
                 \_SB.PEP0, 
                 \_SB.PILC, 
@@ -11172,7 +11195,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 \_SB.IPC0, 
                 \_SB.RPEN, 
                 \_SB.SSDD, 
-                \_SB.ARPC
+                \_SB.ARPC, 
+                \_SB.TFTP, 
+                \_SB.PDSR
             })
             Name (_HID, "QCOM1A1B")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
@@ -11335,13 +11360,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (AMSS)
         {
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
-            Name (_DEP, Package (0x05)  // _DEP: Dependencies
+            Name (_DEP, Package (0x09)  // _DEP: Dependencies
             {
+                \_SB.PEP0, 
                 \_SB.GLNK, 
                 \_SB.PILC, 
                 \_SB.RFS0, 
                 \_SB.RPEN, 
-                \_SB.SSDD
+                \_SB.SSDD, 
+                \_SB.IPC0, 
+                \_SB.TFTP, 
+                \_SB.PDSR
             })
             Name (_HID, "QCOM1A1C")  // _HID: Hardware ID
             Method (_STA, 0, NotSerialized)  // _STA: Status
@@ -11383,11 +11412,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         {
             Name (_HID, "QCOM1A20")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
-            Name (_DEP, Package (0x03)  // _DEP: Dependencies
+            Name (_DEP, Package (One)  // _DEP: Dependencies
             {
-                \_SB.GLNK, 
-                \_SB.PDSR, 
-                \_SB.TFTP
+                \_SB.GLNK
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
@@ -11413,7 +11440,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         Device (NSP0)
         {
-            Name (_DEP, Package (0x07)  // _DEP: Dependencies
+            Name (_DEP, Package (0x08)  // _DEP: Dependencies
             {
                 \_SB.PEP0, 
                 \_SB.PILC, 
@@ -11421,7 +11448,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 \_SB.IPC0, 
                 \_SB.RPEN, 
                 \_SB.SSDD, 
-                \_SB.ARPC
+                \_SB.ARPC, 
+                \_SB.PDSR
             })
             Name (_HID, "QCOM1AB0")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
@@ -19683,8 +19711,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             OperationRegion (XPCA, SystemMemory, 0xE3401000, 0x90)
             Field (XPCA, AnyAcc, NoLock, Preserve)
             {
-                CBTC,   32, 
-                BTC0,   32, 
+                CBOC,   32, 
+                BOC0,   32, 
                 S3R0,   8, 
                 F1R0,   8, 
                 RTR0,   16, 
@@ -19693,7 +19721,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 VBT0,   32, 
                 TBT0,   32, 
                 OCV0,   32, 
-                BTC1,   32, 
+                BOC1,   32, 
                 S3R1,   8, 
                 F1R1,   8, 
                 RTR1,   16, 
@@ -19702,7 +19730,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 VBT1,   32, 
                 TBT1,   32, 
                 OCV1,   32, 
-                BTC2,   32, 
+                BOC2,   32, 
                 S3R2,   8, 
                 F1R2,   8, 
                 RTR2,   16, 
@@ -19711,7 +19739,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 VBT2,   32, 
                 TBT2,   32, 
                 OCV2,   32, 
-                BTC3,   32, 
+                BOC3,   32, 
                 S3R3,   8, 
                 F1R3,   8, 
                 RTR3,   16, 
@@ -19720,7 +19748,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 VBT3,   32, 
                 TBT3,   32, 
                 OCV3,   32, 
-                BTC4,   32, 
+                BOC4,   32, 
                 S3R4,   8, 
                 F1R4,   8, 
                 RTR4,   16, 
@@ -19780,6 +19808,155 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 {
                     \_SB.LID0.LIDB = \_SB.GIO0.LIDR
                     Notify (\_SB.LID0, 0x80) // Status Change
+                }
+            }
+        }
+
+        Device (TPXY)
+        {
+            Name (_HID, "MSFTTPXY")  // _HID: Hardware ID
+            Alias (\_SB.PSUB, _SUB)
+            Name (_UID, Zero)  // _UID: Unique ID
+            Name (_DEP, Package (0x03)  // _DEP: Dependencies
+            {
+                \_SB.SEN2, 
+                \_SB.SEN3, 
+                \_SB.PMBM
+            })
+            Device (\_SB.TPXY.ANG0)
+            {
+                Name (_ADR, Zero)  // _ADR: Address
+            }
+
+            Device (\_SB.TPXY.RSC0)
+            {
+                Name (_ADR, One)  // _ADR: Address
+            }
+
+            Device (\_SB.TPXY.VTS0)
+            {
+                Name (_ADR, 0x02)  // _ADR: Address
+            }
+
+            Name (_CRS, ResourceTemplate ()  // _CRS: Current Resource Settings
+            {
+                GpioInt (Edge, ActiveBoth, Shared, PullNone, 0x01F4,
+                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                    )
+                    {   // Pin list
+                        0x0026
+                    }
+                GpioIo (Shared, PullNone, 0x01F4, 0x0000, IoRestrictionInputOnly,
+                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                    )
+                    {   // Pin list
+                        0x0026
+                    }
+                GpioIo (Shared, PullNone, 0x01F4, 0x0000, IoRestrictionInputOnly,
+                    "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                    )
+                    {   // Pin list
+                        0x0050
+                    }
+            })
+            Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
+            {
+                If ((Arg0 == ToUUID ("60e802c9-29f4-479a-bd42-fa5cacc0a385") /* Unknown UUID */))
+                {
+                    If ((Arg2 == Zero))
+                    {
+                        If ((Arg1 == Zero))
+                        {
+                            Return (Buffer (One)
+                            {
+                                 0x1F                                             // .
+                            })
+                        }
+                    }
+
+                    If ((Arg2 == One))
+                    {
+                        If ((Arg1 == Zero))
+                        {
+                            Name (PBUF, Package (0x2D)
+                            {
+                                "TXY0", 
+                                Zero, 
+                                Zero, 
+                                "BAT0", 
+                                One, 
+                                One, 
+                                "VTS0", 
+                                0x02, 
+                                0x02
+                            })
+                            Return (PBUF) /* \_SB_.TPXY._DSM.PBUF */
+                        }
+                    }
+
+                    If ((Arg2 == 0x02))
+                    {
+                        If ((Arg1 == Zero))
+                        {
+                            Name (CBUF, Package (One)
+                            {
+                                0x03
+                            })
+                            Return (CBUF) /* \_SB_.TPXY._DSM.CBUF */
+                        }
+                    }
+
+                    If ((Arg2 == 0x03))
+                    {
+                        If ((Arg1 == Zero))
+                        {
+                            Name (VBUF, Package (0x0E)
+                            {
+                                0x0BF7, 
+                                0x1F, 
+                                0x1E, 
+                                0x2A, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                Zero, 
+                                0x03, 
+                                0x03, 
+                                0x03
+                            })
+                            Return (VBUF) /* \_SB_.TPXY._DSM.VBUF */
+                        }
+                    }
+
+                    If ((Arg2 == 0x04))
+                    {
+                        If ((Arg1 == Zero))
+                        {
+                            Name (RBUF, Package (0x04)
+                            {
+                                0x32, 
+                                One, 
+                                0x19, 
+                                0x0A
+                            })
+                            Return (RBUF) /* \_SB_.TPXY._DSM.RBUF */
+                        }
+                    }
+
+                    Return (Buffer (One)
+                    {
+                         0x00                                             // .
+                    })
+                }
+                Else
+                {
+                    Return (Buffer (One)
+                    {
+                         0x00                                             // .
+                    })
                 }
             }
         }
@@ -20400,6 +20577,380 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             {
                 \_SB.SEN2
             })
+        }
+
+        Scope (\_SB)
+        {
+            ThermalZone (ATP0)
+            {
+                Name (_TSN, "\\_SB.TPXY.ANG0")  // _TSN: Thermal Sensor Device
+                Name (_DEP, Package (One)  // _DEP: Dependencies
+                {
+                    \_SB.TPXY.ANG0
+                })
+                Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+                {
+                    \_SB.PBM2
+                })
+                Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+                Name (_TC2, Zero)  // _TC2: Thermal Constant 2
+                Name (_TSP, 0x0258)  // _TSP: Thermal Sampling Period
+                Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+                {
+                    Return (0x0BD6)
+                }
+            }
+        }
+
+        ThermalZone (BTP0)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x64)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.PEP0
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x19)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0DCB)
+            }
+        }
+
+        ThermalZone (BTG0)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x65)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.GPU0
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x1E)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0DFD)
+            }
+        }
+
+        ThermalZone (BTU0)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x66)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.UCS0
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x0F)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0DCB)
+            }
+        }
+
+        ThermalZone (BTU1)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x67)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.UCS0
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x05)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0E2F)
+            }
+        }
+
+        ThermalZone (BTC0)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x68)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.GPU0.AVS0
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x0F)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0DCB)
+            }
+        }
+
+        ThermalZone (BTC1)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x69)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.GPU0.AVS0
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x05)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0E2F)
+            }
+        }
+
+        ThermalZone (BTD0)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x6A)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.DISP
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x0F)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0D67)
+            }
+        }
+
+        ThermalZone (BTD1)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x6B)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.DISP
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x05)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0E2F)
+            }
+        }
+
+        ThermalZone (VMX5)
+        {
+            Name (_TSN, "\\_SB.TPXY.VTS0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x4A)  // _UID: Unique ID
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.PEP0
+            })
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.VTS0
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_MTL, 0x19)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0C8B)
+            }
+        }
+
+        ThermalZone (VMX6)
+        {
+            Name (_TSN, "\\_SB.TPXY.VTS0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x4B)  // _UID: Unique ID
+            Name (_TZD, Package (0x04)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.SYSM.CLUS.CPU4, 
+                \_SB.SYSM.CLUS.CPU5, 
+                \_SB.SYSM.CLUS.CPU6, 
+                \_SB.SYSM.CLUS.CPU7
+            })
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.VTS0
+            })
+            Name (_TC1, 0x05)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x03)  // _TC2: Thermal Constant 2
+            Name (_TSP, 0x1E)  // _TSP: Thermal Sampling Period
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_MTL, One)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0C6D)
+            }
+        }
+
+        ThermalZone (VMX7)
+        {
+            Name (_TSN, "\\_SB.TPXY.VTS0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x4C)  // _UID: Unique ID
+            Name (_TZD, Package (0x04)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.SYSM.CLUS.CPU0, 
+                \_SB.SYSM.CLUS.CPU1, 
+                \_SB.SYSM.CLUS.CPU2, 
+                \_SB.SYSM.CLUS.CPU3
+            })
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.VTS0
+            })
+            Name (_TC1, 0x05)  // _TC1: Thermal Constant 1
+            Name (_TC2, One)  // _TC2: Thermal Constant 2
+            Name (_TSP, 0x1E)  // _TSP: Thermal Sampling Period
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_MTL, 0x1E)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0C81)
+            }
+        }
+
+        ThermalZone (VMX8)
+        {
+            Name (_TSN, "\\_SB.TPXY.VTS0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x4D)  // _UID: Unique ID
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.GPU0
+            })
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.VTS0
+            })
+            Name (_TC1, 0x05)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TSP, 0x1E)  // _TSP: Thermal Sampling Period
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_MTL, 0x1E)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0C77)
+            }
+        }
+
+        ThermalZone (VMX9)
+        {
+            Name (_TSN, "\\_SB.TPXY.VTS0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x4E)  // _UID: Unique ID
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.PMBM
+            })
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.VTS0
+            })
+            Name (_TC1, 0x14)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x05)  // _TC2: Thermal Constant 2
+            Name (_TSP, 0x012C)  // _TSP: Thermal Sampling Period
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_MTL, 0x05)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0C63)
+            }
+        }
+
+        ThermalZone (WTU1)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x6E)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.WLCN
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x19)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0D67)
+            }
+        }
+
+        ThermalZone (WTU0)
+        {
+            Name (_TSN, "\\_SB.TPXY.RSC0")  // _TSN: Thermal Sensor Device
+            Name (_UID, 0x6F)  // _UID: Unique ID
+            Name (_DEP, Package (One)  // _DEP: Dependencies
+            {
+                \_SB.TPXY.RSC0
+            })
+            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.WLCN
+            })
+            Name (_TC1, 0x0A)  // _TC1: Thermal Constant 1
+            Name (_TC2, 0x02)  // _TC2: Thermal Constant 2
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
+            Name (_MTL, 0x05)  // _MTL: Minimum Throttle Limit
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (0x0E2F)
+            }
         }
 
         Device (PA00)
@@ -21232,9 +21783,20 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             })
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
-                Name (RBF1, Buffer (0x02)
+                Name (RBF1, ResourceTemplate ()
                 {
-                     0x79, 0x00                                       // y.
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0032
+                        }
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionNone,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0033
+                        }
                 })
                 Return (RBF1) /* \_SB_.DISP._CRS.RBF1 */
             }
@@ -21283,6 +21845,70 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     {
                          0x00                                             // .
                     })
+                }
+            }
+        }
+
+        Device (WLCN)
+        {
+            Name (_UID, Zero)  // _UID: Unique ID
+            Name (_HID, "MSHW0163")  // _HID: Hardware ID
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    GpioIo (Exclusive, PullNone, 0x0000, 0x0000, IoRestrictionOutputOnly,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0027
+                        }
+                })
+                Return (RBUF) /* \_SB_.WLCN._CRS.RBUF */
+            }
+
+            Name (PGID, Buffer (0x0A)
+            {
+                "\\_SB.WLCN"
+            })
+            Name (DBUF, Buffer (DBFL){})
+            CreateByteField (DBUF, Zero, STAT)
+            CreateByteField (DBUF, 0x02, DVAL)
+            CreateField (DBUF, 0x18, 0xA0, DEID)
+            Method (_S1D, 0, NotSerialized)  // _S1D: S1 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_S2D, 0, NotSerialized)  // _S2D: S2 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_S3D, 0, NotSerialized)  // _S3D: S3 Device State
+            {
+                Return (0x03)
+            }
+
+            Method (_PS0, 0, NotSerialized)  // _PS0: Power State 0
+            {
+                DEID = Buffer (ESNL){}
+                DVAL = Zero
+                DEID = PGID /* \_SB_.WLCN.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.WLCN.DBUF */
+                }
+            }
+
+            Method (_PS3, 0, NotSerialized)  // _PS3: Power State 3
+            {
+                DEID = Buffer (ESNL){}
+                DVAL = 0x03
+                DEID = PGID /* \_SB_.WLCN.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.WLCN.DBUF */
                 }
             }
         }
@@ -25262,7 +25888,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ6)
         {
-            Name (_HID, "QCOM1AB7")  // _HID: Hardware ID
+            Name (_HID, "QCOM1A47")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
@@ -25338,7 +25964,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
         ThermalZone (TZ10)
         {
-            Name (_HID, "QCOM1AB6")  // _HID: Hardware ID
+            Name (_HID, "QCOM1A46")  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {

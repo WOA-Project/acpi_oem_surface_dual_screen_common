@@ -156,10 +156,10 @@ Scope(\_SB) {
     OperationRegion(XPCA, SystemMemory, 0xE3401000, 0x90)
     Field(XPCA, AnyAcc, NoLock, Preserve)
     {
-        CBTC,   32,  // Current Boot Cycle     // (00) This variable keeps the total counts of booting of the device.
+        CBOC,   32,  // Current Boot Cycle     // (00) This variable keeps the total counts of booting of the device.
                                                //
                                                // [00] PMIC PON History Information Block
-        BTC0,   32,  // Boot Cycle             //      (01) If BootCycle is zero, it means this record is invalid.
+        BOC0,   32,  // Boot Cycle             //      (01) If BootCycle is zero, it means this record is invalid.
                                                //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
                                                //      PMIC PON PON Information Block
         S3R0,   8,   // S3 Reason              //           (02) S3Reason from SDAM5
@@ -173,7 +173,7 @@ Scope(\_SB) {
         OCV0,   32,  // Open Circuit Voltage   //           (09) Battery Open-Circuit Voltage in mV
                                                //
                                                // [01] PMIC PON History Information Block
-        BTC1,   32,  // Boot Cycle             //      (10) If BootCycle is zero, it means this record is invalid.
+        BOC1,   32,  // Boot Cycle             //      (10) If BootCycle is zero, it means this record is invalid.
                                                //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
                                                //      PMIC PON PON Information Block
         S3R1,   8,   // S3 Reason              //           (11) S3Reason from SDAM5
@@ -187,7 +187,7 @@ Scope(\_SB) {
         OCV1,   32,  // Open Circuit Voltage   //           (18) Battery Open-Circuit Voltage in mV
                                                //
                                                // [02] PMIC PON History Information Block
-        BTC2,   32,  // Boot Cycle             //      (19) If BootCycle is zero, it means this record is invalid.
+        BOC2,   32,  // Boot Cycle             //      (19) If BootCycle is zero, it means this record is invalid.
                                                //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
                                                //      PMIC PON PON Information Block
         S3R2,   8,   // S3 Reason              //           (20) S3Reason from SDAM5
@@ -201,7 +201,7 @@ Scope(\_SB) {
         OCV2,   32,  // Open Circuit Voltage   //           (26) Battery Open-Circuit Voltage in mV
                                                //
                                                // [03] PMIC PON History Information Block
-        BTC3,   32,  // Boot Cycle             //      (28) If BootCycle is zero, it means this record is invalid.
+        BOC3,   32,  // Boot Cycle             //      (28) If BootCycle is zero, it means this record is invalid.
                                                //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
                                                //      PMIC PON PON Information Block
         S3R3,   8,   // S3 Reason              //           (29) S3Reason from SDAM5
@@ -215,7 +215,7 @@ Scope(\_SB) {
         OCV3,   32,  // Open Circuit Voltage   //           (36) Battery Open-Circuit Voltage in mV
                                                //
                                                // [04] PMIC PON History Information Block
-        BTC4,   32,  // Boot Cycle             //      (37) If BootCycle is zero, it means this record is invalid.
+        BOC4,   32,  // Boot Cycle             //      (37) If BootCycle is zero, it means this record is invalid.
                                                //           We can also use this BootCycle to know the gap between the CurrentBootCycle.
                                                //      PMIC PON PON Information Block
         S3R4,   8,   // S3 Reason              //           (38) S3Reason from SDAM5

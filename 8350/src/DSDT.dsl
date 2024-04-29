@@ -11373,11 +11373,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 \_SB.PDSR
             })
             Name (_HID, "QCOM1A1C")  // _HID: Hardware ID
-            Method (_STA, 0, NotSerialized)  // _STA: Status
-            {
-                Return (0x0F)
-            }
-
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {
                 Name (RBUF, ResourceTemplate ()
@@ -11589,6 +11584,19 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Scope (\_SB.NSP0)
         {
             Name (_CID, "QCOMFFE7")  // _CID: Compatible ID
+        }
+
+        Scope (\_SB.AMSS)
+        {
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (0x0F)
+            }
+
+            Method (_SUB, 0, NotSerialized)  // _SUB: Subsystem ID
+            {
+                Return (\_SB.PSUB)
+            }
         }
 
         Device (LLC)
@@ -20473,6 +20481,54 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                 })
                 Return (RBUF) /* \_SB_.VFE0._CRS.RBUF */
+            }
+        }
+
+        Device (EVA0)
+        {
+            Name (_DEP, Package (0x06)  // _DEP: Dependencies
+            {
+                \_SB.IMM0, 
+                \_SB.MMU0, 
+                \_SB.PEP0, 
+                \_SB.PILC, 
+                \_SB.TREE, 
+                \_SB.PMIC
+            })
+            Name (_HID, "QCOM0CF1")  // _HID: Hardware ID
+            Name (_UID, 0x1E)  // _UID: Unique ID
+            Alias (\_SB.PSUB, _SUB)
+            Method (_STA, 0, NotSerialized)  // _STA: Status
+            {
+                Return (0x0F)
+            }
+
+            Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
+            {
+                Name (RBUF, ResourceTemplate ()
+                {
+                    Interrupt (ResourceConsumer, Level, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x0000010A,
+                    }
+                    Memory32Fixed (ReadWrite,
+                        0x0AB00000,         // Address Base
+                        0x00100000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x000B0088,         // Address Base
+                        0x00000000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x00400000,         // Address Base
+                        0x00100000,         // Address Length
+                        )
+                    Memory32Fixed (ReadWrite,
+                        0x00110000,         // Address Base
+                        0x00040000,         // Address Length
+                        )
+                })
+                Return (RBUF) /* \_SB_.EVA0._CRS.RBUF */
             }
         }
 

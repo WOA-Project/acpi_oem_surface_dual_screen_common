@@ -18,6 +18,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
     External (_SB_.TZ52.TTC1, UnknownObj)
     External (_SB_.TZ52.TTC2, UnknownObj)
     External (_SB_.TZ52.TTSP, UnknownObj)
+    External (_SB_.UBF0.PRT0, UnknownObj)
+    External (_SB_.UBF0.PRT1, UnknownObj)
 
     Scope (\_SB)
     {
@@ -2868,7 +2870,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         "DEVICE", 
                         0x82, 
                         "\\_SB.GPU0", 
-                        Package (0x0B)
+                        Package (0x0C)
                         {
                             "COMPONENT", 
                             Zero, 
@@ -2876,7 +2878,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "FSTATE", 
                                 Zero, 
-                                Package (0x13)
+                                Package (0x0E)
                                 {
                                     "EXIT", 
                                     Package (0x02)
@@ -2929,16 +2931,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "mdss_0_disp_cc_xo_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_edp3_phy_clkref_en", 
                                             One
                                         }
                                     }, 
@@ -3005,16 +2997,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_rscc_ahb_clk", 
                                             One
                                         }
@@ -3025,37 +3007,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_dptx3_pixel0_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx3_link_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx3_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx3_link_intf_clk", 
+                                            "mdss_0_disp_cc_mdss_ahb_clk", 
                                             One
                                         }
                                     }, 
@@ -3114,7 +3066,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 "PSTATE_SET", 
                                 One, 
-                                Package (0x0C)
+                                Package (0x08)
                                 {
                                     "PSTATE", 
                                     Zero, 
@@ -3169,16 +3121,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_ahb_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
                                             "mdss_0_disp_cc_mdss_rscc_ahb_clk", 
                                             One
                                         }
@@ -3189,37 +3131,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         "CLOCK", 
                                         Package (0x02)
                                         {
-                                            "mdss_0_disp_cc_mdss_dptx3_pixel0_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx3_link_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx3_aux_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "mdss_0_disp_cc_mdss_dptx3_link_intf_clk", 
+                                            "mdss_0_disp_cc_mdss_ahb_clk", 
                                             One
                                         }
                                     }
@@ -3343,6 +3255,72 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                     "PRELOAD_PSTATE", 
                                     Zero
                                 }
+                            }, 
+
+                            Package (0x04)
+                            {
+                                "PSTATE_SET", 
+                                0x05, 
+                                Package (0x07)
+                                {
+                                    "PSTATE", 
+                                    Zero, 
+                                    Package (0x02)
+                                    {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "mdss_0_disp_cc_mdss_rscc_ahb_clk", 
+                                            0x02
+                                        }
+                                    }, 
+
+                                    Package (0x02)
+                                    {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "mdss_0_disp_cc_mdss_ahb_clk", 
+                                            0x02
+                                        }
+                                    }, 
+
+                                    Package (0x02)
+                                    {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "gcc_disp_xo_clk", 
+                                            0x02
+                                        }
+                                    }, 
+
+                                    Package (0x02)
+                                    {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "gcc_disp_ahb_clk", 
+                                            0x02
+                                        }
+                                    }, 
+
+                                    Package (0x02)
+                                    {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "mdss_0_disp_cc_xo_clk", 
+                                            0x02
+                                        }
+                                    }
+                                }, 
+
+                                Package (0x02)
+                                {
+                                    "PRELOAD_PSTATE", 
+                                    Zero
+                                }
                             }
                         }
                     }
@@ -3426,6 +3404,16 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
                                     Package (0x02)
                                     {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "gcc_edp2_phy_clkref_en", 
+                                            One
+                                        }
+                                    }, 
+
+                                    Package (0x02)
+                                    {
                                         "FOOTSWITCH", 
                                         Package (0x03)
                                         {
@@ -3477,16 +3465,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "gcc_disp_sf_axi_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_edp2_phy_clkref_en", 
                                             One
                                         }
                                     }, 
@@ -4176,6 +4154,26 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
                                     Package (0x02)
                                     {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "gcc_edp0_phy_clkref_en", 
+                                            One
+                                        }
+                                    }, 
+
+                                    Package (0x02)
+                                    {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "gcc_top_edp0_phy_clkref_en", 
+                                            One
+                                        }
+                                    }, 
+
+                                    Package (0x02)
+                                    {
                                         "FOOTSWITCH", 
                                         Package (0x03)
                                         {
@@ -4257,26 +4255,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "gcc_usb30_prim_sleep_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_edp0_phy_clkref_en", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_top_edp0_phy_clkref_en", 
                                             One
                                         }
                                     }, 
@@ -5649,6 +5627,26 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
                                     Package (0x02)
                                     {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "gcc_edp1_phy_clkref_en", 
+                                            One
+                                        }
+                                    }, 
+
+                                    Package (0x02)
+                                    {
+                                        "CLOCK", 
+                                        Package (0x02)
+                                        {
+                                            "gcc_top_edp1_phy_clkref_en", 
+                                            One
+                                        }
+                                    }, 
+
+                                    Package (0x02)
+                                    {
                                         "FOOTSWITCH", 
                                         Package (0x03)
                                         {
@@ -5730,26 +5728,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                         Package (0x02)
                                         {
                                             "gcc_usb30_sec_sleep_clk", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_top_edp1_phy_clkref_en", 
-                                            One
-                                        }
-                                    }, 
-
-                                    Package (0x02)
-                                    {
-                                        "CLOCK", 
-                                        Package (0x02)
-                                        {
-                                            "gcc_edp1_phy_clkref_en", 
                                             One
                                         }
                                     }, 
@@ -10301,6 +10279,14 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     }
                 }
             })
+        }
+
+        Scope (\_SB.PEP0)
+        {
+        }
+
+        Scope (\_SB.PEP0)
+        {
         }
 
         Scope (\_SB.PEP0)
@@ -14858,6 +14844,94 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 }
             }
 
+            Name (PGID, Buffer (0x0A)
+            {
+                "\\_SB.PCI0"
+            })
+            Name (DBUF, Buffer (DBFL){})
+            CreateByteField (DBUF, Zero, STAT)
+            CreateByteField (DBUF, 0x02, DVAL)
+            CreateField (DBUF, 0x18, 0xA0, DEID)
+            Method (OPRG, 1, Serialized)
+            {
+                DEID = Buffer (ESNL){}
+                Debug = Arg0
+                DVAL = Arg0
+                DEID = PGID /* \_SB_.PCI0.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.PCI0.DBUF */
+                }
+            }
+
+            Method (_RMV, 0, Serialized)  // _RMV: Removal Status
+            {
+                Return (One)
+            }
+
+            Method (_OST, 3, Serialized)  // _OST: OSPM Status Indication
+            {
+                Debug = "In _OST of PCI0"
+                While (One)
+                {
+                    Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                    _T_0 = ToInteger (Arg0)
+                    If ((_T_0 == 0x0103))
+                    {
+                        Debug = "In _OST, Ejection Processing"
+                        While (One)
+                        {
+                            Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_1 = ToInteger (Arg1)
+                            If ((_T_1 == Zero))
+                            {
+                                Debug = "In PCI0 _OST, Ejection Success"
+                                Notify (\_SB.PCI0, 0x03) // Eject Request
+                            }
+                            ElseIf ((Match (Package (0x04)
+                                            {
+                                                0x80, 
+                                                0x81, 
+                                                0x82, 
+                                                0x83
+                                            }, MEQ, _T_1, MTR, 0x00, 0x00) != Ones))
+                            {
+                                Debug = "In PCI0 _OST, Ejection Failure"
+                            }
+                            ElseIf ((_T_1 == 0x84))
+                            {
+                                Debug = "In PCI0 _OST, Ejection Pending"
+                            }
+
+                            Break
+                        }
+                    }
+                    ElseIf ((_T_0 == 0x0200))
+                    {
+                        Debug = "In PCI0 _OST, Insertion Processing"
+                        While (One)
+                        {
+                            Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_2 = ToInteger (Arg1)
+                            If ((_T_2 == Zero))
+                            {
+                                Debug = "In PCI0 _OST, Insertion Success"
+                                Notify (\_SB.PCI0, Zero) // Bus Check
+                            }
+
+                            Break
+                        }
+                    }
+
+                    Break
+                }
+            }
+
+            Method (_CBA, 0, NotSerialized)  // _CBA: Configuration Base Address
+            {
+                Return (0x0000000700000000)
+            }
+
             Method (_PSC, 0, NotSerialized)  // _PSC: Power State Current
             {
                 Return (Zero)
@@ -14868,13 +14942,27 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 Name (RBUF, ResourceTemplate ()
                 {
                     Memory32Fixed (ReadWrite,
-                        0x60300000,         // Address Base
-                        0x01D00000,         // Address Length
+                        0x60000000,         // Address Base
+                        0x02000000,         // Address Length
                         )
+                    QWordMemory (ResourceProducer, PosDecode, MinFixed, MaxFixed, NonCacheable, ReadWrite,
+                        0x0000000000000000, // Granularity
+                        0x0000000710000000, // Range Minimum
+                        0x000000071FFFFFFF, // Range Maximum
+                        0x0000000000000000, // Translation Offset
+                        0x0000000010000000, // Length
+                        ,, , AddressRangeMemory, TypeStatic)
+                    QWordMemory (ResourceProducer, PosDecode, MinFixed, MaxFixed, Prefetchable, ReadWrite,
+                        0x0000000000000000, // Granularity
+                        0x0000000720000000, // Range Minimum
+                        0x000000073FFFFFFF, // Range Maximum
+                        0x0000000000000000, // Translation Offset
+                        0x0000000020000000, // Length
+                        ,, , AddressRangeMemory, TypeStatic)
                     WordBusNumber (ResourceProducer, MinFixed, MaxFixed, PosDecode,
                         0x0000,             // Granularity
                         0x0000,             // Range Minimum
-                        0x0001,             // Range Maximum
+                        0x00FF,             // Range Maximum
                         0x0000,             // Translation Offset
                         0x0002,             // Length
                         ,, )
@@ -15088,7 +15176,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     \_SB.R0RR
                 })
                 Name (_S0W, 0x04)  // _S0W: S0 Device Wake State
-                Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
+                Name (_DSD, Package (0x06)  // _DSD: Device-Specific Data
                 {
                     ToUUID ("6211e2c0-58a3-4af3-90e1-927a4e0c55a4") /* Unknown UUID */, 
                     Package (0x01)
@@ -15098,8 +15186,44 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "HotPlugSupportInD3", 
                             One
                         }
+                    }, 
+
+                    ToUUID ("efcc06cc-73ac-4bc3-bff0-76143807c389") /* Unknown UUID */, 
+                    Package (0x02)
+                    {
+                        Package (0x02)
+                        {
+                            "ExternalFacingPort", 
+                            One
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "UID", 
+                            Zero
+                        }
+                    }, 
+
+                    ToUUID ("daffd814-6eba-4d8c-8a91-bc9bbf4aa301") /* Device Properties for _DSD */, 
+                    Package (0x02)
+                    {
+                        Package (0x02)
+                        {
+                            "usb4-host-interface", 
+                            \_SB.UBF0.PRT0
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "usb4-port-number", 
+                            Zero
+                        }
                     }
                 })
+                Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
+                {
+                }
+
                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
                 {
                     Name (RBF0, ResourceTemplate ()
@@ -15197,7 +15321,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         Device (QPPX)
         {
             Name (_HID, "QCOM1A96")  // _HID: Hardware ID
-            Name (_CID, "QCOMFFE2")  // _CID: Compatible ID
+            Name (_CID, "QCOMFFE4")  // _CID: Compatible ID
             Name (_UID, Zero)  // _UID: Unique ID
             Name (_CCA, Zero)  // _CCA: Cache Coherency Attribute
             Alias (\_SB.PSUB, _SUB)
@@ -15289,6 +15413,62 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     Zero, 
                     Zero
                 })
+            }
+
+            Method (_HPX, 2, Serialized)  // _HPX: Hot Plug Parameter Extensions
+            {
+                While (One)
+                {
+                    Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                    _T_0 = ToInteger (Arg0)
+                    If ((_T_0 == Zero))
+                    {
+                        \_SB.PCI0.OPRG (Arg1)
+                    }
+                    ElseIf ((_T_0 == One))
+                    {
+                        \_SB.PCI1.OPRG (Arg1)
+                    }
+
+                    Break
+                }
+            }
+
+            Method (_HPE, 2, Serialized)
+            {
+                While (One)
+                {
+                    Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                    _T_0 = ToInteger (Arg0)
+                    If ((_T_0 == Zero))
+                    {
+                        If ((Arg1 == Zero))
+                        {
+                            PRP0 = One
+                            Notify (\_SB.PCI0, Zero) // Bus Check
+                        }
+                        Else
+                        {
+                            PRP0 = 0xFFFFFFFF
+                            Notify (\_SB.PCI0, One) // Device Check
+                        }
+                    }
+                    ElseIf ((_T_0 == One))
+                    {
+                        If ((Arg1 == Zero))
+                        {
+                            PRP1 = One
+                            Notify (\_SB.PCI1, Zero) // Bus Check
+                        }
+                        Else
+                        {
+                            PRP1 = 0xFFFFFFFF
+                            Notify (\_SB.PCI1, One) // Device Check
+                        }
+                    }
+
+                    Break
+                }
             }
 
             Name (GWLE, ResourceTemplate ()
@@ -15400,6 +15580,94 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 }
             }
 
+            Name (PGID, Buffer (0x0A)
+            {
+                "\\_SB.PCI1"
+            })
+            Name (DBUF, Buffer (DBFL){})
+            CreateByteField (DBUF, Zero, STAT)
+            CreateByteField (DBUF, 0x02, DVAL)
+            CreateField (DBUF, 0x18, 0xA0, DEID)
+            Method (OPRG, 1, Serialized)
+            {
+                DEID = Buffer (ESNL){}
+                Debug = Arg0
+                DVAL = Arg0
+                DEID = PGID /* \_SB_.PCI1.PGID */
+                If (\_SB.ABD.AVBL)
+                {
+                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.PCI1.DBUF */
+                }
+            }
+
+            Method (_RMV, 0, Serialized)  // _RMV: Removal Status
+            {
+                Return (One)
+            }
+
+            Method (_OST, 3, Serialized)  // _OST: OSPM Status Indication
+            {
+                Debug = "In _OST of PCI1"
+                While (One)
+                {
+                    Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                    _T_0 = ToInteger (Arg0)
+                    If ((_T_0 == 0x0103))
+                    {
+                        Debug = "In _OST, Ejection Processing"
+                        While (One)
+                        {
+                            Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_1 = ToInteger (Arg1)
+                            If ((_T_1 == Zero))
+                            {
+                                Debug = "In PCI1 _OST, Ejection Success"
+                                Notify (\_SB.PCI1, 0x03) // Eject Request
+                            }
+                            ElseIf ((Match (Package (0x04)
+                                            {
+                                                0x80, 
+                                                0x81, 
+                                                0x82, 
+                                                0x83
+                                            }, MEQ, _T_1, MTR, 0x00, 0x00) != Ones))
+                            {
+                                Debug = "In PCI1 _OST, Ejection Failure"
+                            }
+                            ElseIf ((_T_1 == 0x84))
+                            {
+                                Debug = "In PCI1 _OST, Ejection Pending"
+                            }
+
+                            Break
+                        }
+                    }
+                    ElseIf ((_T_0 == 0x0200))
+                    {
+                        Debug = "In PCI1 _OST, Insertion Processing"
+                        While (One)
+                        {
+                            Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_2 = ToInteger (Arg1)
+                            If ((_T_2 == Zero))
+                            {
+                                Debug = "In PCI1 _OST, Insertion Success"
+                                Notify (\_SB.PCI1, Zero) // Bus Check
+                            }
+
+                            Break
+                        }
+                    }
+
+                    Break
+                }
+            }
+
+            Method (_CBA, 0, NotSerialized)  // _CBA: Configuration Base Address
+            {
+                Return (0x0000000600000000)
+            }
+
             Method (_PSC, 0, NotSerialized)  // _PSC: Power State Current
             {
                 Return (Zero)
@@ -15410,13 +15678,27 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 Name (RBUF, ResourceTemplate ()
                 {
                     Memory32Fixed (ReadWrite,
-                        0x40300000,         // Address Base
-                        0x01D00000,         // Address Length
+                        0x40000000,         // Address Base
+                        0x02000000,         // Address Length
                         )
+                    QWordMemory (ResourceProducer, PosDecode, MinFixed, MaxFixed, NonCacheable, ReadWrite,
+                        0x0000000000000000, // Granularity
+                        0x0000000610000000, // Range Minimum
+                        0x000000061FFFFFFF, // Range Maximum
+                        0x0000000000000000, // Translation Offset
+                        0x0000000010000000, // Length
+                        ,, , AddressRangeMemory, TypeStatic)
+                    QWordMemory (ResourceProducer, PosDecode, MinFixed, MaxFixed, Prefetchable, ReadWrite,
+                        0x0000000000000000, // Granularity
+                        0x0000000620000000, // Range Minimum
+                        0x000000063FFFFFFF, // Range Maximum
+                        0x0000000000000000, // Translation Offset
+                        0x0000000020000000, // Length
+                        ,, , AddressRangeMemory, TypeStatic)
                     WordBusNumber (ResourceProducer, MinFixed, MaxFixed, PosDecode,
                         0x0000,             // Granularity
                         0x0000,             // Range Minimum
-                        0x0001,             // Range Maximum
+                        0x00FF,             // Range Maximum
                         0x0000,             // Translation Offset
                         0x0002,             // Length
                         ,, )
@@ -15630,7 +15912,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     \_SB.R1RR
                 })
                 Name (_S0W, 0x04)  // _S0W: S0 Device Wake State
-                Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
+                Name (_DSD, Package (0x06)  // _DSD: Device-Specific Data
                 {
                     ToUUID ("6211e2c0-58a3-4af3-90e1-927a4e0c55a4") /* Unknown UUID */, 
                     Package (0x01)
@@ -15640,8 +15922,44 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "HotPlugSupportInD3", 
                             One
                         }
+                    }, 
+
+                    ToUUID ("efcc06cc-73ac-4bc3-bff0-76143807c389") /* Unknown UUID */, 
+                    Package (0x02)
+                    {
+                        Package (0x02)
+                        {
+                            "ExternalFacingPort", 
+                            One
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "UID", 
+                            One
+                        }
+                    }, 
+
+                    ToUUID ("daffd814-6eba-4d8c-8a91-bc9bbf4aa301") /* Device Properties for _DSD */, 
+                    Package (0x02)
+                    {
+                        Package (0x02)
+                        {
+                            "usb4-host-interface", 
+                            \_SB.UBF0.PRT1
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "usb4-port-number", 
+                            One
+                        }
                     }
                 })
+                Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
+                {
+                }
+
                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
                 {
                     Name (RBUF, ResourceTemplate ()

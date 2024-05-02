@@ -79299,7 +79299,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
         Device (CFSA)
         {
-            Name (_HID, "FSA4480")  // _HID: Hardware ID
+            Name (_HID, "FSA04480")  // _HID: Hardware ID
             Alias (\_SB.PSUB, _SUB)
             Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
             {

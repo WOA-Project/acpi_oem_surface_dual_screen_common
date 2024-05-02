@@ -8839,12 +8839,77 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                 }
                             }, 
 
-                            Package (0x03)
+                            Package (0x08)
                             {
                                 "PSTATE", 
                                 0x14, 
                                 Package (0x02)
                                 {
+                                    "PMICVREGVOTE", 
+                                    Package (0x06)
+                                    {
+                                        "PPP_RESOURCE_ID_LDO9_C", 
+                                        One, 
+                                        Zero, 
+                                        Zero, 
+                                        Zero, 
+                                        Zero
+                                    }
+                                }, 
+
+                                Package (0x02)
+                                {
+                                    "PMICVREGVOTE", 
+                                    Package (0x06)
+                                    {
+                                        "PPP_RESOURCE_ID_LDO6_C", 
+                                        One, 
+                                        Zero, 
+                                        Zero, 
+                                        Zero, 
+                                        Zero
+                                    }
+                                }, 
+
+                                Package (0x02)
+                                {
+                                    "DELAY", 
+                                    Package (0x01)
+                                    {
+                                        0x23
+                                    }
+                                }, 
+
+                                Package (0x02)
+                                {
+                                    "PMICVREGVOTE", 
+                                    Package (0x06)
+                                    {
+                                        "PPP_RESOURCE_ID_LDO9_C", 
+                                        One, 
+                                        0x002D2A80, 
+                                        One, 
+                                        0x07, 
+                                        Zero
+                                    }
+                                }, 
+
+                                Package (0x02)
+                                {
+                                    "PMICVREGVOTE", 
+                                    Package (0x06)
+                                    {
+                                        "PPP_RESOURCE_ID_LDO6_C", 
+                                        One, 
+                                        0x002D0370, 
+                                        One, 
+                                        0x07, 
+                                        Zero
+                                    }
+                                }, 
+
+                                Package (0x02)
+                                {
                                     "DELAY", 
                                     Package (0x01)
                                     {
@@ -8853,24 +8918,24 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                 }
                             }, 
 
-                            Package (0x03)
+                            Package (0x04)
                             {
                                 "PSTATE", 
                                 0x15, 
                                 Package (0x02)
                                 {
-                                    "DELAY", 
-                                    Package (0x01)
+                                    "PMICVREGVOTE", 
+                                    Package (0x06)
                                     {
-                                        0x23
+                                        "PPP_RESOURCE_ID_LDO6_C", 
+                                        One, 
+                                        0x001B7740, 
+                                        One, 
+                                        0x07, 
+                                        Zero
                                     }
-                                }
-                            }, 
+                                }, 
 
-                            Package (0x03)
-                            {
-                                "PSTATE", 
-                                0x16, 
                                 Package (0x02)
                                 {
                                     "DELAY", 
@@ -8881,10 +8946,80 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                 }
                             }, 
 
-                            Package (0x03)
+                            Package (0x05)
+                            {
+                                "PSTATE", 
+                                0x16, 
+                                Package (0x02)
+                                {
+                                    "PMICVREGVOTE", 
+                                    Package (0x06)
+                                    {
+                                        "PPP_RESOURCE_ID_LDO9_C", 
+                                        One, 
+                                        0x002D2A80, 
+                                        One, 
+                                        0x07, 
+                                        Zero
+                                    }
+                                }, 
+
+                                Package (0x02)
+                                {
+                                    "PMICVREGVOTE", 
+                                    Package (0x06)
+                                    {
+                                        "PPP_RESOURCE_ID_LDO6_C", 
+                                        One, 
+                                        0x002D0370, 
+                                        One, 
+                                        0x07, 
+                                        Zero
+                                    }
+                                }, 
+
+                                Package (0x02)
+                                {
+                                    "DELAY", 
+                                    Package (0x01)
+                                    {
+                                        0x23
+                                    }
+                                }
+                            }, 
+
+                            Package (0x05)
                             {
                                 "PSTATE", 
                                 0x17, 
+                                Package (0x02)
+                                {
+                                    "PMICVREGVOTE", 
+                                    Package (0x06)
+                                    {
+                                        "PPP_RESOURCE_ID_LDO9_C", 
+                                        One, 
+                                        Zero, 
+                                        Zero, 
+                                        Zero, 
+                                        Zero
+                                    }
+                                }, 
+
+                                Package (0x02)
+                                {
+                                    "PMICVREGVOTE", 
+                                    Package (0x06)
+                                    {
+                                        "PPP_RESOURCE_ID_LDO6_C", 
+                                        One, 
+                                        Zero, 
+                                        Zero, 
+                                        Zero, 
+                                        Zero
+                                    }
+                                }, 
+
                                 Package (0x02)
                                 {
                                     "DELAY", 
@@ -8900,53 +9035,22 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         {
                             "PSTATE_SET", 
                             One, 
-                            Package (0x03)
+                            Package (0x02)
                             {
                                 "PSTATE", 
-                                Zero, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x02)
-                                    {
-                                        "gcc_sdcc2_apps_clk", 
-                                        0x02
-                                    }
-                                }
+                                Zero
                             }, 
 
-                            Package (0x03)
+                            Package (0x02)
                             {
                                 "PSTATE", 
-                                One, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x04)
-                                    {
-                                        "gcc_sdcc2_apps_clk", 
-                                        0x08, 
-                                        0x05F5E100, 
-                                        0x02
-                                    }
-                                }
+                                One
                             }, 
 
-                            Package (0x03)
+                            Package (0x02)
                             {
                                 "PSTATE", 
-                                0x02, 
-                                Package (0x02)
-                                {
-                                    "CLOCK", 
-                                    Package (0x04)
-                                    {
-                                        "gcc_sdcc2_apps_clk", 
-                                        0x08, 
-                                        0x0C0A4680, 
-                                        0x02
-                                    }
-                                }
+                                0x02
                             }
                         }, 
 
@@ -9120,7 +9224,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x06)
+                    Package (0x07)
                     {
                         "DSTATE", 
                         Zero, 
@@ -9131,6 +9235,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 Zero, 
                                 0x16
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "TLMMPORT", 
+                            Package (0x03)
+                            {
+                                0x001CF000, 
+                                0x7FFF, 
+                                0x1FE4
                             }
                         }, 
 
@@ -9165,7 +9280,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x06)
+                    Package (0x07)
                     {
                         "DSTATE", 
                         0x03, 
@@ -9196,6 +9311,17 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             {
                                 0x02, 
                                 0x02
+                            }
+                        }, 
+
+                        Package (0x02)
+                        {
+                            "TLMMPORT", 
+                            Package (0x03)
+                            {
+                                0x001CF000, 
+                                0x7FFF, 
+                                0x0A00
                             }
                         }, 
 

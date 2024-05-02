@@ -29,7 +29,7 @@
 //
 Device (CFSA)
 {
-    Name (_HID, "FSA4480")
+    Name (_HID, "FSA04480")
     Alias(\_SB.PSUB, _SUB)
 
     Method (_CRS, 0x0, NotSerialized)

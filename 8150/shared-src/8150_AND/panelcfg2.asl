@@ -106,7 +106,7 @@ Name (PCF2,
         <DSICmdUsingTrigger>False</DSICmdUsingTrigger>
         <DSIInitMasterTime>120</DSIInitMasterTime>
         <DSIEnterULPSPowerDown>False</DSIEnterULPSPowerDown>
-        <DSIBitClockFrequency>500000000</DSIBitClockFrequency>
+        <DSIBitClockFrequency>412000000</DSIBitClockFrequency>
         <DisplayPrimaryFlags>0x00000009</DisplayPrimaryFlags>
         <DisplayPowerSavingOverride>2</DisplayPowerSavingOverride>
         <DSIClockHSForceRequest>1</DSIClockHSForceRequest>

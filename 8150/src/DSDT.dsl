@@ -389,7 +389,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Name (_DEP, Package (0x03)  // _DEP: Dependencies
             {
                 \_SB.PMIC, 
-                \_SB.ADC1, 
+                \_SB.ADC2, 
                 \_SB.PEIC
             })
             Method (_STA, 0, NotSerialized)  // _STA: Status
@@ -1499,7 +1499,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                             Break
                         }
                     }
-                    ElseIf ((_T_0 == 0x11))
+                    ElseIf ((_T_0 == 0x12))
                     {
                         While (One)
                         {
@@ -1509,67 +1509,13 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                             {
                                 If (Arg2)
                                 {
-                                    \_SB.TZ17.TPSV = Arg1
-                                    Notify (\_SB.TZ17, 0x81) // Thermal Trip Point Change
-                                }
-
-                                Return (\_SB.TZ17._PSV ())
-                            }
-                            ElseIf ((_T_8 == 0x02))
-                            {
-                                If (Arg2)
-                                {
-                                    \_SB.TZ17.TTSP = Arg1
-                                    Notify (\_SB.TZ17, 0x81) // Thermal Trip Point Change
-                                }
-
-                                Return (\_SB.TZ17._TSP ())
-                            }
-                            ElseIf ((_T_8 == 0x03))
-                            {
-                                If (Arg2)
-                                {
-                                    \_SB.TZ17.TTC1 = Arg1
-                                    Notify (\_SB.TZ17, 0x81) // Thermal Trip Point Change
-                                }
-
-                                Return (\_SB.TZ17._TC1 ())
-                            }
-                            ElseIf ((_T_8 == 0x04))
-                            {
-                                If (Arg2)
-                                {
-                                    \_SB.TZ17.TTC2 = Arg1
-                                    Notify (\_SB.TZ17, 0x81) // Thermal Trip Point Change
-                                }
-
-                                Return (\_SB.TZ17._TC2 ())
-                            }
-                            Else
-                            {
-                                Return (0xFFFF)
-                            }
-
-                            Break
-                        }
-                    }
-                    ElseIf ((_T_0 == 0x12))
-                    {
-                        While (One)
-                        {
-                            Name (_T_9, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_9 = ToInteger (Arg3)
-                            If ((_T_9 == Zero))
-                            {
-                                If (Arg2)
-                                {
                                     \_SB.TZ18.TPSV = Arg1
                                     Notify (\_SB.TZ18, 0x81) // Thermal Trip Point Change
                                 }
 
                                 Return (\_SB.TZ18._PSV ())
                             }
-                            ElseIf ((_T_9 == 0x02))
+                            ElseIf ((_T_8 == 0x02))
                             {
                                 If (Arg2)
                                 {
@@ -1579,7 +1525,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ18._TSP ())
                             }
-                            ElseIf ((_T_9 == 0x03))
+                            ElseIf ((_T_8 == 0x03))
                             {
                                 If (Arg2)
                                 {
@@ -1589,7 +1535,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ18._TC1 ())
                             }
-                            ElseIf ((_T_9 == 0x04))
+                            ElseIf ((_T_8 == 0x04))
                             {
                                 If (Arg2)
                                 {
@@ -1611,9 +1557,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_A, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_A = ToInteger (Arg3)
-                            If ((_T_A == Zero))
+                            Name (_T_9, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_9 = ToInteger (Arg3)
+                            If ((_T_9 == Zero))
                             {
                                 If (Arg2)
                                 {
@@ -1623,7 +1569,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ19._PSV ())
                             }
-                            ElseIf ((_T_A == One))
+                            ElseIf ((_T_9 == One))
                             {
                                 If (Arg2)
                                 {
@@ -1633,7 +1579,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ19._CRT ())
                             }
-                            ElseIf ((_T_A == 0x02))
+                            ElseIf ((_T_9 == 0x02))
                             {
                                 If (Arg2)
                                 {
@@ -1643,7 +1589,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ19._TSP ())
                             }
-                            ElseIf ((_T_A == 0x03))
+                            ElseIf ((_T_9 == 0x03))
                             {
                                 If (Arg2)
                                 {
@@ -1653,7 +1599,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ19._TC1 ())
                             }
-                            ElseIf ((_T_A == 0x04))
+                            ElseIf ((_T_9 == 0x04))
                             {
                                 If (Arg2)
                                 {
@@ -1675,9 +1621,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_B, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_B = ToInteger (Arg3)
-                            If ((_T_B == Zero))
+                            Name (_T_A, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_A = ToInteger (Arg3)
+                            If ((_T_A == Zero))
                             {
                                 If (Arg2)
                                 {
@@ -1687,7 +1633,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ20._PSV ())
                             }
-                            ElseIf ((_T_B == 0x02))
+                            ElseIf ((_T_A == 0x02))
                             {
                                 If (Arg2)
                                 {
@@ -1697,7 +1643,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ20._TSP ())
                             }
-                            ElseIf ((_T_B == 0x03))
+                            ElseIf ((_T_A == 0x03))
                             {
                                 If (Arg2)
                                 {
@@ -1707,7 +1653,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ20._TC1 ())
                             }
-                            ElseIf ((_T_B == 0x04))
+                            ElseIf ((_T_A == 0x04))
                             {
                                 If (Arg2)
                                 {
@@ -1729,9 +1675,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_C, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_C = ToInteger (Arg3)
-                            If ((_T_C == Zero))
+                            Name (_T_B, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_B = ToInteger (Arg3)
+                            If ((_T_B == Zero))
                             {
                                 If (Arg2)
                                 {
@@ -1741,7 +1687,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ21._PSV ())
                             }
-                            ElseIf ((_T_C == One))
+                            ElseIf ((_T_B == One))
                             {
                                 If (Arg2)
                                 {
@@ -1751,7 +1697,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ21._CRT ())
                             }
-                            ElseIf ((_T_C == 0x02))
+                            ElseIf ((_T_B == 0x02))
                             {
                                 If (Arg2)
                                 {
@@ -1761,7 +1707,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ21._TSP ())
                             }
-                            ElseIf ((_T_C == 0x03))
+                            ElseIf ((_T_B == 0x03))
                             {
                                 If (Arg2)
                                 {
@@ -1771,7 +1717,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ21._TC1 ())
                             }
-                            ElseIf ((_T_C == 0x04))
+                            ElseIf ((_T_B == 0x04))
                             {
                                 If (Arg2)
                                 {
@@ -1793,9 +1739,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_D, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_D = ToInteger (Arg3)
-                            If ((_T_D == Zero))
+                            Name (_T_C, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_C = ToInteger (Arg3)
+                            If ((_T_C == Zero))
                             {
                                 If (Arg2)
                                 {
@@ -1805,7 +1751,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ22._PSV ())
                             }
-                            ElseIf ((_T_D == 0x02))
+                            ElseIf ((_T_C == 0x02))
                             {
                                 If (Arg2)
                                 {
@@ -1815,7 +1761,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ22._TSP ())
                             }
-                            ElseIf ((_T_D == 0x03))
+                            ElseIf ((_T_C == 0x03))
                             {
                                 If (Arg2)
                                 {
@@ -1825,7 +1771,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ22._TC1 ())
                             }
-                            ElseIf ((_T_D == 0x04))
+                            ElseIf ((_T_C == 0x04))
                             {
                                 If (Arg2)
                                 {
@@ -1847,9 +1793,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_E, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_E = ToInteger (Arg3)
-                            If ((_T_E == Zero))
+                            Name (_T_D, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_D = ToInteger (Arg3)
+                            If ((_T_D == Zero))
                             {
                                 If (Arg2)
                                 {
@@ -1859,7 +1805,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ38._PSV ())
                             }
-                            ElseIf ((_T_E == 0x02))
+                            ElseIf ((_T_D == 0x02))
                             {
                                 If (Arg2)
                                 {
@@ -1869,7 +1815,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ38._TSP ())
                             }
-                            ElseIf ((_T_E == 0x03))
+                            ElseIf ((_T_D == 0x03))
                             {
                                 If (Arg2)
                                 {
@@ -1879,7 +1825,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ38._TC1 ())
                             }
-                            ElseIf ((_T_E == 0x04))
+                            ElseIf ((_T_D == 0x04))
                             {
                                 If (Arg2)
                                 {
@@ -1901,9 +1847,9 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     {
                         While (One)
                         {
-                            Name (_T_F, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_F = ToInteger (Arg3)
-                            If ((_T_F == Zero))
+                            Name (_T_E, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_E = ToInteger (Arg3)
+                            If ((_T_E == Zero))
                             {
                                 If (Arg2)
                                 {
@@ -1913,7 +1859,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ40._PSV ())
                             }
-                            ElseIf ((_T_F == 0x02))
+                            ElseIf ((_T_E == 0x02))
                             {
                                 If (Arg2)
                                 {
@@ -1923,7 +1869,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ40._TSP ())
                             }
-                            ElseIf ((_T_F == 0x03))
+                            ElseIf ((_T_E == 0x03))
                             {
                                 If (Arg2)
                                 {
@@ -1933,7 +1879,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
                                 Return (\_SB.TZ40._TC1 ())
                             }
-                            ElseIf ((_T_F == 0x04))
+                            ElseIf ((_T_E == 0x04))
                             {
                                 If (Arg2)
                                 {
@@ -1942,6 +1888,60 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                                 }
 
                                 Return (\_SB.TZ40._TC2 ())
+                            }
+                            Else
+                            {
+                                Return (0xFFFF)
+                            }
+
+                            Break
+                        }
+                    }
+                    ElseIf ((_T_0 == 0x2C))
+                    {
+                        While (One)
+                        {
+                            Name (_T_F, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
+                            _T_F = ToInteger (Arg3)
+                            If ((_T_F == Zero))
+                            {
+                                If (Arg2)
+                                {
+                                    \_SB.TZ44.TPSV = Arg1
+                                    Notify (\_SB.TZ44, 0x81) // Thermal Trip Point Change
+                                }
+
+                                Return (\_SB.TZ44._PSV ())
+                            }
+                            ElseIf ((_T_F == 0x02))
+                            {
+                                If (Arg2)
+                                {
+                                    \_SB.TZ44.TTSP = Arg1
+                                    Notify (\_SB.TZ44, 0x81) // Thermal Trip Point Change
+                                }
+
+                                Return (\_SB.TZ44._TSP ())
+                            }
+                            ElseIf ((_T_F == 0x03))
+                            {
+                                If (Arg2)
+                                {
+                                    \_SB.TZ44.TTC1 = Arg1
+                                    Notify (\_SB.TZ44, 0x81) // Thermal Trip Point Change
+                                }
+
+                                Return (\_SB.TZ44._TC1 ())
+                            }
+                            ElseIf ((_T_F == 0x04))
+                            {
+                                If (Arg2)
+                                {
+                                    \_SB.TZ44.TTC2 = Arg1
+                                    Notify (\_SB.TZ44, 0x81) // Thermal Trip Point Change
+                                }
+
+                                Return (\_SB.TZ44._TC2 ())
                             }
                             Else
                             {
@@ -67968,8 +67968,8 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     /* 0E48 */  0x0A, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20,  // .       
                     /* 0E50 */  0x20, 0x3C, 0x44, 0x53, 0x49, 0x42, 0x69, 0x74,  //  <DSIBit
                     /* 0E58 */  0x43, 0x6C, 0x6F, 0x63, 0x6B, 0x46, 0x72, 0x65,  // ClockFre
-                    /* 0E60 */  0x71, 0x75, 0x65, 0x6E, 0x63, 0x79, 0x3E, 0x35,  // quency>5
-                    /* 0E68 */  0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30,  // 00000000
+                    /* 0E60 */  0x71, 0x75, 0x65, 0x6E, 0x63, 0x79, 0x3E, 0x34,  // quency>4
+                    /* 0E68 */  0x31, 0x32, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30,  // 12000000
                     /* 0E70 */  0x3C, 0x2F, 0x44, 0x53, 0x49, 0x42, 0x69, 0x74,  // </DSIBit
                     /* 0E78 */  0x43, 0x6C, 0x6F, 0x63, 0x6B, 0x46, 0x72, 0x65,  // ClockFre
                     /* 0E80 */  0x71, 0x75, 0x65, 0x6E, 0x63, 0x79, 0x3E, 0x0A,  // quency>.
@@ -68657,10 +68657,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Local0 = Zero
                 CreateField (RBUF, (Local0 * 0x08), 0x20, PKHR)
                 Local0 += 0x04
-                Local1 = (Arg0 * 0x03FF)
-                Local1 /= 0xFF
-                Local2 = (Arg0 * 0x03FF)
-                Local2 /= 0xFF00
+                Local1 = (Arg0 / 0x40)
+                Local1 &= 0xFF
+                Local2 = (Arg0 / 0x40)
+                Local2 >>= 0x08
                 Local2 &= 0x03
                 CreateField (RBUF, (Local0 * 0x08), 0x08, PKCM)
                 Local0 += One
@@ -69145,7 +69145,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                     /* 0E50 */  0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x3C, 0x44,  //       <D
                     /* 0E58 */  0x53, 0x49, 0x42, 0x69, 0x74, 0x43, 0x6C, 0x6F,  // SIBitClo
                     /* 0E60 */  0x63, 0x6B, 0x46, 0x72, 0x65, 0x71, 0x75, 0x65,  // ckFreque
-                    /* 0E68 */  0x6E, 0x63, 0x79, 0x3E, 0x35, 0x30, 0x30, 0x30,  // ncy>5000
+                    /* 0E68 */  0x6E, 0x63, 0x79, 0x3E, 0x34, 0x31, 0x32, 0x30,  // ncy>4120
                     /* 0E70 */  0x30, 0x30, 0x30, 0x30, 0x30, 0x3C, 0x2F, 0x44,  // 00000</D
                     /* 0E78 */  0x53, 0x49, 0x42, 0x69, 0x74, 0x43, 0x6C, 0x6F,  // SIBitClo
                     /* 0E80 */  0x63, 0x6B, 0x46, 0x72, 0x65, 0x71, 0x75, 0x65,  // ckFreque
@@ -69833,10 +69833,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Local0 = Zero
                 CreateField (RBUF, (Local0 * 0x08), 0x20, PKHR)
                 Local0 += 0x04
-                Local1 = (Arg0 * 0x03FF)
-                Local1 /= 0xFF
-                Local2 = (Arg0 * 0x03FF)
-                Local2 /= 0xFF00
+                Local1 = (Arg0 / 0x40)
+                Local1 &= 0xFF
+                Local2 = (Arg0 / 0x40)
+                Local2 >>= 0x08
                 Local2 &= 0x03
                 CreateField (RBUF, (Local0 * 0x08), 0x08, PKCM)
                 Local0 += One
@@ -75773,7 +75773,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
         ThermalZone (AMX1)
         {
-            Name (_HID, "QCOM0562")  // _HID: Hardware ID
+            Name (_HID, "QCOM0563")  // _HID: Hardware ID
             Name (_UID, 0x14)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -75800,7 +75800,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
         ThermalZone (AMX2)
         {
-            Name (_HID, "QCOM0563")  // _HID: Hardware ID
+            Name (_HID, "QCOM0566")  // _HID: Hardware ID
             Name (_UID, 0x15)  // _UID: Unique ID
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
             {
@@ -75811,7 +75811,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.ADC1
+                    \_SB.ADC2
                 })
             }
 
@@ -75841,21 +75841,21 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
         ThermalZone (AMX4)
         {
-            Name (_HID, "QCOM0565")  // _HID: Hardware ID
+            Name (_HID, "QCOM0568")  // _HID: Hardware ID
             Name (_UID, 0x17)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.ADC1
+                    \_SB.ADC2
                 })
             }
         }
 
         ThermalZone (AMX5)
         {
-            Name (_HID, "QCOM0566")  // _HID: Hardware ID
+            Name (_HID, "QCOM0567")  // _HID: Hardware ID
             Name (_UID, 0x18)  // _UID: Unique ID
             Name (_CRT, 0x0CBA)  // _CRT: Critical Temperature
             Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
@@ -75867,7 +75867,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.ADC1
+                    \_SB.ADC2
                 })
             }
 
@@ -75883,21 +75883,21 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
 
         ThermalZone (PMOD)
         {
-            Name (_HID, "QCOM0567")  // _HID: Hardware ID
+            Name (_HID, "QCOM0562")  // _HID: Hardware ID
             Name (_UID, 0x1D)  // _UID: Unique ID
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.ADC1
+                    \_SB.ADC2
                 })
             }
         }
 
-        ThermalZone (PMI1)
+        ThermalZone (PMB1)
         {
-            Name (_HID, "QCOM0569")  // _HID: Hardware ID
+            Name (_HID, "QCOM0565")  // _HID: Hardware ID
             Name (_UID, 0x0C)  // _UID: Unique ID
             Name (_TZP, 0x012C)  // _TZP: Thermal Zone Polling
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
@@ -75905,37 +75905,22 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.ADC1
+                    \_SB.ADC2
                 })
             }
         }
 
-        ThermalZone (PMI2)
+        ThermalZone (PML1)
         {
             Name (_HID, "QCOM056A")  // _HID: Hardware ID
-            Name (_UID, 0x0D)  // _UID: Unique ID
+            Name (_UID, 0x1E)  // _UID: Unique ID
             Name (_TZP, 0x012C)  // _TZP: Thermal Zone Polling
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
                 Return (Package (0x02)
                 {
                     \_SB.PEP0, 
-                    \_SB.ADC1
-                })
-            }
-        }
-
-        ThermalZone (AUX)
-        {
-            Name (_HID, "QCOM0568")  // _HID: Hardware ID
-            Name (_UID, 0x0E)  // _UID: Unique ID
-            Name (_TZP, 0x012C)  // _TZP: Thermal Zone Polling
-            Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
-            {
-                Return (Package (0x02)
-                {
-                    \_SB.PEP0, 
-                    \_SB.ADC1
+                    \_SB.ADC3
                 })
             }
         }
@@ -80396,61 +80381,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             }
         }
 
-        ThermalZone (TZ17)
-        {
-            Name (_HID, "QCOM0562")  // _HID: Hardware ID
-            Name (_UID, 0x02)  // _UID: Unique ID
-            Name (_TZD, Package (0x01)  // _TZD: Thermal Zone Devices
-            {
-                \_SB.PEP0
-            })
-            Method (INVT, 0, NotSerialized)
-            {
-                Return (One)
-            }
-
-            Method (_MTL, 0, NotSerialized)  // _MTL: Minimum Throttle Limit
-            {
-                Return (0x3C)
-            }
-
-            Name (TPSV, 0x0B0E)
-            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
-            {
-                Return (\_SB.TZ17.TPSV)
-            }
-
-            Name (TTC1, 0x04)
-            Method (_TC1, 0, NotSerialized)  // _TC1: Thermal Constant 1
-            {
-                Return (\_SB.TZ17.TTC1)
-            }
-
-            Name (TTC2, 0x03)
-            Method (_TC2, 0, NotSerialized)  // _TC2: Thermal Constant 2
-            {
-                Return (\_SB.TZ17.TTC2)
-            }
-
-            Name (TTSP, 0x0A)
-            Method (_TSP, 0, NotSerialized)  // _TSP: Thermal Sampling Period
-            {
-                Return (\_SB.TZ17.TTSP)
-            }
-
-            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
-            Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
-            {
-                Return (Package (0x04)
-                {
-                    \_SB.PEP0, 
-                    \_SB.ADC1, 
-                    \_SB.ADC2, 
-                    \_SB.ADC3
-                })
-            }
-        }
-
         ThermalZone (TZ18)
         {
             Name (_HID, "QCOM0565")  // _HID: Hardware ID
@@ -80824,6 +80754,49 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
             Name (_UID, 0x0A)  // _UID: Unique ID
             Name (_TSP, 0x32)  // _TSP: Thermal Sampling Period
             Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+        }
+
+        ThermalZone (TZ44)
+        {
+            Name (_HID, "QCOM055B")  // _HID: Hardware ID
+            Name (_TZD, Package (0x02)  // _TZD: Thermal Zone Devices
+            {
+                \_SB.GPU0.MON0, 
+                \_SB.GPU0
+            })
+            Name (TPSV, 0x0E2E)
+            Method (_PSV, 0, NotSerialized)  // _PSV: Passive Temperature
+            {
+                Return (\_SB.TZ44.TPSV)
+            }
+
+            Name (TTC1, One)
+            Method (_TC1, 0, NotSerialized)  // _TC1: Thermal Constant 1
+            {
+                Return (\_SB.TZ44.TTC1)
+            }
+
+            Name (TTC2, 0x05)
+            Method (_TC2, 0, NotSerialized)  // _TC2: Thermal Constant 2
+            {
+                Return (\_SB.TZ44.TTC2)
+            }
+
+            Name (TTSP, 0x14)
+            Method (_TSP, 0, NotSerialized)  // _TSP: Thermal Sampling Period
+            {
+                Return (\_SB.TZ44.TTSP)
+            }
+
+            Name (_TZP, Zero)  // _TZP: Thermal Zone Polling
+            Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
+            {
+                Return (Package (0x02)
+                {
+                    \_SB.PEP0, 
+                    \_SB.BCL1
+                })
+            }
         }
 
         ThermalZone (TZ99)
@@ -83233,7 +83206,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         {
             Method (CHAN, 0, NotSerialized)
             {
-                Return (Package (0x07)
+                Return (Package (0x09)
                 {
                     Package (0x0B)
                     {
@@ -83330,6 +83303,36 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         "PA_THERM1", 
                         0x4F, 
                         0x02, 
+                        Zero, 
+                        0x02, 
+                        One, 
+                        One, 
+                        One, 
+                        0x02, 
+                        0x000186A0, 
+                        SYTB
+                    }, 
+
+                    Package (0x0B)
+                    {
+                        "SYS_THERM6", 
+                        0x53, 
+                        One, 
+                        Zero, 
+                        0x02, 
+                        One, 
+                        One, 
+                        One, 
+                        0x02, 
+                        0x000186A0, 
+                        SYTB
+                    }, 
+
+                    Package (0x0B)
+                    {
+                        "SYS_THERM7", 
+                        0x54, 
+                        One, 
                         Zero, 
                         0x02, 
                         One, 
@@ -83641,7 +83644,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         {
             Method (CHAN, 0, NotSerialized)
             {
-                Return (Package (0x04)
+                Return (Package (0x05)
                 {
                     Package (0x0B)
                     {
@@ -83693,6 +83696,21 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         "SYS_THERM6", 
                         0x4F, 
                         0x02, 
+                        Zero, 
+                        0x02, 
+                        One, 
+                        One, 
+                        One, 
+                        0x02, 
+                        0x000186A0, 
+                        SYTB
+                    }, 
+
+                    Package (0x0B)
+                    {
+                        "SYS_THERM8", 
+                        0x53, 
+                        One, 
                         Zero, 
                         0x02, 
                         One, 

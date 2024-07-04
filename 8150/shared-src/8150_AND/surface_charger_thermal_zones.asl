@@ -131,88 +131,113 @@ Scope (\_SB)
         {
             Local0 = ~19                              // -19C
             Local1 = ~9                               // -9C
-            Local2 = XCOM (Local0, Local1, Arg0, 927)
-            Local3 = YCOM (964, 927)
-            Local3 = TCOM (Local2, Local3, Local1)
+            Local2 = XCOM (Local0, Local1, Arg0, 927) // Temperature in Kelvin
+            Local3 = YCOM (964, 927)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, Local1)    // Temperature in deci C
         }
         ElseIf ((Arg0 >= 876))
         {
             Local1 = ~9                               // -9C
-            Local2 = XCOM (Local1, 0, Arg0, 876)
-            Local3 = YCOM (927, 876)
-            Local3 = TCOM (Local2, Local3, 0)
+                                                      // +0C
+            Local2 = XCOM (Local1, 0, Arg0, 876)      // Temperature in Kelvin
+            Local3 = YCOM (927, 876)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 0)         // Temperature in deci C
         }
         ElseIf ((Arg0 >= 811))
         {
-            Local2 = XCOM (0, 10, Arg0, 811)
-            Local3 = YCOM (876, 811)
-            Local3 = TCOM (Local2, Local3, 10)
+                                                      // +0C
+                                                      // +10C
+            Local2 = XCOM (0, 10, Arg0, 811)          // Temperature in Kelvin
+            Local3 = YCOM (876, 811)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 10)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 732))
         {
-            Local2 = XCOM (10, 20, Arg0, 732)
-            Local3 = YCOM (811, 732)
-            Local3 = TCOM (Local2, Local3, 20)
+                                                      // +10C
+                                                      // +20C
+            Local2 = XCOM (10, 20, Arg0, 732)         // Temperature in Kelvin
+            Local3 = YCOM (811, 732)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 20)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 645))
         {
-            Local2 = XCOM (20, 30, Arg0, 645)
-            Local3 = YCOM (732, 645)
-            Local3 = TCOM (Local2, Local3, 30)
+                                                      // +20C
+                                                      // +30C
+            Local2 = XCOM (20, 30, Arg0, 645)         // Temperature in Kelvin
+            Local3 = YCOM (732, 645)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 30)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 600))
         {
-            Local2 = XCOM (30, 35, Arg0, 600)
-            Local3 = YCOM (645, 600)
-            Local3 = TCOM (Local2, Local3, 35)
+                                                      // +30C
+                                                      // +35C
+            Local2 = XCOM (30, 35, Arg0, 600)         // Temperature in Kelvin
+            Local3 = YCOM (645, 600)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 35)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 555))
         {
-            Local2 = XCOM (35, 40, Arg0, 555)
-            Local3 = YCOM (600, 555)
-            Local3 = TCOM (Local2, Local3, 40)
+                                                      // +35C
+                                                      // +40C
+            Local2 = XCOM (35, 40, Arg0, 555)         // Temperature in Kelvin
+            Local3 = YCOM (600, 555)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 40)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 511))
         {
-            Local2 = XCOM (40, 45, Arg0, 511)
-            Local3 = YCOM (555, 511)
-            Local3 = TCOM (Local2, Local3, 45)
+                                                      // +40C
+                                                      // +45C
+            Local2 = XCOM (40, 45, Arg0, 511)         // Temperature in Kelvin
+            Local3 = YCOM (555, 511)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 45)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 468))
         {
-            Local2 = XCOM (45, 50, Arg0, 468)
-            Local3 = YCOM (511, 468)
-            Local3 = TCOM (Local2, Local3, 50)
+                                                      // +45C
+                                                      // +50C
+            Local2 = XCOM (45, 50, Arg0, 468)         // Temperature in Kelvin
+            Local3 = YCOM (511, 468)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 50)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 427))
         {
-            Local2 = XCOM (50, 55, Arg0, 427)
-            Local3 = YCOM (468, 427)
-            Local3 = TCOM (Local2, Local3, 55)
+                                                      // +50C
+                                                      // +55C
+            Local2 = XCOM (50, 55, Arg0, 427)         // Temperature in Kelvin
+            Local3 = YCOM (468, 427)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 55)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 388))
         {
-            Local2 = XCOM (55, 60, Arg0, 388)
-            Local3 = YCOM (427, 388)
-            Local3 = TCOM (Local2, Local3, 60)
+                                                      // +55C
+                                                      // +60C
+            Local2 = XCOM (55, 60, Arg0, 388)         // Temperature in Kelvin
+            Local3 = YCOM (427, 388)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 60)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 352))
         {
-            Local2 = XCOM (60, 65, Arg0, 352)
-            Local3 = YCOM (388, 352)
-            Local3 = TCOM (Local2, Local3, 65)
+                                                      // +60C
+                                                      // +65C
+            Local2 = XCOM (60, 65, Arg0, 352)         // Temperature in Kelvin
+            Local3 = YCOM (388, 352)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 65)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 319))
         {
-            Local2 = XCOM (65, 70, Arg0, 319)
-            Local3 = YCOM (352, 319)
-            Local3 = TCOM (Local2, Local3, 70)
+                                                      // +65C
+                                                      // +70C
+            Local2 = XCOM (65, 70, Arg0, 319)         // Temperature in Kelvin
+            Local3 = YCOM (352, 319)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 70)        // Temperature in deci C
         }
         ElseIf ((Arg0 >= 288))
         {
-            Local2 = XCOM (70, 75, Arg0, 288)
-            Local3 = YCOM (319, 288)
-            Local3 = TCOM (Local2, Local3, 75)
+                                                      // +70C
+                                                      // +75C
+            Local2 = XCOM (70, 75, Arg0, 288)         // Temperature in Kelvin
+            Local3 = YCOM (319, 288)                  // Modulus in Kelvin (T1 - T2), Maximum Tolerance
+            Local3 = TCOM (Local2, Local3, 75)        // Temperature in deci C
         }
         Else
         {

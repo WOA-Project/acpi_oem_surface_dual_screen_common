@@ -60,19 +60,19 @@ Scope(\_SB_.PEP0)
 
                 Package()
                 {
-                    "TLMMGPIO",                         // Identifier: PMIC GPIO. Top Level Mode Mux (TLMM)
+                    "PMICVREGVOTE",
                     Package()
                     {
-                        1,                              // Pin Number: GPIO_1
-                        1,                              // State / OutVal: 0 == Low, 1 == High
-                        0,                              // Function Select: 0 == Generic I/O Pin, non-zero == Alternate Function
-                        1,                              // Direction: 0 == Input, 1 == Output
-                        3,                              // Pull Type: 0 == No Pull, 1 == Pull Down, 2 == Keeper, 3 == Pull Up
-                        3,                              // Strength: 0 == 2 mA, 1 == 4 mA, 2 == 6 mA, 3 == 8 mA, 4 == 10 mA, 5 == 12 mA, 4 == 14 mA, 7 == 16 mA
-                    },
+                        "PPP_RESOURCE_ID_LDO9_A",           // Voltage Regulator ID
+                        1,                                  // Voltage Regulator type = LDO
+                        1200000,                            // Voltage 1.2V        : microvolts ( V )
+                        1,                                  // Enable = Enable
+                        0,                                  // Power Mode = LPM
+                        0,                                  // Head Room
+                    }
                 },
 
-                Package(){"DELAY", Package(){300}},
+                Package(){"DELAY", Package(){5}},
 
                 Package()
                 {
@@ -83,8 +83,26 @@ Scope(\_SB_.PEP0)
                         1,                              // State / OutVal: 0 == Low, 1 == High
                         0,                              // Function Select: 0 == Generic I/O Pin, non-zero == Alternate Function
                         1,                              // Direction: 0 == Input, 1 == Output
-                        3,                              // Pull Type: 0 == No Pull, 1 == Pull Down, 2 == Keeper, 3 == Pull Up
-                        3,                              // Strength: 0 == 2 mA, 1 == 4 mA, 2 == 6 mA, 3 == 8 mA, 4 == 10 mA, 5 == 12 mA, 4 == 14 mA, 7 == 16 mA
+                        0,                              // Pull Type: 0 == No Pull, 1 == Pull Down, 2 == Keeper, 3 == Pull Up
+                        0,                              // Strength: 0 == 2 mA, 1 == 4 mA, 2 == 6 mA, 3 == 8 mA, 4 == 10 mA, 5 == 12 mA, 4 == 14 mA, 7 == 16 mA
+                    },
+                },
+
+                Package(){"DELAY", Package(){2}},
+
+                Package(){"DELAY", Package(){2}},
+
+                Package()
+                {
+                    "TLMMGPIO",                         // Identifier: PMIC GPIO. Top Level Mode Mux (TLMM)
+                    Package()
+                    {
+                        1,                              // Pin Number: GPIO_1
+                        1,                              // State / OutVal: 0 == Low, 1 == High
+                        0,                              // Function Select: 0 == Generic I/O Pin, non-zero == Alternate Function
+                        1,                              // Direction: 0 == Input, 1 == Output
+                        0,                              // Pull Type: 0 == No Pull, 1 == Pull Down, 2 == Keeper, 3 == Pull Up
+                        0,                              // Strength: 0 == 2 mA, 1 == 4 mA, 2 == 6 mA, 3 == 8 mA, 4 == 10 mA, 5 == 12 mA, 4 == 14 mA, 7 == 16 mA
                     },
                 },
             },
@@ -108,28 +126,40 @@ Scope(\_SB_.PEP0)
                     "TLMMGPIO",                         // Identifier: PMIC GPIO. Top Level Mode Mux (TLMM)
                     Package()
                     {
-                        0,                              // Pin Number: GPIO_0
+                        1,                              // Pin Number: GPIO_1
                         0,                              // State / OutVal: 0 == Low, 1 == High
                         0,                              // Function Select: 0 == Generic I/O Pin, non-zero == Alternate Function
                         1,                              // Direction: 0 == Input, 1 == Output
-                        1,                              // Pull Type: 0 == No Pull, 1 == Pull Down, 2 == Keeper, 3 == Pull Up
+                        0,                              // Pull Type: 0 == No Pull, 1 == Pull Down, 2 == Keeper, 3 == Pull Up
                         0,                              // Strength: 0 == 2 mA, 1 == 4 mA, 2 == 6 mA, 3 == 8 mA, 4 == 10 mA, 5 == 12 mA, 4 == 14 mA, 7 == 16 mA
                     },
                 },
-
-                Package(){"DELAY", Package(){10}},
 
                 Package()
                 {
                     "TLMMGPIO",                         // Identifier: PMIC GPIO. Top Level Mode Mux (TLMM)
                     Package()
                     {
-                        1,                              // Pin Number: GPIO_1
+                        0,                              // Pin Number: GPIO_0
                         0,                              // State / OutVal: 0 == Low, 1 == High
                         0,                              // Function Select: 0 == Generic I/O Pin, non-zero == Alternate Function
                         1,                              // Direction: 0 == Input, 1 == Output
-                        1,                              // Pull Type: 0 == No Pull, 1 == Pull Down, 2 == Keeper, 3 == Pull Up
+                        0,                              // Pull Type: 0 == No Pull, 1 == Pull Down, 2 == Keeper, 3 == Pull Up
                         0,                              // Strength: 0 == 2 mA, 1 == 4 mA, 2 == 6 mA, 3 == 8 mA, 4 == 10 mA, 5 == 12 mA, 4 == 14 mA, 7 == 16 mA
+                    },
+                },
+
+                Package()
+                {
+                    "PMICVREGVOTE",
+                    Package()
+                    {
+                        "PPP_RESOURCE_ID_LDO9_A",           // Voltage Regulator ID
+                        1,                                  // Voltage Regulator type = LDO
+                        0,                                  // Voltage 1.2V        : microvolts ( V )
+                        0,                                  // Enable = Disable
+                        0,                                  // Power Mode = LPM
+                        0,                                  // Head Room
                     },
                 },
             }

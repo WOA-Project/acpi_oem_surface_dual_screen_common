@@ -22,12 +22,13 @@
 //     SPDX-License-Identifier: MIT
 //
 
-// Device declaration for Hall Effect Sensor
+//
+// LID Hall Effect Sensor
+//
 Device (LID0)
 {
     Name (_HID, EisaId ("PNP0C0D"))
     Name (_UID, 0)
-    Name (_STA, 0)
 
     Method (_DEP, 0, NotSerialized)
     {

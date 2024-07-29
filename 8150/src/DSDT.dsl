@@ -70683,9 +70683,15 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
                         0x0079
                     }
             })
+            Name (FLAG, Zero)
             Method (_E79, 0, Serialized)  // _Exx: Edge-Triggered GPE, xx=0x00-0xFF
             {
-                Notify (\_SB.LID0, 0x80) // Status Change
+                If ((FLAG == One))
+                {
+                    Notify (\_SB.LID0, 0x80) // Status Change
+                }
+
+                FLAG = One
             }
         }
 
@@ -73747,7 +73753,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8150 ", 0x00000003)
         {
             Name (_HID, EisaId ("PNP0C0D") /* Lid Device */)  // _HID: Hardware ID
             Name (_UID, Zero)  // _UID: Unique ID
-            Name (_STA, Zero)  // _STA: Status
             Method (_DEP, 0, NotSerialized)  // _DEP: Dependencies
             {
                 Return (Package (0x01)

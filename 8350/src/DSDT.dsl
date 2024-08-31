@@ -10021,7 +10021,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         }
                     }, 
 
-                    Package (0x05)
+                    Package (0x04)
                     {
                         "DSTATE", 
                         Zero, 
@@ -10051,20 +10051,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                 Zero, 
                                 Zero
                             }
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "TLMMGPIO", 
-                            Package (0x06)
-                            {
-                                0x08, 
-                                One, 
-                                Zero, 
-                                One, 
-                                0x03, 
-                                0x03
-                            }
                         }
                     }, 
 
@@ -10080,24 +10066,10 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         0x02
                     }, 
 
-                    Package (0x05)
+                    Package (0x04)
                     {
                         "DSTATE", 
                         0x03, 
-                        Package (0x02)
-                        {
-                            "TLMMGPIO", 
-                            Package (0x06)
-                            {
-                                0x08, 
-                                Zero, 
-                                Zero, 
-                                One, 
-                                One, 
-                                Zero
-                            }
-                        }, 
-
                         Package (0x02)
                         {
                             "PMICVREGVOTE", 
@@ -11702,7 +11674,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         {
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (0x0F)
+                Return (Zero)
             }
 
             Method (_SUB, 0, NotSerialized)  // _SUB: Subsystem ID
@@ -14537,7 +14509,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
             {
                 Name (RBUF, Buffer (0x02)
                 {
-                     0xCC, 0x00                                       // ..
+                     0xCB, 0x00                                       // ..
                 })
                 Return (RBUF) /* \_SB_.GIO0.OFNI.RBUF */
             }
@@ -14553,46 +14525,16 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (_AEI, 0, NotSerialized)  // _AEI: ACPI Event Interrupts
             {
-                If ((\_SB.PLST == One))
+                Name (RBFC, ResourceTemplate ()
                 {
-                    Name (RBFC, ResourceTemplate ()
-                    {
-                        GpioInt (Edge, ActiveBoth, Shared, PullNone, 0x0000,
-                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                            )
-                            {   // Pin list
-                                0x0026
-                            }
-                    })
-                    Return (RBFC) /* \_SB_.GIO0._AEI.RBFC */
-                }
-                Else
-                {
-                    Name (RBUF, ResourceTemplate ()
-                    {
-                        GpioInt (Edge, ActiveHigh, Exclusive, PullNone, 0x01F4,
-                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                            )
-                            {   // Pin list
-                                0x0002
-                            }
-                        GpioInt (Edge, ActiveBoth, Shared, PullNone, 0x0000,
-                            "\\_SB.GIO0", 0x00, ResourceConsumer, ,
-                            )
-                            {   // Pin list
-                                0x0026
-                            }
-                    })
-                    Return (RBUF) /* \_SB_.GIO0._AEI.RBUF */
-                }
-            }
-
-            Method (_E02, 0, NotSerialized)  // _Exx: Edge-Triggered GPE, xx=0x00-0xFF
-            {
-                If ((\_SB.PLST != One))
-                {
-                    Notify (\_SB.GPU0, 0x92) // Device-Specific
-                }
+                    GpioInt (Edge, ActiveBoth, Shared, PullNone, 0x0000,
+                        "\\_SB.GIO0", 0x00, ResourceConsumer, ,
+                        )
+                        {   // Pin list
+                            0x0026
+                        }
+                })
+                Return (RBFC) /* \_SB_.GIO0._AEI.RBFC */
             }
 
             Method (_E26, 0, NotSerialized)  // _Exx: Edge-Triggered GPE, xx=0x00-0xFF

@@ -1,0 +1,3 @@
+[submodule "QcomACPI"]
+	path = QcomACPI
+	url = https://github.com/WOA-Project/acpi_oem_qcom_common

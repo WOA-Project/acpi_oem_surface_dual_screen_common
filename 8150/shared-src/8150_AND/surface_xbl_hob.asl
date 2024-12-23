@@ -24,7 +24,7 @@
 //
 
 //
-// The XBL Apps Hob is located in the SMEM OEM Specific area on Surface Duo 1
+// The XBL Apps Hob is located in the SMEM OEM Specific area on Surface Duo (1st Gen)
 //
 Scope(\_SB) {
     OperationRegion(XACA, SystemMemory, 0x146BFA94, 0x64)

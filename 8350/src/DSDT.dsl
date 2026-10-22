@@ -18,7 +18,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
     External (_SB_.TZ52.TTC1, UnknownObj)
     External (_SB_.TZ52.TTC2, UnknownObj)
     External (_SB_.TZ52.TTSP, UnknownObj)
-    External (_SB_.UBF0.PRT0, UnknownObj)
     External (_SB_.UBF0.PRT1, UnknownObj)
 
     Scope (\_SB)
@@ -11674,7 +11673,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
         {
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (Zero)
+                Return (0x0F)
             }
 
             Method (_SUB, 0, NotSerialized)  // _SUB: Subsystem ID
@@ -12043,6 +12042,14 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                         )
                     Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
                     {
+                        0x000002C6,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
+                        0x000002C7,
+                    }
+                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
+                    {
                         0x000002C8,
                     }
                     Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
@@ -12072,14 +12079,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
                     {
                         0x000002CF,
-                    }
-                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
-                    {
-                        0x000002D0,
-                    }
-                    Interrupt (ResourceConsumer, Edge, ActiveHigh, Exclusive, ,, )
-                    {
-                        0x000002DF,
                     }
                 })
             }
@@ -14786,94 +14785,6 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 }
             }
 
-            Name (PGID, Buffer (0x0A)
-            {
-                "\\_SB.PCI0"
-            })
-            Name (DBUF, Buffer (DBFL){})
-            CreateByteField (DBUF, Zero, STAT)
-            CreateByteField (DBUF, 0x02, DVAL)
-            CreateField (DBUF, 0x18, 0xA0, DEID)
-            Method (OPRG, 1, Serialized)
-            {
-                DEID = Buffer (ESNL){}
-                Debug = Arg0
-                DVAL = Arg0
-                DEID = PGID /* \_SB_.PCI0.PGID */
-                If (\_SB.ABD.AVBL)
-                {
-                    \_SB.PEP0.FLD0 = DBUF /* \_SB_.PCI0.DBUF */
-                }
-            }
-
-            Method (_RMV, 0, Serialized)  // _RMV: Removal Status
-            {
-                Return (One)
-            }
-
-            Method (_OST, 3, Serialized)  // _OST: OSPM Status Indication
-            {
-                Debug = "In _OST of PCI0"
-                While (One)
-                {
-                    Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                    _T_0 = ToInteger (Arg0)
-                    If ((_T_0 == 0x0103))
-                    {
-                        Debug = "In _OST, Ejection Processing"
-                        While (One)
-                        {
-                            Name (_T_1, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_1 = ToInteger (Arg1)
-                            If ((_T_1 == Zero))
-                            {
-                                Debug = "In PCI0 _OST, Ejection Success"
-                                Notify (\_SB.PCI0, 0x03) // Eject Request
-                            }
-                            ElseIf ((Match (Package (0x04)
-                                            {
-                                                0x80, 
-                                                0x81, 
-                                                0x82, 
-                                                0x83
-                                            }, MEQ, _T_1, MTR, 0x00, 0x00) != Ones))
-                            {
-                                Debug = "In PCI0 _OST, Ejection Failure"
-                            }
-                            ElseIf ((_T_1 == 0x84))
-                            {
-                                Debug = "In PCI0 _OST, Ejection Pending"
-                            }
-
-                            Break
-                        }
-                    }
-                    ElseIf ((_T_0 == 0x0200))
-                    {
-                        Debug = "In PCI0 _OST, Insertion Processing"
-                        While (One)
-                        {
-                            Name (_T_2, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
-                            _T_2 = ToInteger (Arg1)
-                            If ((_T_2 == Zero))
-                            {
-                                Debug = "In PCI0 _OST, Insertion Success"
-                                Notify (\_SB.PCI0, Zero) // Bus Check
-                            }
-
-                            Break
-                        }
-                    }
-
-                    Break
-                }
-            }
-
-            Method (_CBA, 0, NotSerialized)  // _CBA: Configuration Base Address
-            {
-                Return (0x0000000700000000)
-            }
-
             Method (_PSC, 0, NotSerialized)  // _PSC: Power State Current
             {
                 Return (Zero)
@@ -14885,26 +14796,19 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 {
                     Memory32Fixed (ReadWrite,
                         0x60000000,         // Address Base
-                        0x02000000,         // Address Length
+                        0x00200000,         // Address Length
                         )
                     QWordMemory (ResourceProducer, PosDecode, MinFixed, MaxFixed, NonCacheable, ReadWrite,
                         0x0000000000000000, // Granularity
-                        0x0000000710000000, // Range Minimum
-                        0x000000071FFFFFFF, // Range Maximum
+                        0x0000000060300000, // Range Minimum
+                        0x0000000063FFFFFF, // Range Maximum
                         0x0000000000000000, // Translation Offset
-                        0x0000000010000000, // Length
-                        ,, , AddressRangeMemory, TypeStatic)
-                    QWordMemory (ResourceProducer, PosDecode, MinFixed, MaxFixed, Prefetchable, ReadWrite,
-                        0x0000000000000000, // Granularity
-                        0x0000000720000000, // Range Minimum
-                        0x000000073FFFFFFF, // Range Maximum
-                        0x0000000000000000, // Translation Offset
-                        0x0000000020000000, // Length
+                        0x0000000003D00000, // Length
                         ,, , AddressRangeMemory, TypeStatic)
                     WordBusNumber (ResourceProducer, MinFixed, MaxFixed, PosDecode,
                         0x0000,             // Granularity
                         0x0000,             // Range Minimum
-                        0x00FF,             // Range Maximum
+                        0x0001,             // Range Maximum
                         0x0000,             // Translation Offset
                         0x0002,             // Length
                         ,, )
@@ -15118,7 +15022,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                     \_SB.R0RR
                 })
                 Name (_S0W, 0x04)  // _S0W: S0 Device Wake State
-                Name (_DSD, Package (0x06)  // _DSD: Device-Specific Data
+                Name (_DSD, Package (0x02)  // _DSD: Device-Specific Data
                 {
                     ToUUID ("6211e2c0-58a3-4af3-90e1-927a4e0c55a4") /* Unknown UUID */, 
                     Package (0x01)
@@ -15128,47 +15032,11 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                             "HotPlugSupportInD3", 
                             One
                         }
-                    }, 
-
-                    ToUUID ("efcc06cc-73ac-4bc3-bff0-76143807c389") /* Unknown UUID */, 
-                    Package (0x02)
-                    {
-                        Package (0x02)
-                        {
-                            "ExternalFacingPort", 
-                            One
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "UID", 
-                            Zero
-                        }
-                    }, 
-
-                    ToUUID ("daffd814-6eba-4d8c-8a91-bc9bbf4aa301") /* Device Properties for _DSD */, 
-                    Package (0x02)
-                    {
-                        Package (0x02)
-                        {
-                            "usb4-host-interface", 
-                            \_SB.UBF0.PRT0
-                        }, 
-
-                        Package (0x02)
-                        {
-                            "usb4-port-number", 
-                            Zero
-                        }
                     }
                 })
-                Method (_DSW, 3, NotSerialized)  // _DSW: Device Sleep Wake
-                {
-                }
-
                 Method (_CRS, 0, NotSerialized)  // _CRS: Current Resource Settings
                 {
-                    Name (RBF0, ResourceTemplate ()
+                    Name (RBUF, ResourceTemplate ()
                     {
                         GpioInt (Edge, ActiveLow, ExclusiveAndWake, PullUp, 0x0000,
                             "\\_SB.GIO0", 0x00, ResourceConsumer, ,
@@ -15177,7 +15045,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                                 0x0060
                             }
                     })
-                    Return (RBF0) /* \_SB_.PCI0.RP1_._CRS.RBF0 */
+                    Return (RBUF) /* \_SB_.PCI0.RP1_._CRS.RBUF */
                 }
 
                 Method (_DSM, 4, NotSerialized)  // _DSM: Device-Specific Method
@@ -15363,11 +15231,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 {
                     Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
                     _T_0 = ToInteger (Arg0)
-                    If ((_T_0 == Zero))
-                    {
-                        \_SB.PCI0.OPRG (Arg1)
-                    }
-                    ElseIf ((_T_0 == One))
+                    If ((_T_0 == One))
                     {
                         \_SB.PCI1.OPRG (Arg1)
                     }
@@ -15382,20 +15246,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 {
                     Name (_T_0, 0x00)  // _T_x: Emitted by ASL Compiler, x=0-9, A-Z
                     _T_0 = ToInteger (Arg0)
-                    If ((_T_0 == Zero))
-                    {
-                        If ((Arg1 == Zero))
-                        {
-                            PRP0 = One
-                            Notify (\_SB.PCI0, Zero) // Bus Check
-                        }
-                        Else
-                        {
-                            PRP0 = 0xFFFFFFFF
-                            Notify (\_SB.PCI0, One) // Device Check
-                        }
-                    }
-                    ElseIf ((_T_0 == One))
+                    If ((_T_0 == One))
                     {
                         If ((Arg1 == Zero))
                         {
@@ -20005,7 +19856,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
                 Alias (\_SB.PSUB, _SUB)
                 Name (_DEP, Package (0x03)  // _DEP: Dependencies
                 {
-                    \_SB.PCI6, 
+                    \_SB.PCI0, 
                     \_SB.SBTD, 
                     \_SB.IPC0
                 })
@@ -28139,7 +27990,7 @@ DefinitionBlock ("", "DSDT", 2, "QCOMM ", "SDM8350 ", 0x00000003)
 
             Method (_STA, 0, NotSerialized)  // _STA: Status
             {
-                Return (Zero)
+                Return (0x0F)
             }
         }
 
